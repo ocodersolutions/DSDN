@@ -1,0 +1,423 @@
+/*Add font # begin ===============================================================================*/
+@font-face {
+	font-family: Steiner;
+	src: url("../font/Steiner.ttf");
+}
+@font-face {
+	font-family: "CenturyGothic";
+	src: url("../font/CenturyGothic.ttf");
+}
+@font-face {
+	font-family: "CenturyGothic Bold";
+	src: url("../font/CenturyGothicBold.ttf");
+}
+@font-face {
+	font-family: "LevenimMT Bold";
+	src: url("../font/LevenimMTBold.ttf");
+}
+@font-face {
+	font-family: "HelveticaCondensed Bold";
+	src: url("../font/HelveticaCondensedBold.ttf");
+}
+@font-face {
+	font-family: "JoeHand2";
+	src: url("../font/JoeHand2.ttf");
+}
+@font-face {
+	font-family: "ZurichBTExtended";
+	src: url("../font/ZurichBTExtended.ttf");
+}
+body {
+	margin: 0;
+}
+/*Add font # end =================================================================================*/
+
+/*Custom Bootstrap # begin =======================================================================*/
+.container-fluid, .container, [class*="col-"] {
+	padding: 0;
+}
+@media (min-width: 1320px) {
+	.container {
+		width: 1300px;
+	}
+}
+.row, .form-horizontal .form-group {
+	margin: 0;
+}
+.navbar.navbar-default {
+	margin: 0;
+	min-height: 1px;
+	border: 0;
+	border-radius: 0;
+	background-color: transparent;
+}
+.navbar.navbar-default .navbar-header, .navbar.navbar-default .navbar-brand, .navbar.navbar-default .navbar-collapse, .navbar.navbar-default .nav.navbar-nav.navbar-right {
+	margin: 0;
+}
+.navbar.navbar-default .navbar-brand {
+	height: auto;
+}
+.navbar.navbar-default .navbar-collapse {
+	padding: 0;
+}
+.dropdown .dropdown-menu {
+	left: 0;
+	right: auto;
+	padding: 0;
+}
+.caret {
+	border-top: 9px solid;
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+}
+/*Custom Bootstrap # end =========================================================================*/
+
+/*Own style # begin ==============================================================================*/
+.header {
+	padding: 15px 30px 10px 45px;
+}
+.header .header_wrap {
+	display: flex;
+	align-items: center;
+}
+.header .header_img {
+	max-width: 100%;
+}
+.header .header_right {
+	text-align: right;
+}
+/*----------------------------------------------*/
+.menu {
+	background-color: #004ebc;
+}
+#menu_left .navbar-toggle {
+	margin: 8px 10px 8px 0;
+	border: none;
+	background-color: #fff;
+}
+#menu_left .navbar-toggle .icon-bar {
+	background-color: #004ebc;
+}
+#menu_left .navbar-toggle:hover {
+	background-color: #ff4600;
+}
+#menu_left .navbar-toggle:hover .icon-bar {
+	background-color: #fff;
+}
+#menu_left a, #menu_right a {
+	font: 14.58px "CenturyGothic";
+	color: #fff;
+}
+#menu_right li.active a {
+	background-color: #002455;
+}
+#menu_left a:hover, #menu_right a:hover {
+	color: #ff4600;
+}
+#menu_right li.open a {
+	background-color: #444;
+}
+#menu_right li.open li.active a {
+	background-color: #222;
+}
+#menu_left a {
+	padding: 19px 19px 19px 45px;
+}
+#menu_right a {
+	padding: 19px;
+}
+#menu_right {
+	padding-right: 168px;
+}
+/*----------------------------------------------*/
+.slider .slider_img {
+	width: 100%;
+}
+/*----------------------------------------------*/
+.outter_gradient {
+	background: linear-gradient(#fff, #c2d6fb);
+}
+/*----------------------------------------------*/
+.intro {
+	position: relative;
+	background-color: #fff;
+}
+.fivebar {
+	position: absolute;
+	top: 40px;
+}
+.fivebar_height {
+	position: absolute;
+	top: 5px;
+	height: calc(100% - 5px);
+}
+.fivebar .fivebar_img, .fivebar_height .fivebar_img {
+	display: block;
+	max-height: 20%;
+}
+.broad {
+	position: absolute;
+	top: 75px;
+	right: 80px;
+	text-align: right;
+}
+.broad .broad_img {
+	max-height: 100%;
+}
+.fourcell {
+	margin-top: -8%;
+	font-size: 0;
+	text-align: center;
+}
+.fourcell .fourcell_img {
+	padding-left: 5px;
+	width: 25%;
+	box-sizing: border-box;
+}
+/*----------------------------------------------*/
+.main {
+	background-color: #fff;
+}
+.main .main_title {
+	margin: 0 0 10px;
+	font: 20.83px "CenturyGothic Bold";
+	color: #004ebc;
+}
+.main .main_title_sub {
+	margin: 0;
+	font: 16.67px "CenturyGothic Bold";
+	color: #004ebc;
+	word-break: break-all;
+}
+.main .main_title_spc {
+	display: block;
+	margin: 0;
+	font: 16.67px "CenturyGothic Bold";
+	color: #ff4600;
+}
+.main .main_link {
+	display: block;
+	margin: 0 0 0 20px;
+	font: 16.67px "CenturyGothic";
+	color: #ff4600;
+}
+.main .main_link-nomargin {
+	margin: 0;
+}
+.main .main_content {
+	margin: 30px 0 0;
+	font: 14.58px "CenturyGothic";
+	color: #000;
+}
+.main .main_content_spc {
+	margin: 0 0 30px;
+	font: 16.67px "CenturyGothic";
+	color: #333;
+}
+.main .main_img {
+	float: right;
+	max-width: 40%;
+}
+.main .main_img_mrgtop20 {
+	margin-top: 20px;
+	max-width: 100%;
+}
+.main .main_img_free {
+	max-width: 100%;
+}
+.main .main_contact {
+	display: block;
+	font: 25px "CenturyGothic Bold";
+	color: #ff4600;
+}
+.main .main_contact-center {
+	text-align: center;
+}
+/*................*/
+.request [class*="col-"] {
+	padding-left: 5px;
+	padding-right: 5px;
+	padding-bottom: 10px;
+}
+.request .request_btn {
+	border: 1px solid #f74902;
+	background-color: #f85b1b;
+	color: #fff;
+}
+.insurance {
+	text-align: center;
+}
+.project .project_box {
+	font-size: 0;
+}
+.project .project_box div {
+	display: inline-block;
+	padding: 25px;
+	width: 50%;
+	box-sizing: border-box;
+}
+.project .project_box img {
+	display: block;
+	height: 100%;
+	width: 100%;
+	border: 9px solid #ff4600;
+	box-sizing: border-box;
+}
+.project .project_page {
+	margin: 10px 0 25px;
+	font-size: 0;
+	text-align: center;
+}
+.project .project_page a {
+	display: inline-block;
+	margin: 0 5px;
+	height: 30px;
+	width: 30px;
+	border: 1px solid #c8cacb;
+	font: 14.58px ZurichBTExtended;
+	color: #84888b;
+	line-height: 30px;
+	text-decoration: none;
+}
+.project .project_page a.active {
+	background-color: #194797;
+	color: #fff;
+}
+.contact {
+	margin-top: -5%;
+	text-align: right;
+}
+/*................*/
+.main_padtop25 {
+	padding-top: 25px;
+}
+.main_padtop40 {
+	padding-top: 40px;
+}
+.main_padtop160 {
+	padding-top: 160px;
+}
+.main_padbot30 {
+	padding-bottom: 30px;
+}
+.main_padbot40 {
+	padding-bottom: 40px;
+}
+.main_padbot280 {
+	padding-bottom: 280px;
+}
+.main_padleft30 {
+	padding-left: 30px;
+}
+.main_padleft50 {
+	padding-left: 50px;
+}
+.main_padright45 {
+	padding-right: 45px;
+}
+/*----------------------------------------------*/
+.footer {
+	padding: 0 45px;
+	background-color: #fff;
+}
+.footer .footer_flex {
+	display: flex;
+	align-items: center;
+	padding: 10px 0 15px;
+}
+.footer .copyright, .footer .design, .footer a {
+	font: 11px "CenturyGothic";
+	color: #0a0006;
+}
+.footer span {
+	font: 18.9px "JoeHand2";
+}
+.line {
+	border-top: 2px solid #005596;
+}
+.design {
+	text-align: right;
+}
+/*----------------------------------------------*/
+.footerimg {
+	margin-top: -403px;
+	height: 403px;
+	background: url(../img/footerimg.png);
+	background-size: 100% 100%;
+}
+.footerimg-org {
+	margin-top: -343px;
+	height: 343px;
+}
+/*Own style # end ================================================================================*/
+
+/*Responsive # begin =============================================================================*/
+@media screen and (max-width: 1299px) {
+	.fivebar {
+		top: 10px;
+		height: calc(49% - 10px);
+	}
+	.broad {
+		top: 20px;
+		right: 20px;
+		height: calc(49% - 20px);
+	}
+}
+@media screen and (max-width: 1199px) {
+	#menu_right {
+		padding-right: 12px;
+	}
+}
+@media screen and (max-width: 991px) {
+	.header {
+		padding: 10px;
+	}
+	/*----------------*/
+	#menu_right {
+		padding-right: 0;
+	}
+	#menu_left a, #menu_right a {
+		padding: 15px 8px;
+	}
+}
+@media screen and (max-width: 767px) {
+	.header .header_wrap {
+		display: block;
+	}
+	.header .header_left, .header .header_right {
+		text-align: center;
+	}
+	/*----------------*/
+	.broad {
+		top: 5px;
+		right: auto;
+		height: calc(49% - 5px);
+		text-align: center;
+	}
+	/*----------------*/
+	.main_block {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.request [class*="col-"] {
+		padding: 5px 0;
+	}
+	/*----------------*/
+	.footer {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+	.footer .footer_flex {
+		display: block;
+	}
+	.copyright, .design {
+		text-align: center;
+	}
+	.design {
+		margin-top: 5px;
+	}
+}
+@media screen and (max-width: 479px) {
+	/*----------------*/
+}
+/*Responsive # end ===============================================================================*/
