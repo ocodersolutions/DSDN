@@ -928,7 +928,7 @@ clear: both;
 }
 .tinanh .items a {
 	text-transform: uppercase;
-	font: 16px "Century Gothic";
+	font: 14px "Century Gothic";
 	color:#ff4600;
     font-weight: bold;
     text-decoration: none;
@@ -949,6 +949,7 @@ clear: both;
 
 }
 .tinanh .items span.info{
+	display: block;
 	font-size: 11px;
     color: rgb(153, 153, 153);
     font-weight: normal;
