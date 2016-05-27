@@ -128,7 +128,7 @@ font-size: 15px;
 max-width: 1300px !important;
 }
 header {
-padding: 10px 0;
+padding: 0px 0px 1px 0px;
 margin-bottom: 0 !important;
 }
 header .logo {
@@ -444,7 +444,7 @@ clear: both;
             width: 1300px !important;
             }
             header .logo img {
-            margin-left: 40px;
+            margin-left: 0px;
             }
             .menu-main .request-quote {
             margin-left: 40px;
@@ -897,7 +897,6 @@ clear: both;
 }
 /*========== member=========*/
 .member {
-	border: 1px solid #004ebc;
 	font-size: 0;
 	margin:0 20px;
 }
