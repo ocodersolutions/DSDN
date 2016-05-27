@@ -71,6 +71,7 @@
  .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .ui-accordion-header-active.ui-state-active >.ui-icon:after{
 	background-color:#004ebc; }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line .uc_link_tittle{
+        border-bottom: 1px solid #eee;
 	box-sizing: border-box;
     display: block;
     min-width: 100%;

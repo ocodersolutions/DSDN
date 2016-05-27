@@ -229,21 +229,21 @@
         line-height: 18px; 
     }
     .uc_background_image_content_box .uc_item_html .uc_item_tittle {
-        font: bold 40px/38px "Lora", serif;
-        margin:1px 0 5px; 
+        font: bold 26px/33px 'Century Gothic', serif;
+        margin: 10px 0 5px; 
     } 
     .uc_background_image_content_box .uc_item_html .uc_content_des {
         width: 80%; 
         margin:0 0 10px;
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add {
-        font: bold 20px/26px "Roboto", sans-serif;
-        padding: 16px 20px 18px 21px;
+        font: bold 13px/13px 'Century Gothic', sans-serif;
+        padding: 16px 13px 16px 13px;
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after {
-        font-size: 30px;
-        line-height: 60px;
-        width: 60px;
+        font-size: 25px;
+        line-height: 46px;
+        width: 35px;
     }
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -252,32 +252,32 @@
         line-height: 18px; 
     }
     .uc_background_image_content_box .uc_item_html .uc_item_tittle {
-        font: bold 30px/28px "Lora", serif; 
-        margin :1px 0 5px;
+        font: bold 23px/26px 'Century Gothic', serif;
+        margin: 27px 0 5px;
     }
     .uc_background_image_content_box .uc_item_html .uc_content_des {
         width: 80%; 
     }
     .uc_background_image_content_box .uc_item_html .uc_add_cart .uc_link_add {
-        font: bold 16px/20px "Roboto", sans-serif;
-        padding: 8px 10px 10px 11px; 
+        font: bold 10px/18px 'Century Gothic', sans-serif;
+        padding: 10px 7px 9px 10px;
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after {
-        font-size: 20px;
-        line-height: 38px;
-        width: 38px; 
+        font-size: 16px;
+        line-height: 37px;
+        width: 21px;
     } 
 }
 @media (min-width: 480px) and (max-width: 767px) {
    
     .uc_background_image_content_box .uc_item_html .uc_item_tittle {
-        font: bold 20px/22px "Lora", serif;
+        font: bold 20px/22px 'Century Gothic', serif;
     }
     .uc_background_image_content_box .uc_item_html .uc_content_des {
         display: none; 
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add  {
-        font: bold 16px/20px "Roboto", sans-serif;
+        font: bold 16px/20px 'Century Gothic', sans-serif;
         padding: 8px 10px 10px 11px; 
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after{
@@ -292,13 +292,13 @@
         padding: 0 5px 10px; 
     }
     .uc_background_image_content_box .uc_item_html .uc_item_tittle {
-        font: bold 14px/18px "Lora", serif; 
+        font: bold 14px/18px 'Century Gothic', serif; 
     }
     .uc_background_image_content_box .uc_item_html .uc_content_des {
         display: none; 
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add {
-        font: bold 12px/18px "Roboto", sans-serif;
+        font: bold 12px/18px 'Century Gothic', sans-serif;
         padding: 5px 7px 6px 7px; 
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after{
@@ -318,14 +318,14 @@
         line-height: 18px; 
     }
     .uc_background_image_content_box .uc_item_html .uc_item_tittle {
-        font: bold 25px/28px "Lora", serif; 
+        font: bold 25px/28px 'Century Gothic', serif; 
         margin:1px 0 5px;
     }
     .uc_background_image_content_box .uc_item_html .uc_content_des {
         width: 80%; 
     }
     .uc_background_image_content_box .uc_item_html .uc_add_cart .uc_link_add {
-        font: bold 16px/20px "Roboto", sans-serif;
+        font: bold 16px/20px 'Century Gothic', sans-serif;
         padding: 8px 10px 10px 11px; 
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after{
