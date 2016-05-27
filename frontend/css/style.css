@@ -317,9 +317,7 @@
      padding-left: 20px;
  }
  
- .page-default .content .sidebar-left .menu-left-2 .title-default {
-     text-transform: none;
- }
+ 
  
  .page-default .content .main-content-wrap {
      float: right;
@@ -1023,6 +1021,9 @@
  .block {
      margin-bottom: 20px;
  }
+ .first{
+ 	margin-top: 20px;
+ }
  /*========== News ==========*/
  
  .newpost {
@@ -1062,10 +1063,11 @@
  }
  
  .otherlink span {
+    text-transform: uppercase;
      display: block;
      padding: 10px;
      background-color: #004ebc;
-     font: bold 21px "Century Gothic";
+     font: bold 20px "Century Gothic";
      color: #fff;
  }
  
@@ -1095,10 +1097,11 @@
  }
  
  .tinanh span.tittle {
+    text-transform: uppercase;
      display: block;
      padding: 10px;
      background-color: #004ebc;
-     font: bold 21px "Century Gothic";
+     font: bold 20px "Century Gothic";
      color: #fff;
  }
  
