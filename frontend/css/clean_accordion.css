@@ -5,22 +5,24 @@
 .uc_clean_accordion{
 	width: 100%;
 	box-sizing: border-box;
-	font-family: "Century Gothic",sans-serif;
+	font-family: "Raleway",sans-serif;
 	font-size: 14px;
 	line-height: 1.6;
 	color: #666;
 }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line{
-	font-family: Century Gothic;
-    color: #004ebc;
-    font-size: 21px;
-    line-height: 25px;
-    text-transform: uppercase;
-    font-weight: bold;
-    margin-bottom: 10px;
+	display: block;
+	background-color: #fff;
+    border: 1px solid #eee;
+    border-bottom: 0;
+    margin: 15px 0 1px 0;
+    padding-top: 0;
+    position: relative;
+    text-transform: none;
+    letter-spacing: inherit
 }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line:hover{
-	color: #004ebc;
+	color:#c8385e;
 }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line .ui-accordion-header-icon.ui-icon{
 	
@@ -34,7 +36,7 @@
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line .ui-accordion-header-icon.ui-icon:before{
 	content: '';
     display: block;
-    background: #666;
+    background: #004ebc;
     width: 1px;
     height: 13px;
     margin-bottom: -7px;
@@ -44,7 +46,7 @@
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line .ui-accordion-header-icon.ui-icon:after{
 	content: '';
     display: block;
-    background: #666;
+    background: #004ebc;
     width: 13px;
     height: 1px;
     margin-bottom: -7px;
@@ -65,20 +67,21 @@
     -webkit-transform: rotate(45deg) translate(1px, 6px);
 }
   .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .ui-accordion-header-active.ui-state-active >.ui-icon:before{
-	background-color:#c8385e; }
+	background-color:#004ebc; }
  .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .ui-accordion-header-active.ui-state-active >.ui-icon:after{
-	background-color:#c8385e; }
+	background-color:#004ebc; }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line .uc_link_tittle{
 	box-sizing: border-box;
     display: block;
     min-width: 100%;
     font-size: 21px;
-    color: #004ebc;
+    text-transform: uppercase;
     padding: 15px 20px 14px;
     line-height: 1.44;
     transition: none;
     text-decoration: none;
     font-family: Century Gothic;
+    color: #004ebc;
     font-weight: bold;
 }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content{
