@@ -438,6 +438,10 @@ text-align: right;
 clear: both;
 }
 
+.uc_tittle, small{
+      font-family:'Century Gothic';
+}
+
 /*========== main style =========*/
 @media (min-width: 1300px) {
             .container {
@@ -881,6 +885,16 @@ clear: both;
 	color: #ff4600;
 	line-height: 22px;
 }
+.row-line{
+      width: 100%;
+      border-bottom: 4px solid #004ebc;
+
+}
+.addmore .row-line span{
+      
+      color: #444;
+      padding: 3px;
+}
 @media (min-width: 992px) {
 	.addmore {
 		display: flex;
@@ -902,10 +916,10 @@ clear: both;
 }
 .member>span  {
 	display: block;
-	padding: 10px 20px;
-	background-color: #004ebc;
+	padding: 5px 20px;
 	font: bold 21px "Century Gothic";
-	color: #fff;
+	color: #444;
+      border-bottom: 3px solid #004ebc;
 }
 .member .post {
 	padding: 20px;
