@@ -272,7 +272,7 @@
                         <div class="sub-slider row">
                             <div class="col-xs-12 col-xs-offset-0 col-sm-10 col-sm-offset-1">
                                 <div class="row">
-                                    <div class="slide-item col-sm-3 col-xs-3">
+                                    <div class="slide-item col-sm-3 col-xs-5">
                                         <div class="uc_background_image_content_box" id="orange">
                                             <a href="" class="uc_item_link">
                                                 <!-- start of box content block -->
@@ -293,7 +293,7 @@
                                         </div>
                                         <!-- end of background image content box-->
                                     </div>
-                                    <div class="slide-item col-sm-3 col-xs-3">
+                                    <div class="slide-item col-sm-3 col-xs-5">
                                         <div class="uc_background_image_content_box" id="green">
                                             <a href="" class="uc_item_link">
                                                 <!-- start of box content block -->
@@ -312,7 +312,7 @@
                                         </div>
                                         <!-- end of background image content box-->
                                     </div>
-                                    <div class="slide-item col-sm-3 col-xs-3">
+                                    <div class="slide-item col-sm-3 col-xs-5">
                                         <div class="uc_background_image_content_box" id="blue">
                                             <a href="" class="uc_item_link">
                                                 <!-- start of box content block -->
@@ -331,7 +331,7 @@
                                         </div>
                                         <!-- end of background image content box-->
                                     </div>
-                                    <div class="slide-item col-sm-3 col-xs-3">
+                                    <div class="slide-item col-sm-3 col-xs-5">
                                         <div class="uc_background_image_content_box" id="sky">
                                             <a href="" class="uc_item_link">
                                                 <!-- start of box content block -->
@@ -902,19 +902,14 @@
                                     loop: true,
                                     margin: 30,
                                     autoplay: true,
-                                    autoplayTimeout: 8500,
+                                    autoplayTimeout: 2000,
                                     smartSpeed: 450,
-                                    responsive: {
-                                        0: {
-                                            items: 2
-                                        },
-                                        768: {
-                                            items: 3
-                                        },
-                                        1170: {
-                                            items: 5
-                                        }
-                                    }
+                                    items: 5,
+                                    itemsDesktop : [1199,5],
+                                    itemsDesktopSmall : [991,4],
+                                    itemsTablet: [768,3],
+                                    itemsTabletSmall: [640,2],
+                                    itemsMobile : [380,1],
                                 });
                             });
                         </script>

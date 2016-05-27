@@ -576,7 +576,7 @@ clear: both;
             padding-top: 20px;
             }
             .page-default .content .sidebar-left {
-            border-top: 1px solid #004ebc;
+            
             padding: 15px 30px;
             margin-top: 20px;
             width: 100%;
@@ -685,8 +685,9 @@ clear: both;
             margin-bottom: 8px;
             }
             .page-home .sub-slider .slide-item {
-            margin-bottom: 10px;
-            padding: 3px !important;
+            margin-left: 17px;
+		    margin-bottom: 0px;
+		    padding: 3px !important;
             }
             .page-home .sub-slider .slide-item  a img:hover{
             border: 1px solid;
