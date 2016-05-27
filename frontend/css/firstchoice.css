@@ -80,9 +80,42 @@ body {
 }
 /*Custom Bootstrap # end =========================================================================*/
 
+/*Custom flexslider # begin ======================================================================*/
+#intro_slider.flexslider {
+	margin: 0;
+	border: none;
+}
+#intro_slider.flexslider .flex-prev::before, #intro_slider.flexslider .flex-next::before {
+	height: 40px;
+	width: 40px;
+	font: 32px FontAwesome;
+	line-height: 40px;
+	text-align: center;
+	text-shadow: -1px 0 2px #fff, 0 -1px 2px #fff, 1px 0 2px #fff, 0 1px 2px #fff;
+}
+#intro_slider.flexslider .flex-prev::before {
+	content: "\f053";
+}
+#intro_slider.flexslider .flex-next::before {
+	content: "\f054";
+}
+/*Custom flexslider # end ========================================================================*/
+
 /*Own style # begin ==============================================================================*/
+@keyframes blinker {
+	0% {
+		opacity: 1.0;
+	}
+	50% {
+		opacity: 0.0;
+	}
+	100% {
+		opacity: 1.0;
+	}
+}
 .header {
-	padding: 15px 30px 10px 45px;
+	padding: 8px 30px 11px;
+	background: url(../img/bg-header-2.png) no-repeat;
 }
 .header .header_wrap {
 	display: flex;
@@ -93,6 +126,28 @@ body {
 }
 .header .header_right {
 	text-align: right;
+}
+.header .header_call {
+	margin: 0;
+	font: 25px "GothamVnuBook Bold";
+	color: #ff4600;
+	text-shadow: -1px 0px 0px #fff, 0px -1px 0px #fff, 1px 0px 0px #fff, 0px 1px 0px #fff;
+	line-height: 29px;
+	animation: blinker 2s linear infinite;
+}
+.header .header_phone {
+	margin: 0;
+	font: 37px "GothamVnuBook";
+	color: #004ebc;
+	text-shadow: -1px 0px 0px #fff, 0px -1px 0px #fff, 1px 0px 0px #fff, 0px 1px 0px #fff;
+	line-height: 41px;
+}
+.header .header_name {
+	margin: 0;
+	font: 16px "GothamVnuBook";
+	color: #ff4600;
+	text-shadow: -1px 0px 0px #fff, 0px -1px 0px #fff, 1px 0px 0px #fff, 0px 1px 0px #fff;
+	line-height: 18px;
 }
 /*----------------------------------------------*/
 .menu {
@@ -117,10 +172,12 @@ body {
 	color: #fff;
 }
 #menu_right li.active a {
-	background-color: #002455;
+	background-color: #004ebc;
+	border-bottom: 3px solid #fff;
 }
-#menu_left a:hover, #menu_right a:hover {
-	color: #ff4600;
+#menu_right a:hover {
+	border-bottom: 3px solid #fff;
+	transition: 0.2s;
 }
 #menu_right li.open a {
 	background-color: #444;
@@ -129,10 +186,11 @@ body {
 	background-color: #222;
 }
 #menu_left a {
-	padding: 19px 19px 19px 45px;
+	padding: 17px 30px;
 }
 #menu_right a {
-	padding: 19px;
+	padding: 17px 15px;
+	border-right: 1px solid rgba(255, 255, 255, 0.18);
 }
 #menu_right {
 	padding-right: 168px;
@@ -173,14 +231,19 @@ body {
 	max-height: 100%;
 }
 .fourcell {
-	margin-top: -8%;
-	font-size: 0;
-	text-align: center;
+	margin-top: -15px;
 }
 .fourcell .fourcell_img {
 	padding-left: 5px;
 	width: 25%;
 	box-sizing: border-box;
+}
+.fourcell .col-xs-3 {
+	padding: 0 15px;
+}
+/*----------------------------------------------*/
+.team {
+	padding: 0 15px;
 }
 /*----------------------------------------------*/
 .main {
