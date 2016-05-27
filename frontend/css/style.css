@@ -741,7 +741,7 @@
          padding-top: 20px;
      }
      .page-default .content .sidebar-left {
-         border-top: 1px solid #004ebc;
+         
          padding: 15px 30px;
          margin-top: 20px;
          width: 100%;
@@ -776,6 +776,9 @@
      }
      #datetimepicker1 .form-control {
          margin-top: 0px;
+     }
+     .tinanh {
+        margin-right: 0px;
      }
  }
  
@@ -1093,7 +1096,7 @@
  
  .tinanh {
      border: 1px solid #004ebc;
-     margin-right: 30px;
+    
  }
  
  .tinanh span.tittle {
@@ -1175,6 +1178,7 @@
          margin-right: 30px;
          height: 100%;
      }
+     
  }
  /*========== member=========*/
  
@@ -1222,5 +1226,9 @@
          margin-right: 30px;
          height: 100%;
      }
+      .tinanh {
+        margin-right: 30px;
+    }
  }
+
  /*========== member=========*/
