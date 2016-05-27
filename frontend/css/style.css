@@ -890,7 +890,8 @@ clear: both;
 }
 .row-line{
       width: 100%;
-      border-bottom: 4px solid #004ebc;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #004ebc;
 
 }
 .addmore .row-line span{
