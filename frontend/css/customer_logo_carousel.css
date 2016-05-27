@@ -26,7 +26,7 @@
 	transition: all 0.25s ease-out 0s;
 }
 #uc_customer_logo_carousel .owl-page.active span, #uc_customer_logo_carousel .owl-page:hover span {
-	background: #28cb75;
+	background: #004EBC;
 	transform: scale(0.7);
 	transition: all 0.25s ease-out 0s;
 }

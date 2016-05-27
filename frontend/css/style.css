@@ -874,6 +874,7 @@ clear: both;
 	border: 1px solid #004ebc;
 }
 .otherlink span {
+    text-transform: uppercase;
 	display: block;
 	padding: 10px;
 	background-color: #004ebc;
@@ -905,6 +906,8 @@ clear: both;
 
 }
 .tinanh span.tittle {
+	text-transform: uppercase;
+    border-bottom: 1px solid #eee;
 	display: block;
 	padding: 10px;
 	background-color: #004ebc;
@@ -912,13 +915,17 @@ clear: both;
 	color: #fff;
 }
 .tinanh .items {
+	border-bottom: 1px solid rgba(21, 20, 20, 0.08);
     padding: 5px;
     width: 100%;
     display: block;
     margin-bottom: 5px;
     margin-top: 5px;
-    float: left; */
+    float: left; 
     
+}
+.tinanh .items:last-child {
+	border-bottom:none;
 }
 .tinanh .items img {
     float: left;
