@@ -839,6 +839,9 @@ clear: both;
 	text-align: center;
 	text-shadow: -1px 0 2px #fff, 0 -1px 2px #fff, 1px 0 2px #fff, 0 1px 2px #fff;
 }
+.block{
+	margin-bottom: 20px;
+}
 /*========== News ==========*/
 .newpost {
 	border: 1px solid #004ebc;
@@ -887,7 +890,8 @@ clear: both;
 }
 .row-line{
       width: 100%;
-      border-bottom: 4px solid #004ebc;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #004ebc;
 
 }
 .addmore .row-line span{
@@ -925,7 +929,7 @@ clear: both;
 }
 .tinanh .items a {
 	text-transform: uppercase;
-	font: 16px "Century Gothic";
+	font: 14px "Century Gothic";
 	color:#ff4600;
     font-weight: bold;
     text-decoration: none;
@@ -946,6 +950,7 @@ clear: both;
 
 }
 .tinanh .items span.info{
+	display: block;
 	font-size: 11px;
     color: rgb(153, 153, 153);
     font-weight: normal;
