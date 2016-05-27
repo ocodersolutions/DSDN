@@ -27,6 +27,14 @@
 	font-family: "ZurichBTExtended";
 	src: url("../font/ZurichBTExtended.ttf");
 }
+@font-face {
+	font-family: "GothamVnuBook";
+	src: url("../font/GothamVnu-Book.woff");
+}
+@font-face {
+	font-family: "GothamVnuBook Bold";
+	src: url("../font/GothamVnu-Bold.woff");
+}
 body {
 	margin: 0;
 }
@@ -105,7 +113,7 @@ body {
 	background-color: #fff;
 }
 #menu_left a, #menu_right a {
-	font: 14.58px "CenturyGothic";
+	font: 14.58px "GothamVnuBook";
 	color: #fff;
 }
 #menu_right li.active a {
@@ -180,7 +188,7 @@ body {
 }
 .main .main_title {
 	margin: 0 0 10px;
-	font: 20.83px "CenturyGothic Bold";
+	font: 21px "GothamVnuBook Bold";
 	color: #004ebc;
 }
 .main .main_title_sub {
@@ -198,16 +206,18 @@ body {
 .main .main_link {
 	display: block;
 	margin: 0 0 0 20px;
-	font: 16.67px "CenturyGothic";
+	font: 16px "GothamVnuBook";
 	color: #ff4600;
+	line-height: 25px;
 }
 .main .main_link-nomargin {
 	margin: 0;
 }
 .main .main_content {
-	margin: 30px 0 0;
-	font: 14.58px "CenturyGothic";
-	color: #000;
+	margin: 0 0 10px;
+	font: 15px "GothamVnuBook";
+	color: #333;
+	line-height: 21px;
 }
 .main .main_content_spc {
 	margin: 0 0 30px;
@@ -227,7 +237,7 @@ body {
 }
 .main .main_contact {
 	display: block;
-	font: 25px "CenturyGothic Bold";
+	font: 25px "GothamVnuBook Bold";
 	color: #ff4600;
 }
 .main .main_contact-center {
