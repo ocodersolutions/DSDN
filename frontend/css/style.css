@@ -441,6 +441,11 @@ clear: both;
 .uc_tittle, small{
       font-family:'Century Gothic';
 }
+.header-wrapper{
+      background-image: url(../img/bg-header-2.png);
+      background-repeat: no-repeat;
+      
+}
 
 /*========== main style =========*/
 @media (min-width: 1300px) {
