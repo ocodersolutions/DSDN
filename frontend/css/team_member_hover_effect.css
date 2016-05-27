@@ -6,6 +6,7 @@
 .uc_member_hover_effect {
 	font-family:'Montserrat';
 	width: 100%;
+	padding: 10px;
 }
 .uc_member_hover_effect .uc_box_image {
 	width: 100%;
@@ -30,7 +31,7 @@
 	transition: all 0.3s ease-in-out;
 }
 .uc_member_hover_effect .uc_box_image .uc_overlay {
-	background: rgba(7,170,165,.75);
+	background: rgba(7, 170, 165, 0.37);
 	position: absolute;
 	width: 100%;
 	bottom: 0;
@@ -123,25 +124,40 @@
 	text-align: center;
 }
 .uc_member_hover_effect .uc_paragraph small {
-	font-family: 'Montserrat';
 	font-weight: lighter;
 	color: #222222;
 	font-size: 16px;
 	margin: 10px 0 20px;
 	display: inline-block;
+
+
 }
 .uc_member_hover_effect .uc_paragraph {
 	font-size: 22px;
 	margin-top: 5px;
 	text-align: center;
+	background-color: #EEEEEE;
 }
 .uc_member_hover_effect .uc_paragraph .uc_tittle{
 	text-transform: uppercase;
+	font-size: 14px;
+	color: #FFFFFF;
+	padding: 8px;
+
 }
+h3.uc_tittle{
+	position: relative; 
+	margin: 0 -px; 
+	background: #0088AA; 
+	text-shadow: 1px 1px 0px #1A5D6E; 
+	box-shadow: 0 0 10px #AAA;
+}
+
 .uc_member_hover_effect .uc_paragraph .uc_content {
 	font-size: 16px;
 	font-family: 'Source Sans Pro';
 	margin: 0 10px;
+	padding-bottom: 20px;
 }
 
 @media only screen and (max-width: 767px) {
