@@ -839,6 +839,9 @@ clear: both;
 	text-align: center;
 	text-shadow: -1px 0 2px #fff, 0 -1px 2px #fff, 1px 0 2px #fff, 0 1px 2px #fff;
 }
+.block{
+	margin-bottom: 20px;
+}
 /*========== News ==========*/
 .newpost {
 	border: 1px solid #004ebc;
