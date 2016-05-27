@@ -896,6 +896,71 @@ clear: both;
       color: #444;
       padding: 3px;
 }
+.tinanh {
+	border: 1px solid #004ebc;
+	margin-right: 30px;
+
+}
+.tinanh span.tittle {
+	display: block;
+	padding: 10px;
+	background-color: #004ebc;
+	font: bold 21px "Century Gothic";
+	color: #fff;
+}
+.tinanh .items {
+    padding: 5px;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    float: left; */
+    
+}
+.tinanh .items img {
+    float: left;
+    margin-right: 10px;
+    width: 70px;
+    padding: 2px;
+    border: #CCC 1px solid;
+}
+.tinanh .items a {
+	text-transform: uppercase;
+	font: 16px "Century Gothic";
+	color:#ff4600;
+    font-weight: bold;
+    text-decoration: none;
+}
+.tinanh .link a.linkmore{
+
+	font: 16px "Century Gothic";
+	color: #ff4600;
+	line-height: 22px;
+	padding-right: 10px;
+}
+.tinanh .link{
+	box-sizing: border-box;
+    text-align: right;
+    display: block;
+    width: 100%;
+    margin: 5px;
+
+}
+.tinanh .items span.info{
+	font-size: 11px;
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+}
+.row-line{
+      width: 100%;
+      border-bottom: 4px solid #004ebc;
+
+}
+.addmore .row-line span{
+      
+      color: #444;
+      padding: 3px;
+}
 @media (min-width: 992px) {
 	.addmore {
 		display: flex;
