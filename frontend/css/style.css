@@ -143,12 +143,20 @@
  }
  
  header {
-     padding: 0px 0px 1px 0px;
      margin-bottom: 0 !important;
+     border: none;
  }
  
+header .row {
+    position: relative;
+}
+
+header .textwidget {
+    display: flex;
+}
+
  header .logo {
-     padding-top: 10px;
+     padding: 10px 0px;
  }
  
  header .logo img {
@@ -158,6 +166,8 @@
  header .phone {
      font-family: Century Gothic;
      text-align: right;
+     padding-top: 25px;
+     background-size: 100% 100%;
  }
  
  header .phone .content {
@@ -170,6 +180,7 @@
      text-transform: uppercase;
      line-height: 20px;
      font-weight: bold;
+     text-shadow: -1px 0 0 #fff,0 -1px 0 #fff,1px 0 0 #fff,0 1px 0 #fff;
  }
  
  header .phone .content .title {
@@ -191,6 +202,7 @@
      color: #004ebc;
      font-size: 37px;
      line-height: 35px;
+     text-shadow: -1px 0 0 #fff,0 -1px 0 #fff,1px 0 0 #fff,0 1px 0 #fff;
  }
  
  header .phone .content .wrt {
@@ -198,6 +210,7 @@
      font-size: 16px;
      text-transform: uppercase;
      line-height: 10px;
+     text-shadow: -1px 0 0 #fff,0 -1px 0 #fff,1px 0 0 #fff,0 1px 0 #fff;
  }
  
  header .click-to-phone-image {
@@ -538,6 +551,10 @@
      transform: scale(1.1);
  }
  
+.container-2 > div > div:nth-child(2) {
+    padding: 10px 0px;
+}
+
  .container-2 .copyright p {
      margin: 0;
  }
@@ -609,388 +626,51 @@
      width: 100%;
      color: #FFFFFF;
  }
+ .login {
+    margin: 0;
+    border: 1px solid #004ebc;
+ }
+ .login > span {
+    display:block;
+    padding: 10px;
+    background-color:#004ebc;
+    font:bold 20px 'Century Gothic';
+    color:#fff;
+ }
+ .login > div {
+    padding:0 10px;
+ }
+ .login form label {
+    margin:10px 0;
+    font:bold 16px 'Century Gothic';
+    color: #000;
+ }
+ .login form input {
+    margin:0 0 10px;
+    padding:5px;
+    font:16px 'Century Gothic';
+    width:100%;
+ }
+ .login form button {
+    padding:5px;
+    margin:0 0 10px;
+    font:16px 'Century Gothic';
+    color:#000;
+ }
+ .login form a {
+    display:inline;
+    margin:0 0 10px 10px;
+    font:16px 'Century Gothic';
+    color:#004ebc;
+ }
+ .partner {
+    display:block;
+    margin:50px 15px 0;
+    border-bottom:4px solid #004ebc;
+ }
  /*========== main style =========*/
  
- @media (min-width: 1300px) {
-     .container {
-         width: 1300px !important;
-     }
-     header .logo img {
-         margin-left: 0px;
-     }
-     .menu-main .request-quote {
-         margin-left: 40px;
-     }
-     .menu-main .navbar-nav {
-         margin-right: 160px;
-     }
-     .page-default .content {
-         padding-bottom: 170px;
-     }
-     .page-home .content {
-         padding-bottom: 220px !important;
-     }
-     .bs-docs-footer {
-         background-position: top;
-         margin-top: -240px;
-     }
-     .bs-docs-footer .menu-footer {
-         margin-top: 150px;
-     }
-     .page-contact .form-contact {
-         margin-top: 30px;
-     }
-     .page-contact .form-contact .control-label {
-         line-height: 33px;
-     }
-     .page-contact #first_name,
-     .page-contact #last_name,
-     .page-contact #pri_phone,
-     .page-contact #sec_phone,
-     .page-contact #loss_cause,
-     .page-contact #prop,
-     .page-contact #loss_type,
-     .page-contact #email,
-     .page-contact #priority {
-         width: 200px;
-     }
-     .page-contact #postal_code {
-         width: 100px;
-     }
-     .page-contact #street_add {
-         width: 300px;
-     }
-     .page-contact #apt {
-         width: 100px;
-     }
-     .page-contact #prop {
-         margin-left: -12px;
-     }
-     .page-contact #email {
-         width: 404px;
-     }
-     .page-contact select {
-         width: 207px !important;
-     }
-     .page-contact #comments {
-         width: 672px;
-     }
- }
  
- @media (max-width: 1299px) {
-     .title-default {
-         font-size: 16px;
-     }
-     .sub-title-default {
-         font-size: 15px;
-         line-height: 20px;
-     }
-     .page-default .content {
-         padding-bottom: 120px;
-     }
-     .page-default .content .main-content-wrap .sidebar-right .title {
-         font-size: 14px !important;
-     }
-     .page-default .content .main-content-wrap .sidebar-right .phone {
-         font-size: 25px !important;
-     }
-     .page-home .content {
-         padding-bottom: 150px !important;
-     }
-     .bs-docs-footer {
-         margin-top: -150px;
-         background-position: top;
-     }
-     .bs-docs-footer .contact-us {
-         font-size: 18px;
-     }
-     .bs-docs-footer .menu-footer {
-         margin-top: 100px;
-     }
- }
- 
- @media (max-width: 1023px) {
-     .container {
-         padding: 0;
-     }
-     .row {
-         margin: 0;
-     }
-     header .phone .content .main-content-wrap {
-         padding-left: 45px;
-     }
-     header .phone .content .title {
-         font-size: 20px;
-     }
-     header .phone .content .phone-number {
-         font-size: 25px;
-     }
-     header .phone .content .wrt {
-         font-size: 13px;
-     }
-     .menu-main .request-quote {
-         font-size: 13px;
-         margin-left: 20px;
-     }
-     .menu-main .navbar-nav li a {
-         font-size: 13px;
-         line-height: 18px;
-         padding: 15px 10px;
-     }
-     .page-default .content {
-         padding-top: 20px;
-     }
-     .page-default .content .sidebar-left {
-         
-         padding: 15px 30px;
-         margin-top: 20px;
-         width: 100%;
-     }
-     .page-home .sub-slider {
-         margin-top: -70px;
-     }
-     .bs-docs-footer {
-         background-position: bottom;
-     }
-     .page-bio img.img-content,
-     .page-fire img.img-content,
-     .page-water img.img-content,
-     .page-mold img.img-content {
-         display: block !important;
-         margin: 0 auto;
-         float: none;
-         margin-top: 0px;
-     }
-     .page-contact .form-group {
-         margin-bottom: 15px;
-     }
-     .page-contact .sidebar-right {
-         clear: both;
-     }
-     .form-inline .form-control {
-         width: 100% !important;
-         margin-top: 10px;
-     }
-     #datetimepicker1 {
-         margin-top: 10px;
-     }
-     #datetimepicker1 .form-control {
-         margin-top: 0px;
-     }
-     .tinanh {
-        margin-right: 0px;
-     }
- }
- 
- @media (max-width: 767px) {
-     .container-fluid > .navbar-collapse,
-     .container-fluid > .navbar-header,
-     .container > .navbar-collapse,
-     .container > .navbar-header {
-         margin: 0;
-     }
-     header .phone .content .title {
-         font-size: 16px;
-     }
-     header .phone .content .phone-number {
-         font-size: 20px;
-         line-height: 15px;
-     }
-     header .phone .content .wrt {
-         font-size: 10px;
-         line-height: 10px;
-     }
-     .page-default .content {
-         padding-bottom: 200px !important;
-     }
-     .menu-main .navbar-nav {
-         float: left;
-         width: 100%;
-         margin: 0;
-     }
-     .menu-main .navbar-nav li a {
-         padding: 15px 20px;
-     }
-     .menu-main .navbar-nav .parent-item.open a {
-         color: #000;
-     }
-     .menu-main .navbar-nav .parent-item.open .dropdown-menu a {
-         color: #fff;
-         padding: 8px 40px;
-     }
-     .menu-main .navbar-nav .parent-item.open .dropdown-menu a:hover {
-         color: #000;
-     }
-     .navbar-collapse {
-         padding: 0;
-     }
-     .page-default .content .main-content-wrap .sidebar-right {
-         margin-top: 30px;
-         text-align: center;
-     }
-     .bs-docs-footer .menu-footer {
-         margin-top: 30px;
-         text-align: center;
-     }
-     .bs-docs-footer .menu-footer .giaa {
-         text-align: center;
-         margin-top: 20px;
-     }
-     .bs-docs-footer {
-         margin-top: -140px;
-     }
-     .bs-docs-footer .contact-us-wrap {
-         width: 100%;
-         margin: 30px 0 0 0;
-         text-align: right;
-     }
-     .bs-docs-footer .contact-us-wrap .contact-us {
-         font-size: 13px;
-     }
-     .bs-docs-footer .copyright a {
-         display: block;
-         text-align: center;
-         border-right: 0 !important;
-         margin-bottom: 8px;
-     }
-     .page-home .sub-slider .slide-item {
-         margin-bottom: 10px;
-         padding: 3px !important;
-     }
-     .page-home .sub-slider .slide-item a img:hover {
-         border: 1px solid;
-         box-shadow: 4px 10px 5px rgba(136, 136, 136, 0.46);
-     }
-     .property-type,
-     .loss-type {
-         margin-top: 10px;
-     }
-     .property-type .control-label,
-     .loss-type .control-label {
-         padding: 0;
-     }
-     .property-type .col-md-6,
-     .loss-type .col-md-6 {
-         padding: 0;
-     }
- }
- 
- @media (max-width: 479px) {
-     header .logo,
-     header .phone {
-         width: 100%;
-     }
-     header .logo {
-         text-align: center;
-         margin-bottom: 10px;
-     }
-     header .phone {
-         display: none;
-     }
-     .click-to-phone-image {
-         display: block !important;
-         text-align: right !important;
-     }
-     .click-to-call-phone {
-         display: block !important;
-         font-family: Century Gothic !important;
-         font-size: 28px !important;
-         font-weight: bold !important;
-         text-align: right !important;
-         margin-top: 3px !important;
-     }
-     .click-to-call-phone a {
-         color: #ff4600 !important;
-     }
-     .page-default .content {
-         padding-bottom: 200px !important;
-     }
-     header {
-         padding-bottom: 0;
-     }
-     .bs-docs-footer {
-         margin-top: -180px;
-     }
-     .bs-docs-footer .contact-us {
-         font-size: 15px;
-     }
-     .page-home .sub-slider {
-         margin-top: -50px;
-     }
-     .click-to-phone-porfolio {
-         display: block;
-     }
-     .click-to-phone-porfolio .click-to-phone-image .left .flooded {
-         font-size: 26px !important;
-     }
-     .click-to-phone-porfolio .click-to-phone-image .left .emergency {
-         font-size: 12px !important;
-     }
-     .click-to-phone-porfolio .click-to-call-phone .right .phone-number {
-         line-height: 15px !important;
-         padding: 10px 0 5px !important;
-     }
-     .click-to-phone-porfolio .click-to-call-phone .right .click {
-         font-size: 10px !important;
-     }
-     .click-to-phone-porfolio .wrt {
-         color: #ff4600;
-         font-size: 16px;
-         text-transform: uppercase;
-         text-align: center;
-     }
- }
- 
- @media (max-width: 399px) {
-     .click-to-call-phone {
-         font-size: 22px;
-     }
-     .click-to-phone-porfolio .click-to-phone-image .left .flooded {
-         font-size: 21px !important;
-     }
-     .click-to-phone-porfolio .click-to-phone-image .left .emergency {
-         font-size: 9px !important;
-     }
-     .click-to-call-phone .right .phone-number {
-         line-height: 15px !important;
-         padding: 10px 0 5px !important;
-         font-size: 22px !important;
-     }
-     .click-to-call-phone .right .click {
-         font-size: 10px !important;
-     }
-     .click-to-phone .click-to-call-phone a {
-         font-size: 22px;
-     }
- }
- 
- @media (max-width: 319px) {
-     .click-to-call-phone {
-         font-size: 18px !important;
-     }
-     .bs-docs-footer {
-         margin-top: -210px;
-     }
-     .bs-docs-footer .contact-us {
-         font-size: 13px;
-     }
-     .click-to-phone .click-to-call-phone a {
-         font-size: 20px;
-     }
-     .click-to-phone-porfolio .click-to-phone-image .left .flooded {
-         font-size: 20px !important;
-     }
-     .click-to-phone-porfolio .click-to-phone-image .left .emergency {
-         font-size: 8px !important;
-     }
-     .click-to-phone-porfolio .click-to-call-phone .right .phone-number {
-         line-height: 15px !important;
-         font-size: 20px !important;
-     }
-     .page-contact .info-bottom .email {
-         font-size: 13px;
-     }
- }
  /*========== flex slider ========*/
  
  .flexslider {
@@ -1088,6 +768,10 @@
      padding-bottom: 10px;
      border-bottom: 2px solid #004ebc;
  }
+
+ .addmore .addmore_pad {
+    margin-bottom: 20px;
+ }
  
  .addmore .row-line span {
      color: #444;
@@ -1165,21 +849,6 @@
      color: #444;
      padding: 3px;
  }
- 
- @media (min-width: 992px) {
-     .addmore {
-         display: flex;
-     }
-     .newpost {
-         margin-left: 30px;
-         height: 100%;
-     }
-     .otherlink {
-         margin-right: 30px;
-         height: 100%;
-     }
-     
- }
  /*========== member=========*/
  
  .member {
@@ -1212,23 +881,6 @@
      font: 16px "Century Gothic";
      color: #ff4600;
      line-height: 22px;
- }
- 
- @media (min-width: 992px) {
-     .addmore {
-         display: flex;
-     }
-     .member {
-         margin: 0 15px;
-         height: 100%;
-     }
-     .otherlink {
-         margin-right: 30px;
-         height: 100%;
-     }
-      .tinanh {
-        margin-right: 30px;
-    }
  }
 
  /*========== member=========*/
