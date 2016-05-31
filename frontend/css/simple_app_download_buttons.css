@@ -1,0 +1,50 @@
+.uc_simple_app_download_buttons *{
+	margin:0;
+	padding: 0;
+}
+.uc_simple_app_download_buttons{
+	margin: 0 auto;
+    position: relative;
+    text-align: center;
+    line-height: 1;
+    font-family: 'Roboto', sans-serif;
+}
+.uc_simple_app_download_buttons .uc_app_button{
+	font-size: 24px;
+    text-align: left;
+    padding: 7px 10px 7px 10px;
+    margin: 26px 44px 26px -42px;
+    z-index: 5;
+    position: relative;
+    font-size: 18px;
+    line-height: 18px;
+    color: #17BEBB;
+    text-decoration: none;
+    border: 2px solid #17BEC1;
+    border-radius: 350px;
+    transform: translate3d(0px, 0px, 0px);
+    display: inline-block;
+    background-color: transparent;
+    transition: color 0.3s, background-color 0.3s;
+    -webkit-transition: color 0.3s, background-color 0.3s;
+}
+.uc_simple_app_download_buttons .uc_app_button:hover{
+    color: #fff;
+    background-color:#5cadad;
+}
+.uc_simple_app_download_buttons .uc_app_button .fa {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.uc_simple_app_download_buttons .uc_app_button i {
+	font-size: 17px;
+    margin-right: 6px;
+    margin-top: 0px;
+}
+.uc_simple_app_download_buttons .uc_app_button .uc_button_app{
+	font-size: 14px;
+    float: right;
+}
+.uc_simple_app_download_buttons .uc_app_button .uc_button_app .uc_app_os{
+	font-size: 24px;
+}
