@@ -9,17 +9,10 @@
          margin-left: 40px;
      }
      .menu-main .navbar-nav {
-         margin-right: 160px;
-     }
-     .page-default .content {
-         padding-bottom: 170px;
-     }
-     .page-home .content {
-         padding-bottom: 220px !important;
+        margin-right: 160px;
      }
      .bs-docs-footer {
-         background-position: top;
-         margin-top: -220px;
+        background-position: top;
      }
      .bs-docs-footer .menu-footer {
          margin-top: 150px;

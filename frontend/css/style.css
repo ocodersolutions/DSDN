@@ -128,9 +128,9 @@
  
  .sub-title-default {
      font-family: Century Gothic;
-     color: #ff4600;
-     font-size: 16px;
-     line-height: 25px;
+    color: #004ebc;
+    font-size: 16px;
+    line-height: 25px;
  }
  
  .p-default {
@@ -316,7 +316,6 @@ header .textwidget {
  
  .page-default .content {
      background-color: #fff;
-     padding-bottom: 200px;
      padding-top: 40px;
  }
  
@@ -518,8 +517,8 @@ header .textwidget {
  
  .container-1 .block i {
      color: #FFFFFF;
-     font-size: 40px;
-     margin-left: 30px;
+     font-size: 30px;
+     margin-left: 16px;
      -moz-transition: all 0.3s;
      -webkit-transition: all 0.3s;
      transition: all 0.3s;
@@ -537,7 +536,7 @@ header .textwidget {
  }
  
  .container-1 .contact-phone i {
-     font-size: 30px;
+     font-size: 20px;
  }
  
  .container-1 .address i {
@@ -565,14 +564,15 @@ header .textwidget {
  }
  
  .container-1 p.sdt {
-     font-size: 25px;
+     font-weight: bold;
+     font-size: 16px;
      margin-bottom: 0px;
      margin-top: -5px;
  }
  
  .bs-docs-footer hr {
-     margin-top: 37px;
-     margin-bottom: 37px;
+     margin-top: 0px;
+     margin-bottom: 20px;
  }
  
  .bs-docs-footer .contact-us {
@@ -756,11 +756,11 @@ header .textwidget {
  
  .otherlink a {
      display: block;
-     padding: 10px 5px 10px 25px;
-     background: url(img/marker.png) no-repeat 10px center;
-     font: 16px "Century Gothic";
-     color: #ff4600;
-     line-height: 22px;
+    padding: 10px 5px 10px 25px;
+    background: url(../img/marker.png) no-repeat 10px center;
+    font: 16px "Century Gothic";
+    color: #004ebc;
+    line-height: 22px;
  }
  
  .row-line {
@@ -813,14 +813,14 @@ header .textwidget {
  .tinanh .items a {
      text-transform: uppercase;
      font: 14px "Century Gothic";
-     color: #ff4600;
+     color: #004ebc;
      font-weight: bold;
      text-decoration: none;
  }
  
  .tinanh .link a.linkmore {
      font: 16px "Century Gothic";
-     color: #ff4600;
+     color: #004ebc;
      line-height: 22px;
      padding-right: 10px;
  }
