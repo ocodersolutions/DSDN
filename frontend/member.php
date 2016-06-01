@@ -1,7 +1,7 @@
 <?php include "header.php";?>
     <div class="contact-content">
         <div class="container">
-            <img src="img/contact-img.jpg" alt="">   
+            <img src="img/contact-img.jpg" alt="hình nền">   
             <p class="contact_p">Các đơn vị của ĐSĐN</p>
             <div class="col-md-12">
                 
@@ -25,7 +25,7 @@
                 </div>
                 <div class="col-sm-12 member-item">
                     <div class="col-xs-2 member-col">
-                        <img class="member-image" src="img/member/member-1.jpg" />
+                        <img class="member-image" src="img/member/member-1.jpg" alt="đơn vị thành viên"/>
                     </div>
                     <div class="col-xs-10">
                         <a href="#" class="member-title">Xí nghiệp TTTH ĐS Bình Trị Thiên</a>
@@ -34,7 +34,7 @@
                 </div>
                 <div class="col-sm-12 member-item">
                     <div class="col-xs-2 member-col">
-                        <img class="member-image" src="img/member/member-2.jpg" />
+                        <img class="member-image" src="img/member/member-2.jpg" alt="đơn vị thành viên" />
                     </div>
                     <div class="col-xs-10">
                         <a href="#" class="member-title">Xí nghiệp TTTH ĐS Quảng Nam - Đà Nẵng</a>
@@ -43,7 +43,7 @@
                 </div>
                 <div class="col-sm-12 member-item">
                     <div class="col-xs-2 member-col">
-                        <img class="member-image" src="img/member/member-3.jpg" />
+                        <img class="member-image" src="img/member/member-3.jpg" alt="đơn vị thành viên" />
                     </div>
                     <div class="col-xs-10">
                         <a href="#" class="member-title">Xí nghiệp TTTH ĐS Nghĩa Bình</a>
@@ -52,7 +52,7 @@
                 </div>
                 <div class="col-sm-12 member-item">
                     <div class="col-xs-2 member-col">
-                        <img class="member-image" src="img/member/member-4.jpg" />
+                        <img class="member-image" src="img/member/member-4.jpg" alt="đơn vị thành viên" />
                     </div>
                     <div class="col-xs-10">
                         <a href="#" class="member-title">Xí nghiệp SX & XLCT</a>

@@ -77,14 +77,31 @@ define('BASE_URL', 'http://localhost/ocoder/DSDN/frontend/');
                     <li class="parent-item ">
                         <a href="<?php echo BASE_URL;?>congvan.php">Công văn</a>
                     </li>
-                    <li class="parent-item ">
-                        <a href="#">Dịch vụ</a>
+                    <li class="parent-item dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Dịch vụ <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Cung cấp thiết bị</a></li>
+                            <li><a href="#">Bảo trì vận hành</a></li>
+                            <li><a href="#">Tư vấn thiết kế</a></li>
+                            <li><a href="#">Dịch vụ khác</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-item dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo BASE_URL;?>news.php">Tin tức <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Tin nội bộ</a></li>
+                            <li><a href="#">Tin tức liên quan</a></li>
+                            <li><a href="#">Tin công nghệ</a></li>
+                        </ul>
                     </li>
                     <li class="parent-item ">
-                        <a href="<?php echo BASE_URL;?>news.php">Tin tức</a>
-                    </li>
-                    <li class="parent-item ">
-                        <a href="<?php echo BASE_URL;?>member.php">Đơn vị thành viên</a>
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo BASE_URL;?>member.php">Đơn vị thành viên <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Xí nghiệp TTTH ĐS Bình Trị Thiên</a></li>
+                            <li><a href="#">Xí nghiệp TTTH ĐS Quảng Nam - Đà Nẵng</a></li>
+                            <li><a href="#">Xí nghiệp TTTH ĐS Nghĩa Bình</a></li>
+                            <li><a href="#">Xí nghiệp SX & XLCT</a></li>
+                        </ul>
                     </li>
                     <li class="parent-item ">
                         <a href="#">Tin ảnh</a>

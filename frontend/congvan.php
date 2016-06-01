@@ -1,7 +1,7 @@
 <?php include "header.php";?>
     <div class="contact-content">
         <div class="container">
-            <img src="img/van-ban-phap-luat1.jpg" alt="">   
+            <img src="img/van-ban-phap-luat1.jpg" alt="hình nền">   
             <p class="contact_p">Công văn nội bộ</p>
             <div class="col-md-12">
                 
@@ -47,7 +47,7 @@
                         </div>
                         
 
-                        <img class="uc_avatar" src="img/icon-human/1.jpg" />
+                        <img class="uc_avatar" src="img/icon-human/1.jpg" alt="avatar"/>
                     </div>
                     <!-- end of customer review box --> 
                     <!-- start of customer review box -->
@@ -74,7 +74,7 @@
                         </div>
                         
 
-                        <img class="uc_avatar" src="img/icon-human/1.jpg" />
+                        <img class="uc_avatar" src="img/icon-human/1.jpg" alt="avatar"/>
                     </div>
                     <!-- end of customer review box --> 
                     <!-- start of customer review box -->
@@ -101,7 +101,7 @@
                         </div>
                         
 
-                        <img class="uc_avatar" src="img/icon-human/1.jpg" />
+                        <img class="uc_avatar" src="img/icon-human/1.jpg" alt="avatar"/>
                     </div>
                     <!-- end of customer review box --> 
                 </div>
