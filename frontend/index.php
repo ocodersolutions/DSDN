@@ -1,100 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Công Ty Cổ Phần Thông Tin Tín Hiệu Đường Sắt Đà Nẵng | Công Ty CP Thông Tin Tín Hiệu Đường Sắt Đà Nẵng. ĐC: 218 Hải Phòng, P.Tân Chính, Q.Thanh Kkê, TP. Đà Nẵng. ĐT: (0511)3825472.</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/owl.carousel.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="css/style.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="css/responsive.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="css/background_image_content_box.css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="css/team_member_hover_effect.css"/>
-    <link rel="stylesheet" type="text/css" href="css/clean_accordion.css"/>
-    <link rel="stylesheet" type="text/css" href="css/customer_logo_carousel.css"/>
-    <link rel="stylesheet" type="text/css" href="css/minimal_logo_carousel.css" media="all"/>
-    <link rel="stylesheet" type="text/css" href="css/flexslider.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/flexslider.css" />
-    <script src="https://code.jquery.com/jquery-1.11.2.js"   integrity="sha256-WMJwNbei5YnfOX5dfgVCS5C4waqvc+/0fV7W2uy3DyU="   crossorigin="anonymous"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-</head>
-<body>
-	<!-- Docs master nav -->
-    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-        <div class="header-wrapper container">
-            <div class="row">
-            	<div class="container">
-                    <div id="text-2" class="widget_text">
-                        <div class="textwidget">
-                            <div class="logo col-sm-4 col-xs-6">
-                                <a class="home-link" href="#" title="First Choice Restoration" rel="home">
-                                <img class="img-rize" src="img/logo/logo-2.png" alt="logo">
-                                </a>
-                            </div>
-                            <div class="phone col-sm-8 col-xs-6">
-                                <div class="content">
-                                    <span class="title">Gọi ngay hôm nay</span><br>
-                                    <span class="phone-number">(0511)3825472</span><br>
-                                    <span class="wrt">Công Ty CP Thông Tin Tín Hiệu Đường Sắt Đà Nẵng</span><br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="menu-main">
-        <div class="container">
-            <div class="navbar-header">
-                <div id="text-4" class="widget_text">
-                    <div class="textwidget"><a href="#" class="request-quote">Trang chủ</a></div>
-                </div>
-                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-            </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse">
-                
-                <ul class="parent nav navbar-nav">
-                    <li class="parent-item ">
-                        <a href="#">Liên hệ</a>
-                    </li>
-                    <li class="parent-item ">
-                        <a href="#">Công văn</a>
-                    </li>
-                    <li class="parent-item ">
-                        <a href="#">Dịch vụ</a>
-                    </li>
-                    <li class="parent-item ">
-                        <a href="#">Tin tức</a>
-                    </li>
-                    <li class="parent-item ">
-                        <a href="#">Đơn vị thành viên</a>
-                    </li>
-                    <li class="parent-item ">
-                        <a href="#">Tin ảnh</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+
+<?php include "header.php";?>
     <div class="container topslider">
         <div class="flexslider">
         	<ul class="slides">
-        		<li><img src="img/top-slider/slide15.jpg" /></li>
-        		<li><img src="img/top-slider/slide16.jpg" /></li>
-        		<li><img src="img/top-slider/slide17.jpg" /></li>
-        		<li><img src="img/top-slider/slide18.jpg" /></li>
-        		<li><img src="img/top-slider/slide19.jpg" /></li>
-        		<li><img src="img/top-slider/slide20.jpg" /></li>
+        		<li><img src="<?php echo BASE_URL;?>img/top-slider/slide15.jpg" alt="slider 1" /></li>
+        		<li><img src="<?php echo BASE_URL;?>img/top-slider/slide16.jpg" alt="slider 2"/></li>
+        		<li><img src="<?php echo BASE_URL;?>img/top-slider/slide17.jpg" alt="slider 3"/></li>
+        		<li><img src="<?php echo BASE_URL;?>img/top-slider/slide18.jpg" alt="slider 4"/></li>
+        		<li><img src="<?php echo BASE_URL;?>img/top-slider/slide19.jpg" alt="slider 5"/></li>
+        		<li><img src="<?php echo BASE_URL;?>img/top-slider/slide20.jpg" alt="slider 6"/></li>
         	</ul>
         </div>
     </div>
@@ -110,7 +24,7 @@
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="img/services/orange_train.jpg" alt="" class="uc_item_img"/>
+                                                <img src="img/services/orange_train.jpg" alt="background service 1" class="uc_item_img"/>
                                                 <!-- overplay block -->
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
@@ -130,7 +44,7 @@
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="img/services/green-train.jpg" alt="" class="uc_item_img"/>
+                                                <img src="img/services/green-train.jpg" alt="background service 2" class="uc_item_img"/>
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle">Bảo trì-Vận hành</h2>
@@ -149,7 +63,7 @@
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="img/services/blue_train.jpg" alt="" class="uc_item_img"/>
+                                                <img src="img/services/blue_train.jpg" alt="background service 3" class="uc_item_img"/>
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle">Tư vấn thiết kế</h2>
@@ -168,7 +82,7 @@
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="img/services/yellow-train.jpg" alt="" class="uc_item_img"/>
+                                                <img src="img/services/yellow-train.jpg" alt="background service 4" class="uc_item_img"/>
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle">Dịch vụ khác</h2>
@@ -202,7 +116,7 @@
                                         <!-- start of  menber box block -->
                                         <div class="uc_member_hover_effect">
                                             <div class="uc_box_image">
-                                                <img src="img/icon-human/1.jpg" alt="Richard" />
+                                                <img src="img/icon-human/1.jpg" alt="MR. ANH NGUYEN " />
                                                 <!-- start of social icon block -->
                                                 <div class="uc_overlay">
                                                     <div class="uc_overlay_inner">
@@ -235,7 +149,7 @@
                                         <!-- start of  menber box block -->
                                         <div class="uc_member_hover_effect">
                                             <div class="uc_box_image">
-                                                <img src="img/icon-human/3.jpg" alt="Richard" />
+                                                <img src="img/icon-human/3.jpg" alt="MR. THAI TRAN" />
                                                 <!-- start of social icon block -->
                                                 <div class="uc_overlay">
                                                     <div class="uc_overlay_inner">
@@ -271,7 +185,7 @@
                                         <!-- start of  menber box block -->
                                         <div class="uc_member_hover_effect">
                                             <div class="uc_box_image">
-                                                <img src="img/icon-human/2.jpg" alt="Richard" />
+                                                <img src="img/icon-human/2.jpg" alt="MIS. LAN HOA" />
                                                 <!-- start of social icon block -->
                                                 <div class="uc_overlay">
                                                     <div class="uc_overlay_inner">
@@ -304,7 +218,7 @@
                                         <!-- start of  menber box block -->
                                         <div class="uc_member_hover_effect">
                                             <div class="uc_box_image">
-                                                <img src="img/icon-human/7.jpg" alt="HOANG ANH NGUYEN" />
+                                                <img src="img/icon-human/7.jpg" alt="MR. TUAN ANH " />
                                                 <!-- start of social icon block -->
                                                 <div class="uc_overlay">
                                                     <div class="uc_overlay_inner">
@@ -338,7 +252,7 @@
                                         <!-- start of  menber box block -->
                                         <div class="uc_member_hover_effect">
                                             <div class="uc_box_image">
-                                                <img src="img/icon-human/5.jpg" alt="Richard" />
+                                                <img src="img/icon-human/5.jpg" alt="MR. HUONG PHAM" />
                                                 <!-- start of social icon block -->
                                                 <div class="uc_overlay">
                                                     <div class="uc_overlay_inner">
@@ -427,7 +341,7 @@
                                                 <div id="accordion" class="uc_clean_accorder_content">
                                                     <!-- start of line 1 -->
                                                     <h3 class="uc_head_line">
-                                                       <a href="" class="uc_link_tittle sub-title-default">Lịch sử phát triển</p></a>
+                                                       <a href="" class="uc_link_tittle sub-title-default">Lịch sử phát triển</a>
                                                     </h3>
                                                     <div class="uc_line_content">
                                                         <p class="uc_des p-default">Giai đoạn đầu đầy khó khăn, gian khổ từ năm 1979 đến  1985, trong điều kiện cả nước còn ngập chìm trong cơ chế bao cấp, với biết bao khó khăn chồng chất sau cuộc chiến tranh dài của dân tộc, những khó khăn này có những lúc  tưởng chừng như không thể vượt qua  được; nhưng bằng ý chí, nghị lực và tinh thần trách nhiệm cao với sự phát triển của ngành, của đất nước bằng mồ hôi, xương máu của hơn 1500 cán bộ công nhân viên  trên 120 tổ sản xuất,  thuộc 15 đơn vị TTTH trực thuộc, 1 xưởng TTTH,  1 trường công nhân kỹ thuậtTTTH  và cơ quan đoạn đã vượt qua các khó khăn, thử thách để xây dựng và trưởng thành.</p>
@@ -437,7 +351,7 @@
 
                                                     <!-- start of line 2 -->
                                                     <h3 class="uc_head_line">
-                                                        <a href="" class="uc_link_tittle sub-title-default">Ngành nghề kinh doanh</p></a>
+                                                        <a href="" class="uc_link_tittle sub-title-default">Ngành nghề kinh doanh</a>
                                                     </h3>
                                                     <div class="uc_line_content">
                                                         <p class="uc_des p-default">
@@ -489,20 +403,20 @@
                                         <div class="tinanh">
                                             <span class="tittle">Tin ảnh</span>
                                             <div class="items">
-                                            <a href=""><img src="img/tinanh/tin anh 1_.jpg" alt="" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                                            <a href=""><img src="img/tinanh/tin anh 1_.jpg" alt="tin ảnh" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="img/tinanh/tin anh 2_.jpg" alt="" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                                            <a href=""><img src="img/tinanh/tin anh 2_.jpg" alt="tin ảnh" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="img/tinanh/tin anh 3_.jpg" alt="" title="Hoạt động công ty" class="img"></a>
+                                            <a href=""><img src="img/tinanh/tin anh 3_.jpg" alt="tin ảnh" title="Hoạt động công ty" class="img"></a>
                                             <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="img/tinanh/post1.jpg" alt="" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                                            <a href=""><img src="img/tinanh/post1.jpg" alt="tin ảnh" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
@@ -545,6 +459,8 @@
                                     <div id="awcc1464314833494" class="aw-widget-current"  data-locationkey="352954" data-unit="c" data-language="vi" data-useip="false" data-uid="awcc1464314833494"></div>
                                     
                                 </div>
+                                <!-- weather wigets js -->
+                                <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
                                 <div class="block login">
                                     <span>ĐĂNG NHẬP</span>
                                     <div>
@@ -569,100 +485,29 @@
                 <!-- start of customer logo carousel -->
                 <div id="uc_customer_logo_carousel" class="uc_customer_logo_carousel">
                     <div class="uc_item">
-                        <img class="uc_logo" src="img/logo/ds_03.jpg" />
+                        <img class="uc_logo" src="img/logo/ds_03.jpg" alt="slide logo" />
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="img/logo/ds_04.jpg" />
+                        <img class="uc_logo" src="img/logo/ds_04.jpg" alt="slide logo"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="img/logo/ds_05.jpg" />
+                        <img class="uc_logo" src="img/logo/ds_05.jpg" alt="slide logo"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="img/logo/ds_06.jpg" />
+                        <img class="uc_logo" src="img/logo/ds_06.jpg" alt="slide logo"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="img/logo/ds_03.jpg" />
+                        <img class="uc_logo" src="img/logo/ds_03.jpg" alt="slide logo" />
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="img/logo/ds_04.jpg" />
+                        <img class="uc_logo" src="img/logo/ds_04.jpg" alt="slide logo"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="img/logo/ds_05.jpg" />
+                        <img class="uc_logo" src="img/logo/ds_05.jpg" alt="slide logo"/>
                     </div>
                 </div>
                 <!-- end of customer logo carousel -->
             </div>
         </div>
     </div>
-    <!-- Footer block-->
-    <footer class="bs-docs-footer" role="contentinfo">
-        <div class="container-1">
-            <div class="row">
-                <div class="container">
-                    <div class="col-md-6 social">
-                        <div class="social-block">
-                            <h4 class="float-left">Kết nối:</h4>
-                            <div class="block">
-                                <a href="#">
-                                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                    <i class="fa fa-youtube" aria-hidden="true"></i>
-                                </a>
-                                <a href="#">
-                                   <i class="fa fa-google-plus-square" aria-hidden="true"></i>
-                                </a>
-                            </div>
-                            <hr>
-                            <div class="btm-links"> 
-                                <a class="first-link" href="/">Trang Chủ</a>
-                                <a href="/uk-day-trips/index.html">Công Văn</a>
-                                <a href="/uk-day-trips/index.html">Dịch vụ</a>
-                                <a href="/travel-tours/">Tin Tức</a>
-                                <a href="/about-us/">Đơn Vị Thành Viên</a>
-                                <a href="/contact-us">Tin Ảnh</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-6">
-                         <div class="social-block  pull-right">
-                            <h4>CÔNG TY CP THÔNG TIN TÍN HIỆU ĐƯỜNG SẮT ĐÀ NẴNG</h4>
-                            <div class="block">
-                                <div class="address">
-                                    
-                                    <i class="fa fa-home" aria-hidden="true"></i>  
-                                    <p>218 Hải Phòng, P.Tân Chính, Q.Thanh Khê, TP.Đà Nẵng</p>
-                                </div>
-                                <div class="contact-phone">
-                                    
-                                    <i class="fa fa-phone" aria-hidden="true"></i>
-                                    <p class="sdt">(0511) 382 5472</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container-2 copyright center">
-             <div class="row">
-                <div class="col-md-8  col-md-offset-2 col-xs-10 col-xs-offset-1">
-                        <div class="social-block text-center">
-                          <span class="block copyright">
-                            <p>Copyright © 2016  | Bản quyền thuộc về : Công ty CP Thông Tin Tín Hiệu Đường Sắt Đà Nẵng</p>
-                          </span>
-                        </div>
-                </div>
-                
-            </div>
-        </div>
-    </footer>
-    <!-- weather wigets js -->
-    <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
-    <!-- js occodion in maincontent-->
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-    <!-- main js file -->
-    <script src="js/main.js"></script>
-</body>
-</html>
+    <?php include "footer.php";?>
