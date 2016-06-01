@@ -191,6 +191,10 @@ form input:focus,form textarea:focus{
     padding: 0 30px;
     margin: 10px 0;
 }
+.news .new_box .link .linkmore {
+    font-size: 16px;
+    float: right;
+}
 .pagination_line{
 	text-align: center;
 }
@@ -214,6 +218,28 @@ ul.pagination_news  li a:active,
 ul.pagination_news  li a:focus{
 	background-color:#004ebc;
 	color: #fff; 
+}
+/*======= newsdetail page ====*/
+.news_content{
+    font: normal 20px "Century Gothic";
+    color: rgba(0, 0, 0, 0.64);
+}
+.news_content span {
+    margin: 10px 0;
+    display: block;
+    font-size: 18px;
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+}
+.news_content .new_tittle{
+    font-size: 30px;
+    font-weight: bold;
+    color:#004ebc;
+}
+.news_content .short_des{
+    
+    font-weight: bold;
+    color: #000;
 }
 @media (max-width: 1190px){
 	.contact-content .contact_p{
