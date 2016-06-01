@@ -46,3 +46,7 @@ $("#uc_customer_logo_carousel").owlCarousel({
 	itemsTabletSmall: [640,2],
 	itemsMobile : [380,1],
 });
+//
+$( "#accor-congvan" ).accordion({
+      collapsible: true
+});
