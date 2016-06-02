@@ -1,5 +1,6 @@
 <?php 
 define('BASE_URL', 'http://localhost/ocoder/DSDN/frontend/');
+//define('BASE_URL', 'http://localhost:8089/ocoder/DSDN/frontend/');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -24,10 +25,13 @@ define('BASE_URL', 'http://localhost/ocoder/DSDN/frontend/');
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/flexslider.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/contact.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/member.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/news_image.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/magnific-popup.css" />
     <script src="https://code.jquery.com/jquery-1.11.2.js"   integrity="sha256-WMJwNbei5YnfOX5dfgVCS5C4waqvc+/0fV7W2uy3DyU="   crossorigin="anonymous"></script>
     <script src="<?php echo BASE_URL;?>js/bootstrap.js"></script>
     <script src="<?php echo BASE_URL;?>js/jquery.js"></script>
     <script src="<?php echo BASE_URL;?>js/jquery.flexslider-min.js"></script>
+    <script src="<?php echo BASE_URL;?>js/jquery.magnific-popup.min.js"></script>
 </head>
 <body>
 	<!-- Docs master nav -->

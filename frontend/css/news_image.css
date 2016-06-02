@@ -1,0 +1,8 @@
+div[class^="parent_group"] {
+	margin: 0 0 40px;
+}
+.child_group p {
+	margin: 10px 0 0;
+	font: 16px "Century Gothic";
+	color: #004ebc;
+}
