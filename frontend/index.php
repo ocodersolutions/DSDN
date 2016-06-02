@@ -507,4 +507,4 @@
             </div>
         </div>
     </div>
-    <?php include "fooer.php";?>
+    <?php include "footer.php";?>
