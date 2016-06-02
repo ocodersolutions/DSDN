@@ -27,95 +27,72 @@
                             </div> 
                         </div>
                         <hr class="block">
-                    </div>
-                    <div class="new_box">
-                        <div class="first_news">
-                           <img src="img/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
-                            <div class="first_new_content">
-                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
-                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
-                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
-                                <a href="" class="link_detail"> Xem chi tiết</a>
-                            </div> 
+                        <div class="under_new_content">
+                            <a href="#">Tổng công ty đường sắt Việt Nam</a>
+                            <a href="#">Công ty tín hiệu đường sắt Hà Nội</a>
+                            <a href="#">Công ty thông tin tín hiệu đường sắt Đà Nẵng</a>
+                            <a href="#">Công ty thông tin tín hiệu đường sắt Sài Gòn</a>
+                            <a href="#">Báo điện tử VnExpress</a>
+                            <a href="#">Báo điện tử Dân trí</a>
                         </div>
-                        <hr class="block">
-                    </div>
-                    <div class="new_box">
-                        <div class="first_news">
-                           <img src="img/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
-                            <div class="first_new_content">
-                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
-                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
-                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
-                                <a href="" class="link_detail"> Xem chi tiết</a>
-                            </div> 
-                        </div>
-                        <hr class="block">
-                    </div>
-                    <div class="new_box">
-                        <div class="first_news">
-                           <img src="img/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
-                            <div class="first_new_content">
-                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
-                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
-                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
-                                <a href="" class="link_detail"> Xem chi tiết</a>
-                            </div> 
-                        </div>
-                        <hr class="block">
-                    </div>
-                    <div class="new_box">
-                        <div class="first_news">
-                           <img src="img/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
-                            <div class="first_new_content">
-                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
-                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
-                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
-                                <a href="" class="link_detail"> Xem chi tiết</a>
-                            </div> 
-                        </div>
-                        <hr class="block">
-                    </div>
-                    <div class="new_box">
-                        <div class="first_news">
-                           <img src="img/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
-                            <div class="first_new_content">
-                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
-                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
-                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
-                                <a href="" class="link_detail"> Xem chi tiết</a>
-                            </div> 
-                        </div>
-                        <hr class="block">
-                    </div>
-                    <div class="new_box">
-                        <div class="first_news">
-                           <img src="img/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
-                            <div class="first_new_content">
-                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
-                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
-                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
-                                <a href="" class="link_detail"> Xem chi tiết</a>
-                            </div> 
-                        </div>
-                        <hr class="block">
-                    </div>
-                    <div class="pagination_line">
-                        <ul class="pagination_news">
-                            <li><a href="#">«</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a class="active" href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">6</a></li>
-                            <li><a href="#">7</a></li>
-                            <li><a href="#">»</a></li>
-                        </ul>
+                        <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+                        
                     </div>
                 </div>
+                <hr>
+                <div class="news">
+                    <span class="new_tittle">Tin tức liên quan</span>
+                    <hr>
+                    <div class="new_box">
+                        <div class="first_news">
+                           <img src="img/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
+                            <div class="first_new_content">
+                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
+                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
+                                <a href="" class="link_detail"> Xem chi tiết</a>
+                            </div> 
+                        </div>
+                        <hr class="block">
+                        <div class="under_new_content">
+                            <a href="#">Tổng công ty đường sắt Việt Nam</a>
+                            <a href="#">Công ty tín hiệu đường sắt Hà Nội</a>
+                            <a href="#">Công ty thông tin tín hiệu đường sắt Đà Nẵng</a>
+                            <a href="#">Công ty thông tin tín hiệu đường sắt Sài Gòn</a>
+                            <a href="#">Báo điện tử VnExpress</a>
+                            <a href="#">Báo điện tử Dân trí</a>
+                        </div>
+                        <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+                    </div>
+                </div> 
+                <hr>   
+                <div class="news">
+                    <span class="new_tittle">Tin Công Nghệ</span>
+                    <hr>
+                    <div class="new_box">
+                        <div class="first_news">
+                           <img src="img/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
+                            <div class="first_new_content">
+                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
+                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
+                                <a href="" class="link_detail"> Xem chi tiết</a>
+                            </div> 
+                        </div>
+                        <hr class="block">
+                        <div class="under_new_content">
+                            <a href="#">Tổng công ty đường sắt Việt Nam</a>
+                            <a href="#">Công ty tín hiệu đường sắt Hà Nội</a>
+                            <a href="#">Công ty thông tin tín hiệu đường sắt Đà Nẵng</a>
+                            <a href="#">Công ty thông tin tín hiệu đường sắt Sài Gòn</a>
+                            <a href="#">Báo điện tử VnExpress</a>
+                            <a href="#">Báo điện tử Dân trí</a>
+                        </div>
+                        <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+                    </div>
+                </div>
+                 <hr>        
             </div>
-                
             <div class="col-sm-4 block">
                  
                 <div class="tinanh">

@@ -402,15 +402,15 @@
                                         <div class="tinanh">
                                             <span class="tittle">Tin ảnh</span>
                                             <div class="items">
-                                            <a href=""><img src="img/tinanh/tin anh 1_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                                            <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="img/tinanh/tin anh 2_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                                            <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="img/tinanh/tin anh 3_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a>
+                                            <a href=""><img src="img/tinanh/tin_anh3_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a>
                                             <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
@@ -430,6 +430,19 @@
                                 </div>
                             </div>
                             <div class="sidebar-left col-md-3 col-sm-12">
+                            <div class="block login">
+                                    <span>ĐĂNG NHẬP</span>
+                                    <div>
+                                        <form action="" method="post">
+                                            <label for="acount">Tài khoản</label>
+                                            <input id="acount" type="text" />
+                                            <label for="pass">Mật khẩu</label>
+                                            <input id="pass" type="text" />
+                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                            <a href="#">Quên mật khẩu?</a>
+                                        </form>
+                                    </div>
+                                </div>
                                 <div class="menu-left-1">
                                     <h2 class="title-default">Sản phẩm, dịch vụ</h2>
                                     <ul class="menu-list">
@@ -443,6 +456,7 @@
                                     </ul>
                                 </div>
                                 <!-- END .menu-left-1 -->
+
                                 <div class="menu-left-2">
                                     <h2 class="title-default">Văn phòng điều hành</h2>
                                     <ul class="menu-list">
@@ -458,19 +472,7 @@
                                     <div id="awcc1464314833494" class="aw-widget-current"  data-locationkey="352954" data-unit="c" data-language="vi" data-useip="false" data-uid="awcc1464314833494"></div>
                                     
                                 </div>
-                                <div class="block login">
-                                    <span>ĐĂNG NHẬP</span>
-                                    <div>
-                                        <form action="" method="post">
-                                            <label for="acount">Tài khoản</label>
-                                            <input id="acount" type="text" />
-                                            <label for="pass">Mật khẩu</label>
-                                            <input id="pass" type="text" />
-                                            <button type="submit">Đăng nhập</button>
-                                            <a href="#">Quên mật khẩu?</a>
-                                        </form>
-                                    </div>
-                                </div>
+                                
                                 <!-- END .menu-left-2 -->
                             </div>
                         </div>
@@ -507,4 +509,4 @@
             </div>
         </div>
     </div>
-    <?php include "fooer.php";?>
+    <?php include "footer.php";?>

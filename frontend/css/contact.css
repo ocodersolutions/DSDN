@@ -37,7 +37,7 @@
    
 }
 .contact_info p{
-	font-weight: bold;
+	
 }
 .contact_info p span{
 	margin-left: 5px;
@@ -62,7 +62,7 @@ form input,form textarea {
     outline: 0;
     background: 0 0;
     border: 0;
-    background: rgba(0, 0, 0, 0) no-repeat;
+    background: rgba(0, 0, 0, 0.05) no-repeat;
     background-image: linear-gradient(to bottom, #004EBC, #004EBC), linear-gradient(to bottom, #fbfbfb, #fbfbfb);
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;
@@ -70,6 +70,7 @@ form input,form textarea {
 }
 form input.input_email,
 form input.input_fname,form textarea{
+    padding: 0 8px;
 	border-bottom: 1px solid #004EBC;
 }
 form textarea{
@@ -116,6 +117,10 @@ form input:focus,form textarea:focus{
     font: bold 20px "Century Gothic";
     color: #fff;	
 }
+.news a {
+    color: #fff;
+    text-decoration: none;
+}
 .news span.new_tittle{
 	position: relative;
     top: 11px;
@@ -152,6 +157,7 @@ form input:focus,form textarea:focus{
 	height: auto;
 }
 .news .new_box .first_news .first_new_content{
+    color: #333;
     max-height: 480px;
 	margin-left: 30px;
     display: inline-block;
@@ -165,7 +171,7 @@ form input:focus,form textarea:focus{
     font-weight: normal;
 }
 .news .new_box .first_news .first_new_content p{
-	font-size: 16px;
+	font-size: 14px;
     font-style: italic;
     font-weight: normal;
     color: #000;
@@ -221,18 +227,18 @@ ul.pagination_news  li a:focus{
 }
 /*======= newsdetail page ====*/
 .news_content{
-    font: normal 20px "Century Gothic";
+    font: normal 14px "Century Gothic";
     color: rgba(0, 0, 0, 0.64);
 }
 .news_content span {
     margin: 10px 0;
     display: block;
-    font-size: 18px;
+    font-size: 14px;
     color: rgb(153, 153, 153);
     font-weight: normal;
 }
 .news_content .new_tittle{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     color:#004ebc;
 }
@@ -240,6 +246,41 @@ ul.pagination_news  li a:focus{
     
     font-weight: bold;
     color: #000;
+}
+/*=== tin anh ====*/
+.images_new{
+    margin-right: 20px;
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 30%;
+    padding: 5px;
+    box-shadow: 0px 5px 10px #888888;
+}
+.images_new .images_new_box{
+    display: inline-block;
+}
+.images_new .images_new_box a.link{
+    padding: 0 7px;
+    display: block;
+    font: 12px "Century Gothic";
+    font-weight: bold;
+    text-decoration: none;
+}
+.images_new .images_new_box a img{
+    width: 100%;
+    padding: 5px;
+    border:1px solid #eee;
+    margin-bottom: 10px;
+}
+.images_new .images_new_box span {
+    margin:10px 0;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(153, 153, 153);
+    
+
 }
 @media (max-width: 1190px){
 	.contact-content .contact_p{

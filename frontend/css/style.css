@@ -119,8 +119,8 @@
  .title-default {
      font-family: Century Gothic;
      color: #004ebc;
-     font-size: 21px;
-     line-height: 25px;
+     font-size: 16px;
+     line-height: 16px;
      text-transform: uppercase;
      font-weight: bold;
      margin-bottom: 10px;
@@ -129,7 +129,7 @@
  .sub-title-default {
      font-family: Century Gothic;
     color: #004ebc;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 25px;
  }
  
@@ -288,17 +288,28 @@ header .textwidget {
      line-height: 23px;
      border-right: 1px solid rgba(255, 255, 255, 0.18);
  }
- 
+ .menu-main .navbar-nav li ul {
+     background: #004EBC;
+ }
  .menu-main .navbar-nav li a:hover,
  .menu-main .navbar-nav li a:active,
  .menu-main .navbar-nav li a:focus {
+
      padding-bottom: 12px;
      border-bottom: 3px solid #fff;
      background-color: transparent;
+     box-sizing: border-box;
+ }
+ .menu-main .navbar-nav li.parent-item.open a:hover
+ {
+    background-color: #fff;
+    color:#004EBC;
  }
  
  .menu-main .navbar-nav li.parent-item.open a {
-     color: #333;
+    border: 0;
+    color: #fff;
+    background-color: transparent;
  }
  
  .menu-main .navbar-nav li ul.dropdown-menu li a {
@@ -321,7 +332,7 @@ header .textwidget {
  
  .page-default .content .sidebar-left {
      float: left;
-     padding: 0 0 40px 45px;
+     padding: 20px 0 40px 45px;
  }
  
  .page-default .content .sidebar-left .menu-list {
@@ -486,13 +497,13 @@ header .textwidget {
      background: #1b478b;
      overflow: hidden;
      width: 100%;
-     padding-top: 20px;
+     padding-top: 10px;
      color: #FFFFFF;
      font-family: "Century Gothic";
  }
  
  .container-1 {
-     padding: 0px 20px;
+     padding: 0px 20px 10px 20px;
  }
  
  .container-1 h4.float-left {
@@ -515,9 +526,11 @@ header .textwidget {
      color: #FFFFFF;
  }
  
- .container-1 .block i {
+ .container-1 i {
+    margin-bottom: 10px;
+    line-height: 35px;
      color: #FFFFFF;
-     font-size: 30px;
+     font-size: 20px;
      margin-left: 16px;
      -moz-transition: all 0.3s;
      -webkit-transition: all 0.3s;
@@ -530,18 +543,10 @@ header .textwidget {
      float: left;
      margin-right: 8px;
  }
- 
- .container-1 .contact-phone i {
-     font-size: 30px;
- }
- 
- .container-1 .contact-phone i {
-     font-size: 20px;
- }
- 
- .container-1 .address i {
-     font-size: 20px;
-     margin-left: 0px;
+.container-1 .address i,.container-1 .contact-phone i {
+    line-height: 19px;
+    font-size: 20px;
+    margin-left: 0px;
  }
  
  .container-1 .block i:hover {
@@ -559,18 +564,27 @@ header .textwidget {
      margin: 0;
  }
  
- .container-1 p {
-     color: #72bf66;
-     font-weight: 300;
+ .container-1 p.copyright_line {
+    border-top: 1px solid #fff;
+    padding-top: 12px;
+    font-size: 12px;
+    text-align: left;
  }
  
  .container-1 p.sdt {
-     font-weight: bold;
-     font-size: 16px;
+     
+     font-size: 13px;
      margin-bottom: 0px;
      margin-top: -5px;
  }
- 
+.container-1 .social-block {
+
+    font-family: "Century Gothic";
+    font-size: 14px;
+}
+.container-1 .social-block h4{
+    font-size: 14px;
+}
  .bs-docs-footer hr {
      margin-top: 0px;
      margin-bottom: 20px;
@@ -630,12 +644,13 @@ header .textwidget {
  .login {
     margin: 0;
     border: 1px solid #004ebc;
+    border-radius: 4px;
  }
  .login > span {
     display:block;
     padding: 10px;
     background-color:#004ebc;
-    font:bold 20px 'Century Gothic';
+    font:bold 16px 'Century Gothic';
     color:#fff;
  }
  .login > div {
@@ -743,7 +758,10 @@ header .textwidget {
  }
  
  .otherlink {
+    /*radian*/
+    background: linear-gradient(to top, rgba(255,0,0,0), rgba(0,58,188,1));
      border: 1px solid #004ebc;
+     border-radius: 4px;
  }
  
  .otherlink span {
@@ -751,19 +769,21 @@ header .textwidget {
      display: block;
      padding: 10px;
      background-color: #004ebc;
-     font: bold 20px "Century Gothic";
+     font: bold 16px "Century Gothic";
      color: #fff;
  }
  
  .otherlink a {
-     display: block;
-    padding: 10px 5px 10px 25px;
+    display: block;
+    padding: 6px 5px 6px 25px;
     background: url(../img/marker.png) no-repeat 10px center;
-    font: 16px "Century Gothic";
-    color: #004ebc;
-    line-height: 22px;
+    font: 14px "Century Gothic";
+    color: #fff;
+    line-height: 20px;
  }
- 
+ .otherlink a:hover {
+    color: #000;
+ }
  .row-line {
      width: 100%;
      padding-bottom: 10px;
@@ -780,27 +800,29 @@ header .textwidget {
  }
  
  .tinanh {
-     border: 1px solid #004ebc;
-    
+    /* radian*/
+    background: linear-gradient(to top, rgba(255,0,0,0), rgba(0,58,188,1));
+    border: 1px solid #004ebc;
+    border-radius: 4px;
  }
  
  .tinanh span.tittle {
     text-transform: uppercase;
-     display: block;
-     padding: 10px;
-     background-color: #004ebc;
-     font: bold 20px "Century Gothic";
-     color: #fff;
+    display: block;
+    padding: 10px;
+    background-color: #004ebc;
+    font: bold 16px "Century Gothic";
+    color: #fff;
  }
  
  .tinanh .items {
-     padding: 5px;
-     width: 100%;
-     display: block;
-     margin-bottom: 5px;
-     margin-top: 5px;
-     float: left;
-     */
+    border-bottom: 1px dotted #eee;
+    padding: 5px;
+    width: 100%;
+    display: block;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    float: left;
  }
  
  .tinanh .items img {
@@ -812,15 +834,16 @@ header .textwidget {
  }
  
  .tinanh .items a {
-     text-transform: uppercase;
+     
      font: 14px "Century Gothic";
-     color: #004ebc;
-     font-weight: bold;
+     color: #fff;
      text-decoration: none;
  }
- 
+ .tinanh .items a:hover {
+    color: #000;
+ }
  .tinanh .link a.linkmore {
-     font: 16px "Century Gothic";
+     font: 13px "Century Gothic";
      color: #004ebc;
      line-height: 22px;
      padding-right: 10px;

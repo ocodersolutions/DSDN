@@ -89,22 +89,31 @@ define('BASE_URL', 'http://localhost/ocoder/DSDN/frontend/');
                     <li class="parent-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo BASE_URL;?>news.php">Tin tức <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Tin nội bộ</a></li>
-                            <li><a href="#">Tin tức liên quan</a></li>
-                            <li><a href="#">Tin công nghệ</a></li>
+                            <li><a href="<?php echo BASE_URL;?>news.php?tin-noi-bo">Tin nội bộ</a></li>
+                            <li><a href="<?php echo BASE_URL;?>news.php?tin-lien-quan">Tin tức liên quan</a></li>
+                            <li><a href="<?php echo BASE_URL;?>news.php?tin-cong-nghe">Tin công nghệ</a></li>
                         </ul>
                     </li>
                     <li class="parent-item ">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo BASE_URL;?>member.php">Đơn vị thành viên <span class="caret"></span></a>
+                        <a href="<?php echo BASE_URL;?>member.php">Đơn vị thành viên </a>
+                        
+                    </li>
+                    <li class="parent-item dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Quan hệ cổ đông <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Xí nghiệp TTTH ĐS Bình Trị Thiên</a></li>
-                            <li><a href="#">Xí nghiệp TTTH ĐS Quảng Nam - Đà Nẵng</a></li>
-                            <li><a href="#">Xí nghiệp TTTH ĐS Nghĩa Bình</a></li>
-                            <li><a href="#">Xí nghiệp SX & XLCT</a></li>
+                            <li><a href="#">Thông báo</a></li>
+                            <li><a href="#">Báo cáo tài chính</a></li>
+                            <li><a href="#">Đại hội cổ đông</a></li>
+                            <li><a href="#">Thông tin về cổ phiếu</a></li>
+                            <li><a href="#">Báo cáo thường niên</a></li>
+                            <li><a href="#">Báo cáo HĐQT</a></li>
+                            <li><a href="#">Qui chế quản trị</a></li>
+                            <li><a href="#">Bản cáo bạch</a></li>
+                            <li><a href="#">Điều lệ tổ chức và hoạt động</a></li>
                         </ul>
                     </li>
                     <li class="parent-item ">
-                        <a href="#">Tin ảnh</a>
+                        <a href="<?php echo BASE_URL;?>tinanh.php">Tin ảnh</a>
                     </li>
                 </ul>
             </nav>

@@ -5,14 +5,14 @@
 .uc_clean_accordion{
 	width: 100%;
 	box-sizing: border-box;
-	font-family: "Raleway",sans-serif;
+	font-family: Century Gothic;
 	font-size: 14px;
 	line-height: 1.6;
 	color: #666;
 }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line{
 	display: block;
-	background-color: #fff;
+	background-color: rgba(255, 255, 255, 0);
     border: 1px solid #eee;
     border-bottom: 0;
     margin: 15px 0 1px 0;
@@ -71,11 +71,11 @@
  .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .ui-accordion-header-active.ui-state-active >.ui-icon:after{
 	background-color:#004ebc; }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line .uc_link_tittle{
-        border-bottom: 1px solid #eee;
-	box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
     display: block;
     min-width: 100%;
-    font-size: 21px;
+    font-size: 16px;
     text-transform: uppercase;
     padding: 15px 20px 14px;
     line-height: 1.44;
@@ -87,7 +87,7 @@
 }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content{
 	padding: 10px 20px 25px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0);
     border: 1px solid #eee;
     border-top: none;
     margin-top: -1px;

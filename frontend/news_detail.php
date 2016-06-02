@@ -34,17 +34,17 @@
             <div class="col-sm-4 block">
                  
                 <div class="tinanh">
-                    <span class="tittle">Tin ảnh</span>
+                    <span class="tittle">Tin mới nhất</span>
                     <div class="items">
-                    <a href=""><img src="img/tinanh/tin anh 1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                    <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
                     <span class="info">32 photos | 26639 view</span>
                     </div>
                     <div class="items">
-                    <a href=""><img src="img/tinanh/tin anh 2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                    <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
                     <span class="info">32 photos | 26639 view</span>
                     </div>
                     <div class="items">
-                    <a href=""><img src="img/tinanh/tin anh 3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
+                    <a href=""><img src="img/tinanh/tin_anh3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
                     <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
                     <span class="info">32 photos | 26639 view</span>
                     </div>
@@ -53,7 +53,7 @@
                     <span class="info">32 photos | 26639 view</span>
                     </div>
                     <div class="items">
-                    <a href=""><img src="img/tinanh/tin anh 2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                    <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
                     <span class="info">32 photos | 26639 view</span>
                     </div>
 
@@ -65,17 +65,17 @@
             <div class="col-sm-4 block">
                  
                 <div class="tinanh">
-                    <span class="tittle">Tin Thể thao</span>
+                    <span class="tittle">Tin liên quan</span>
                     <div class="items">
-                    <a href=""><img src="img/tinanh/tin anh 1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                    <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
                     <span class="info">32 photos | 26639 view</span>
                     </div>
                     <div class="items">
-                    <a href=""><img src="img/tinanh/tin anh 2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                    <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
                     <span class="info">32 photos | 26639 view</span>
                     </div>
                     <div class="items">
-                    <a href=""><img src="img/tinanh/tin anh 3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
+                    <a href=""><img src="img/tinanh/tin_anh3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
                     <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
                     <span class="info">32 photos | 26639 view</span>
                     </div>
@@ -84,7 +84,7 @@
                     <span class="info">32 photos | 26639 view</span>
                     </div>
                     <div class="items">
-                    <a href=""><img src="img/tinanh/tin anh 2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                    <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
                     <span class="info">32 photos | 26639 view</span>
                     </div>
                     <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
