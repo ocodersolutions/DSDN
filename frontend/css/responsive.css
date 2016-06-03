@@ -74,9 +74,7 @@
      .page-default .content .main-content-wrap .sidebar-right .phone {
          font-size: 25px !important;
      }
-     .page-home .content {
-         padding-bottom: 150px !important;
-     }
+     
      .bs-docs-footer {
          background-position: top;
      }
@@ -120,10 +118,8 @@
          padding-top: 20px;
      }
      .page-default .content .sidebar-left {
-         
-         padding: 15px 30px;
-         margin-top: 20px;
-         width: 100%;
+        padding: 0px 15px;
+        width: 100%;
      }
      .page-home .sub-slider {
          margin-top: -70px;
@@ -171,6 +167,9 @@
     }
     .navbar-collapse {
         padding-right: 0 !important;
+    }
+    .padding_right5{
+        padding-right: 15px!important;
     }
 }
  

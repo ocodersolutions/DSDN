@@ -304,6 +304,7 @@ ul.pagination_news  li a:focus{
     width: 75%;
 }
 .search button p{
+    display: none;
     line-height: 24px;
 }
 .search button i{
@@ -323,27 +324,49 @@ ul.pagination_news  li a:focus{
     top: 0px;
     right: 0px;
 }
+@media (min-width: 1191px){
+   .search button p{
+    display: block;
+} 
+}
 @media (max-width: 1190px){
     .search button i{
     display: block;
-}
-.search button p{
-    display: none;
 }
 	.contact-content .contact_p{
 	font-size: 40px;
 	top:70%;
 }
+@media (max-width: 991px){
+    .search button i{
+    display: block;
+    float: left;
+}
+    .search button p{
+    display: block;
+    } 
+}
 @media (max-width: 767px){
 	.contact-content .contact_p{
-	font-size: 30px;
-	top:60%;
+	display: block;
 }
 @media (max-width: 480px){
+    .search button i{
+    display: block;
+    
+}
+    .search button p{
+    display: block;
+    } 
+}
 	.contact-content .contact_p{
 	font-size: 22px;
 }
 @media (max-width: 350px){
+    .search button p{
+    display: none;
+    }
 	.contact-content .contact_p{
 	font-size: 18px;
+}
 }
