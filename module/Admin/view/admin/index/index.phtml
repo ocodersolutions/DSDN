@@ -1,0 +1,95 @@
+<section class="content-header">
+    <h1>
+        <?php echo 'Cấu hình'; ?>
+        <small></small>
+    </h1>
+</section>
+
+<?php
+$myForm = $this->myForm;
+//$myForm->prepare();
+echo $this->form()->openTag($myForm);
+?>
+<div class="row toolbar-button">
+    <div class="text-center">
+        <button class="btn btn-app" data-type="save" type="submit"><i class="fa fa-save"></i><?php echo SAVE ?></button>
+    </div>
+</div>
+
+<!-- NOTICE -->
+<?php echo $this->flashMessenger()->render(); ?>
+
+<div class="box box-info">
+    <div class="box-body">
+        <!-- Custom Tabs -->
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab_vietnamese" data-toggle="tab"><?php echo VIETNAMESE ?></a></li>
+                <li class=""><a href="#tab_english" data-toggle="tab"><?php echo ENGLISH ?></a></li>
+                <li class=""><a href="#tab_japanese" data-toggle="tab"><?php echo JAPANESE ?></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_vietnamese">
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('title')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('title')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('description')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('description')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('keywords')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('keywords')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('company_name')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('company_name')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('company_description')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('company_description')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('contact_info')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('contact_info')) ?></div></div>
+                </div><!-- /.tab-pane -->
+                <div class="tab-pane" id="tab_english">
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('title_en')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('title_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('description_en')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('description_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('keywords_en')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('keywords_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('company_name_en')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('company_name_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('company_description_en')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('company_description_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('contact_info_en')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('contact_info_en')) ?></div></div>
+                </div><!-- /.tab-pane -->
+                <div class="tab-pane" id="tab_japanese">
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('title_jp')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('title_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('description_jp')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('description_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('keywords_jp')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('keywords_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('company_name_jp')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('company_name_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('company_description_jp')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('company_description_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('contact_info_jp')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('contact_info_jp')) ?></div></div>
+                </div><!-- /.tab-pane -->
+            </div><!-- /.tab-content -->
+        </div><!-- nav-tabs-custom -->
+
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('logo')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('logo')) ?><input type="button" id="BrowseImageIcon" value="<?php echo BROWSER_IMAGE; ?>" style="height: 34px;" /><br/> <i>(250px * 85px)</i></div></div>
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('intro_image')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('intro_image')) ?><input type="button" id="BrowseImageIcon1" value="<?php echo BROWSER_IMAGE; ?>" style="height: 34px;" /><br/> <i>(215px * 130px)</i></div></div>
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('iframe_youtube')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('iframe_youtube')) ?><input type="button" id="BrowseImageIcon2" value="<?php echo BROWSER_IMAGE; ?>" style="height: 34px;" /></div>
+
+        <?php echo $this->formHidden($myForm->get('id')) ?>
+        <?php echo $this->formHidden($myForm->get('action')) ?>
+
+    </div>
+</div>
+<?php echo $this->form()->closeTag(); ?>
+
+<script>
+    $(document).ready(function () {
+        $("#BrowseImageIcon").click(function () {
+            var ckfider = new CKFinder();
+            ckfider.selectActionFunction = function (fileUrl) {
+                $("#Image").val(fileUrl);
+            };
+            ckfider.popup();
+        });
+        $("#BrowseImageIcon1").click(function () {
+            var ckfider = new CKFinder();
+            ckfider.selectActionFunction = function (fileUrl) {
+                $("#Image1").val(fileUrl);
+            };
+            ckfider.popup();
+        });
+        $("#BrowseImageIcon2").click(function () {
+            var ckfider = new CKFinder();
+            ckfider.selectActionFunction = function (fileUrl) {
+                $("#Image2").val(fileUrl);
+            };
+            ckfider.popup();
+        });
+    });
+
+</script>

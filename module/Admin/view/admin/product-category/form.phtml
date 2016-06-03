@@ -1,0 +1,175 @@
+<!-- BUTTON -->
+<?php // echo $this->render('area_toolbar.phtml'); ?>
+
+
+
+<?php
+$myForm = $this->myForm;
+$myForm->prepare();
+echo $this->form()->openTag($myForm);
+?>
+<div class="row toolbar-button">
+    <div class="text-center">
+        <button class="btn btn-app" data-type="save" type="submit"><i class="fa fa-save"></i><?php echo SAVE ?></button>
+        <!--<button class="btn btn-app" data-type="save-close" type="submit"><i class="fa fa-save"></i><?php echo SAVE_CLOSE ?></button>-->
+        <button class="btn btn-app" data-type="save-new" type="submit"><i class="fa fa-save"></i><?php echo SAVE_NEW ?></button>
+    </a><a data-show-item="no" data-type="default" class="btn btn-app" href="/admin/productcategory/index/">
+    <i class="fa fa-arrow-circle-left"></i>Quay lại
+</a> 
+<!--        <a data-show-item="no" data-type="save" class="btn btn-app" href="#">
+            <i class="fa fa-save"></i>Lưu
+        </a><a data-show-item="no" data-type="save-close" class="btn btn-app" href="#">
+            <i class="fa fa-folder-open-o"></i>Lưu &amp; Đóng
+        </a><a data-show-item="no" data-type="save-new" class="btn btn-app" href="#">
+            <i class="fa fa-plus-square"></i>Lưu &amp; Thêm mới
+        </a><a data-show-item="no" data-type="default" class="btn btn-app" href="/admin/productcategory/index/">
+            <i class="fa fa-arrow-circle-left"></i>Quay lại
+        </a>    -->
+</div>
+</div>
+
+<!-- NOTICE -->
+<?php echo $this->flashMessenger()->render(); ?>
+<?php echo $this->myForm->showMessage(); ?>
+
+<div class="box box-info">
+    <div class="box-body">
+
+        <!-- Custom Tabs -->
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab_vietnamese" data-toggle="tab"><?php echo VIETNAMESE ?></a></li>
+                <li class=""><a href="#tab_english" data-toggle="tab"><?php echo ENGLISH ?></a></li>
+                <li class=""><a href="#tab_japanese" data-toggle="tab"><?php echo JAPANESE ?></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_vietnamese">
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('name')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('name')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('description')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('description')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('keyword')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('keyword')) ?></div></div>
+                </div><!-- /.tab-pane -->
+                <div class="tab-pane" id="tab_english">
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('name_en')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('name_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('description_en')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('description_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('keyword_en')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('keyword_en')) ?></div></div>
+                </div><!-- /.tab-pane -->
+                <div class="tab-pane" id="tab_japanese">
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('name_jp')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('name_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('description_jp')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('description_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('keyword_jp')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('keyword_jp')) ?></div></div>
+                </div><!-- /.tab-pane -->
+            </div><!-- /.tab-content -->
+        </div><!-- nav-tabs-custom -->
+
+        <div class="form-group" style="display: none"><?php echo $this->formLabel($myForm->get('parent')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('parent')) ?></div></div>
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('status')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('status')) ?></div></div>
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('thumbnail')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('thumbnail')) ?><input type="button" id="BrowseImageIcon" value="<?php echo BROWSER_IMAGE ?>" style="height: 34px;" /><br/> <i>(325px * 200px)</i></div></div>
+                <?php echo $this->formHidden($myForm->get('id')) ?>
+                <?php echo $this->formHidden($myForm->get('action')) ?>
+
+    </div>
+</div>
+<?php echo $this->form()->closeTag(); ?>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#BrowseImageIcon").click(function () {
+            var ckfider = new CKFinder();
+            ckfider.selectActionFunction = function (fileUrl) {
+                $("#Image").val(fileUrl);
+            };
+            ckfider.popup();
+        });
+    });
+//    $(document).ready(function () {
+//        $('#adminForm')
+//            .formValidation({
+//                excluded: [':disabled'],
+//                icon: {
+//                    valid: 'glyphicon glyphicon-ok',
+//                    invalid: 'glyphicon glyphicon-remove',
+//                    validating: 'glyphicon glyphicon-refresh'
+//                },
+//                fields: {
+//                    name: {
+//                        validators: {
+//                            notEmpty: {
+//                                message: 'The full name is required'
+//                            }
+//                        }
+//                    },
+//                    name_en: {
+//                        validators: {
+//                            notEmpty: {
+//                                message: 'The full name is required'
+//                            }
+//                        }
+//                    },
+//                    name_jp: {
+//                        validators: {
+//                            notEmpty: {
+//                                message: 'The full name is required'
+//                            }
+//                        }
+//                    },
+//                    parent: {
+//                        validators: {
+//                            notEmpty: {
+//                                message: 'The full name is required'
+//                            }
+//                        }
+//                    },
+//                    status: {
+//                        validators: {
+//                            notEmpty: {
+//                                message: 'The full name is required'
+//                            }
+//                        }
+//                    },
+//                }
+//            })
+//            .on('err.form.fv', function (e) {
+//                var $form = $(e.target),
+//                        fv = $form.data('formValidation'),
+//                        $invalidFields = fv.getInvalidFields();
+//
+//                for (var i = 0; i < $invalidFields.length; i++) {
+//                    var $field = $invalidFields.eq(i),
+//                            autoFocus = fv.isOptionEnabled($field.attr('data-fv-field'), 'autoFocus');
+//
+//                    if (autoFocus) {
+//                        // Activate the tab containing the field if exists
+//                        var $tabPane = $field.parents('.tab-pane'), tabId;
+//                        if ($tabPane && (tabId = $tabPane.attr('id'))) {
+//                            $('a[href="#' + tabId + '"][data-toggle="tab"]').tab('show');
+//                        }
+//                        break;
+//                    }
+//                }
+//            })
+//            .on('status.field.fv', function (e, data) {
+//                var validator = data.fv,
+//                        $tabPane = data.element.parents('.tab-pane'),
+//                        tabId = $tabPane.attr('id');
+//
+//                if (tabId) {
+//                    var $icon = $('a[href="#' + tabId + '"][data-toggle="tab"]').parent().find('i');
+//
+//                    // Add custom class to tab containing the field
+//                    if (data.status == validator.STATUS_INVALID) {
+//                        $icon.removeClass('fa-check').addClass('fa-times');
+//                    } else if (data.status == validator.STATUS_VALID) {
+//                        $icon.removeClass('fa-check fa-times');
+//
+//                        var isValidTab = validator.isValidContainer($tabPane);
+//                        if (isValidTab !== null) {
+//                            $icon.addClass(isValidTab ? 'fa-check' : 'fa-times');
+//                        }
+//                    }
+//                }
+//            })
+//    });
+</script>
+
+
+

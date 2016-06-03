@@ -1,0 +1,100 @@
+<?php
+
+use Zend\Session\Container;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+
+$featuredProducts = $this->featuredProducts;
+?>
+
+<!-- Main Content of Website -->
+<div class="main-wrapper category-page">
+    <!-- Main Content -->
+    <div class="row main-content-wrapper">
+        <!-- Main Content -->
+        <div class="main-content col-sm-8">
+            <img src="<?php echo URL_TEMPLATE . '/frontend/images/banner-sub.jpg' ?>" class="img-thumbnail banner-sub">
+
+            <!-- Category Product List -->
+            <div class="row articles">
+                <?php
+                if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                    $name = $this->categoryInfo->name;
+                } else {
+                    $nameLang = json_decode($this->categoryInfo->name_lang);
+                    $nameField = 'name_' . $ssSystem->language;
+                    $name = $nameLang->$nameField;
+                }
+                ?>
+                <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo $name ?></h3>
+                <?php
+                foreach ($this->articles as $article) {
+                    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                        $name = $article->name;
+                        $alias = $article->alias;
+                        $intro = $article->intro;
+                    } else {
+                        $nameLang = json_decode($article->name_lang);
+                        $nameField = 'name_' . $ssSystem->language;
+                        $name = $nameLang->$nameField;
+                        $aliasLang = json_decode($article->alias_lang);
+                        $aliasField = 'alias_' . $ssSystem->language;
+                        $alias = $aliasLang->$aliasField;
+                        $introLang = json_decode($article->intro_lang);
+                        $introField = 'intro_' . $ssSystem->language;
+                        $intro = $introLang->$introField;
+                    }
+
+                    if (trim($article->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $article->thumbnail)) {
+                        $imageUrl = URL_APPLICATION . $article->thumbnail;
+                    } else {
+                        $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                    }
+                    ?>
+                    <div class="col-sm-12 article" style="margin-bottom: 25px;">
+                        <div class="col-sm-3 news-images">
+                            <img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail">
+                        </div>
+                        <div class="col-sm-9 news-content">
+                            <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><strong><?php echo $name; ?></strong></a>
+                            <p class="short-desc"><?php echo $helperString->summary($intro, 250, true, true); ?></p>
+                        </div>
+                    </div>
+                <?php } //end foreach ?>
+            </div><!-- END Category Product List -->
+        </div>
+
+        <!-- Sidebar right -->
+        <div class="sidebar-right col-sm-4">
+            <!-- Sidebar Right Main Job Block -->
+            <?php echo $this->blkNewsCategory() ?>
+
+            <!-- Sidebar Right Video Block -->
+            <?php echo $this->blkVideo() ?>
+
+            <!-- Sidebar Right Featured News -->
+            <?php echo $this->blkLatestNews() ?>
+        </div><!-- Sidebar Right -->
+    </div><!-- End Main Content -->
+
+    <!-- PAGINATION -->
+    <?php
+    $aliasCategory = array(
+        COMPANY_INFO_CATEGORY_ID => '/' . URL_ALIAS_INTRO,
+        SERVICE_CATEGORY_ID => '/' . URL_ALIAS_SERVICE,
+        RECRUITMENT_CATEGORY_ID => '/' . URL_ALIAS_RECRUITMENT,
+        NEWS_CATEGORY_ID => '/' . URL_ALIAS_NEWS,
+    );
+    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+        $alias = $this->categoryInfo->alias;
+    } else {
+        $langObj = json_decode($this->categoryInfo->alias_lang);
+        $aliasField = 'alias_' . $ssSystem->language;
+        $alias = $langObj->$aliasField;
+    }
+    
+    $currentURL = URL_APPLICATION . $aliasCategory[$this->categoryInfo->parent_id] . '/' . $alias;
+    
+    echo $this->paginationControl($this->paginator, 'sliding', 'paginator.phtml', array('currentURL' => $currentURL));
+    ?>

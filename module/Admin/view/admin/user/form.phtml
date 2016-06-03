@@ -1,0 +1,50 @@
+<section class="content-header">
+    <h1>
+        <?php echo USER_MANAGEMENT ?>
+        <small><?php echo CREATE ?></small>
+    </h1>
+</section>
+<?php
+$myForm = $this->myForm;
+$myForm->prepare();
+echo $this->form()->openTag($myForm);
+?>
+<div class="row toolbar-button">
+    <div class="text-center">
+        <button class="btn btn-app" data-type="save" type="submit"><i class="fa fa-save"></i><?php echo SAVE ?></button>
+        <button class="btn btn-app" data-type="save-new" type="submit"><i class="fa fa-save"></i><?php echo SAVE_NEW ?></button>
+        <a data-show-item="no" data-type="default" class="btn btn-app" href="/admin/user/">
+            <i class="fa fa-arrow-circle-left"></i>Quay lại
+        </a> 
+    </div>
+</div>
+
+<!-- NOTICE -->
+<?php 
+echo $this->flashMessenger()->render('success', array('alert', 'alert-success')); 
+echo $this->flashMessenger()->render('error', array('alert', 'alert-danger')); 
+?>
+<?php echo $this->myForm->showMessage(); ?>
+
+<div class="box box-info">
+    <div class="box-body">
+        <?php
+        echo $this->partialLoop('form_row.phtml', array(
+            array('elm' => $myForm->get('username')),
+            array('elm' => $myForm->get('email')),
+            array('elm' => $myForm->get('fullname')),
+            array('elm' => $myForm->get('password')),
+            array('elm' => $myForm->get('published')),
+            array('elm' => $myForm->get('id'), 'type' => 'hidden'),
+            array('elm' => $myForm->get('action'), 'type' => 'hidden'),
+        ));
+        ?>
+    </div>
+</div>
+<?php echo $this->form()->closeTag(); ?>
+
+
+
+
+
+

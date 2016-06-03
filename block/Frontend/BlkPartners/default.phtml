@@ -1,0 +1,19 @@
+<div id="slideCont" style="clip: rect(auto, 10000px, 90px, auto); height: 90px; overflow: hidden; position: relative; top: 0px; width: 10000px; z-index: 1;">
+    <div id="slideA" style="height: 90px; left: -194px; overflow: hidden; position: absolute; top: 0px; width: 100000px; z-index: 1;">
+        <div id="innerSlideA" style="float: left;">
+            <?php foreach ($this->_data as $partner) { 
+                $website = trim($partner->website) ? $partner->website : '#'; 
+                ?>
+                <a href="<?php echo $website ?>"><img src="<?php echo URL_APPLICATION . $partner->logo ?>" class="img-thumbnail logo-partner"/></a>
+            <?php } ?>
+            <?php foreach ($this->_data1 as $partner) { 
+                $website = trim($partner->website) ? $partner->website : '#'; 
+                ?>
+                <a href="<?php echo $website ?>"><img src="<?php echo URL_APPLICATION . $partner->logo ?>" class="img-thumbnail logo-partner"/></a>
+            <?php } ?>
+        </div>
+        <div id="slideB" style="height: 90px; left: 0px; overflow: hidden; position: relative; top: 0px; width: 100000px; z-index: 1;">
+
+        </div>
+    </div>
+</div>

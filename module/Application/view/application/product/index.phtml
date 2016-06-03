@@ -1,0 +1,83 @@
+<?php
+
+use Zend\Session\Container;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+?>
+
+<!-- Main Content of Website -->
+<div class="main-wrapper product-category-page">
+    <!-- Main Content -->
+    <div class="row main-content-wrapper">
+        <!-- Main Content -->
+        <div class="main-content col-sm-8">
+            <img src="<?php echo URL_TEMPLATE . '/frontend/images/banner-sub.jpg' ?>" class="img-thumbnail banner-sub">
+
+            <!-- Category List -->
+            <div class="row products">
+                <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo PRODUCT_CATEGORY ?></h3>
+                <?php 
+                foreach ($categories as $category) { 
+                    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                        $name = $category->name;
+                        $alias = $category->alias;
+                        $description = $category->description;
+                    } else {
+                        $nameLang = json_decode($category->name_lang);
+                        $nameField = 'name_' . $ssSystem->language;
+                        $name = $nameLang->$nameField;
+                        $aliasLang = json_decode($category->alias_lang);
+                        $aliasField = 'alias_' . $ssSystem->language;
+                        $alias = $aliasLang->$aliasField;
+                        $descriptionLang = json_decode($category->description_lang);
+                        $descriptionField = 'description_' . $ssSystem->language;
+                        $description = $descriptionLang->$descriptionField;
+                    }
+                    
+                    if (trim($category->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $category->thumbnail)) {
+                        $imageUrl = URL_APPLICATION . $category->thumbnail;
+                    } else {
+                        $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                    }
+                ?>
+                <div class="col-sm-6 product-item">
+                    <div class="product-thumbnail effect-box-shadow">
+                        <a href="<?php echo URL_APPLICATION . '/' . URL_ALIAS_PRODUCTS . '/' . $alias; ?>">
+                            <img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail">
+                        </a>
+                    </div>
+                    <div>
+                        <h3 class="product-name"><a href="<?php echo URL_APPLICATION . '/' . URL_ALIAS_PRODUCTS . '/' . $alias; ?>"><?php echo $name ?></a></h3>
+                        <p class="short-desc"><?php echo $helperString->summary($description, 150, true, true); ?></p>
+                    </div>
+                </div>   
+                <?php } ?>
+            </div>
+        </div>
+
+        <!-- Sidebar right -->
+        <div class="sidebar-right col-sm-4">
+            <?php             
+            // Sidebar Right Product Category Block
+            echo $this->blkProductCategory();
+            // Sidebar Right Services Block
+            echo $this->blkServices();
+            // Sidebar Right Video Block
+            echo $this->blkVideo();
+            // Sidebar Right Featured News
+            echo $this->blkLatestNews();
+            ?>
+        </div><!-- Sidebar Right -->
+    </div><!-- End Main Content -->
+
+    <!-- PAGINATION -->
+    <?php
+//    $aliasCategory = array(
+//        COMPANY_INFO_CATEGORY_ID => '/gioi-thieu',
+//        SERVICE_CATEGORY_ID => '/dich-vu',
+//        RECRUITMENT_CATEGORY_ID => '/tuyen-dung',
+//    );
+//    $currentURL = URL_APPLICATION . $aliasCategory[$this->categoryInfo->id];
+//    echo $this->paginationControl($this->paginator, 'sliding', 'paginator.phtml', array('currentURL' => $currentURL));
+    ?>
