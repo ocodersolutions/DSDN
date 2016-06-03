@@ -101,7 +101,222 @@
                     </div>
                 </div>
             </div>
-            <hr>
+            <div class="row addmore">
+                <div class="container">
+                    <div class="col-sm-12 addmore_pad">
+                        <div class="row-member">
+                            <div class="row-line">
+                                <span class="title-default">THÀNH VIÊN HỘI ĐỒNG QUẢN TRỊ</span>
+                            </div>
+                            <div class="uc_owl_carousel" id="uc_carousel_testimonials">
+                                <!--item 1-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/1.jpg" alt="MR. ANH NGUYEN" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MR. ANH NGUYEN </h3>
+                                                <small>DIRECTOR</small>
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 1-->
+                                <!--item 2-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/3.jpg" alt="MR. THAI TRAN" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <div class="name-human">
+                                                     <h3 class="uc_tittle">MR. THAI TRAN</h3>
+                                                </div>
+                                                <small>MANAGER</small>
+                                            
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 2-->
+                                <!--item 3-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/2.jpg" alt="MIS. LAN HOA" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MIS. LAN HOA</h3>
+                                                <small>DEPUTY</small>
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 3-->
+                                <!--item 3-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/7.jpg" alt="MR. TUAN ANH" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MR. TUAN ANH </h3>
+                                                <small>DESIGNER</small>
+                    
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 3-->
+                                <!--item 3-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/5.jpg" alt="MR. HUONG PHAM" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MR. HUONG PHAM</h3>
+                                                <small>ACCOUNTANT</small>
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 3-->
+                                <!--item 3-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/6.jpg" alt="MISS QUYNH NHU" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MISS QUYNH NHU </h3>
+                                                <small>SECRETARY</small>
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 3-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="row">
             	<div class="container">
                     <div class="image_background"></div>
