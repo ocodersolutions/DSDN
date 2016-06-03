@@ -51,59 +51,12 @@ $( "#accor-congvan" ).accordion({
       collapsible: true
 });
 // js news image
-$('.parent_group_1').magnificPopup({
-	delegate: ".child_group",
-	type: "image",
-	gallery: {
-		enabled: true
-	}
-});
-$('.parent_group_2').magnificPopup({
-	delegate: ".child_group",
-	type: "image",
-	gallery: {
-		enabled: true
-	}
-});
-$('.parent_group_3').magnificPopup({
-	delegate: ".child_group",
-	type: "image",
-	gallery: {
-		enabled: true
-	}
-});
-$('.parent_group_4').magnificPopup({
-	delegate: ".child_group",
-	type: "image",
-	gallery: {
-		enabled: true
-	}
-});
-$('.parent_group_5').magnificPopup({
-	delegate: ".child_group",
-	type: "image",
-	gallery: {
-		enabled: true
-	}
-});
-$('.parent_group_6').magnificPopup({
-	delegate: ".child_group",
-	type: "image",
-	gallery: {
-		enabled: true
-	}
-});
-$('.parent_group_7').magnificPopup({
-	delegate: ".child_group",
-	type: "image",
-	gallery: {
-		enabled: true
-	}
-});
-$('.parent_group_8').magnificPopup({
-	delegate: ".child_group",
-	type: "image",
-	gallery: {
-		enabled: true
-	}
+$('.image_group').each(function() {
+    $(this).magnificPopup({
+        delegate: '.child_group',
+        type: 'image',
+        gallery: {
+          enabled:true
+        }
+    });
 });

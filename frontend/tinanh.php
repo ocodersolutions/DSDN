@@ -13,59 +13,90 @@
             </div>
         
             <div class="col-sm-8 pull-left block">
-                <div class="images_new">
+                <div class="images_new image_group">
                     <div class="images_new_box">
-                        <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
+                        <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
                         <div class="text-center"><span class="info">32 photos | 26639 view</span></div>
                     </div>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
                 </div>
-                <div class="images_new">
+                <div class="images_new image_group">
                     <div class="images_new_box">
-                        <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
+                        <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
                         <div class="text-center"><span class="info">32 photos | 26639 view</span></div>
                     </div>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
                 </div>
-                <div class="images_new">
+                <div class="images_new image_group">
                     <div class="images_new_box">
-                        <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
+                        <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
                         <div class="text-center"><span class="info">32 photos | 26639 view</span></div>
                     </div>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
                 </div>
-                <div class="images_new">
+                <div class="images_new image_group">
                     <div class="images_new_box">
-                        <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
+                        <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
                         <div class="text-center"><span class="info">32 photos | 26639 view</span></div>
                     </div>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
                 </div>
-                <div class="images_new">
+                <div class="images_new image_group">
                     <div class="images_new_box">
-                        <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
+                        <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
                         <div class="text-center"><span class="info">32 photos | 26639 view</span></div>
                     </div>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
                 </div>
-                <div class="images_new">
+                <div class="images_new image_group">
                     <div class="images_new_box">
-                        <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
+                        <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
                         <div class="text-center"><span class="info">32 photos | 26639 view</span></div>
                     </div>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
                 </div>
-                <div class="images_new">
+                <div class="images_new image_group">
                     <div class="images_new_box">
-                        <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
+                        <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
                         <div class="text-center"><span class="info">32 photos | 26639 view</span></div>
                     </div>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
                 </div>
-                <div class="images_new">
+                <div class="images_new image_group">
                     <div class="images_new_box">
-                        <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
+                        <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
                         <div class="text-center"><span class="info">32 photos | 26639 view</span></div>
                     </div>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
                 </div>
-                <div class="images_new">
+                <div class="images_new image_group">
                     <div class="images_new_box">
-                        <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
+                        <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
                         <div class="text-center"><span class="info">32 photos | 26639 view</span></div>
                     </div>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh1_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh5_.jpg"></a>
+                    <a class="child_group" href="img/tinanh/tin_anh4_.jpg"></a>
                 </div>
                 <div class="pagination_line">
                         <ul class="pagination_news">
