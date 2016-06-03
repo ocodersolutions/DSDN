@@ -147,6 +147,7 @@
  
  header {
      margin-bottom: 0 !important;
+     max-height: 150px;
      border: none;
  }
  
@@ -694,11 +695,15 @@ header .textwidget {
  
  .flexslider {
      margin: 0;
-     border: none;
+     border: none !important;
  }
  
- .flexslider .flex-prev,
- .flexslider .flex-next {}
+ .flexslider .flex-prev {
+    left: 0 !important;
+ }
+ .flexslider .flex-next {
+    right: 0 !important;
+ }
  
  .flexslider .flex-prev::before {
      height: 40px;
