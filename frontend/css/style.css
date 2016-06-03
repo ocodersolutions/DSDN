@@ -145,6 +145,7 @@
  
  header {
      margin-bottom: 0 !important;
+     max-height: 150px;
      border: none;
  }
  
@@ -692,7 +693,7 @@ header .textwidget {
  
  .flexslider {
      margin: 0;
-     border: none;
+     border: none !important;
  }
  
  .flexslider .flex-prev,
