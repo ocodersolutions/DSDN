@@ -117,6 +117,7 @@
  }
  
  .title-default {
+    padding: 0 20px;
      font-family: Century Gothic;
      color: #004ebc;
      font-size: 16px;
