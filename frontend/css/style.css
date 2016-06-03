@@ -117,7 +117,6 @@
  }
  
  .title-default {
-    padding: 0 20px;
      font-family: Century Gothic;
      color: #004ebc;
      font-size: 16px;
@@ -910,3 +909,6 @@ header .textwidget {
  }
 
  /*========== member=========*/
+.padding_right5{
+    padding-right: 45px !important;
+}
