@@ -1,18 +1,15 @@
 <?php include "header.php";?>
-    <div class="row">
-        <div class="container contact-content" style="padding: 0">
-            <img src="img/news.jpg" alt="">   
-            <p class="contact_p">Tin Tức</p>
-        </div>
-
+    <div class="container contact-content" style="padding: 0">
+        <img src="img/news.jpg" alt="">   
+        <p class="contact_p">Tin Tức</p>
     </div>
-    <div class="row page-default ">
+   <div class="page-default ">
         <div class="container content">
             <div class="breakum-line">
                 <a href="">Trang chủ</a>/<span> Tin Ảnh </span>
             </div>
         
-            <div class="col-sm-8 pull-left block">
+            <div class="col-md-8 col-sm-12 block">
                 <div class="images_new image_group">
                     <div class="images_new_box">
                         <a class="child_group" href="img/tinanh/tin_anh1_.jpg"><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="link">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a>
@@ -112,13 +109,13 @@
                         </ul>
                     </div>
             </div>
-            <div class="col-md-4 block padding_right5">
+            <div class="col-md-4 col-sm-12 block padding_right5">
                 <div class="search">
                     <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
                     <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
                 </div>
             </div>   
-            <div class="col-sm-4 pull-right block">
+            <div class="col-md-4 col-sm-12 block">
                  
                 <div class="tinanh">
                     <span class="tittle">Tin nội bộ</span>
@@ -149,7 +146,7 @@
             </div>
 
             
-            <div class="col-sm-4 pull-right block">
+            <div class="col-md-4 col-sm-12 block">
                  
                 <div class="tinanh">
                     <span class="tittle">Tin Thể thao</span>

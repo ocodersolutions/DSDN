@@ -64,22 +64,20 @@
     </div>-->
     
     <?php include "header.php";?>
-    <div class="row">
-        <div class="container contact-content" style="padding: 0">
-            <img src="img/news.jpg" alt="">   
-            <p class="contact_p">Tin Tức</p>
-        </div>
-
+    
+    <div class="container contact-content" style="padding: 0">
+        <img src="img/news.jpg" alt="">   
+        <p class="contact_p">Tin Tức</p>
     </div>
-    <div class="row page-default ">
+    <div class="page-default ">
         <div class="container content">
             <div class="breakum-line">
                 <a href="">Trang chủ</a>/<span> Đơn vị thành viên </span>
             </div>
         
-            <div class="col-sm-8 block">
+            <div class="col-md-8 col-sm-12 block">
                 <div class="news">
-                    <a href="http://duongsatbtt.vn/"><span class="new_tittle">Xí nghiệp TTTH ĐS Bình Trị Thiên</span></a>
+                    <a href="http://duongsatbtt.vn/" class="new_tittle">Xí nghiệp TTTH ĐS Bình Trị Thiên</a>
                     <hr>
                     <div class="new_box">
                         <div class="first_news">
@@ -101,13 +99,13 @@
                             <a href="#">Tin tức của đơn vị thành viên</a>
                             <a href="#">Tin tức của đơn vị thành viên</a>
                         </div>
-                        
+                        <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
                         
                     </div>
                 </div>
                 <hr>
                 <div class="news">
-                    <a href="http://duongsatbtt.vn/"><span class="new_tittle">Xí nghiệp TTTH ĐS Quảng Nam - Đà Nẵng</span></a>
+                    <a href="http://duongsatbtt.vn/" class="new_tittle">Xí nghiệp TTTH ĐS Quảng Nam - Đà Nẵng</a>
                     <hr>
                     <div class="new_box">
                         <div class="first_news">
@@ -135,7 +133,7 @@
                 </div>
                 <hr>   
                 <div class="news">
-                    <a href="http://duongsatbtt.vn/"><span class="new_tittle">Xí nghiệp TTTH ĐS Nghĩa Bình</span></a>
+                    <a href="http://duongsatbtt.vn/" class="new_tittle">Xí nghiệp TTTH ĐS Nghĩa Bình</a>
                     <hr>
                     <div class="new_box">
                         <div class="first_news">
@@ -163,13 +161,13 @@
                 </div>
                  <hr>        
             </div>
-            <div class="col-md-4 block padding_right5">
+            <div class="col-md-4 col-sm-12 block padding_right5">
                 <div class="search">
                     <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
                     <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
                 </div>
             </div>   
-            <div class="col-sm-4 block">
+            <div class="col-md-4 col-sm-12 block">
                 <div class="tinanh">
                     <span class="tittle">Tin ảnh</span>
                     <div class="items">
@@ -197,13 +195,13 @@
                     <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
                 </div>
             </div>
-            <div class="col-md-4 block">
+            <div class="col-md-4 col-sm-12 block">
                 <div class="otherlink">
                     <span>video</span>
                     <iframe width="100%" height="315" src="https://www.youtube.com/embed/ahLjVibR6oY" frameborder="0" allowfullscreen></iframe>
                 </div>
             </div>
-            <div class="col-sm-4 block">
+            <div class="col-md-4 col-sm-12 block">
                  
                 <div class="tinanh">
                     <span class="tittle">Tin Thể thao</span>
