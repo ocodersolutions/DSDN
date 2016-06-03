@@ -19,7 +19,10 @@
      background: linear-gradient(#ffffff, #98afe1);
      /* Standard syntax */
  }
- 
+ *{
+    margin:0;
+    padding: 0;
+ }
  @-moz-keyframes blinker {
      0% {
          opacity: 1.0;
