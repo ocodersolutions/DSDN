@@ -58,14 +58,27 @@
 	.uc_customer_review_box .uc_job {
 		margin: 4px 20px 0 20px;
 	}
-	.uc_customer_review_box .uc_avatar {
+	/*.uc_customer_review_box .uc_avatar {
 		position: relative;
 		top: 54px;
 		left: 50%;
 		right: auto;
 		margin: -54px 0 0 -54px;
+	}*/
+	.uc_customer_review_box .uc_avatar {
+		position: relative;
+		display: inline-block;
+		margin-top: 15px;
 	}
 	.uc_customer_review_box{
 		text-align: center;
+	}
+}
+@media screen and (max-width: 479px) {
+	.uc_customer_review_box .left-box {
+		width: 100%;
+	}
+	.uc_customer_review_box .right-box {
+		width: 100%;
 	}
 }
