@@ -1,0 +1,107 @@
+<?php
+$myForm = $this->myForm;
+$myForm->prepare();
+
+?>
+<section class="content-header">
+	<h1>
+        <?php echo PARTNER_MANAGEMENT?>
+        <small><?php echo CREATE ?></small>
+	</h1>
+</section>
+
+<?php echo $this->form()->openTag($myForm); ?>
+<!-- BUTTON -->
+<div class="row toolbar-button">
+	<div class="text-center">
+		<button class="btn btn-app" data-type="save" type="submit">
+			<i class="fa fa-save"></i>Lưu
+		</button>
+		<button class="btn btn-app" data-type="save-new" type="submit">
+			<i class="fa fa-save"></i>Lưu &amp; Thêm mới
+		</button>
+	</div>
+</div>
+
+<!-- NOTICE -->
+<?php
+echo $this->flashMessenger()->render('success', array(
+    'alert',
+    'alert-success'
+));
+echo $this->flashMessenger()->render('error', array(
+    'alert',
+    'alert-danger'
+));
+?>
+<?php echo $this->myForm->showMessage(); ?>
+
+<div class="box box-info">
+	<div class="box-body">
+		<!-- Custom Tabs -->
+		<div class="nav-tabs-custom">
+			<ul class="nav nav-tabs">
+				<li class="active"><a href="#tab_vietnamese" data-toggle="tab"><?php echo VIETNAMESE ?></a></li>
+				<li class=""><a href="#tab_english" data-toggle="tab"><?php echo ENGLISH ?></a></li>
+				<li class=""><a href="#tab_japanese" data-toggle="tab"><?php echo JAPANESE ?></a></li>
+			</ul>
+			<div class="tab-content">
+				<div class="tab-pane active" id="tab_vietnamese">
+                    <?php
+                    echo $this->partialLoop('form_row.phtml', array(
+                        array(
+                            'elm' => $myForm->get('name')
+                        ),
+                        array(
+                            'elm' => $myForm->get('description')
+                        ),
+                    ));
+                    ?>
+					</div>
+					<!-- /.tab-pane -->
+					<div class="tab-pane" id="tab_english">
+					      <?php
+                    echo $this->partialLoop('form_row.phtml', array(
+                        array(
+                            'elm' => $myForm->get('name_en')
+                        ),
+                        array(
+                            'elm' => $myForm->get('description_en')
+                        )
+                    ));
+                    ?>
+					</div>
+					<!-- /.tab-pane -->
+					<div class="tab-pane" id="tab_japanese">
+					      <?php
+                    echo $this->partialLoop('form_row.phtml', array(
+                        array(
+                            'elm' => $myForm->get('name_jp')
+                        ),
+                        array(
+                            'elm' => $myForm->get('description_jp')
+                        ),
+                    ));
+                    ?>
+					</div>
+					<!-- /.tab-pane -->
+				</div>
+				<!-- /.tab-content -->
+			</div>
+			<!-- nav-tabs-custom -->
+			
+            <div class="form-group"><?php echo $this->formLabel($myForm->get('website')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('website')) ?></div></div>
+             <div class="row">
+    						<div class="col-md-offset-3">
+                                <?php echo $this->forminput($myForm->get('logo'));?>
+                    			<?php echo $this->forminput($myForm->get('selectImage'));?>
+                    			(190px * 90px)
+                			</div>
+		      </div>
+            <?php echo $this->formHidden($myForm->get('id')) ?>
+             <?php echo $this->formHidden($myForm->get('action')) ?>
+        <?php
+        echo $this->form()->closeTag();
+        ?>
+    </div>
+	</div>

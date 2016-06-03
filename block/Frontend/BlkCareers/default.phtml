@@ -1,0 +1,48 @@
+<?php
+use Zend\Session\Container;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+?>
+
+<div class="row main-job">
+    <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo CAREERS ?></h3>	
+    <?php foreach ($this->_data as $career) { ?>
+        <div class="col-sm-12 job-item">
+            <?php
+            if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                $name = $career->name;
+                $intro = $career->intro;
+                $content = $career->content;
+                $alias = $career->alias;
+            } else {
+                $nameLang = json_decode($career->name_lang);
+                $nameField = 'name_' . $ssSystem->language;
+                $name = $nameLang->$nameField;
+                $introLang = json_decode($career->intro_lang);
+                $introField = 'intro_' . $ssSystem->language;
+                $intro = $introLang->$introField;
+                $contentLang = json_decode($career->content_lang);
+                $contentField = 'content_' . $ssSystem->language;
+                $content = $contentLang->$contentField;
+                $aliasLang = json_decode($career->alias_lang);
+                $aliasField = 'alias_' . $ssSystem->language;
+                $alias = $aliasLang->$aliasField;
+            }
+
+            if (trim($career->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $career->thumbnail)) {
+                $imageUrl = URL_APPLICATION . $career->thumbnail;
+            } else {
+                $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+            }
+            ?>
+            <a href="<?php echo strip_tags($content) ?>" target="_blank">
+                <img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-responsive">
+            </a>
+            <div>
+                <h3 class="product-name"><a href="<?php echo strip_tags($content) ?>" target="_blank"><?php echo $helperString->summary($name, 35, true); ?></a></h3>
+                <p class="short-desc" style="text-align: justify;"><?php echo $helperString->summary($intro, 150, true, true); ?></p>
+            </div>
+        </div>
+    <?php } ?>
+</div><!-- END Sidebar Right Main Job Block -->

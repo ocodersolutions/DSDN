@@ -1,0 +1,127 @@
+<?php
+$ssFilter = $this->ssFilter;
+$currentController = $this->layout()->controller;
+
+// CREATE INPUT HIDDEN
+$inputHiddenOrder = $this->ocoderFormHidden('order', $ssFilter['order']);
+$inputHiddenOrderBy = $this->ocoderFormHidden('order_by', $ssFilter['order_by']);
+$inputpublishedID = $this->ocoderFormHidden('published_id', null);
+$inputpublishedValue = $this->ocoderFormHidden('published_value', null);
+$strInputHidden = $inputHiddenOrder . $inputHiddenOrderBy . $inputpublishedID . $inputpublishedValue;
+
+// CREATE SELECTBOX
+$arrKeywordType = array('username' => 'Search by USERNAME', 'id' => 'Search by ID', 'email' => 'Search by EMAIL', 'all' => 'Search by ALL');
+//$slbKeywordType 	= $this->ocoderFormSelect('filter_keyword_type', null , $arrKeywordType, $ssFilter['filter_keyword_type']);
+$slbFilterpublished = $this->ocoderFormSelect('filter_published', '-- ' . PUBLISHED . ' --', array('active' => ACTIVE, 'inactive' => INACTIVE), $ssFilter['filter_published']);
+// CREATE INPUT
+$inputKeyword = $this->ocoderFormInput('filter_keyword_value', $ssFilter['filter_keyword_value'], array('class' => 'form-control input-sm'));
+// CREATE BUTTON
+$btnClear = $this->ocoderFormButton('btn-clear', 'btn-clear', CLEAR, array('class' => 'btn-default'));
+$btnSearch = $this->ocoderFormButton('btn-go', 'btn-go', SEARCH, array('class' => 'btn-primary'));
+
+$linkAdd = $this->cmsLinkAdmin(array('controller' => 'category', 'action' => 'form'));
+// DATA ITEM
+$xhtmlItems = '';
+if (!empty($this->categories)) {
+    foreach ($this->categories as $item) {
+        $class = $this->cycle(array('odd', 'even'))->next();
+        $id = $item->id;
+        $name = $item->name;
+        $published = $this->CmsButtonPublished($id, $item->published);
+        $cid = $this->ocoderFormInput('cid[]', $id, array('type' => 'checkbox'));
+        $linkEdit = $this->cmsLinkAdmin(array('controller' => $currentController, 'action' => 'form', 'id' => $id));
+        $xhtmlItems .= '<tr class="' . $class . '">
+                            <td>' . $cid . '</td>
+                            <td style="text-align: left;"><a href="' . URL_APPLICATION . '/admin/category/detail/' . $id . '">' . $name . '</a></td>
+                            <td>' . $id . '</td>
+                            <td><a class="btn btn-default" href="' . $linkEdit . '"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span></a></td>
+                        </tr>';
+    }
+}
+// LINK FORM SUBMIT
+$linkFormSubmit = $this->cmsLinkAdmin(array('controller' => $currentController, 'action' => 'filter'));
+?>
+
+<?php 
+$titleArr = array(
+    SERVICE_CATEGORY_ID => SERVICES,
+    CAREER_CATEGORY_ID => CAREERS,
+    NEWS_CATEGORY_ID => NEWS,
+    COMPANY_INFO_CATEGORY_ID => COMPANY_INFO,
+    RECRUITMENT_CATEGORY_ID => RECRUITMENT,
+);
+?>
+
+<section class="content-header">
+    <h1>
+        <?php echo NEWS; ?>
+        <small><?php echo CATEGORY; ?></small>
+    </h1>
+</section>
+<!-- Main content -->
+<section class="content">
+    <!-- BUTTON -->
+    <div class="row">
+        <div class="text-center">
+            <!--<a data-type="show-total" class="btn btn-app" href="#" onclick="javascript:changeOrdering();"><i class="fa fa-refresh"></i><?php echo UPDATE ?></a>--> 
+            <a class="btn btn-app" href="<?php echo $linkAdd; ?>"><i class="fa fa-plus-square-o"></i> <?php echo ADD ?></a> 
+<!--            <a data-type="show-total" class="btn btn-app" href="#" onclick="javascript:changemultiPublished(1);"><i class="fa fa-check-circle-o"></i> <?php echo ACTIVE ?></a>
+            <a data-type="show-total" class="btn btn-app" href="#" onclick="javascript:changemultiPublished(0);"><i class="fa fa-circle-o"></i> <?php echo INACTIVE ?></a> -->
+            <a data-type="show-total" class="btn btn-app" href="#" onclick="javascript:deleteItemCustom('<?php echo CONFIRM_DELETE; ?>', '<?php echo NO_ITEMS_CHOOSE; ?>')"><i class="fa fa-minus-square-o"></i> <?php echo DELETE ?></a>
+        </div>
+    </div>
+    <!-- NOTICE -->
+    <?php 
+    echo $this->flashMessenger()->render('success', array('alert', 'alert-success')); 
+    echo $this->flashMessenger()->render('error', array('alert', 'alert-danger')); 
+    ?>
+    <?php ?>
+    <div class="box box-info">	
+        <form name="adminForm" id="adminForm" action="<?php echo $linkFormSubmit; ?>" method="post">
+<!--             FILTER 
+            <div class="box-header" style="padding-top: 10px;">
+                 FILTER KEYWORD 
+                <div class="col-xs-6">
+                    <?php
+                    echo $this->partial('area_search.phtml', array('inputKeyword' => $inputKeyword, 'strButton' => $btnClear . $btnSearch));
+                    ?>
+                </div>
+                 FILTER published 
+                <div class="col-xs-6">
+                    <div class="dataTables_filter pull-right">
+                        <?php echo $slbFilterpublished; ?>
+                    </div>
+                </div>
+            </div>-->
+
+            <div class="box-body table-responsive">
+                <div class="dataTables_wrapper" role="grid">
+                    <table class="table table-bordered table-striped dataTable text-center">
+                        <!-- COLUMN TITLE -->
+                        <thead>
+                            <tr role="row">
+                                <th class="col-sm-1"><input type="checkbox" id="check-all" /></th>
+                                <th class="col-sm-9"><?php echo NAME; ?></th>
+                                <th class="col-sm-1"><?php echo ID; ?></th>
+                                <th class="col-sm-1"><?php echo EDIT; ?></th>
+                            </tr>
+                        </thead>
+
+                        <!-- CONTENT TABLE -->
+                        <tbody><?php echo $xhtmlItems; ?></tbody>
+                    </table>
+
+                    <!-- PAGINATION -->
+                    <?php
+                    if(count($this->categories) > 0){
+                        $currentURL = $this->cmsLinkAdmin(array('controller' => $currentController, 'action' => 'index'));
+                        echo $this->paginationControl($this->paginator, 'sliding', 'paginator.phtml', array('currentURL' => $currentURL));
+                    }
+                    ?>
+                </div>
+            </div>
+            <!-- INPUT HIDDEN -->
+            <?php echo $strInputHidden; ?>
+        </form>
+    </div>
+</section><!-- /.content -->

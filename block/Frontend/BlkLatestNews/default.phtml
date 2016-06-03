@@ -1,0 +1,49 @@
+<?php
+
+use Zend\Session\Container;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+?>
+
+<div class="row featured-news">
+    <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo LASTEST_NEWS ?></h3>
+    <div class="col-sm-12">
+        <?php foreach ($this->_data as $item) { ?>
+            <div class="row article-item">
+                <?php
+                if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                    $name = $item->name;
+                    $intro = $item->intro;
+                    $alias = $item->alias;
+                } else {
+                    $nameLang = json_decode($item->name_lang);
+                    $nameField = 'name_' . $ssSystem->language;
+                    $name = $nameLang->$nameField;
+                    $introLang = json_decode($item->intro_lang);
+                    $introField = 'intro_' . $ssSystem->language;
+                    $intro = $introLang->$introField;
+                    $aliasLang = json_decode($item->alias_lang);
+                    $aliasField = 'alias_' . $ssSystem->language;
+                    $alias = $aliasLang->$aliasField;
+                }
+
+                if (trim($item->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $item->thumbnail)) {
+                    $imageUrl = URL_APPLICATION . $item->thumbnail;
+                } else {
+                    $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                }
+                ?>
+                <div class="col-sm-5">
+                    <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>">
+                        <img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-responsive">
+                    </a>
+                </div>
+                <div class="content col-sm-7">
+                    <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><?php echo $helperString->summary($name, 20, true); ?></a>
+                    <p><?php echo $helperString->summary($intro, 80, true, true); ?></p>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+</div><!-- END Sidebar Right Featured News -->

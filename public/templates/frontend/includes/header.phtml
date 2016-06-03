@@ -1,0 +1,59 @@
+<?php 
+use Zend\Session\Container;
+$ssSystem = new Container('system');
+?>
+<div>
+    <!-- Logo and Toggle navigation -->
+    <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+        <a href="<?php echo URL_APPLICATION ?>" class="navbar-brand">
+            <img src="<?php echo URL_APPLICATION . $ssSystem->configs->logo ?>" class="logo img-responsive" alt="Logo Image">
+        </a>
+    </div> <!-- end Logo and Toggle navigation -->
+
+    <!-- Search and Multi language Block -->
+    <nav class="collapse navbar-collapse bs-navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+            <li class="search-form">
+                
+                <form action="<?php echo URL_APPLICATION . '/tim-kiem/' ?>" method="GET">
+                    <input type="text" class="form-control" id="keyword-search" name='tk' placeholder="<?php echo SEARCH ?>" value="<?php echo array_key_exists('tk', $_GET) ? $_GET['tk'] : '' ?>">
+                    <button type="submit" class="submit-search"><img src="<?php echo $urlImage ?>/icon-search1.png" /></button>
+                </form>
+            </li>
+            <li class="flag"><a href="<?php echo URL_APPLICATION_VI ?>"><img src="<?php echo $urlImage ?>/vietnam.png"></a></li>
+            <li class="flag"><a href="<?php echo URL_APPLICATION_EN ?>"><img src="<?php echo $urlImage ?>/england.png"></a></li>
+            <li class="flag"><a href="<?php echo URL_APPLICATION_JP ?>"><img src="<?php echo $urlImage ?>/japan.png" style="margin-right: 15px;"></a></li>
+        </ul>
+    </nav> <!-- END Search and Multi language Block -->
+</div>
+
+<!-- Main Menu -->
+<div id="navbar" class="navbar-collapse collapse">
+    <ul class="nav navbar-nav pull-right">
+        <li class="active"><a href="<?php echo URL_APPLICATION ?>"><?php echo HOME ?></a></li>
+        <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_INTRO ?>"><?php echo COMPANY ?></a></li>
+        <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_PRODUCTS ?>"><?php echo PRODUCT ?></a></li>
+        <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SERVICE ?>"><?php echo SERVICES ?></a></li>
+        <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_NEWS ?>"><?php echo NEWS ?></a></li>
+        <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_RECRUITMENT ?>"><?php echo RECRUITMENT ?></a></li>
+        <li><a href="<?php echo URL_APPLICATION ?>/lien-he"><?php echo CONTACT ?></a></li>
+        <!-- <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="true">Dropdown <span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Action</a></li>
+                        <li><a href="#">Another action</a></li>
+                        <li><a href="#">Something else here</a></li>
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Nav header</li>
+                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">One more separated link</a></li>
+                </ul>
+        </li> -->
+    </ul>
+</div> <!-- End Main Menu -->
