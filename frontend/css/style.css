@@ -272,7 +272,7 @@ header .textwidget {
      font-family: Century Gothic;
      color: #fff;
      text-transform: uppercase;
-     font-size: 15px;
+     font-size: 13px;
      padding: 15px 0;
  }
  
@@ -284,7 +284,7 @@ header .textwidget {
      font-family: Century Gothic;
      color: #fff;
      text-transform: uppercase;
-     font-size: 15px;
+     font-size: 13px;
      line-height: 23px;
      border-right: 1px solid rgba(255, 255, 255, 0.18);
  }

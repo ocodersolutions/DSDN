@@ -66,7 +66,7 @@
          line-height: 20px;
      }
      .page-default .content {
-         padding-bottom: 120px;
+         /*padding-bottom: 120px;*/
      }
      .page-default .content .main-content-wrap .sidebar-right .title {
          font-size: 14px !important;
@@ -78,7 +78,6 @@
          padding-bottom: 150px !important;
      }
      .bs-docs-footer {
-         margin-top: -150px;
          background-position: top;
      }
      .bs-docs-footer .contact-us {
@@ -161,6 +160,19 @@
         margin-right: 0px;
      }
  }
+
+@media (max-width: 991px) {
+    .menu-main .request-quote {
+        font-size: 12px;
+    }
+    .menu-main .navbar-nav li a {
+        font-size: 12px;
+        padding: 15px 3px;
+    }
+    .navbar-collapse {
+        padding-right: 0 !important;
+    }
+}
  
  @media (max-width: 767px) {
      .container-fluid > .navbar-collapse,
@@ -181,7 +193,7 @@
          line-height: 10px;
      }
      .page-default .content {
-         padding-bottom: 200px !important;
+         /*padding-bottom: 200px !important;*/
      }
      .menu-main .navbar-nav {
          float: left;
@@ -217,7 +229,6 @@
          margin-top: 20px;
      }
      .bs-docs-footer {
-         margin-top: -140px;
      }
      .bs-docs-footer .contact-us-wrap {
          width: 100%;
@@ -283,13 +294,12 @@
          color: #ff4600 !important;
      }
      .page-default .content {
-         padding-bottom: 200px !important;
+         /*padding-bottom: 200px !important;*/
      }
      header {
          padding-bottom: 0;
      }
      .bs-docs-footer {
-         margin-top: -180px;
      }
      .bs-docs-footer .contact-us {
          font-size: 15px;
@@ -356,7 +366,6 @@
          font-size: 18px !important;
      }
      .bs-docs-footer {
-         margin-top: -210px;
      }
      .bs-docs-footer .contact-us {
          font-size: 13px;
