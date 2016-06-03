@@ -30,7 +30,12 @@
                     <p class="author pull-right">Mạnh Nguyên</p>
                 </div>
             </div>
-                
+             <div class="col-md-4 block padding_right5">
+                <div class="search">
+                    <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
+                    <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
+                </div>
+            </div>   
             <div class="col-sm-4 block">
                  
                 <div class="tinanh">

@@ -296,7 +296,7 @@ ul.pagination_news  li a:focus{
     line-height: 1.5;
     border-color: #004ebc;
     border-radius: 4px 0px 0px 4px;
-    width: 70%;
+    width: 75%;
 }
 .search button p{
     line-height: 24px;
@@ -314,9 +314,9 @@ ul.pagination_news  li a:focus{
     font-size: 12px;
     line-height: 1.5;
     border-radius: 0px 4px 4px 0px;
-    width: 22%;
+    width: 25%;
     top: 0px;
-    right: 30px;
+    right: 0px;
 }
 @media (max-width: 1190px){
     .search button i{
