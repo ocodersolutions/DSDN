@@ -101,6 +101,11 @@ form input:focus,form textarea:focus{
     margin-bottom: 10px;
     border-bottom: 1px dotted;
 }
+.contact_info .cv_p::after {
+    content: "";
+    display: block;
+    clear: both;
+}
 .contact_info span{
 	float: right;
 }
