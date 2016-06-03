@@ -649,6 +649,7 @@ header .textwidget {
     margin: 0;
     border: 1px solid #004ebc;
     border-radius: 4px;
+    background: #fff;
  }
  .login > span {
     display:block;
@@ -672,10 +673,11 @@ header .textwidget {
     width:100%;
  }
  .login form button {
-    padding:5px;
-    margin:0 0 10px;
-    font:16px 'Century Gothic';
-    color:#000;
+    background: #004EBC;
+    padding: 5px;
+    margin: 0 0 10px;
+    font: 16px 'Century Gothic';
+    color: #fff;
  }
  .login form a {
     display:inline;
@@ -767,7 +769,7 @@ header .textwidget {
  
  .otherlink {
     /*radian*/
-    background: linear-gradient(to top, rgba(144, 166, 255, 1), rgba(0,58,188,1));
+    background: linear-gradient(to top, rgb(231, 236, 248), rgba(140, 180, 255, 1));
      border: 1px solid #004ebc;
      border-radius: 4px;
  }
@@ -786,7 +788,7 @@ header .textwidget {
     padding: 6px 5px 6px 25px;
     background: url(../img/marker.png) no-repeat 10px center;
     font: 14px "Century Gothic";
-    color: #fff;
+    color: #ff4600;
     line-height: 20px;
  }
  .otherlink a:hover {
@@ -809,7 +811,7 @@ header .textwidget {
  
  .tinanh {
     /* radian*/
-    background: linear-gradient(to top, rgba(163, 182, 255, 1), rgba(0,58,188,1));
+    background: linear-gradient(to top, rgb(231, 236, 248), rgba(140, 180, 255, 1));
     border: 1px solid #004ebc;
     border-radius: 4px;
  }
@@ -844,7 +846,7 @@ header .textwidget {
  .tinanh .items a {
      
      font: 14px "Century Gothic";
-     color: #fff;
+     color:#ff4600;
      text-decoration: none;
  }
  .tinanh .items a:hover {
