@@ -48,3 +48,8 @@
 .uc_simple_app_download_buttons .uc_app_button .uc_button_app .uc_app_os{
 	font-size: 24px;
 }
+@media (max-width: 991px) {
+    .uc_simple_app_download_buttons .uc_app_button {
+        margin-bottom: -15px;
+    }
+}
