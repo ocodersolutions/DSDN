@@ -695,8 +695,12 @@ header .textwidget {
      border: none !important;
  }
  
- .flexslider .flex-prev,
- .flexslider .flex-next {}
+ .flexslider .flex-prev {
+    left: 0 !important;
+ }
+ .flexslider .flex-next {
+    right: 0 !important;
+ }
  
  .flexslider .flex-prev::before {
      height: 40px;
