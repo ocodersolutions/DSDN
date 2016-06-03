@@ -1,5 +1,5 @@
 <?php 
-require('defines.php');
+require('defines-default.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
