@@ -1,6 +1,5 @@
 <?php 
-require('defines.php');
-//define('BASE_URL', 'http://localhost:8089/ocoder/DSDN/frontend/');
+require('defines-default.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
