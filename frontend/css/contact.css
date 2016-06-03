@@ -279,10 +279,52 @@ ul.pagination_news  li a:focus{
     font-size: 12px;
     font-weight: bold;
     color: rgb(153, 153, 153);
-    
-
+}
+/*==== form seach====*/
+.search{
+    font: 12px "Century Gothic";
+    width: 100%;
+    margin-right: 30px;
+    display: block;
+    position: relative;
+}
+.search .input-search{
+    display: inline-block;
+    height: 34px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-color: #004ebc;
+    border-radius: 4px 0px 0px 4px;
+    width: 70%;
+}
+.search button p{
+    line-height: 24px;
+}
+.search button i{
+    display: none;
+    font-size: 21px;
+}
+.btn-search {
+    background: #004EBC;
+    position: absolute;
+    display: inline-block;
+    height: 34px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0px 4px 4px 0px;
+    width: 22%;
+    top: 0px;
+    right: 30px;
 }
 @media (max-width: 1190px){
+    .search button i{
+    display: block;
+}
+.search button p{
+    display: none;
+}
 	.contact-content .contact_p{
 	font-size: 40px;
 	top:70%;

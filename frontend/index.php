@@ -388,6 +388,12 @@
                                         <!-- end of clean accordion -->
                                     </div>
                                     <div class="col-md-5 block first">
+                                        <div class="search">
+                                            <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
+                                            <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5 block first">
                                         <div class="otherlink">
                                             <span>LIÊN KẾT KHÁC</span>
                                             <a href="#">Tổng công ty đường sắt Việt Nam</a>
