@@ -20,7 +20,7 @@
                 <div class="breakum-line">
                     <a href="">Trang chủ</a>/<span> thông tin liên hệ</span>
                 </div>
-                <div class="col-sm-7">
+                <div class="col-sm-12 col-md-7">
                     <p  class="title-default">Liên hệ và Góp ý </p>
                     <form class="contactform">
                         <div class="form-group col-sm-6">
@@ -41,13 +41,13 @@
                         </div>
                     </form>
                 </div>
-                <div class="col-md-5 block">
+                <div class="col-md-5 col-sm-12 block">
                     <div class="search">
                         <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
                         <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
                     </div>
                 </div>
-                <div class="col-md-5 block">
+                <div class="col-md-5 col-sm-12 block">
                     <div class="contact_info">
                         <p  class="title-default">Thông tin liên hệ </p>
                         <p>CÔNG TY CP THÔNG TIN TÍN HIỆU ĐƯỜNG SẮT ĐÀ NẴNG</p>
