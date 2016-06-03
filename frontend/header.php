@@ -83,10 +83,10 @@ require('defines.php');
                     <li class="parent-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Dịch vụ <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="#">Cung cấp thiết bị</a></li>
-                            <li><a href="#">Bảo trì vận hành</a></li>
-                            <li><a href="#">Tư vấn thiết kế</a></li>
-                            <li><a href="#">Dịch vụ khác</a></li>
+                            <li><a href="<?php echo BASE_URL;?>service_detail.php?thiet-bi">Cung cấp thiết bị</a></li>
+                            <li><a href="<?php echo BASE_URL;?>service_detail.php?bao-tri">Bảo trì vận hành</a></li>
+                            <li><a href="<?php echo BASE_URL;?>service_detail.php?thiet-ke">Tư vấn thiết kế</a></li>
+                            <li><a href="<?php echo BASE_URL;?>service_detail.php?khac">Dịch vụ khác</a></li>
                         </ul>
                     </li>
                     <li class="parent-item dropdown">
