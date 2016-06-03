@@ -100,7 +100,7 @@
                         <!-- end of customer review box --> 
                     </div>
                 </div>
-                <div class="col-md-5 block first">
+                <div class="col-md-5 block first col-xs-12">
                     <div class="search">
                         <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
                         <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
