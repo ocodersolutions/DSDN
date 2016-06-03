@@ -4,7 +4,7 @@
             <div class="row">
                 <div class="container">
                     
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-sm-6">
                          <div class="social-block  pull-left">
                             <h4>CÔNG TY CP THÔNG TIN TÍN HIỆU ĐƯỜNG SẮT ĐÀ NẴNG</h4>
                             <div>
@@ -20,7 +20,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div><div class="col-md-6 social">
+                    </div><div class="col-md-6 col-sm-6 social">
                         <div class="social-block">
                             <h4 class="float-left">Kết nối:</h4>
                             <div>
