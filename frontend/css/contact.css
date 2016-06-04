@@ -254,6 +254,13 @@ ul.pagination_news  li a:focus{
     font-weight: bold;
     color:#004ebc;
 }
+.news_content .new_tittle_block {
+    display: inline-block;
+    padding: 10px;
+    background-color: #004ebc;
+    font: bold 20px "Century Gothic";
+    color: #fff;
+}
 .news_content .short_des{
     
     font-weight: bold;

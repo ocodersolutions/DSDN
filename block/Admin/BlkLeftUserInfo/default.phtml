@@ -1,0 +1,10 @@
+<?php $userInfo = $this->_data; ?>
+<div class="user-panel">
+    <div class="pull-left image">
+        <img src="<?php echo URL_PUBLIC . '/img/avatar.png' ?>" class="img-circle" alt="User Image" />
+    </div>
+    <div class="pull-left info">
+        <p><?php echo HELLO ?>, <br/><?php echo $userInfo->fullname; ?></p>
+        <!--<a href="#"><i class="fa fa-circle text-success"></i> Online</a>-->
+    </div>
+</div>

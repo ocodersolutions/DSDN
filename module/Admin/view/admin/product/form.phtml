@@ -1,0 +1,86 @@
+<?php
+$myForm = $this->myForm;
+//$myForm->prepare();
+echo $this->form()->openTag($myForm);
+?>
+<div class="row toolbar-button">
+    <div class="text-center">
+        <button class="btn btn-app" data-type="save" type="submit"><i class="fa fa-save"></i><?php echo SAVE ?></button>
+        <!--<button class="btn btn-app" data-type="save-close" type="submit"><i class="fa fa-save"></i><?php echo SAVE_CLOSE ?></button>-->
+        <button class="btn btn-app" data-type="save-new" type="submit"><i class="fa fa-save"></i><?php echo SAVE_NEW ?></button>
+    </a><a data-show-item="no" data-type="default" class="btn btn-app" href="/admin/product/index/">
+    <i class="fa fa-arrow-circle-left"></i>Quay lại
+</a> 
+<!--        <a data-show-item="no" data-type="save" class="btn btn-app" href="#">
+            <i class="fa fa-save"></i>Lưu
+        </a><a data-show-item="no" data-type="save-close" class="btn btn-app" href="#">
+            <i class="fa fa-folder-open-o"></i>Lưu &amp; Đóng
+        </a><a data-show-item="no" data-type="save-new" class="btn btn-app" href="#">
+            <i class="fa fa-plus-square"></i>Lưu &amp; Thêm mới
+        </a><a data-show-item="no" data-type="default" class="btn btn-app" href="/admin/productcategory/index/">
+            <i class="fa fa-arrow-circle-left"></i>Quay lại
+        </a>    -->
+</div>
+</div>
+
+<!-- NOTICE -->
+<?php echo $this->flashMessenger()->render(); ?>
+<?php echo $this->myForm->showMessage(); ?>
+
+<div class="box box-info">
+    <div class="box-body">
+        <!-- Custom Tabs -->
+        <div class="nav-tabs-custom">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="#tab_vietnamese" data-toggle="tab"><?php echo VIETNAMESE ?></a></li>
+                <li class=""><a href="#tab_english" data-toggle="tab"><?php echo ENGLISH ?></a></li>
+                <li class=""><a href="#tab_japanese" data-toggle="tab"><?php echo JAPANESE ?></a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="tab-pane active" id="tab_vietnamese">
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('name')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('name')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('intro')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('intro')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('description')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('description')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('keyword')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('keyword')) ?> <i><?php echo NOTE_FOR_KEYWORD ?></i></div></div>
+                </div><!-- /.tab-pane -->
+                <div class="tab-pane" id="tab_english">
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('name_en')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('name_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('intro_en')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('intro_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('description_en')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('description_en')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('keyword_en')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('keyword_en')) ?> <i><?php echo NOTE_FOR_KEYWORD ?></i></div></div>
+                </div><!-- /.tab-pane -->
+                <div class="tab-pane" id="tab_japanese">
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('name_jp')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('name_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('intro_jp')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('intro_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('description_jp')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('description_jp')) ?></div></div>
+                    <div class="form-group"><?php echo $this->formLabel($myForm->get('keyword_jp')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('keyword_jp')) ?> <i><?php echo NOTE_FOR_KEYWORD ?></i></div></div>
+                </div><!-- /.tab-pane -->
+            </div><!-- /.tab-content -->
+        </div><!-- nav-tabs-custom -->
+
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('price')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('price')) ?></div></div>
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('category_id')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('category_id')) ?></div></div>
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('status')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('status')) ?></div></div>
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('special')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('special')) ?></div></div>
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('picture')) ?><div class="col-xs-6"><?php echo $this->formElement($myForm->get('picture')) ?><input type="button" id="BrowseImageIcon" value="<?php echo BROWSER_IMAGE ?>" style="height: 34px;" /><br/> <i>(325px * 200px)</i></div></div>
+
+
+        <?php echo $this->formHidden($myForm->get('id')) ?>
+        <?php echo $this->formHidden($myForm->get('action')) ?>
+
+    </div>
+</div>
+<?php echo $this->form()->closeTag(); ?>
+
+<script>
+    $(document).ready(function () {
+        $("#BrowseImageIcon").click(function () {
+            var ckfider = new CKFinder();
+            ckfider.selectActionFunction = function (fileUrl) {
+                $("#Image").val(fileUrl);
+            };
+            ckfider.popup();
+        });
+    });
+
+</script>

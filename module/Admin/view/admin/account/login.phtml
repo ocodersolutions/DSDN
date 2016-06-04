@@ -1,0 +1,72 @@
+<?php
+$this->layout()->setTemplate('layout/backend-blank');
+$myForm = $this->myForm;
+$myForm->prepare();
+?>
+
+<div class="form-box" id="login-box">
+    <div class="header"><?php echo SIGN_IN ?></div>
+    <?php echo $this->form()->openTag($myForm); ?>
+    <div class="body bg-gray">
+        <!-- NOTICE -->
+        <?php if(trim($this->msgError)){
+            echo '<span style="color: red">' . $this->msgError . '</span>';
+        }?>
+        <div class="form-group">
+            <!--<input type="text" name="username" class="form-control" placeholder="<?php echo USERNAME ?>"/>-->
+            <?php echo $this->formElement($myForm->get('username')) ?>
+        </div>
+        <div class="form-group">
+            <!--<input type="password" name="password" class="form-control" placeholder="<?php echo PASSWORD ?>"/>-->
+            <?php echo $this->formElement($myForm->get('password')) ?>
+        </div>          
+        <!--            <div class="form-group">
+                        <input type="checkbox" name="remember_me"/> Remember me
+                    </div>-->
+    </div>
+    <div class="footer">                                                               
+        <button type="submit" class="btn bg-olive btn-block"><?php echo SIGN_IN ?></button>  
+
+            <!--<p><a href="#">I forgot my password</a></p>-->
+
+        <!--<a href="register.html" class="text-center">Register a new membership</a>-->
+    </div>
+    <?php echo $this->form()->closeTag(); ?>
+
+    <!--    <div class="margin text-center">
+            <span>Sign in using social networks</span>
+            <br/>
+            <button class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></button>
+            <button class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></button>
+            <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
+    
+        </div>-->
+</div>
+
+<script>
+    $('#adminForm')
+            .formValidation({
+                excluded: [':disabled'],
+                icon: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    username: {
+                        validators: {
+                            notEmpty: {
+                                message: '<?php echo ALERT_REQUIRE_INPUT; ?>'
+                            }
+                        }
+                    },
+                    password: {
+                        validators: {
+                            notEmpty: {
+                                message: '<?php echo ALERT_REQUIRE_INPUT; ?>'
+                            }
+                        }
+                    },
+                }
+            });
+</script>

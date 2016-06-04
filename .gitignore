@@ -1,1 +1,3 @@
 frontend/defines.php
+public/define_local.php
+public/define.php

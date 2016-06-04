@@ -1,0 +1,124 @@
+<?php
+
+use Zend\Session\Container;
+use Admin\Model\ProductTable;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+
+$featuredProducts = $this->featuredProducts;
+?>
+
+
+<!-- Main Content of Website -->
+<div class="main-wrapper search-page">
+    <!-- Main Content -->
+    <div class="row main-content-wrapper">
+        <!-- Main Content -->
+        <div class="main-content col-sm-8">
+            <img src="<?php echo URL_TEMPLATE . '/frontend/images/banner-sub.jpg' ?>" class="img-thumbnail banner-sub">
+            
+            <div class="row search-results">
+                <h3 class="col-sm-12 header-title"> <?php echo SEARCH_RESULTS_FOR . ' <span style="color: #ea3e03; text-transform: none;">"' . $this->keyword . '"</span>' ?></h3>
+                
+                <?php if(count($this->products) > 0) { ?>
+                <!-- Search Products Block -->
+                <div class="products">
+                    <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo PRODUCT ?></h3>
+                    <?php foreach ($this->products as $product) { ?>
+                        <div class="col-sm-6 product-item">
+                            <div class="product-thumbnail effect-box-shadow">
+                                <?php
+                                if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                                    $name = $product->name;
+                                    $alias = $product->alias;
+                                    $intro = $product->intro;
+                                } else {
+                                    $nameLang = json_decode($product->name_lang);
+                                    $nameField = 'name_' . $ssSystem->language;
+                                    $name = $nameLang->$nameField;
+                                    $aliasLang = json_decode($product->alias_lang);
+                                    $aliasField = 'alias_' . $ssSystem->language;
+                                    $alias = $aliasLang->$aliasField;
+                                    $introLang = json_decode($product->intro_lang);
+                                    $introField = 'intro_' . $ssSystem->language;
+                                    $intro = $introLang->$introField;
+                                }
+                                
+                                if (trim($product->picture) && $helperString->isUrlExist(URL_APPLICATION . $product->picture)) {
+                                    $imageUrl = URL_APPLICATION . $product->picture;
+                                } else {
+                                    $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                                }
+                                ?>
+                                <a href="<?php echo URL_APPLICATION . '/sp/' . $alias ?>">
+                                    <img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail">
+                                </a>
+                            </div>
+                            <div>
+                                <h3 class="product-name"><a href="<?php echo URL_APPLICATION . '/sp/' . $alias ?>"><?php echo $helperString->summary($name, 50, true); ?></a></h3>
+                                <p class="price"><strong><?php echo PRICE ?>: <span><?php echo number_format($product->price, 0, ',', '.') . " VND" ?></span></strong></p>
+                                <p class="short-desc"><?php echo $helperString->summary($intro, 150, true, true); ?></p>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div><!-- END Search Product Block -->
+                <?php } ?>
+                
+                <?php if(count($this->articles) > 0) { ?>
+                <!-- Search Articles List -->
+                <div class="articles">
+                    <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo ARTICLE ?></h3>
+                    <?php
+                    foreach ($this->articles as $article) {
+                        if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                            $name = $article->name;
+                            $intro = $article->intro;
+                            $alias = $article->alias;
+                        } else {
+                            $nameLang = json_decode($article->name_lang);
+                            $nameField = 'name_' . $ssSystem->language;
+                            $name = $nameLang->$nameField;
+                            $introLang = json_decode($article->intro_lang);
+                            $introField = 'intro_' . $ssSystem->language;
+                            $intro = $introLang->$introField;
+                            $aliasLang = json_decode($article->alias_lang);
+                            $aliasField = 'alias_' . $ssSystem->language;
+                            $alias = $aliasLang->$aliasField;
+                        }
+    
+                        if (trim($article->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $article->thumbnail)) {
+                            $imageUrl = URL_APPLICATION . $article->thumbnail;
+                        } else {
+                            $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                        }
+                        ?>
+                        <div class="col-sm-12 article">
+                            <div class="col-sm-3 news-images">
+                                <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail"></a>
+                            </div>
+                            <div class="col-sm-9 news-content">
+                                <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><strong><?php echo $name; ?></strong></a>
+                                <p class="short-desc"><?php echo $helperString->summary($intro, 250, true, true); ?></p>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div><!-- END Search Articles List -->
+                <?php } ?>
+            </div>
+        </div> <!-- End Homepage content -->
+
+        <!-- Sidebar right -->
+        <div class="sidebar-right col-sm-4">
+            <?php
+            // Sidebar Right Product Category Block
+            echo $this->blkProductCategory();
+            // Sidebar Right Services Block
+            echo $this->blkServices();
+            // Sidebar Right Video Block
+            echo $this->blkVideo();
+            // Sidebar Right Featured News
+            echo $this->blkLatestNews();
+            ?>
+        </div><!-- Sidebar Right -->
+    </div><!-- End Main Content -->

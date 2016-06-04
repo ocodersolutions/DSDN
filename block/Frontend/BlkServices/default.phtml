@@ -1,0 +1,30 @@
+<?php
+use Zend\Session\Container;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+?>
+
+<div class="row product-categories menu-right">
+    <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo SERVICES ?></h3>	
+    <div class="col-sm-12 job-item">
+        <ul class="menu-sidebar list-unstyled">
+            <?php
+            foreach ($this->_data as $service) {
+                if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                    $name = $service->name;
+                    $alias = $service->alias;
+                } else {
+                    $nameLang = json_decode($service->name_lang);
+                    $nameField = 'name_' . $ssSystem->language;
+                    $name = $nameLang->$nameField;
+                    $aliasLang = json_decode($service->alias_lang);
+                    $aliasField = 'alias_' . $ssSystem->language;
+                    $alias = $aliasLang->$aliasField;
+                }
+                ?>
+                <li><a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><?php echo $name ?></a></li>
+            <?php } ?>
+        </ul>
+    </div>
+</div>
