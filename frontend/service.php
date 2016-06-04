@@ -15,6 +15,7 @@
             <div class="col-sm-8 block">
                 <div class="news_content">
                     <p class="new_tittle_block block">Cung cấp thiết bị</p>
+                    <span class="block">Thứ 6, 03/06/2016, 15:49:21</span>
                     <p class="short_des block">Trong bối cảnh kinh doanh hiện nay, đặc biệt khi Việt Nam gia nhập WTO, vấn đề cạnh tranh trong kinh doanh ngày càng trở nên gay gắt. Bên cạnh các dịch vụ, sản phẩm truyền thống, Quý Doanh nghiệp cần có sự kết hợp chặt chẽ với các tổ chức và doanh nghiệp khác để đưa ra các dịch vụ, sản phẩm giá trị gia tăng để thu hút khách hàng</p>
                     <p>Dự án di dời ga Đà Nẵng và tái phát triển đô thị có tổng mức đầu tư 442,23 triệu USD (tương đương 9.932 tỷ đồng). Trong đó, dự kiến vay ODA từ WB 334 triệu USD, phần vốn còn lại trị giá 107 triệu USD được huy động từ nguồn ngân sách địa phương.</p>
                     <p>Kinh phí dự trù cho các hạng mục ở giai đoạn I gồm: xây dựng tuyến đường sắt mới dài 16 km, xây mới ga khách Đà Nẵng, xây dựng 6 cầu vượt đường bộ (cầu Thanh Khê, cầu vượt quốc lộ 14B và 4 cầu vượt đường bộ) khoảng 7.000 tỷ đồng.</p>
