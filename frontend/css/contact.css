@@ -62,7 +62,7 @@ form input,form textarea {
     outline: 0;
     background: 0 0;
     border: 0;
-    background: #E3E3E3 no-repeat;
+    background: #fff no-repeat;
     background-image: linear-gradient(to bottom, #004EBC, #004EBC), linear-gradient(to bottom, #fbfbfb, #fbfbfb);
     background-size: 0 2px, 100% 1px;
     background-position: 50% 100%, 50% 100%;

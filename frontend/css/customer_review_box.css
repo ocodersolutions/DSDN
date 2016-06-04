@@ -30,14 +30,13 @@
 }
 .uc_customer_review_box .left-box .uc_name {
 	text-transform: uppercase;
-	margin: 17px 20px 0;
+	margin: 17px 5px 0;
     font: bold 16px Century Gothic;
     color: rgba(0,78,188,0.58);
 	line-height: 22px;
 }
 .uc_customer_review_box .left-box .uc_job {
-	
-	margin: 4px 10px 0 20px;
+	margin: 4px 10px 0 5px;
 	padding-bottom: 19px;
 	font: 16px Montserrat ;
 	color: rgba(0,78,188,0.58);
@@ -79,6 +78,7 @@
 		width: 100%;
 	}
 	.uc_customer_review_box .right-box {
-		width: 100%;
+	    width: 65%;
+    	margin-top: -35px;
 	}
 }
