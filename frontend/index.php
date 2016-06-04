@@ -229,7 +229,7 @@
                                             <input id="acount" type="text" />
                                             <label for="pass">Mật khẩu</label>
                                             <input id="pass" type="text" />
-                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
+                                            <button type="submit">Đăng nhập</button>
                                             <a href="#">Quên mật khẩu?</a>
                                         </form>
                                     </div>

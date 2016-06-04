@@ -12,7 +12,7 @@
 .uc_simple_app_download_buttons .uc_app_button{
 	font-size: 24px;
     text-align: left;
-    padding: 7px 10px 7px 10px;
+    padding: 7px;
     margin: 26px 44px 26px -42px;
     z-index: 5;
     position: relative;
@@ -47,6 +47,11 @@
 }
 .uc_simple_app_download_buttons .uc_app_button .uc_button_app .uc_app_os{
 	font-size: 24px;
+}
+@media (max-width: 1190px) {
+    .uc_simple_app_download_buttons .uc_app_button {
+        padding:6px;
+    }
 }
 @media (max-width: 991px) {
     .uc_simple_app_download_buttons .uc_app_button {

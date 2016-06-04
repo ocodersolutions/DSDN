@@ -673,11 +673,11 @@ header .textwidget {
     width:100%;
  }
  .login form button {
-    background: #004EBC;
+   
     padding: 5px;
     margin: 0 0 10px;
     font: 16px 'Century Gothic';
-    color: #fff;
+    color: #000;
  }
  .login form a {
     display:inline;

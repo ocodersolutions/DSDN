@@ -84,6 +84,10 @@
      .bs-docs-footer .menu-footer {
          margin-top: 100px;
      }
+     .uc_simple_app_download_buttons .uc_app_button {
+        padding: 7px;
+     }
+
  }
  
  @media (max-width: 1023px) {
