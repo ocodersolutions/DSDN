@@ -29,7 +29,12 @@ $(function() {
 	$( "#accordion" ).accordion({
 		icons: icons,
 		heightStyle:"content",
-		active: false
+		active: false,
+		activate: function(event, ui) {
+        	//alert(ui.newHeader.text());
+        	//$("ui-state-active").focus();
+        	document.querySelector(".ui-state-active").focus();
+    	}
 	});
 });
 // js Logo carousel
