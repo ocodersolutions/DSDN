@@ -31,8 +31,6 @@ $(function() {
 		heightStyle:"content",
 		active: false,
 		activate: function(event, ui) {
-        	//alert(ui.newHeader.text());
-        	//$("ui-state-active").focus();
         	document.querySelector(".ui-state-active").focus();
     	}
 	});
