@@ -1,0 +1,22 @@
+.member-item {
+    margin-bottom: 10px;
+}
+.member-col {
+    padding: 0;
+}
+.member-image {
+    width: 100%;
+}
+.member-title {
+    font: bold 18px "Century Gothic";
+    color: #ff4600;
+}
+.member-title:hover {
+    color: #ff4600;
+}
+.member-content {
+    margin-top: 5px;
+    font: 15px "Century Gothic";
+    color: #333;
+    line-height: 22px;
+}

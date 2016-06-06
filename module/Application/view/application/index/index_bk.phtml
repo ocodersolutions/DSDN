@@ -1,0 +1,221 @@
+<?php
+
+use Zend\Session\Container;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+
+$featuredProducts = $this->featuredProducts;
+?>
+
+<div class="box-banner">
+    <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+         <!--Indicators--> 
+        <ol class="carousel-indicators">
+            <?php 
+            for ($i = 0; $i < count($this->banners); $i++) {
+                $classActive = $i == 0 ? 'active' : '';
+            ?> 
+                <li data-target="#carousel-example-generic" data-slide-to="<?php echo $i; ?>" class="<?php echo $classActive; ?>"></li>    
+            <?php } ?>
+        </ol>
+
+         <!--Wrapper for slides--> 
+        <div class="carousel-inner" role="listbox">
+            <?php 
+            $isFirst = true; 
+            foreach ($this->banners as $banner) { 
+                if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                    $name = $banner->name;
+                    $description = $banner->description;
+                } else {
+                    $nameLang = json_decode($banner->name_lang);
+                    $nameField = 'name_' . $ssSystem->language;
+                    $name = $nameLang->$nameField;
+                    $descritionLang = json_decode($banner->descrition_lang);
+                    $descritionField = 'descrition_' . $ssSystem->language;
+                    $descrition = $descritionLang->$descritionField;
+                }
+                $classActive = $isFirst ? 'active' : '';
+                $isFirst = false;
+                ?>
+                <div class="item <?php echo $classActive; ?>">
+                    <img src="<?php echo URL_APPLICATION . $banner->banner ?>" alt="<?php echo $name; ?>">
+                    <div class="carousel-caption">
+                        <?php if(trim($banner->link)) { ?>
+                            <strong><a href="<?php echo $banner->link; ?>"><?php echo $name; ?></a></strong>    
+                        <?php } else { ?>
+                            <strong><?php echo $name; ?></strong>
+                        <?php } ?>
+                        
+                        <p><?php echo $description; ?></p>
+                    </div>
+                </div>
+            <?php } ?>
+        </div>
+    </div>
+</div>
+
+
+<!-- Main Content of Website -->
+<div class="main-wrapper home-page">
+    <!-- Homepage content -->
+    <div class="row menu-thumb">
+        <div class="menu-item col-md-offset-1 col-md-2">
+            <a href="<?php echo URL_APPLICATION . '/' . URL_ALIAS_INTRO ?>">
+                <div class="image-thumbnail effect-box-shadow">
+                    <img src="<?php echo URL_TEMPLATE . '/frontend/images/menu-thumb-intro.jpg' ?>" alt="<?php echo INTRO ?>" class="img-thumbnail box-shadow">
+                </div>
+                <div class="title"><?php echo INTRO ?></div>
+            </a>
+        </div>
+        <div class="menu-item col-md-2">
+            <a href="<?php echo URL_APPLICATION . '/' . URL_ALIAS_PRODUCTS ?>">
+                <div class="image-thumbnail effect-box-shadow">
+                    <img src="<?php echo URL_TEMPLATE . '/frontend/images/menu-thumb-product.jpg' ?>" alt="<?php echo PRODUCT ?>" class="img-thumbnail">
+                </div>
+                <div class="title"><?php echo PRODUCT ?></div>
+            </a>
+        </div>
+        <div class="menu-item col-md-2">
+            <a href="<?php echo URL_APPLICATION . '/' . URL_ALIAS_SERVICE ?>">
+                <div class="image-thumbnail effect-box-shadow">
+                    <img src="<?php echo URL_TEMPLATE . '/frontend/images/menu-thumb-service.jpg' ?>" alt="<?php echo SERVICES ?>" class="img-thumbnail">
+                </div>
+                <div class="title"><?php echo SERVICES ?></div>
+            </a>
+        </div>
+        <div class="menu-item col-md-2">
+            <a href="<?php echo URL_APPLICATION . '/' . URL_ALIAS_RECRUITMENT ?>">
+                <div class="image-thumbnail effect-box-shadow">
+                    <img src="<?php echo URL_TEMPLATE . '/frontend/images/menu-thumb-recruitment.jpg' ?>" alt="<?php echo RECRUITMENT ?>" class="img-thumbnail">
+                </div>
+                <div class="title"><?php echo RECRUITMENT ?></div>
+            </a>
+        </div>
+        <div class="menu-item col-md-2">
+            <a href="<?php echo URL_APPLICATION . '/' . URL_ALIAS_NEWS ?>">
+                <div class="image-thumbnail effect-box-shadow">
+                    <img src="<?php echo URL_TEMPLATE . '/frontend/images/menu-thumb-news.jpg' ?>" alt="News" class="img-thumbnail">
+                </div>
+                <div class="title"><?php echo NEWS ?></div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="row main-content-wrapper">
+        <!-- Main Content -->
+        <div class="main-content col-sm-8">
+            <!-- Homepage Intro Block -->
+            <div class="row intro">
+                <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo $ssSystem->configs->company_name; ?></h3>
+                <div class="col-sm-8 left" style="">
+                    <?php echo $ssSystem->configs->company_description; ?>
+                </div>
+                <div class="col-sm-4 right">
+                    <img src="<?php echo URL_APPLICATION . $ssSystem->configs->intro_image ?>" class="logo img-responsive" alt="Responsive image">
+                </div>
+                <div class="col-sm-12">
+                    <a class="readmore" href="<?php echo URL_APPLICATION . '/' . URL_ALIAS_INTRO ?>"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> <?php echo READMORE ?></a>
+                </div>
+            </div><!-- END Homepage Intro Block -->
+
+            <!-- Homepage Products Block -->
+            <div class="row products">
+                <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo FEATURED_PRODUCTS ?></h3>
+                <?php foreach ($featuredProducts as $product) { ?>
+                    <div class="col-sm-6 product-item">
+                        <div class="product-thumbnail effect-box-shadow">
+                            <?php
+                            if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                                $name = $product->name;
+                                $alias = $product->alias;
+                                $intro = $product->intro;
+                            } else {
+                                $nameLang = json_decode($product->name_lang);
+                                $nameField = 'name_' . $ssSystem->language;
+                                $name = $nameLang->$nameField;
+                                $aliasLang = json_decode($product->alias_lang);
+                                $aliasField = 'alias_' . $ssSystem->language;
+                                $alias = $aliasLang->$aliasField;
+                                $introLang = json_decode($product->intro_lang);
+                                $introField = 'intro_' . $ssSystem->language;
+                                $intro = $introLang->$introField;
+                            }
+                            
+                            if (trim($product->picture) && $helperString->isUrlExist(URL_APPLICATION . $product->picture)) {
+                                $imageUrl = URL_APPLICATION . $product->picture;
+                            } else {
+                                $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                            }
+                            ?>
+                            <a href="<?php echo URL_APPLICATION . '/sp/' . $alias ?>">
+                                <img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail">
+                            </a>
+                        </div>
+                        <div>
+                            <h3 class="product-name"><a href="<?php echo URL_APPLICATION . '/sp/' . $alias ?>"><?php echo $helperString->summary($name, 50, true); ?></a></h3>
+                            <p class="price"><strong><?php echo PRICE ?>: <span><?php echo number_format($product->price, 0, ',', '.') . " VND" ?></span></strong></p>
+                            <p class="short-desc"><?php echo $helperString->summary($intro, 150, true, true); ?></p>
+                        </div>
+                    </div>
+                <?php } ?>
+
+            </div><!-- END Homepage Product Block -->
+
+            <!-- Homepage Products Block -->
+            <div class="row products services">
+                <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo SERVICES ?></h3>
+                <?php foreach ($this->services as $service) { ?>
+                    <div class="col-sm-6 product-item">
+                        <div class="product-thumbnail effect-box-shadow">
+                            <?php
+                            if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                                $name = $service->name;
+                                $intro = $service->intro;
+                                $alias = $service->alias;
+                            } else {
+                                $nameLang = json_decode($service->name_lang);
+                                $nameField = 'name_' . $ssSystem->language;
+                                $name = $nameLang->$nameField;
+                                $introLang = json_decode($service->intro_lang);
+                                $introField = 'intro_' . $ssSystem->language;
+                                $intro = $introLang->$introField;
+                                $aliasLang = json_decode($service->alias_lang);
+                                $aliasField = 'alias_' . $ssSystem->language;
+                                $alias = $aliasLang->$aliasField;
+                            }
+                            
+                            if (trim($service->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $service->thumbnail)) {
+                                $imageUrl = URL_APPLICATION . $service->thumbnail;
+                            } else {
+                                $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                            }
+                            ?>
+                            <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>">
+                                <img src="<?php echo $imageUrl ?>" alt="<?php echo $service->name; ?>" class="img-thumbnail">
+                            </a>
+                        </div>
+                        <div>
+                            <h3 class="product-name"><a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><?php echo $helperString->summary($name, 50, true); ?></a></h3>
+                            <p class="short-desc"><?php echo $helperString->summary($intro, 250, true, true); ?></p>
+                        </div>
+                    </div>
+                <?php } ?>
+            </div><!-- END Homepage Product Block -->
+        </div> <!-- End Homepage content -->
+
+        <!-- Sidebar right -->
+        <div class="sidebar-right col-sm-4">
+            <!-- Sidebar Right Main Job Block -->
+            <?php $this->blkCareers(); ?>
+
+            <!-- Sidebar Right Video Block -->
+            <?php $this->blkVideo(); ?>
+
+            <!-- Sidebar Right Featured News -->
+            <?php $this->blkLatestNews(); ?>
+            
+        </div><!-- Sidebar Right -->
+    </div><!-- End Main Content -->

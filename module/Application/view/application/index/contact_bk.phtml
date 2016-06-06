@@ -1,0 +1,109 @@
+<?php
+use Zend\Session\Container;
+$ssSystem = new Container('system');
+
+// $companyName = 'CÔNG TY TNHH PHÚ AN PHÁT';
+$address = 'Số 916, Ấp 4, Quốc Lộ 51, Xã An Hòa ,TP. Biên Hòa , Đồng Nai';
+// $tel = '0613 937964 - 0613 937974';
+// $fax = '0613 937984';
+// $email = 'sales.phuanphat@gmail.com';
+// $hotline = '0907 353 348 - 0909 926 618';
+
+?>
+
+<!-- Main Content of Website -->
+<div class="main-wrapper contact-page">
+    <!-- Main Content -->
+    <div class="row main-content-wrapper">
+        <!-- Main Content -->
+        <div class="main-content col-sm-8">
+            <div class="effect-box-shadow" style="background: #fff; padding: 5px; ">
+                <div class="map" style="width: 690px; height: 270px;" id="map"></div>
+            </div>
+
+            <h3 class="header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo CONTACT ?></h3>
+
+            <form class="form-horizontal form-contact" method="POST">
+                <div class="col-sm-6 left">
+                    <div class="form-group">
+                        <label for="fullname" class="col-sm-4 control-label"><?php echo FULLNAME ?></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="fullname" id="fullname">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="address" class="col-sm-4 control-label"><?php echo ADDRESS; ?></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="address" id="address">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="telephone" class="col-sm-4 control-label"><?php echo TELEPHONE; ?></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="telephone" id="telephone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="col-sm-4 control-label"><?php echo EMAIL; ?></label>
+                        <div class="col-sm-8">
+                            <input type="text" class="form-control" name="email" id="email">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="col-sm-offset-4 col-sm-10">
+                            <button type="submit" class="btn btn-default"><?php echo SEND ?></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 right">
+                    <label class="col-sm-12" for=""><?php echo CONTENT; ?></label>
+                    <textarea class="col-sm-12" rows="5" name="content"></textarea>
+                </div>
+            </form>
+        </div>
+
+        <!-- Sidebar right -->
+        <div class="sidebar-right col-sm-4">
+            <?php echo $ssSystem->configs->contact_info; ?>
+        </div><!-- End Main Content -->
+    </div>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <script type="text/javascript">
+        function initialize() {
+            var myLatlng = new google.maps.LatLng(10.895578, 106.891942);
+            // var myLatlng = new google.maps.LatLng(21.193727, 105.765927);
+            var mapOptions = {
+                center: myLatlng,
+                zoom: 15
+            };
+            var map = new google.maps.Map(document.getElementById('map'),
+                    mapOptions);
+            var infoWindow = new google.maps.InfoWindow;
+
+            // current place					        
+
+            var contentString = '<?php echo "<strong>" . $ssSystem->configs->company_name . "</strong><br/>" . ADDRESS . ": " . $address ?>';
+            var marker = new google.maps.Marker({
+                map: map,
+                position: myLatlng,
+                icon : '<?php echo URL_APPLICATION . "/public/img/home-map-icon.png"; ?>'
+            });
+            infoWindow.setContent(contentString);
+            infoWindow.open(map, marker);
+            bindInfoWindow(marker, map, infoWindow, contentString);
+
+            //end curent place
+
+        }
+        //end  function initialize()
+        function bindInfoWindow(marker, map, infoWindow, html) {
+            google.maps.event.addListener(marker, 'click', function () {
+                infoWindow.setContent(html);
+                infoWindow.open(map, marker);
+            });
+        }
+
+        google.maps.event.addDomListener(window, 'load', initialize);
+        //link tham khảo: https://developers.google.com/maps/documentation/javascript/examples/infowindow-simple
+    </script>
