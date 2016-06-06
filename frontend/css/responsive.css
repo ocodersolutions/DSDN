@@ -119,7 +119,7 @@
          padding: 15px 10px;
      }
      .page-default .content {
-         padding-top: 20px;
+         padding: 0;
      }
      .page-default .content .sidebar-left {
         padding: 0px 15px;
