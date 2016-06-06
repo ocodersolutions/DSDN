@@ -1,8 +1,7 @@
 <?php include "header.php";?>
     <div class="contact-content">
         <div class="container">
-            <div></div>
-            <!--<img src="img/contact-img.jpg" alt="">   -->
+            <img src="img/contact-img.jpg" alt="">
             <p class="contact_p">Thông tin liên hệ ĐSĐN</p>
             <div class="col-md-12">
                 

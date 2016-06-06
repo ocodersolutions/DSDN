@@ -402,10 +402,11 @@ ul.pagination_news  li a:focus{
 @media (max-width: 480px){
     .search button i{
     display: block;
+    float: none;
     
 }
     .search button p{
-    display: block;
+    display: none;
     } 
 
 	.contact-content .contact_p{
