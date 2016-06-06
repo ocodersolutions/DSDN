@@ -1,23 +1,7 @@
-<?php
-$urlCSS_DSDN = URL_TEMPLATE . '/frontend_dsdn/css';
-$urlJS_DSDN = URL_TEMPLATE . '/frontend_dsdn/js';
-$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
-
-use Zend\Session\Container;
-$ssSystem = new Container('system');
-
-// $companyName = 'CÔNG TY TNHH PHÚ AN PHÁT';
-$address = 'Số 916, Ấp 4, Quốc Lộ 51, Xã An Hòa ,TP. Biên Hòa , Đồng Nai';
-// $tel = '0613 937964 - 0613 937974';
-// $fax = '0613 937984';
-// $email = 'sales.phuanphat@gmail.com';
-// $hotline = '0907 353 348 - 0909 926 618';
-
-?>
-
-<div class="contact-content">
+<?php include "header.php";?>
+    <div class="contact-content">
         <div class="container">
-            <img src="<?php echo $urlImage_DSDN;?>/contact-img.jpg" alt="">   
+            <img src="img/contact-img.jpg" alt="">   
             <p class="contact_p">Thông tin liên hệ ĐSĐN</p>
             <div class="col-md-12">
                 
@@ -34,7 +18,7 @@ $address = 'Số 916, Ấp 4, Quốc Lộ 51, Xã An Hòa ,TP. Biên Hòa , Đ�
         
             <div class="col-sm-12 page_content">
                 <div class="breakum-line">
-                    <a href="<?php echo URL_APPLICATION ?>"><?php echo HOME; ?></a>/<span> thông tin liên hệ</span>
+                    <a href="">Trang chủ</a>/<span> thông tin liên hệ</span>
                 </div>
                 <div class="col-sm-12 col-md-7">
                     <p  class="title-default">Liên hệ và Góp ý </p>
@@ -79,3 +63,4 @@ $address = 'Số 916, Ấp 4, Quốc Lộ 51, Xã An Hòa ,TP. Biên Hòa , Đ�
             </div>
         
     </div>
+    <?php include "footer.php";?>

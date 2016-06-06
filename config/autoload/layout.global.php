@@ -2,6 +2,6 @@
 return array(
     'module_layouts' => array(
         'Admin' => 'layout/backend',
-        'Application' => 'layout/frontend',
+        'Application' => 'layout/frontend_dsdn',
     ),
 );

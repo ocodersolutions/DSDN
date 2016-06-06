@@ -1,26 +1,14 @@
-<?php
-$urlCSS_DSDN = URL_TEMPLATE . '/frontend_dsdn/css';
-$urlJS_DSDN = URL_TEMPLATE . '/frontend_dsdn/js';
-$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
-
-use Zend\Session\Container;
-
-$ssSystem = new Container('system');
-$helperString = new \Ocoder\Helper\String;
-
-$featuredProducts = $this->featuredProducts;
-?>
-
-<div class="container topslider">
+<?php include "header.php";?>
+    <div class="container topslider">
         <div class="flexslider">
-            <ul class="slides">
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide15.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide16.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide17.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide18.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide19.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide20.jpg" /></li>
-            </ul>
+        	<ul class="slides">
+        		<li><img src="img/top-slider/slide15.jpg" /></li>
+        		<li><img src="img/top-slider/slide16.jpg" /></li>
+        		<li><img src="img/top-slider/slide17.jpg" /></li>
+        		<li><img src="img/top-slider/slide18.jpg" /></li>
+        		<li><img src="img/top-slider/slide19.jpg" /></li>
+        		<li><img src="img/top-slider/slide20.jpg" /></li>
+        	</ul>
         </div>
     </div>
     <div class="container page-home page-default">
@@ -35,7 +23,7 @@ $featuredProducts = $this->featuredProducts;
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="<?php echo $urlImage_DSDN ?>/services/orange_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
+                                                <img src="img/services/orange_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <!-- overplay block -->
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
@@ -55,7 +43,7 @@ $featuredProducts = $this->featuredProducts;
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="<?php echo $urlImage_DSDN ?>/services/green-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
+                                                <img src="img/services/green-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle">Bảo trì-Vận hành</h2>
@@ -74,7 +62,7 @@ $featuredProducts = $this->featuredProducts;
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="<?php echo $urlImage_DSDN ?>/services/blue_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
+                                                <img src="img/services/blue_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle">Tư vấn thiết kế</h2>
@@ -93,7 +81,7 @@ $featuredProducts = $this->featuredProducts;
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="<?php echo $urlImage_DSDN ?>/services/yellow-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
+                                                <img src="img/services/yellow-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle">Dịch vụ khác</h2>
@@ -113,9 +101,224 @@ $featuredProducts = $this->featuredProducts;
                     </div>
                 </div>
             </div>
-            <hr>
-            <div class="row">
+            <div class="row addmore">
                 <div class="container">
+                    <div class="col-sm-12 addmore_pad">
+                        <div class="row-member">
+                            <div class="row-line">
+                                <span class="title-default">THÀNH VIÊN HỘI ĐỒNG QUẢN TRỊ</span>
+                            </div>
+                            <div class="uc_owl_carousel" id="uc_carousel_testimonials">
+                                <!--item 1-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/1.jpg" alt="MR. ANH NGUYEN" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MR. ANH NGUYEN </h3>
+                                                <small>DIRECTOR</small>
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 1-->
+                                <!--item 2-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/3.jpg" alt="MR. THAI TRAN" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <div class="name-human">
+                                                     <h3 class="uc_tittle">MR. THAI TRAN</h3>
+                                                </div>
+                                                <small>MANAGER</small>
+                                            
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 2-->
+                                <!--item 3-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/2.jpg" alt="MIS. LAN HOA" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MIS. LAN HOA</h3>
+                                                <small>DEPUTY</small>
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 3-->
+                                <!--item 3-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/7.jpg" alt="MR. TUAN ANH" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MR. TUAN ANH </h3>
+                                                <small>DESIGNER</small>
+                    
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 3-->
+                                <!--item 3-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/5.jpg" alt="MR. HUONG PHAM" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MR. HUONG PHAM</h3>
+                                                <small>ACCOUNTANT</small>
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 3-->
+                                <!--item 3-->
+                                <div class="uc_item">
+                                    <div class=" post">
+                                        <!-- start of  menber box block -->
+                                        <div class="uc_member_hover_effect">
+                                            <div class="uc_box_image">
+                                                <img src="img/icon-human/6.jpg" alt="MISS QUYNH NHU" />
+                                                <!-- start of social icon block -->
+                                                <div class="uc_overlay">
+                                                    <div class="uc_overlay_inner">
+                                                        <div class="uc_social_row">
+                                                            <ul class="uc_social_link">
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-facebook"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-twitter"></i><span></span></a></li>
+                                                                <li><a href="#" class="uc_social_icon"><i class="fa fa-instagram"></i><span></span></a>
+                                                                </li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <!-- end of social icon  block -->
+                                            </div>
+                                            <!-- start of content block -->
+                                            <div class="uc_paragraph">
+                                                <h3 class="uc_tittle">MISS QUYNH NHU </h3>
+                                                <small>SECRETARY</small>
+                                            </div>
+                                            <!-- end of content block -->
+                                        </div>
+                                        <!-- end of  menber box block -->
+                                    </div>
+                                </div>
+                                <!-- end item 3-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+            	<div class="container">
                     <div class="image_background"></div>
                     <div id="text-7" class="widget_text">
                         <div class="textwidget">
@@ -205,20 +408,20 @@ $featuredProducts = $this->featuredProducts;
                                         <div class="tinanh">
                                             <span class="tittle">Tin ảnh</span>
                                             <div class="items">
-                                            <a href=""><img src="<?php echo $urlImage_DSDN ?>/tinanh/tin_anh1_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                                            <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="<?php echo $urlImage_DSDN ?>/tinanh/tin_anh2_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                                            <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="<?php echo $urlImage_DSDN ?>/tinanh/tin_anh3_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a>
+                                            <a href=""><img src="img/tinanh/tin_anh3_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a>
                                             <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="<?php echo $urlImage_DSDN ?>/tinanh/post1.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                                            <a href=""><img src="img/tinanh/post1.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
@@ -241,7 +444,7 @@ $featuredProducts = $this->featuredProducts;
                                             <input id="acount" type="text" />
                                             <label for="pass">Mật khẩu</label>
                                             <input id="pass" type="text" />
-                                            <button type="submit">Đăng nhập</button>
+                                            <button type="submit" class="btn btn-primary">Đăng nhập</button>
                                             <a href="#">Quên mật khẩu?</a>
                                         </form>
                                     </div>
@@ -287,28 +490,29 @@ $featuredProducts = $this->featuredProducts;
                 <!-- start of customer logo carousel -->
                 <div id="uc_customer_logo_carousel" class="uc_customer_logo_carousel">
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_03.jpg" alt=" đối tác" />
+                        <img class="uc_logo" src="img/logo/ds_03.jpg" alt=" đối tác" />
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_04.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_04.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_05.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_05.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_06.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_06.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_03.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_03.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_04.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_04.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_05.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_05.jpg" alt=" đối tác"/>
                     </div>
                 </div>
                 <!-- end of customer logo carousel -->
             </div>
         </div>
     </div>
+    <?php include "footer.php";?>

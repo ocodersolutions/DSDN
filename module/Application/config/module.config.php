@@ -85,7 +85,7 @@ return array(
         'not_found_template'       => 'error/404',
         'exception_template'       => 'error/index',
         'template_map' => array(
-            'layout/frontend'           => PATH_TEMPLATE . '/frontend/layout.phtml',
+            'layout/frontend_dsdn'           => PATH_TEMPLATE . '/frontend_dsdn/layout.phtml',
             'layout/backend'            => PATH_TEMPLATE . '/backend/layout.phtml',
             'layout/error'            => PATH_TEMPLATE . '/error/layout.phtml',
             'error/404'                 => PATH_TEMPLATE . '/error/404.phtml',

@@ -1,26 +1,135 @@
-<?php
-$urlCSS_DSDN = URL_TEMPLATE . '/frontend_dsdn/css';
-$urlJS_DSDN = URL_TEMPLATE . '/frontend_dsdn/js';
-$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
 
-use Zend\Session\Container;
-
-$ssSystem = new Container('system');
-$helperString = new \Ocoder\Helper\String;
-
-$featuredProducts = $this->featuredProducts;
-?>
-
-<div class="container topslider">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Công Ty Cổ Phần Thông Tin Tín Hiệu Đường Sắt Đà Nẵng | Công Ty CP Thông Tin Tín Hiệu Đường Sắt Đà Nẵng. ĐC: 218 Hải Phòng, P.Tân Chính, Q.Thanh Kkê, TP. Đà Nẵng. ĐT: (0511)3825472.</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="<?php echo BASE_URL;?>css/owl.carousel.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo BASE_URL;?>css/style.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo BASE_URL;?>css/responsive.css" media="all" rel="stylesheet" type="text/css"/>
+    <link href="<?php echo BASE_URL;?>css/background_image_content_box.css" media="all" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/team_member_hover_effect.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/clean_accordion.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/customer_logo_carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/minimal_logo_carousel.css" media="all"/>
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/flexslider.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/customer_review_box.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/simple_app_download_buttons.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/flexslider.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/contact.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/member.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/news_image.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo BASE_URL;?>css/magnific-popup.css" />
+    <script src="https://code.jquery.com/jquery-1.11.2.js"   integrity="sha256-WMJwNbei5YnfOX5dfgVCS5C4waqvc+/0fV7W2uy3DyU="   crossorigin="anonymous"></script>
+    <script src="<?php echo BASE_URL;?>js/bootstrap.js"></script>
+    <script src="<?php echo BASE_URL;?>js/jquery.js"></script>
+    <script src="<?php echo BASE_URL;?>js/jquery.flexslider-min.js"></script>
+    <script src="<?php echo BASE_URL;?>js/jquery.magnific-popup.min.js"></script>
+</head>
+<body>
+    <!-- Docs master nav -->
+    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
+        <div class="header-wrapper container">
+            <div class="row">
+                <div class="container">
+                    <div id="text-2" class="widget_text">
+                        <div class="textwidget">
+                            <div class="logo col-sm-4 col-xs-6">
+                                <a class="home-link" href="#" title="First Choice Restoration" rel="home">
+                                <img class="img-rize" src="img/logo/logo-2.png" alt="logo">
+                                </a>
+                            </div>
+                            <div class="phone col-sm-8 col-xs-6">
+                                <div class="content">
+                                    <span class="title">Gọi ngay hôm nay</span><br>
+                                    <span class="phone-number">(0511)3825472</span><br>
+                                    <span class="wrt">Công Ty CP Thông Tin Tín Hiệu Đường Sắt Đà Nẵng</span><br>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="menu-main">
+        <div class="container">
+            <div class="navbar-header">
+                <div id="text-4" class="widget_text">
+                    <div class="textwidget"><a href="<?php echo BASE_URL;?>" class="request-quote">Trang chủ</a></div>
+                </div>
+                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                </button>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse">
+                
+                <ul class="parent nav navbar-nav">
+                    <li class="parent-item ">
+                        <a href="<?php echo BASE_URL;?>contact.php">Liên hệ</a>
+                    </li>
+                    <li class="parent-item ">
+                        <a href="<?php echo BASE_URL;?>congvan.php">Công văn</a>
+                    </li>
+                    <li class="parent-item dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Dịch vụ <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo BASE_URL;?>service_detail.php?thiet-bi">Cung cấp thiết bị</a></li>
+                            <li><a href="<?php echo BASE_URL;?>service_detail.php?bao-tri">Bảo trì vận hành</a></li>
+                            <li><a href="<?php echo BASE_URL;?>service_detail.php?thiet-ke">Tư vấn thiết kế</a></li>
+                            <li><a href="<?php echo BASE_URL;?>service_detail.php?khac">Dịch vụ khác</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-item dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo BASE_URL;?>news.php">Tin tức <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo BASE_URL;?>news.php?tin-noi-bo">Tin nội bộ</a></li>
+                            <li><a href="<?php echo BASE_URL;?>news.php?tin-lien-quan">Tin tức liên quan</a></li>
+                            <li><a href="<?php echo BASE_URL;?>news.php?tin-cong-nghe">Tin công nghệ</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-item ">
+                        <a href="<?php echo BASE_URL;?>member.php">Đơn vị thành viên </a>
+                        
+                    </li>
+                    <li class="parent-item dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Quan hệ cổ đông <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Thông báo</a></li>
+                            <li><a href="#">Báo cáo tài chính</a></li>
+                            <li><a href="#">Đại hội cổ đông</a></li>
+                            <li><a href="#">Thông tin về cổ phiếu</a></li>
+                            <li><a href="#">Báo cáo thường niên</a></li>
+                            <li><a href="#">Báo cáo HĐQT</a></li>
+                            <li><a href="#">Qui chế quản trị</a></li>
+                            <li><a href="#">Bản cáo bạch</a></li>
+                            <li><a href="#">Điều lệ tổ chức và hoạt động</a></li>
+                        </ul>
+                    </li>
+                    <li class="parent-item ">
+                        <a href="<?php echo BASE_URL;?>tinanh.php">Tin ảnh</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    </header>
+    <div class="container topslider">
         <div class="flexslider">
-            <ul class="slides">
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide15.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide16.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide17.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide18.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide19.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide20.jpg" /></li>
-            </ul>
+        	<ul class="slides">
+        		<li><img src="img/top-slider/slide15.jpg" /></li>
+        		<li><img src="img/top-slider/slide16.jpg" /></li>
+        		<li><img src="img/top-slider/slide17.jpg" /></li>
+        		<li><img src="img/top-slider/slide18.jpg" /></li>
+        		<li><img src="img/top-slider/slide19.jpg" /></li>
+        		<li><img src="img/top-slider/slide20.jpg" /></li>
+        	</ul>
         </div>
     </div>
     <div class="container page-home page-default">
@@ -35,7 +144,7 @@ $featuredProducts = $this->featuredProducts;
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="<?php echo $urlImage_DSDN ?>/services/orange_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
+                                                <img src="img/services/orange_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <!-- overplay block -->
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
@@ -55,7 +164,7 @@ $featuredProducts = $this->featuredProducts;
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="<?php echo $urlImage_DSDN ?>/services/green-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
+                                                <img src="img/services/green-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle">Bảo trì-Vận hành</h2>
@@ -74,7 +183,7 @@ $featuredProducts = $this->featuredProducts;
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="<?php echo $urlImage_DSDN ?>/services/blue_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
+                                                <img src="img/services/blue_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle">Tư vấn thiết kế</h2>
@@ -93,7 +202,7 @@ $featuredProducts = $this->featuredProducts;
                                         <a href="" class="uc_item_link">
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="<?php echo $urlImage_DSDN ?>/services/yellow-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
+                                                <img src="img/services/yellow-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle">Dịch vụ khác</h2>
@@ -115,7 +224,7 @@ $featuredProducts = $this->featuredProducts;
             </div>
             <hr>
             <div class="row">
-                <div class="container">
+            	<div class="container">
                     <div class="image_background"></div>
                     <div id="text-7" class="widget_text">
                         <div class="textwidget">
@@ -205,20 +314,20 @@ $featuredProducts = $this->featuredProducts;
                                         <div class="tinanh">
                                             <span class="tittle">Tin ảnh</span>
                                             <div class="items">
-                                            <a href=""><img src="<?php echo $urlImage_DSDN ?>/tinanh/tin_anh1_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                                            <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="<?php echo $urlImage_DSDN ?>/tinanh/tin_anh2_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                                            <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="<?php echo $urlImage_DSDN ?>/tinanh/tin_anh3_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a>
+                                            <a href=""><img src="img/tinanh/tin_anh3_.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a>
                                             <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="items">
-                                            <a href=""><img src="<?php echo $urlImage_DSDN ?>/tinanh/post1.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                                            <a href=""><img src="img/tinanh/post1.jpg" alt="Hoạt động công ty" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
                                             <span class="info">32 photos | 26639 view</span>
                                             </div>
                                             <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
@@ -287,28 +396,92 @@ $featuredProducts = $this->featuredProducts;
                 <!-- start of customer logo carousel -->
                 <div id="uc_customer_logo_carousel" class="uc_customer_logo_carousel">
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_03.jpg" alt=" đối tác" />
+                        <img class="uc_logo" src="img/logo/ds_03.jpg" alt=" đối tác" />
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_04.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_04.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_05.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_05.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_06.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_06.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_03.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_03.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_04.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_04.jpg" alt=" đối tác"/>
                     </div>
                     <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_05.jpg" alt=" đối tác"/>
+                        <img class="uc_logo" src="img/logo/ds_05.jpg" alt=" đối tác"/>
                     </div>
                 </div>
                 <!-- end of customer logo carousel -->
             </div>
         </div>
     </div>
+    <!-- Footer block-->
+    <footer class="bs-docs-footer" role="contentinfo">
+        <div class="container-1">
+            <div class="row">
+                <div class="container">
+                    
+                    <div class="col-md-6 col-sm-6">
+                         <div class="social-block  pull-left">
+                            <h4>CÔNG TY CP THÔNG TIN TÍN HIỆU ĐƯỜNG SẮT ĐÀ NẴNG</h4>
+                            <div>
+                                <div class="address">
+                                    
+                                    <i class="fa fa-home" aria-hidden="true"></i>  
+                                    <p>218 Hải Phòng, P.Tân Chính, Q.Thanh Khê, TP.Đà Nẵng</p>
+                                </div>
+                                <div class="contact-phone">
+                                    
+                                    <i class="fa fa-phone" aria-hidden="true"></i>
+                                    <p class="sdt">(0511) 382 5472</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div><div class="col-md-6 col-sm-6 social">
+                        <div class="social-block">
+                            <h4 class="float-left">Kết nối:</h4>
+                            <div>
+                                <a href="#">
+                                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                    <i class="fa fa-youtube" aria-hidden="true"></i>
+                                </a>
+                                <a href="#">
+                                   <i class="fa fa-google-plus-square" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                           
+                            <div class="social-block text-center">
+                                <span class="copyright">
+                                    <p class="copyright_line">Copyright © 2016  | Bản quyền thuộc về : Công ty CP Thông Tin Tín Hiệu Đường Sắt Đà Nẵng</p>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-2 copyright center">
+             <div class="row">
+                <div class="col-md-8  col-md-offset-2 col-xs-10 col-xs-offset-1">
+                        
+                </div>
+                
+            </div>
+        </div>
+    </footer>
+    
+    <!-- js occodion in maincontent-->
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
+    <!-- main js file -->
+    <script src="js/main.js"></script>
+</body>
+</html>

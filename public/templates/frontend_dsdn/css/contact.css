@@ -1,0 +1,428 @@
+.contact-content{
+	position: relative;
+    font-family: Century Gothic;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 15px;
+    line-height: 23px;
+}
+.contact-content img{
+
+}
+.contact-content .contact_p{
+	text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 0%;
+    font-weight: 800;
+    font-size: 53px;
+    width: 100%;
+}
+.breakum-line{
+	font-family: Century Gothic;
+	font-size: 15px;
+    line-height: 23px;
+	margin: 30px 20px;
+    padding: 0 0px 10px 0px;
+    border-bottom: 1px solid;
+}
+.breakum-line a {
+    margin-right: 5px;
+    font-weight: bold;
+}
+.contact_info {
+	font-family: Century Gothic;
+	font-size: 15px;
+    line-height: 30px;
+   
+}
+.contact_info p{
+	
+}
+.contact_info p span{
+	margin-left: 5px;
+	font-weight: normal;
+}
+ form label {
+	font-family: Century Gothic;
+	font-size: 15px;
+    line-height: 30px;
+   	font-style: italic;
+}
+form input,form textarea {
+	display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 1px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    border: none;
+    border-color:#004EBC;
+    outline: 0;
+    background: 0 0;
+    border: 0;
+    background: #fff no-repeat;
+    background-image: linear-gradient(to bottom, #004EBC, #004EBC), linear-gradient(to bottom, #fbfbfb, #fbfbfb);
+    background-size: 0 2px, 100% 1px;
+    background-position: 50% 100%, 50% 100%;
+    transition: background-size 0.15s cubic-bezier(0.64, 0.09, 0.08, 1)
+}
+form input.input_email,
+form input.input_fname,form textarea{
+    padding: 0 8px;
+	border-bottom: 1px solid #004EBC;
+}
+form textarea{
+	height: 76px;
+}
+form input:focus,form textarea:focus{
+	background-size: 100% 2px, 100% 1px;
+	outline: none;
+}
+.contactform{
+ margin-left: -15px;
+ margin-top: 20px;
+}
+.page_content{
+	
+	background-color: #fff;
+}
+/*=== cong van block ===*/
+.contact-content{
+	padding: 0;
+}
+.contact-content img {
+	width: 100%;
+	height:200px;
+}
+.contact_info .cv_p{
+	padding-bottom: 7px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted;
+}
+.contact_info .cv_p::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.contact_info span{
+	float: right;
+}
+.contact_info span a{
+	border: 1px solid;
+    padding: 0 15px 0;
+    background: rgba(0, 0, 0, 0.24);
+}
+/*==== News ===*/
+.news {
+	
+    display: block;
+    
+    font: bold 20px "Century Gothic";
+    color: #fff;	
+}
+.news a {
+    position: relative;
+    background-color: #004ebc;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+.news .new_tittle{
+	position: relative;
+    top: 11px;
+    text-transform: uppercase;
+    background-color: #004ebc;
+    padding: 10px;
+    
+}
+.news a.new_tittle:after{
+	content: "";
+	width: 0;
+	height: 0;
+	position: relative;
+	top:-32px;
+	left: 49px;
+	border-bottom: 42px solid #004ebc;
+	border-right: 39px solid transparent;
+}
+.news hr{
+	width: 100%;
+	border-bottom: 1px solid #eee;;
+}
+.news .new_box {
+	padding: 0 15px;
+}
+.news .new_box .first_news img{
+	padding: 3px;
+	border: 1px solid;
+	border-color: silver;
+}
+.news .new_box .first_news .first_thumb {
+	float: left;
+	width: 25%;
+	height: auto;
+}
+.news .new_box .first_news .first_new_content{
+    color: #333;
+    max-height: 480px;
+	margin-left: 30px;
+    display: inline-block;
+    width: 60%;
+}
+.news .new_box .first_news .first_new_content a{
+    background-color: transparent;
+}
+.news .new_box .first_news .first_new_content span{
+    margin: 10px 0;
+	display: block;
+    font-size: 11px;
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+}
+.news .new_box .first_news .first_new_content p{
+	font-size: 14px;
+    font-style: italic;
+    font-weight: normal;
+    color: #000;
+    margin: 10px 0;
+}
+.news .new_box .first_news .first_new_content a {
+	font-size: 16px;
+    color: #004ebc;
+    font-weight: bold;
+    text-decoration: none;
+}
+.news .new_box .first_news .first_new_content a.link_detail{
+	font-size: 12px;
+	float:right;
+}
+.news .new_box .under_new_content a {
+
+	display: block;
+    background: url(../img/marker.png) no-repeat 10px center;
+    font-size: 16px;
+    color: #004ebc;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 0 30px;
+    margin: 10px 0;
+}
+.news .new_box .link .linkmore {
+    line-height: 0px;
+    background: none;
+    font-size: 16px;
+    float: right;
+    color: #004EBC;
+}
+.pagination_line{
+	text-align: center;
+}
+ul.pagination_news {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.pagination_news  li {display: inline;}
+
+ul.pagination_news  li a {
+    background-color: transparent;
+	font-size: 14px;
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ul.pagination_news  li a:hover,
+ul.pagination_news  li a:active,
+ul.pagination_news  li a:focus{
+	background-color:#004ebc;
+	color: #fff; 
+}
+/*======= newsdetail page ====*/
+.news_content{
+    font: normal 14px "Century Gothic";
+    color: rgba(0, 0, 0, 0.64);
+}
+.news_content span {
+    margin: 10px 0;
+    display: block;
+    font-size: 14px;
+    color: rgb(153, 153, 153);
+    font-weight: normal;
+}
+.news_content .new_tittle{
+    font-size: 20px;
+    font-weight: bold;
+    color:#004ebc;
+}
+.news_content .new_tittle_block {
+    display: inline-block;
+    padding: 10px;
+    background-color: #004ebc;
+    font: bold 20px "Century Gothic";
+    color: #fff;
+}
+.news_content .short_des{
+    
+    font-weight: bold;
+    color: #000;
+}
+/*=== tin anh ====*/
+.images_new{
+    border-radius: 4px;
+    margin-right: 20px;
+    margin-bottom: 25px;
+    display: inline-block;
+    width: 30%;
+    padding: 5px;
+    box-shadow: 0px 5px 10px #888888;
+}
+.images_new .images_new_box{
+    display: inline-block;
+}
+.images_new .images_new_box a.link{
+    padding: 0 7px;
+    display: block;
+    font: 12px "Century Gothic";
+    font-weight: bold;
+    text-decoration: none;
+}
+.images_new .images_new_box a img{
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+.images_new .images_new_box span {
+    margin:10px 0;
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: rgb(153, 153, 153);
+}
+/*==== form seach====*/
+.search{
+    font: 12px "Century Gothic";
+    width: 100%;
+    margin-right: 30px;
+    display: block;
+    position: relative;
+}
+.search .input-search{
+    display: inline-block;
+    height: 34px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-color: #004ebc;
+    border-radius: 4px 0px 0px 4px;
+    width: 75%;
+}
+.search button p{
+    display: none;
+    line-height: 24px;
+}
+.search button i{
+    display: none;
+    font-size: 21px;
+}
+.btn-search {
+    background: #004EBC;
+    position: absolute;
+    display: inline-block;
+    height: 34px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 1.5;
+    border-radius: 0px 4px 4px 0px;
+    width: 25%;
+    top: 0px;
+    right: 0px;
+}
+@media (min-width: 1191px){
+   .search button p{
+    display: block;
+    } 
+}
+@media (max-width: 1190px){
+    .search button i{
+    display: block;
+}
+	.contact-content .contact_p{
+	font-size: 40px;
+	top:70%;
+}
+.images_new{
+    margin-right: 17px;
+} 
+}
+@media (max-width: 991px){
+    .search button i{
+    display: block;
+    float: left;
+}
+    .search button p{
+    display: block;
+    } 
+    .images_new{
+
+    }
+}
+@media (max-width: 767px){
+	.contact-content .contact_p{
+	display: block;
+}
+    .news .new_tittle{
+        font-size: 12px;
+    }
+    .news .new_tittle:after{
+        top: -23px!important;
+        border-bottom: 33px solid #004ebc !important;
+        border-right: 39px solid transparent !important;
+    }
+    .news .new_box .first_news .first_thumb{
+        width: 100%;
+    }
+    .news .new_box .first_news .first_new_content{
+        width: 100%;
+        margin-left: 0;
+    }
+    .news .new_box .under_new_content a,.news .new_box .link .linkmore{
+        font-size: 14px;
+    }
+    .images_new {
+        width: 48%;
+        margin-right: 5px;
+    }
+}
+@media (max-width: 480px){
+    .search button i{
+    display: block;
+    
+}
+    .search button p{
+    display: block;
+    } 
+
+	.contact-content .contact_p{
+	font-size: 22px;
+}
+    .news .news_box .first_news .first_thumb {
+        width: 100%;
+    }
+}
+@media (max-width: 350px){
+    .search button p{
+    display: none;
+    }
+	.contact-content .contact_p{
+	font-size: 18px;
+}
+    .images_new {
+        width: 100%;
+        margin-right: 5px;
+    }
+}

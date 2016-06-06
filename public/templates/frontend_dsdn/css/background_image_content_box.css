@@ -1,0 +1,433 @@
+.uc_background_image_content_box {
+    box-sizing: border-box;
+    padding-bottom: 30px; 
+}
+.uc_background_image_content_box .uc_banner_box {
+    width: 100%;
+    position: relative;
+    overflow: hidden; 
+}
+.uc_background_image_content_box .uc_banner_box .uc_item_img {
+    width: 100%;
+    max-width: 100%;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -o-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1); 
+    vertical-align: middle;
+}
+.uc_background_image_content_box .uc_banner_box .overplay{
+    position: absolute;
+    top: 0;
+    opacity: 0.5;
+    background-color: black;
+    width: 100%;
+    min-height: 100%;
+}
+.uc_background_image_content_box .uc_banner_box .uc_item_html{
+    box-sizing: border-box;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    color: rgb(255, 255, 255);
+    height: 100%;
+    width: 100%;
+    padding: 4% 5% 0px;
+}
+.uc_background_image_content_box .uc_banner_box .uc_item_html .uc_content_des{
+    width: 100%;
+    font-family: Century Gothic;
+}
+#orange .uc_item_link .uc_banner_box:before{
+    content: " ";
+    background: #ff5b23;
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#blue .uc_item_link .uc_banner_box:before{
+    content: " ";
+    background: #0651BA;
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#sky .uc_item_link .uc_banner_box:before{
+    content: " ";
+    background: #07DDF8;
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+#green .uc_item_link .uc_banner_box:before{
+    content: " ";
+    background: #09E20C;
+    height: 15px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.uc_background_image_content_box .uc_item_html .uc_add_cart {
+    overflow: visible;
+    position: absolute;
+    left: 5.4%;
+    bottom: 9.3%;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    padding: 0px;
+    border-width: initial;
+    border-style: none;
+    border-color: initial;
+    background: none;
+    color: #fff;
+}
+ .uc_background_image_content_box#sky .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add{
+    background-color:  #07DDF8;
+}
+.uc_background_image_content_box#green .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add{
+    background-color:   #09E20C;
+}
+.uc_background_image_content_box#blue .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add{
+    background-color:   #0651BA;
+}
+.uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add {
+    text-transform: uppercase;
+    border: none;
+    display: block;
+    background: rgba(255, 91, 35, 0.8);
+    position: relative;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+.uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after {
+    content: "\f101";
+    font-family: "FontAwesome";
+    font-weight: normal;
+    text-align: center;
+    display: block;
+    background: rgba(41, 41, 41, 0.9);
+    position: absolute;
+    left: 100%;
+    top: 0;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+
+
+@media only screen and (min-width: 1200px) {
+
+    #blue .uc_item_link:hover .uc_banner_box:before,
+    #sky .uc_item_link:hover .uc_banner_box:before,
+    #green .uc_item_link:hover .uc_banner_box:before,
+    #orange .uc_item_link:hover .uc_banner_box:before {
+        top: -15px; 
+    }
+
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_item_tittle{
+        font: bold 22px/27px 'Century Gothic';
+        margin: 48px 0px 5px;
+        text-transform: uppercase;
+    }
+
+    .uc_background_image_content_box .uc_item_link:hover .uc_banner_box .uc_item_img {
+        -moz-transform: scale(1.1, 1.1);
+        -ms-transform: scale(1.1, 1.1);
+        -o-transform: scale(1.1, 1.1);
+        -webkit-transform: scale(1.1, 1.1);
+        transform: scale(1.1, 1.1); 
+    } 
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add {
+       font: bold 13px/11px 'Century Gothic', sans-serif;
+        padding: 16px 15px 15px 16px;
+    }
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after {
+        font-size: 20px;
+        line-height: 42px;
+        width: 37px;
+    }
+    .uc_background_image_content_box .uc_item_link:hover .uc_banner_box .uc_item_tittle {
+        animation: 0.5s ease-in-out 0s normal none 1 moveFromLeft;
+        -webkit-animation: 0.5s ease-in-out 0s normal none 1 moveFromLeft; 
+    }
+    .uc_background_image_content_box .uc_item_link:hover .uc_banner_box .uc_content_des {
+        animation: 0.4s ease-in-out .2s normal none 1 moveFromLeft;
+        -webkit-animation: 0.4s ease-in-out .2s normal none 1 moveFromLeft; 
+      }
+    .uc_background_image_content_box .uc_item_link:hover .uc_banner_box .uc_add_cart {
+        animation: 0.4s ease-in-out .1s normal none 1 moveFromBottom;
+        -webkit-animation: 0.4s ease-in-out .1s normal none 1 moveFromBottom; 
+    }
+    .uc_background_image_content_box .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
+        background: rgba(41, 41, 41, 0.9); 
+    }
+    .uc_background_image_content_box#sky .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
+        background: rgba(41, 41, 41, 0.9); 
+    }
+    .uc_background_image_content_box#blue .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
+        background: rgba(41, 41, 41, 0.9); 
+    }
+    .uc_background_image_content_box#green .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
+        background: rgba(41, 41, 41, 0.9); 
+    }
+    .uc_background_image_content_box .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
+        background: rgba(255, 91, 35, 0.8); 
+    }
+    .uc_background_image_content_box#sky .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
+        background: #07DDF8; 
+    }
+    .uc_background_image_content_box#blue .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
+        background:#0651BA; 
+    }
+    .uc_background_image_content_box#green .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
+        background: #09E20C; 
+    }
+    
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+    .uc_background_image_content_box .uc_item_html {
+        font-size: 13px;
+        line-height: 18px; 
+    }
+    .uc_background_image_content_box .uc_item_html .uc_item_tittle {
+        font: bold 26px/33px 'Century Gothic', serif;
+        margin: 10px 0 5px; 
+    } 
+    .uc_background_image_content_box .uc_item_html .uc_content_des {
+        width: 80%; 
+        margin:0 0 10px;
+    }
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add {
+        font: bold 13px/13px 'Century Gothic', sans-serif;
+        padding: 16px 13px 16px 13px;
+    }
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after {
+        font-size: 25px;
+        line-height: 46px;
+        width: 35px;
+    }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+    .uc_background_image_content_box .uc_item_html {
+        font-size: 13px;
+        line-height: 18px; 
+    }
+    .uc_background_image_content_box .uc_item_html .uc_item_tittle {
+        font: bold 18px 'Century Gothic', serif;
+        margin: 15px 0 5px;
+    }
+    .uc_background_image_content_box .uc_item_html .uc_content_des {
+        width: 80%; 
+    }
+    .uc_background_image_content_box .uc_item_html .uc_add_cart {
+        left: 5%;
+        bottom: 5%;
+    }
+    .uc_background_image_content_box .uc_item_html .uc_add_cart .uc_link_add {
+        font: bold 10px/18px 'Century Gothic', sans-serif;
+        padding: 7px;
+    }
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after {
+        font-size: 16px;
+        line-height: 32px;
+        width: 21px;
+    } 
+}
+@media (min-width: 480px) and (max-width: 767px) {
+   
+    .uc_background_image_content_box .uc_item_html .uc_item_tittle {
+        font: bold 20px/22px 'Century Gothic', serif;
+    }
+    .uc_background_image_content_box .uc_item_html .uc_content_des {
+        display: none; 
+    }
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add  {
+        font: bold 16px/20px 'Century Gothic', sans-serif;
+        padding: 8px 10px 10px 11px; 
+    }
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after{
+        font-size: 20px;
+        line-height: 38px;
+        width: 38px; 
+    } 
+}
+@media (max-width: 479px) {
+   
+    .uc_background_image_content_box {
+        padding: 0 5px 10px; 
+    }
+    .uc_background_image_content_box .uc_item_html .uc_item_tittle {
+        font: bold 14px/18px 'Century Gothic', serif; 
+    }
+    .uc_background_image_content_box .uc_item_html .uc_content_des {
+        display: none; 
+    }
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add {
+        font: bold 12px/18px 'Century Gothic', sans-serif;
+        padding: 5px 7px 6px 7px; 
+    }
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after{
+        font-size: 15px;
+        line-height: 29px;
+        width: 29px; 
+    }
+}
+@media (max-width: 350px) {
+    
+    .uc_background_image_content_box {
+        width: 100%;
+        padding: 0 5px 10px; 
+    }
+    .uc_background_image_content_box .uc_item_html {
+        font-size: 13px;
+        line-height: 18px; 
+    }
+    .uc_background_image_content_box .uc_item_html .uc_item_tittle {
+        font: bold 14px 'Century Gothic', serif; 
+        margin:15px 0 5px;
+    }
+    .uc_background_image_content_box .uc_item_html .uc_content_des {
+        width: 80%; 
+    }
+    .uc_background_image_content_box .uc_item_html .uc_add_cart {
+        left: 3px;
+        bottom: 3px;
+    }
+    .uc_background_image_content_box .uc_item_html .uc_add_cart .uc_link_add {
+        font: bold 12px 'Century Gothic', sans-serif;
+        padding: 3px; 
+    }
+    .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after{
+        font-size: 15px;
+        line-height: 29px;
+        width: 29px; 
+    } 
+}
+@-webkit-keyframes moveFromLeft {
+  from {
+    -webkit-transform: translateX(-100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -webkit-transform: translateX(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+@-moz-keyframes moveFromLeft {
+  from {
+    -moz-transform: translateX(-100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -moz-transform: translateX(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+@-ms-keyframes moveFromLeft {
+  from {
+    -ms-transform: translateX(-100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -ms-transform: translateX(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+@-webkit-keyframes moveFromRight {
+  from {
+    -webkit-transform: translateX(100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -webkit-transform: translateX(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+@-moz-keyframes moveFromRight {
+  from {
+    -moz-transform: translateX(100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -moz-transform: translateX(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+@-ms-keyframes moveFromRight {
+  from {
+    -ms-transform: translateX(100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -ms-transform: translateX(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+@-webkit-keyframes moveFromBottom {
+  from {
+    -webkit-transform: translateY(100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -webkit-transform: translateY(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+@-moz-keyframes moveFromBottom {
+  from {
+    -moz-transform: translateY(100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -moz-transform: translateY(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
+@-ms-keyframes moveFromBottom {
+  from {
+    -ms-transform: translateY(100%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0; }
+
+  to {
+    -ms-transform: translateY(0%);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1; } }
