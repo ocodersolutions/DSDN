@@ -119,7 +119,7 @@
          padding: 15px 10px;
      }
      .page-default .content {
-         padding-top: 20px;
+         padding: 0;
      }
      .page-default .content .sidebar-left {
         padding: 0px 15px;
@@ -308,7 +308,11 @@
          font-size: 15px;
      }
      .page-home .sub-slider {
-         margin-top: -50px;
+         margin-top: -65px;
+         padding: 0 6px;
+     }
+     .page-home .sub-slider .slide-item {
+        margin-bottom: 0;
      }
      .click-to-phone-porfolio {
          display: block;

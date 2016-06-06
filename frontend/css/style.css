@@ -381,6 +381,11 @@ header .textwidget {
  .page-default .content .page-content .image {
      text-align: center;
  }
+
+ .page-home {
+    background-color: #fff;
+    background-clip: content-box;
+ }
  
  .page-home .sub-slider {
      margin-top: -120px;
