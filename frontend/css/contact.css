@@ -171,6 +171,9 @@ form input:focus,form textarea:focus{
     display: inline-block;
     width: 60%;
 }
+.news .new_box .first_news .first_new_content a{
+    background-color: transparent;
+}
 .news .new_box .first_news .first_new_content span{
     margin: 10px 0;
 	display: block;
@@ -225,6 +228,7 @@ ul.pagination_news {
 ul.pagination_news  li {display: inline;}
 
 ul.pagination_news  li a {
+    background-color: transparent;
 	font-size: 14px;
     color: black;
     float: left;
