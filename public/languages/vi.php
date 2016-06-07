@@ -94,6 +94,7 @@ define("DESCRIPTION_DEFAULT", "...");
 define("TITLE", "Tiêu đề");
 define("KEYWORDS", "Từ khóa");
 define("COMPANY_NAME", "Tên công ty");
+
 define("COMPANY_INTRO", "Giới thiệu công ty");
 define("LOGO", "Logo");
 define("INTRO_IMAGE", "Ảnh giới thiệu");
@@ -114,3 +115,9 @@ define("CURRENT_WEEK", "Tuần này");
 define("PREVIOUS_WEEK", "Tuần trước");
 define("PREVIOUS_MONTH", "Tháng trước");
 define("TOTAL", "Tất cả");
+define("COMPANY_ADDRESS", "Địa chỉ công ty");
+define("COMPANY_PHONE", "Số điện thoại công ty");
+define("COMPANY_FAX", "Số Fax công ty");
+define("COMPANY_EMAIL", "Địa chỉ mail công ty");
+define("COMPANY_HISTORY", "Lịch sử phát triển công ty");
+define("COMPANY_BUSINESS", "Nghành nghề kinh doanh");

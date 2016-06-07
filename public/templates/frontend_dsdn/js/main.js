@@ -34,17 +34,18 @@ $(function() {
 });
 // js Logo carousel
 $("#uc_customer_logo_carousel").owlCarousel({
-	loop: true,
-	margin: 30,
-	autoplay: true,
-	autoplayTimeout: 2000,
-	smartSpeed: 450,
 	items: 5,
 	itemsDesktop : [1199,5],
 	itemsDesktopSmall : [991,4],
 	itemsTablet: [768,3],
 	itemsTabletSmall: [640,2],
 	itemsMobile : [380,1],
+	navigation : false,
+	pagination: true,
+	autoPlay: true,
+	autoPlaySpeed: 2000,
+	autoPlayTimeout: 2000,
+	autoPlayHoverPause: true
 });
 //
 $( "#accor-congvan" ).accordion({

@@ -63,7 +63,13 @@ class IndexController extends OcoderActionController
             $item->contact_info = stripslashes($item->contact_info);
             $item->contact_info_en = stripslashes($contact_infoLang->contact_info_en);
             $item->contact_info_jp = stripslashes($contact_infoLang->contact_info_jp);
-            
+            $item->company_address = stripslashes($item->company_address);
+            $item->company_phone = stripslashes($item->company_phone);
+            $item->company_fax = stripslashes($item->company_fax);
+            $item->company_email = stripslashes($item->company_email);
+            $item->company_history = stripslashes($item->company_history);
+            $item->company_business = stripslashes($item->company_business);
+
             $myForm->bind($item);
             $task = 'edit-item';
         }

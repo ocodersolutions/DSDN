@@ -15,7 +15,7 @@ return array(
                 'options' => array(
                     'route'    => '/',
                     'defaults' => array(
-                        'controller' => 'Application\Controller\Index',
+                        'controller' => 'Application\Controller\IndexController',
                         'action'     => 'index',
                     ),
                 ),
@@ -76,6 +76,7 @@ return array(
             'Application\Controller\Index' => 'Application\Controller\IndexController',
             'Application\Controller\Category' => 'Application\Controller\CategoryController',
             'Application\Controller\Product' => 'Application\Controller\ProductController',
+            'Application\Controller\Document' => 'Application\Controller\DocumentController',
         ),
     ),
     'view_manager' => array(

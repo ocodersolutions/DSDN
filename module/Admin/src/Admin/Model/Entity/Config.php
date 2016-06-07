@@ -42,6 +42,12 @@ class Config {
         $this->contact_info = (!empty($data['contact_info'])) ? $data['contact_info'] : null;
         $this->contact_info_lang = (!empty($data['contact_info_lang'])) ? $data['contact_info_lang'] : null;
         $this->iframe_youtube = (!empty($data['iframe_youtube'])) ? $data['iframe_youtube'] : null;
+        $this->company_address = (!empty($data['company_address'])) ? $data['company_address'] : null;
+        $this->company_phone = (!empty($data['company_phone'])) ? $data['company_phone'] : null;
+        $this->company_fax = (!empty($data['company_fax'])) ? $data['company_fax'] : null;
+        $this->company_email = (!empty($data['company_email'])) ? $data['company_email'] : null;
+        $this->company_fax = (!empty($data['company_history'])) ? $data['company_history'] : null;
+        $this->company_email = (!empty($data['company_business'])) ? $data['company_business'] : null;
     }
 
     public function getArrayCopy() {

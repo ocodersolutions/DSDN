@@ -13,6 +13,18 @@ $homeRoute = array(
     )
 );
 
+$documentRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => '/cong-van[/]',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'Document',
+            'action' => 'index',
+        ),
+    ),
+);
+
 $introCompanyRoute = array(
     'type' => 'Zend\Mvc\Router\Http\Segment',
     'options' => array(
@@ -110,9 +122,6 @@ $newsRoute = array(
     'type' => 'Zend\Mvc\Router\Http\Segment',
     'options' => array(
         'route' => '/tin-tuc[/]',
-        'constraints' => array(
-            'alias-cateogry' => '[a-zA-Z0-9-_.]+',
-        ),
         'defaults' => array(
             '__NAMESPACE__' => 'Application\Controller',
             'controller' => 'Category',
@@ -271,6 +280,29 @@ $contactLangRoute = array(
     ),
 );
 
+$dispatchRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => '/cong-van[/]',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'Index',
+            'action' => 'dispatch',
+        ),
+    ),
+);
+$dispatchLangRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => '/dispatch[/]',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'Index',
+            'action' => 'dispatch',
+        ),
+    ),
+);
+
 $searchRoute = array(
     'type' => 'Zend\Mvc\Router\Http\Segment',
     'options' => array(
@@ -307,6 +339,7 @@ return array(
             'contactLang' => $contactLangRoute,
             'search' => $searchRoute,
 			'googleVerificationRoute' => $googleVerificationRoute,
+            'document' => $documentRoute,
         ),
     )
 );

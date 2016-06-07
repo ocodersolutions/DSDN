@@ -85,7 +85,7 @@ class IndexController extends OcoderBaseController
         $this->_viewHelper->get('HeadMeta')->setName('keywords', $this->_configs->keywords);
         $this->_viewHelper->get('HeadMeta')->setName('description', $this->_configs->description);
     }
-    
+
     public function searchAction() {
         //set Head info
         $this->_viewHelper->get('HeadTitle')->prepend(TITLE_SEARCH . ' - ' . $this->_configs->title);

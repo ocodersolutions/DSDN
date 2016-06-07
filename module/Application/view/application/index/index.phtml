@@ -14,12 +14,25 @@ $featuredProducts = $this->featuredProducts;
 <div class="container topslider">
         <div class="flexslider">
             <ul class="slides">
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide15.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide16.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide17.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide18.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide19.jpg" /></li>
-                <li><img src="<?php echo $urlImage_DSDN ?>/top-slider/slide20.jpg" /></li>
+             <?php 
+            $isFirst = true; 
+            foreach ($this->banners as $banner) { 
+                if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                    $name = $banner->name;
+                    $description = $banner->description;
+                } else {
+                    $nameLang = json_decode($banner->name_lang);
+                    $nameField = 'name_' . $ssSystem->language;
+                    $name = $nameLang->$nameField;
+                    $descritionLang = json_decode($banner->descrition_lang);
+                    $descritionField = 'descrition_' . $ssSystem->language;
+                    $descrition = $descritionLang->$descritionField;
+                }
+                $classActive = $isFirst ? 'active' : '';
+                $isFirst = false;
+                ?>
+                <li><img src="<?php echo URL_APPLICATION . $banner->banner ?>" alt="<?php echo $name; ?>"/></li>
+            <?php } ?>    
             </ul>
         </div>
     </div>
@@ -186,8 +199,10 @@ $featuredProducts = $this->featuredProducts;
                                     </div>
                                     <div class="col-md-5 block first padding_right5">
                                         <div class="search">
-                                            <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
-                                            <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
+                                            <form action="<?php echo URL_APPLICATION . '/tim-kiem/' ?>" method="GET">
+                                                <input type="text" class="form-control input-search" id="keyword-search" maxlength="64" placeholder="<?php echo SEARCH ?>" value="<?php echo array_key_exists('tk', $_GET) ? $_GET['tk'] : '' ?>" />
+                                                <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p><?php echo SEARCH ?></p></button>
+                                            </form>
                                         </div>
                                     </div>
                                     <div class="col-md-5 block">
@@ -284,30 +299,9 @@ $featuredProducts = $this->featuredProducts;
             </div>
             <span class="title-default partner">CÁC ĐỐI TÁC</span>
             <div>
+            <?php echo $this->blkPartners(); ?>
                 <!-- start of customer logo carousel -->
-                <div id="uc_customer_logo_carousel" class="uc_customer_logo_carousel">
-                    <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_03.jpg" alt=" đối tác" />
-                    </div>
-                    <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_04.jpg" alt=" đối tác"/>
-                    </div>
-                    <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_05.jpg" alt=" đối tác"/>
-                    </div>
-                    <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_06.jpg" alt=" đối tác"/>
-                    </div>
-                    <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_03.jpg" alt=" đối tác"/>
-                    </div>
-                    <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_04.jpg" alt=" đối tác"/>
-                    </div>
-                    <div class="uc_item">
-                        <img class="uc_logo" src="<?php echo $urlImage_DSDN ?>/logo/ds_05.jpg" alt=" đối tác"/>
-                    </div>
-                </div>
+                
                 <!-- end of customer logo carousel -->
             </div>
         </div>

@@ -456,6 +456,107 @@ class Config extends Form {
                 )
             ),
         ));
+        // Address
+        $this->add(array(
+            'name' => 'company_address',
+            'type' => 'Text',
+            'attributes' => array(
+                'class' => 'form-control',
+                'id' => 'company_address',
+                'placeholder' => '',
+            ),
+            'options' => array(
+                'label' => COMPANY_ADDRESS,
+                'label_attributes' => array(
+                    'for' => 'company_address',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
+        // Number Phone
+        $this->add(array(
+            'name' => 'company_phone',
+            'type' => 'Text',
+            'attributes' => array(
+                'class' => 'form-control',
+                'id' => 'company_phone',
+                'placeholder' => '',
+            ),
+            'options' => array(
+                'label' => COMPANY_PHONE,
+                'label_attributes' => array(
+                    'for' => 'company_phone',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
+        // Email
+        $this->add(array(
+            'name' => 'company_email',
+            'type' => 'Text',
+            'attributes' => array(
+                'class' => 'form-control',
+                'id' => 'company_email',
+                'placeholder' => '',
+            ),
+            'options' => array(
+                'label' => COMPANY_EMAIL,
+                'label_attributes' => array(
+                    'for' => 'company_email',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
+        // Company Fax
+        $this->add(array(
+            'name' => 'company_fax',
+            'type' => 'Text',
+            'attributes' => array(
+                'class' => 'form-control',
+                'id' => 'company_fax',
+                'placeholder' => '',
+            ),
+            'options' => array(
+                'label' => COMPANY_FAX,
+                'label_attributes' => array(
+                    'for' => 'company_fax',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
+        $this->add(array(
+            'name' => 'company_history',
+            'type' => 'Textarea',
+            'attributes' => array(
+                'class' => 'form-control ckeditor',
+                'id' => 'company_history',
+                'placeholder' => '',
+            ),
+            'options' => array(
+                'label' => COMPANY_HISTORY,
+                'label_attributes' => array(
+                    'for' => 'company_fax',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
+        $this->add(array(
+            'name' => 'company_business',
+            'type' => 'Textarea',
+            'attributes' => array(
+                'class' => 'form-control ckeditor',
+                'id' => 'company_business',
+                'placeholder' => '',
+            ),
+            'options' => array(
+                'label' => COMPANY_BUSINESS,
+                'label_attributes' => array(
+                    'for' => 'company_business',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
+
     }
 
     public function showMessage() {
