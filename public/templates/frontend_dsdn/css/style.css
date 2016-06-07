@@ -582,11 +582,12 @@ header .textwidget {
      margin-top: -5px;
  }
 .container-1 .social-block {
-
+    width: 100%;
     font-family: "Century Gothic";
     font-size: 14px;
 }
 .container-1 .social-block h4{
+    text-transform: uppercase;
     font-size: 14px;
 }
  .bs-docs-footer hr {
@@ -919,5 +920,5 @@ header .textwidget {
 
  /*========== member=========*/
 .padding_right5{
-    padding-right: 45px !important;
+    padding-right: 30px;
 }

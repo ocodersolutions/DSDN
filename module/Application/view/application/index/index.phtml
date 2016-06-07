@@ -135,11 +135,6 @@ $featuredProducts = $this->featuredProducts;
                             <div class="main-content-wrap col-md-9 col-sm-12">
                                 
                                 <div class="page-content row">
-                                 <?php   
-        echo "<pre>";
-        var_dump($ssSystem->configs);
-        echo "</pre>";
-        ?>
                                     <div class="content-wrap col-md-7">
                                     <h2 class="title-default ">Giới thiệu chung</h2>
                                        <!-- <p class="p-default">
@@ -253,10 +248,7 @@ $featuredProducts = $this->featuredProducts;
                                         </div>
                                     </div>
                                     <div class="col-md-5 block">
-                                        <div class="otherlink">
-                                            <span>video</span>
-                                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/ahLjVibR6oY" frameborder="0" allowfullscreen></iframe>
-                                        </div>
+                                        <?php echo $this->blkVideo(); ?>
                                     </div>
                                 </div>
                             </div>

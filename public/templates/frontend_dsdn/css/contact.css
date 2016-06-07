@@ -119,7 +119,7 @@ form input:focus,form textarea:focus{
 	
     display: block;
     
-    font: bold 20px "Century Gothic";
+    font: bold 16px "Century Gothic";
     color: #fff;	
 }
 .news a {
@@ -193,6 +193,9 @@ form input:focus,form textarea:focus{
     color: #004ebc;
     font-weight: bold;
     text-decoration: none;
+}
+.news .new_box .first_news .first_new_content a.links_tittle{
+    padding-left: 0px;
 }
 .news .new_box .first_news .first_new_content a.link_detail{
 	font-size: 12px;

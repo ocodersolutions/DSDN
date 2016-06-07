@@ -1,4 +1,7 @@
 <?php
+$urlCSS_DSDN = URL_TEMPLATE . '/frontend_dsdn/css';
+$urlJS_DSDN = URL_TEMPLATE . '/frontend_dsdn/js';
+$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
 
 use Zend\Session\Container;
 
@@ -6,19 +9,22 @@ $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
 
 $featuredProducts = $this->featuredProducts;
+
 ?>
 
-<!-- Main Content of Website -->
-<div class="main-wrapper category-page">
-    <!-- Main Content -->
-    <div class="row main-content-wrapper">
-        <!-- Main Content -->
-        <div class="main-content col-sm-8">
-            <img src="<?php echo URL_TEMPLATE . '/frontend/images/banner-sub.jpg' ?>" class="img-thumbnail banner-sub">
+<div class="row">
+        <div class="container contact-content" style="padding: 0">
+            <img src="<?php echo $urlImage_DSDN ?>/news.jpg" alt="">   
+            <p class="contact_p">Tin Tức</p>
+        </div>
 
-            <!-- Category Product List -->
-            <div class="row articles">
-                <?php
+    </div>
+    <div class="row page-default ">
+        <div class="container content">
+            <div class="breakum-line">
+                <a href="">Trang chủ</a>/<span> Tin tức </span>
+            </div>
+            <?php
                 if ($ssSystem->language == DEFAULT_LANGUAGE) {
                     $name = $this->categoryInfo->name;
                 } else {
@@ -27,8 +33,11 @@ $featuredProducts = $this->featuredProducts;
                     $name = $nameLang->$nameField;
                 }
                 ?>
-                <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo $name ?></h3>
-                <?php
+            <div class="col-md-8 block">
+                <div class="news">
+                    <span class="new_tittle"><?php echo $name ;?></span>
+                    <hr>
+                    <?php
                 foreach ($this->articles as $article) {
                     if ($ssSystem->language == DEFAULT_LANGUAGE) {
                         $name = $article->name;
@@ -52,49 +61,177 @@ $featuredProducts = $this->featuredProducts;
                         $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
                     }
                     ?>
-                    <div class="col-sm-12 article" style="margin-bottom: 25px;">
-                        <div class="col-sm-3 news-images">
-                            <img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail">
+                    <div class="new_box">
+                        <div class="first_news">
+                           <img src="<?php echo $imageUrl ?>" alt="thumbnail" class="first_thumb"/>
+                            <div class="first_new_content">
+                                <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>" class="links_tittle"><?php echo $name ;?></a>
+                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                                <p><?php echo $helperString->summary($intro, 250, true, true); ?></p>
+                                <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>" class="link_detail"> Xem chi tiết</a>
+                            </div> 
                         </div>
-                        <div class="col-sm-9 news-content">
-                            <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><strong><?php echo $name; ?></strong></a>
-                            <p class="short-desc"><?php echo $helperString->summary($intro, 250, true, true); ?></p>
-                        </div>
+                        <hr class="block">
                     </div>
-                <?php } //end foreach ?>
-            </div><!-- END Category Product List -->
+                     <?php } //end foreach ?>
+                    <!--<div class="new_box">
+                        <div class="first_news">
+                          <img src="<?php echo $urlImage_DSDN ?>/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
+                            <div class="first_new_content">
+                                <a href="news_detail.php" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
+                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
+                                <a href="news_detail.php" class="link_detail"> Xem chi tiết</a>
+                            </div> 
+                        </div>
+                        <hr class="block">
+                    </div>
+                    <div class="new_box">
+                        <div class="first_news">
+                          <img src="<?php echo $urlImage_DSDN ?>/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
+                            <div class="first_new_content">
+                                <a href="news_detail.php" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
+                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
+                                <a href="news_detail.php" class="link_detail"> Xem chi tiết</a>
+                            </div> 
+                        </div>
+                        <hr class="block">
+                    </div>
+                    <div class="new_box">
+                        <div class="first_news">
+                           <img src="<?php echo $urlImage_DSDN ?>/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
+                            <div class="first_new_content">
+                                <a href="news_detail.php" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
+                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
+                                <a href="news_detail.php" class="link_detail"> Xem chi tiết</a>
+                            </div> 
+                        </div>
+                        <hr class="block">
+                    </div>
+                    <div class="new_box">
+                        <div class="first_news">
+                           <img src="<?php echo $urlImage_DSDN ?>/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
+                            <div class="first_new_content">
+                                <a href="news_detail.php" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
+                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
+                                <a href="news_detail.php" class="link_detail"> Xem chi tiết</a>
+                            </div> 
+                        </div>
+                        <hr class="block">
+                    </div>
+                    <div class="new_box">
+                        <div class="first_news">
+                           <img src="<?php echo $urlImage_DSDN ?>/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
+                            <div class="first_new_content">
+                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
+                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
+                                <a href="" class="link_detail"> Xem chi tiết</a>
+                            </div> 
+                        </div>
+                        <hr class="block">
+                    </div>
+                    <div class="new_box">
+                        <div class="first_news">
+                           <img src="<?php echo $urlImage_DSDN ?>/tinanh/new1.jpg" alt="thumbnail" class="first_thumb"/>
+                            <div class="first_new_content">
+                                <a href="" class="links_tittle">Di dời ga Đà Nẵng tốn gần 10.000 tỉ đồngs</a>
+                                <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                                <p>Ngày 15-3, đại diện tư vấn của Ngân hàng thế giới (WB) có buổi làm việc với UBND TP Đà Nẵng về Dự án di dời ga đường sắt Đà Nẵng và tái phát triển đô thị...</p>
+                                <a href="" class="link_detail"> Xem chi tiết</a>
+                            </div> 
+                        </div>
+                        <hr class="block">
+                    </div>-->
+                    <div class="pagination_line">
+                        <ul class="pagination_news">
+                            <li><a href="#">«</a></li>
+                            <li><a href="#">1</a></li>
+                            <li><a class="active" href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li><a href="#">6</a></li>
+                            <li><a href="#">7</a></li>
+                            <li><a href="#">»</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 pull-right">
+                <div class=" block padding_right5">
+                    <div class="search">
+                        <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
+                        <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
+                    </div>
+                </div>    
+                <div class="block">
+                 
+                    <div class="tinanh">
+                        <span class="tittle">Tin ảnh</span>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
+                        <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/post1.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+
+                        <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="otherlink">
+                        <span>video</span>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ahLjVibR6oY" frameborder="0" allowfullsrceen></iframe>
+                    </div>
+                </div>
+                <div class="block">
+                     
+                    <div class="tinanh">
+                        <span class="tittle">Tin Thể thao</span>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
+                        <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/post1.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Sidebar right -->
-        <div class="sidebar-right col-sm-4">
-            <!-- Sidebar Right Main Job Block -->
-            <?php echo $this->blkNewsCategory() ?>
-
-            <!-- Sidebar Right Video Block -->
-            <?php echo $this->blkVideo() ?>
-
-            <!-- Sidebar Right Featured News -->
-            <?php echo $this->blkLatestNews() ?>
-        </div><!-- Sidebar Right -->
-    </div><!-- End Main Content -->
-
-    <!-- PAGINATION -->
-    <?php
-    $aliasCategory = array(
-        COMPANY_INFO_CATEGORY_ID => '/' . URL_ALIAS_INTRO,
-        SERVICE_CATEGORY_ID => '/' . URL_ALIAS_SERVICE,
-        RECRUITMENT_CATEGORY_ID => '/' . URL_ALIAS_RECRUITMENT,
-        NEWS_CATEGORY_ID => '/' . URL_ALIAS_NEWS,
-    );
-    if ($ssSystem->language == DEFAULT_LANGUAGE) {
-        $alias = $this->categoryInfo->alias;
-    } else {
-        $langObj = json_decode($this->categoryInfo->alias_lang);
-        $aliasField = 'alias_' . $ssSystem->language;
-        $alias = $langObj->$aliasField;
-    }
-    
-    $currentURL = URL_APPLICATION . $aliasCategory[$this->categoryInfo->parent_id] . '/' . $alias;
-    
-    echo $this->paginationControl($this->paginator, 'sliding', 'paginator.phtml', array('currentURL' => $currentURL));
-    ?>
+    </div> 

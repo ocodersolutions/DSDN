@@ -6,7 +6,7 @@ $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
 
 $featuredProducts = $this->featuredProducts;
-die ('trang chi tiét');
+
 ?>
 
 <!-- Main Content of Website -->
@@ -33,18 +33,18 @@ die ('trang chi tiét');
                 foreach ($this->articles as $article) {
                     if ($ssSystem->language == DEFAULT_LANGUAGE) {
                         $name = $article->name;
-                        $intro = $article->intro;
                         $alias = $article->alias;
+                        $intro = $article->intro;
                     } else {
                         $nameLang = json_decode($article->name_lang);
                         $nameField = 'name_' . $ssSystem->language;
                         $name = $nameLang->$nameField;
-                        $introLang = json_decode($article->intro_lang);
-                        $introField = 'intro_' . $ssSystem->language;
-                        $intro = $introLang->$introField;
                         $aliasLang = json_decode($article->alias_lang);
                         $aliasField = 'alias_' . $ssSystem->language;
                         $alias = $aliasLang->$aliasField;
+                        $introLang = json_decode($article->intro_lang);
+                        $introField = 'intro_' . $ssSystem->language;
+                        $intro = $introLang->$introField;
                     }
 
                     if (trim($article->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $article->thumbnail)) {
@@ -53,44 +53,49 @@ die ('trang chi tiét');
                         $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
                     }
                     ?>
-                    <div class="col-sm-12 article">
+                    <div class="col-sm-12 article" style="margin-bottom: 25px;">
                         <div class="col-sm-3 news-images">
-                            <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail"></a>
+                            <img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail">
                         </div>
                         <div class="col-sm-9 news-content">
                             <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><strong><?php echo $name; ?></strong></a>
                             <p class="short-desc"><?php echo $helperString->summary($intro, 250, true, true); ?></p>
                         </div>
                     </div>
-                <?php } ?>
+                <?php } //end foreach ?>
             </div><!-- END Category Product List -->
         </div>
 
         <!-- Sidebar right -->
         <div class="sidebar-right col-sm-4">
-            <?php 
-            if($this->categoryInfo->id == SERVICE_CATEGORY_ID){
-                echo $this->blkServices();
-                echo $this->blkProductCategory();
-            }
-            
-            // Sidebar Right Main Job Block
-            echo $this->blkNewsCategory();
-            // Sidebar Right Video Block
-            echo $this->blkVideo();
-            // Sidebar Right Featured News
-            echo $this->blkLatestNews();
-            ?>
+            <!-- Sidebar Right Main Job Block -->
+            <?php echo $this->blkNewsCategory() ?>
+
+            <!-- Sidebar Right Video Block -->
+            <?php echo $this->blkVideo() ?>
+
+            <!-- Sidebar Right Featured News -->
+            <?php echo $this->blkLatestNews() ?>
         </div><!-- Sidebar Right -->
     </div><!-- End Main Content -->
 
     <!-- PAGINATION -->
     <?php
-//    $aliasCategory = array(
-//        COMPANY_INFO_CATEGORY_ID => '/gioi-thieu',
-//        SERVICE_CATEGORY_ID => '/dich-vu',
-//        RECRUITMENT_CATEGORY_ID => '/tuyen-dung',
-//    );
-//    $currentURL = URL_APPLICATION . $aliasCategory[$this->categoryInfo->id];
-//    echo $this->paginationControl($this->paginator, 'sliding', 'paginator.phtml', array('currentURL' => $currentURL));
+    $aliasCategory = array(
+        COMPANY_INFO_CATEGORY_ID => '/' . URL_ALIAS_INTRO,
+        SERVICE_CATEGORY_ID => '/' . URL_ALIAS_SERVICE,
+        RECRUITMENT_CATEGORY_ID => '/' . URL_ALIAS_RECRUITMENT,
+        NEWS_CATEGORY_ID => '/' . URL_ALIAS_NEWS,
+    );
+    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+        $alias = $this->categoryInfo->alias;
+    } else {
+        $langObj = json_decode($this->categoryInfo->alias_lang);
+        $aliasField = 'alias_' . $ssSystem->language;
+        $alias = $langObj->$aliasField;
+    }
+    
+    $currentURL = URL_APPLICATION . $aliasCategory[$this->categoryInfo->parent_id] . '/' . $alias;
+    
+    echo $this->paginationControl($this->paginator, 'sliding', 'paginator.phtml', array('currentURL' => $currentURL));
     ?>

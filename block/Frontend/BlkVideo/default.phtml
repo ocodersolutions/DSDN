@@ -2,25 +2,7 @@
 use Zend\Session\Container;
 $ssSystem = new Container('system');
 ?>
-<div class="row video">
-    <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> VIDEOS CLIP</h3>
-    <div class="embed-responsive embed-responsive-16by9 col-md-offset-1 col-md-10">
-        <?php //echo $ssSystem->configs->iframe_youtube; ?>
-<!--         <iframe class="embed-responsive-item" width="560" height="315" src="//www.youtube.com/embed/5-tBJ-uM_tc" frameborder="0" allowfullscreen></iframe> -->
-<!--         <OBJECT ID="Player" width="200" height="200" -->
-<!--         classid="clsid:6bf52a52-394a-11d3-b153-00C04f79faa6" -->
-<!--         codebase="http://activex.microsoft.com/activex/controls/mplayer/en/ -->
-<!--         nsmp2inf.cab#Version=5,1,52,701" -->
-<!--         standby="Loading Microsoft Windows Media Player components..." -->
-<!--         type="application/x-oleobject" align="center"> -->
-<!--         <param name="url" value="666.wmv"> -->
-<!--         <param name="AutoStart" value="True"> -->
-<!--         <param name="ShowControls" value="True"> -->
-<!--         <embed type="application/x-mplayer2" -->
-<!--         pluginspage="http://www.microsoft.com/Windows/Downloads/Contents/Products/MediaPlayer/" src="http://haoanphat.local/public/media/files/test.mp4" align="middle" width="200" height="200" showcontrols="1" showdisplay="0" showstatusbar="1"> </embed> -->
-<!--         </OBJECT> -->
-        <video src="<?php echo $ssSystem->configs->iframe_youtube; ?>"  width="263" controls autoplay>
-<!--             Trình duyệt của bạn không hỗ trợ xem video -->
-        </video>
-    </div>
-</div><!-- END Sidebar Right Video Block -->
+<div class="otherlink">
+    <span>video</span>
+    <iframe width="100%" height="315" src="<?php echo $ssSystem->configs->iframe_youtube?>" frameborder="0" allowfullscreen></iframe>
+</div>

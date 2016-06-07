@@ -65,7 +65,8 @@ class Module {
         define('URL_ALIAS_RECRUITMENT', $ssSystem->language == DEFAULT_LANGUAGE ? 'tuyen-dung' : 'recruitment');
         define('URL_ALIAS_PRODUCTS', $ssSystem->language == DEFAULT_LANGUAGE ? 'san-pham' : 'products');
         define('URL_ALIAS_CONTACT', $ssSystem->language == DEFAULT_LANGUAGE ? 'lien-he' : 'contact');
-        define('URL_ALIAS_DISPATCH', $ssSystem->language == DEFAULT_LANGUAGE ? 'cong-van' : 'dispatch');
+        define('URL_ALIAS_DOCUMENT', $ssSystem->language == DEFAULT_LANGUAGE ? 'cong-van' : 'document');
+        define('URL_ALIAS_MEMBERS', $ssSystem->language == DEFAULT_LANGUAGE ? 'thanh-vien' : 'members');
     }
     
     public function loadConfigs(MvcEvent $e){
