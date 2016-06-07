@@ -38,8 +38,8 @@ class IndexController extends OcoderActionController
 
         if (!empty($item)) {
             $titleLang = json_decode($item->title_lang);
-            $item->title_en = $titleLang->title_en;
-            $item->title_jp = $titleLang->title_jp;
+            //$item->title_en = $titleLang->title_en;
+            //$item->title_jp = $titleLang->title_jp;
             $descriptionLang = json_decode($item->description_lang);
             $item->description_en = stripslashes($descriptionLang->description_en);
             $item->description_jp = stripslashes($descriptionLang->description_jp);
