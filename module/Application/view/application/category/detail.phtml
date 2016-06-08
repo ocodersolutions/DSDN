@@ -1,4 +1,7 @@
 <?php
+$urlCSS_DSDN = URL_TEMPLATE . '/frontend_dsdn/css';
+$urlJS_DSDN = URL_TEMPLATE . '/frontend_dsdn/js';
+$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
 
 use Zend\Session\Container;
 
@@ -6,31 +9,33 @@ $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
 
 $featuredProducts = $this->featuredProducts;
-die ('trang chi tiét');
+
 ?>
 
-<!-- Main Content of Website -->
-<div class="main-wrapper category-page">
-    <!-- Main Content -->
-    <div class="row main-content-wrapper">
-        <!-- Main Content -->
-        <div class="main-content col-sm-8">
-            <img src="<?php echo URL_TEMPLATE . '/frontend/images/banner-sub.jpg' ?>" class="img-thumbnail banner-sub">
+<div class="row">
+    <div class="container contact-content" style="padding: 0">
+        <img src="<?php echo $urlImage_DSDN ?>/service.jpg" alt="">   
+        <p class="contact_p">Dịch vụ</p>
+    </div>
 
-            <!-- Category Product List -->
-            <div class="row articles">
-                <?php
-                if ($ssSystem->language == DEFAULT_LANGUAGE) {
-                    $name = $this->categoryInfo->name;
-                } else {
-                    $nameLang = json_decode($this->categoryInfo->name_lang);
-                    $nameField = 'name_' . $ssSystem->language;
-                    $name = $nameLang->$nameField;
-                }
-                ?>
-                <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo $name ?></h3>
-                <?php
-                foreach ($this->articles as $article) {
+</div>
+<div class="row page-default ">
+    <div class="container content">
+        <div class="breakum-line">
+            <a href="">Trang chủ</a>/<span> Dịch vụ </span>
+        </div>
+        <?php
+            if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                $name = $this->categoryInfo->name;
+            } else {
+                $nameLang = json_decode($this->categoryInfo->name_lang);
+                $nameField = 'name_' . $ssSystem->language;
+                $name = $nameLang->$nameField;
+            }
+            ?>
+        <div class="col-md-8 block">
+        <?php
+        foreach ($this->articles as $article) {
                     if ($ssSystem->language == DEFAULT_LANGUAGE) {
                         $name = $article->name;
                         $intro = $article->intro;
@@ -50,47 +55,92 @@ die ('trang chi tiét');
                     if (trim($article->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $article->thumbnail)) {
                         $imageUrl = URL_APPLICATION . $article->thumbnail;
                     } else {
-                        $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                        $imageUrl = $urlImage_DSDN . '/tinanh/no-image.png';
                     }
                     ?>
-                    <div class="col-sm-12 article">
-                        <div class="col-sm-3 news-images">
-                            <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail"></a>
-                        </div>
-                        <div class="col-sm-9 news-content">
-                            <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><strong><?php echo $name; ?></strong></a>
-                            <p class="short-desc"><?php echo $helperString->summary($intro, 250, true, true); ?></p>
-                        </div>
+            <div class="news">
+                <div class="new_box">
+                    <div class="first_news">
+                        <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="first_thumb"/></a>
+                        <div class="first_new_content">
+                            <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>" class="links_tittle"><?php echo $name; ?></a>
+                            <hr class="block">
+                            <p><?php echo $helperString->summary($intro, 250, true, true); ?></p>
+                            
+                        </div> 
                     </div>
-                <?php } ?>
-            </div><!-- END Category Product List -->
+                </div>
+            </div>
+            <hr class="block">
+            <?php } ?>
         </div>
 
-        <!-- Sidebar right -->
-        <div class="sidebar-right col-sm-4">
-            <?php 
-            if($this->categoryInfo->id == SERVICE_CATEGORY_ID){
-                echo $this->blkServices();
-                echo $this->blkProductCategory();
-            }
+         <div class="col-md-4 block padding_right5">
             
-            // Sidebar Right Main Job Block
-            echo $this->blkNewsCategory();
-            // Sidebar Right Video Block
-            echo $this->blkVideo();
-            // Sidebar Right Featured News
-            echo $this->blkLatestNews();
-            ?>
-        </div><!-- Sidebar Right -->
-    </div><!-- End Main Content -->
+        </div>   
+        <div class="col-md-4 block">
+            <div class="padding_right5">
+                <div class="search block ">
+                    <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
+                    <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
+                </div> 
+            </div>
+            
+            <div class="tinanh block">
+                <span class="tittle">Tin mới nhất</span>
+                <div class="items">
+                <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
+                <div class="items">
+                <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
+                <div class="items">
+                <a href=""><img src="img/tinanh/tin_anh3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
+                <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
+                <div class="items">
+                <a href=""><img src="img/tinanh/post1.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
+                <div class="items">
+                <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
 
-    <!-- PAGINATION -->
-    <?php
-//    $aliasCategory = array(
-//        COMPANY_INFO_CATEGORY_ID => '/gioi-thieu',
-//        SERVICE_CATEGORY_ID => '/dich-vu',
-//        RECRUITMENT_CATEGORY_ID => '/tuyen-dung',
-//    );
-//    $currentURL = URL_APPLICATION . $aliasCategory[$this->categoryInfo->id];
-//    echo $this->paginationControl($this->paginator, 'sliding', 'paginator.phtml', array('currentURL' => $currentURL));
-    ?>
+                <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+            </div>
+            <div class="tinanh block">
+                <span class="tittle">Tin liên quan</span>
+                <div class="items">
+                <a href=""><img src="img/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
+                <div class="items">
+                <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
+                <div class="items">
+                <a href=""><img src="img/tinanh/tin_anh3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
+                <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
+                <div class="items">
+                <a href=""><img src="img/tinanh/post1.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
+                <div class="items">
+                <a href=""><img src="img/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                <span class="info">32 photos | 26639 view</span>
+                </div>
+                <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+            </div>
+        </div>
+
+            
+        
+            
+    </div>
+</div> 

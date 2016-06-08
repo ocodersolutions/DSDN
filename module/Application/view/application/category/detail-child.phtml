@@ -58,7 +58,7 @@ $featuredProducts = $this->featuredProducts;
                     if (trim($article->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $article->thumbnail)) {
                         $imageUrl = URL_APPLICATION . $article->thumbnail;
                     } else {
-                        $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                        $imageUrl = $urlImage_DSDN . '/tinanh/no-image.png';
                     }
                     ?>
                     <div class="new_box">

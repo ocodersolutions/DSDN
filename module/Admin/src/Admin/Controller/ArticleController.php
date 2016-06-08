@@ -118,8 +118,8 @@ class ArticleController extends OcoderBaseController {
 
             if (!empty($item)) {
                 $nameLang = json_decode($item->name_lang);
-                $item->name_en = $nameLang->name_en;
-                $item->name_jp = $nameLang->name_jp;
+                //$item->name_en = $nameLang->name_en;
+                //$item->name_jp = $nameLang->name_jp;
                 $introLang = json_decode($item->intro_lang);
                 $item->intro_en = $introLang->intro_en;
                 $item->intro_jp = $introLang->intro_jp;

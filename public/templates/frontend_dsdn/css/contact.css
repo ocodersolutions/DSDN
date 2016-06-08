@@ -124,9 +124,6 @@ form input:focus,form textarea:focus{
 }
 .news a {
     position: relative;
-    background-color: #004ebc;
-    padding: 10px;
-    color: #fff;
     text-decoration: none;
 }
 .news .new_tittle{
@@ -166,10 +163,11 @@ form input:focus,form textarea:focus{
 }
 .news .new_box .first_news .first_new_content{
     color: #333;
+    min-height: 200px;
     max-height: 480px;
 	margin-left: 30px;
     display: inline-block;
-    width: 60%;
+    width: 68%;
 }
 .news .new_box .first_news .first_new_content a{
     background-color: transparent;

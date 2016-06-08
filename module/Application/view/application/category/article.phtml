@@ -1,20 +1,14 @@
 <?php
+$urlCSS_DSDN = URL_TEMPLATE . '/frontend_dsdn/css';
+$urlJS_DSDN = URL_TEMPLATE . '/frontend_dsdn/js';
+$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
 
 use Zend\Session\Container;
 
 $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
 ?>
-
-<!-- Main Content of Website -->
-<div class="main-wrapper news-page">
-    <!-- Main Content -->
-    <div class="row main-content-wrapper">
-        <!-- Main Content -->
-        <div class="main-content col-sm-8">
-            <img src="<?php echo URL_TEMPLATE . '/frontend/images/banner-sub.jpg' ?>" class="img-thumbnail banner-sub">
-
-            <?php
+<?php
             if ($ssSystem->language == DEFAULT_LANGUAGE) {
                 $name = $this->item->name;
                 $intro = $this->item->intro;
@@ -31,29 +25,100 @@ $helperString = new \Ocoder\Helper\String;
                 $content = $contentLang->$contentField;
             }
             ?>
-
-            <!-- Category List -->
-            <div class="row categories">
-                <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo $name ?></h3>
-                <div class="col-sm-12"><strong><?php echo $intro; ?></strong></div>
-                <div class="col-sm-12"><?php echo $content; ?></div>
-            </div><!-- END Category Product List -->
+<div class="row">
+        <div class="container contact-content" style="padding: 0">
+            <img src="<?php echo $urlImage_DSDN?>/news.jpg" alt="">   
+            <p class="contact_p">Tin Tức</p>
         </div>
 
-        <!-- Sidebar right -->
-        <div class="sidebar-right col-sm-4">
-            <?php            
-            if ($this->item->category_id == SERVICE_CATEGORY_ID) {
-                echo $this->blkServices();
-                echo $this->blkProductCategory();
-            }
+    </div>
+    <div class="row page-default ">
+        <div class="container content">
+            <div class="breakum-line">
+                <a href="<?php echo URL_APPLICATION ?>"><?php echo HOME ?></a>/<span> Tin tức </span>
+            </div>
+        
+            <div class="col-md-8 block">
+                <div class="news_content">
 
-            // Sidebar Right Main Job Block
-            echo $this->blkNewsCategory();
-            // Sidebar Right Video Block
-            echo $this->blkVideo();
-            // Sidebar Right Featured News
-            echo $this->blkLatestNews();
-            ?>
-        </div><!-- Sidebar Right -->
-    </div><!-- End Main Content -->
+                    <p class="new_tittle block"><?php echo $name?></p>
+                    <span class="block">Thứ 4, 01/06/2016 , 9:37:03</span>
+                    <div class="short_des block"><?php echo $intro; ?></div>
+                    <?php echo $content; ?>
+                </div>
+            </div>
+            <div class="col-md-4 pull-right">
+                <div class=" block padding_right5">
+                    <div class="search">
+                        <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
+                        <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
+                    </div>
+                </div>    
+                <div class="block">
+                 
+                    <div class="tinanh">
+                        <span class="tittle">Tin ảnh</span>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
+                        <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/post1.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+
+                        <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+                    </div>
+                </div>
+
+                <div class="block">
+                    <div class="otherlink">
+                        <span>video</span>
+                        <iframe width="100%" height="315" src="https://www.youtube.com/embed/ahLjVibR6oY" frameborder="0" allowfullsrceen></iframe>
+                    </div>
+                </div>
+                <div class="block">
+                     
+                    <div class="tinanh">
+                        <span class="tittle">Tin Thể thao</span>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
+                        <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/post1.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="items">
+                        <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                        <span class="info">32 photos | 26639 view</span>
+                        </div>
+                        <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div> 
