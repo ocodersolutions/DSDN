@@ -1,0 +1,115 @@
+<?php
+use Zend\Session\Container;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+
+?>
+
+<!-- Main Content of Website -->
+<div class="main-wrapper news-page">
+    <!-- Main Content -->
+    <div class="row main-content-wrapper">
+        <!-- Main Content -->
+        <div class="main-content col-sm-8">
+            <img src="<?php echo URL_TEMPLATE . '/frontend/images/banner-sub.jpg' ?>" class="img-thumbnail banner-sub">
+
+            <!-- Category List -->
+            <div class="row categories">
+                <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo NEWS ?></h3>
+                <?php 
+                foreach ($this->categoryNews as $category) { 
+                    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                        $name = $category->name;
+                        $alias = $category->alias;
+                        $intro = $category->intro;
+                    } else {
+                        $nameLang = json_decode($category->name_lang);
+                        $nameField = 'name_' . $ssSystem->language;
+                        $name = $nameLang->$nameField;
+                        $aliasLang = json_decode($category->alias_lang);
+                        $aliasField = 'alias_' . $ssSystem->language;
+                        $alias = $aliasLang->$aliasField;
+                        $introLang = json_decode($category->intro_lang);
+                        $introField = 'intro_' . $ssSystem->language;
+                        $intro = $introLang->$introField;
+                    }
+                ?>
+                <div class="col-sm-6">
+                    <h3 class="title"><a href="<?php echo URL_APPLICATION . '/' . URL_ALIAS_NEWS . '/' . $alias ?>"><?php echo $helperString->summary($name, 50, true, true); ?></a></h3>
+                    <?php 
+                    $count = 1;
+                    foreach ($category->articles as $article) { 
+                        if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                            $name = $article->name;
+                            $alias = $article->alias;
+                            $intro = $article->intro;
+                        } else {
+                            $nameLang = json_decode($article->name_lang);
+                            $nameField = 'name_' . $ssSystem->language;
+                            $name = $nameLang->$nameField;
+                            $aliasLang = json_decode($article->alias_lang);
+                            $aliasField = 'alias_' . $ssSystem->language;
+                            $alias = $aliasLang->$aliasField;
+                            $introLang = json_decode($article->intro_lang);
+                            $introField = 'intro_' . $ssSystem->language;
+                            $intro = $introLang->$introField;
+                        }
+                        
+                        if (trim($article->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $article->thumbnail)) {
+                            $imageUrl = URL_APPLICATION . $article->thumbnail;
+                        } else {
+                            $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                        }
+                        
+                        if($count > 1){
+                            $count++;
+                    ?>
+                            <div class="col-sm-12">
+                                <div style="margin-left: -15px; font-size: 11px;">
+                                    <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>">+ <?php echo $helperString->summary($name, 60, true, true); ?></a>
+                                </div>
+                            </div>
+                    <?php   
+                        } else {
+                            $count++;
+                    ?>
+                            <div class="col-sm-5">
+                                <img src="<?php echo $imageUrl ?>" class="imgtv img-responsive" align="left">
+                            </div>
+                            <div class="col-sm-7 content" style="margin-bottom: 10px;">
+                                <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><?php echo $helperString->summary($name, 25, true, true); ?></a><br/>
+                                <?php echo $helperString->summary($intro, 90, true, true); ?>
+                            </div>
+                    <?php       
+                        }//end if
+                    }//end foreach ?>
+                </div>
+                <?php }//end foreach ?>
+                
+            </div><!-- END Category Product List -->
+        </div>
+
+        <!-- Sidebar right -->
+        <div class="sidebar-right col-sm-4">
+            <?php            
+            // Sidebar Right Main Job Block
+            echo $this->blkNewsCategory();
+            // Sidebar Right Video Block
+            echo $this->blkVideo();
+            // Sidebar Right Featured News
+            echo $this->blkLatestNews();
+            ?>
+        </div><!-- Sidebar Right -->
+    </div><!-- End Main Content -->
+
+    <!-- PAGINATION -->
+    <?php
+//    $aliasCategory = array(
+//        COMPANY_INFO_CATEGORY_ID => '/gioi-thieu',
+//        SERVICE_CATEGORY_ID => '/dich-vu',
+//        RECRUITMENT_CATEGORY_ID => '/tuyen-dung',
+//    );
+//    $currentURL = URL_APPLICATION . $aliasCategory[$this->categoryInfo->id];
+//    echo $this->paginationControl($this->paginator, 'sliding', 'paginator.phtml', array('currentURL' => $currentURL));
+    ?>

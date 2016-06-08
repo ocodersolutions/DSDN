@@ -123,6 +123,7 @@ form input:focus,form textarea:focus{
     color: #fff;	
 }
 .news a {
+    color: #fff;
     position: relative;
     text-decoration: none;
 }
@@ -150,6 +151,17 @@ form input:focus,form textarea:focus{
 }
 .news .new_box {
 	padding: 0 15px;
+}
+.news .under_new_content{
+    padding:0 15px;
+}
+.news .under_new_content a {
+    padding-left:25px;
+    background: url(../img/marker.png) no-repeat 10px center;
+    font-size: 13px;
+    color: #004ebc;
+    font-weight: bold;
+    text-decoration: none;
 }
 .news .new_box .first_news img{
 	padding: 3px;
