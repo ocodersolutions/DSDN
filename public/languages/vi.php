@@ -1,5 +1,5 @@
 <?php
-define("PAGE_TITLE", "phuanphat.com.vn");
+define("PAGE_TITLE", "ttthdsdn.com.vn");
 define("TITLE_HOMEPAGE", "Trang chủ, Trang chu");
 define("TITLE_INTRO", "Giới thiệu, Gioi thieu");
 define("TITLE_PRODUCT", "Sản phẩm, San pham");
@@ -121,3 +121,5 @@ define("COMPANY_FAX", "Số Fax công ty");
 define("COMPANY_EMAIL", "Địa chỉ mail công ty");
 define("COMPANY_HISTORY", "Lịch sử phát triển công ty");
 define("COMPANY_BUSINESS", "Nghành nghề kinh doanh");
+define("MEMBERS", "Đơn vị thành viên");
+define("SHAREHOLDER", "Quan hệ cổ đông");

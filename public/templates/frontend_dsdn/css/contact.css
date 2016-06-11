@@ -22,7 +22,7 @@
 	font-family: Century Gothic;
 	font-size: 15px;
     line-height: 23px;
-	margin: 30px 20px;
+	margin: 30px 15px;
     padding: 0 0px 10px 0px;
     border-bottom: 1px solid;
 }
@@ -36,8 +36,9 @@
     line-height: 30px;
    
 }
-.contact_info p{
-	
+.contact_info p.comname{
+	text-transform: uppercase;
+    font-weight: bold;
 }
 .contact_info p span{
 	margin-left: 5px;
@@ -72,6 +73,15 @@ form input.input_email,
 form input.input_fname,form textarea{
     padding: 0 8px;
 	border-bottom: 1px solid #004EBC;
+}
+form.contactform input.has-err {
+    border-color: red;
+}
+form.contactform span.show_err{
+    color: red;
+    font-family: Century Gothic;
+    font-size: 15px;
+    font-style: italic;
 }
 form textarea{
 	height: 76px;
@@ -140,10 +150,10 @@ form input:focus,form textarea:focus{
 	width: 0;
 	height: 0;
 	position: relative;
-	top:-32px;
-	left: 49px;
-	border-bottom: 42px solid #004ebc;
-	border-right: 39px solid transparent;
+	top: -28px;
+    left: 49px;
+    border-bottom: 38px solid #004ebc;
+    border-right: 39px solid transparent;
 }
 .news hr{
 	width: 100%;
@@ -152,9 +162,13 @@ form input:focus,form textarea:focus{
 .news .new_box {
 	padding: 0 15px;
 }
+.news .new_box p{
+    color: #333;
+}
 .news .under_new_content{
     padding:0 15px;
 }
+
 .news .under_new_content a {
     padding-left:25px;
     background: url(../img/marker.png) no-repeat 10px center;
@@ -259,6 +273,13 @@ ul.pagination_news  li a:focus{
     font: normal 14px "Century Gothic";
     color: rgba(0, 0, 0, 0.64);
 }
+.news_content .header-title{
+    padding-left: 0;
+}
+.news_content .header-title span{
+    font-size: initial;
+    display: inline-block;
+}
 .news_content span {
     margin: 10px 0;
     display: block;
@@ -353,7 +374,7 @@ ul.pagination_news  li a:focus{
     border-radius: 0px 4px 4px 0px;
     width: 25%;
     top: 0px;
-    right: 0px;
+    /*right: 0px;*/
 }
 @media (min-width: 1191px){
    .search button p{

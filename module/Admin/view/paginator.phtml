@@ -41,15 +41,15 @@ foreach ($this->pagesInRange as $key) {
 <?php echo sprintf('Showing %s to %s of %s entries', $this->firstItemNumber, $this->lastItemNumber, $this->totalItemCount); ?>
         </div>
     </div>
-    <div class="col-xs-6">
-        <div class="dataTables_paginate paging_bootstrap">
-            <ul class="pagination">
+    <div class="pagination_line">
+         
+             <ul class="pagination_news">
                 <?php echo $startXhtml; ?>
                 <?php echo $previousXhtml; ?>
                 <?php echo $pagesInRange; ?>
                 <?php echo $nextXhtml; ?>
-<?php echo $endXhtml; ?>
+                <?php echo $endXhtml; ?>
             </ul>
-        </div>
+        
     </div>
 </div>

@@ -13,7 +13,7 @@ $ssSystem = new Container('system');
 <div class="contact-content">
         <div class="container">
             <img src="<?php echo $urlImage_DSDN;?>/contact-img.jpg" alt="">   
-            <p class="contact_p">Thông tin liên hệ ĐSĐN</p>
+            <p class="contact_p">Thông tin liên hệ</p>
             <div class="col-md-12">
                 
                 <div class="row col-md-7">
@@ -29,48 +29,52 @@ $ssSystem = new Container('system');
         
             <div class="col-sm-12 page_content">
                 <div class="breakum-line">
-                    <a href="<?php echo URL_APPLICATION ?>"><?php echo HOME; ?></a>/<span> thông tin liên hệ</span>
+                    <a href="<?php echo URL_APPLICATION ?>"><?php echo HOME; ?></a>/<span> Thông tin liên hệ</span>
                 </div>
                 <div class="col-sm-12 col-md-7">
                     <p  class="title-default">Liên hệ và Góp ý </p>
-                    <form class="contactform">
+                    <form id="contactform" class="contactform" method="POST">
                         <div class="form-group col-sm-6">
                             <label for="contactInputName">Họ và tên:</label>
-                            <input type="email" class="input_fname" id="contactInputName" >
+                            <input type="text" class="input_fname has-err" name="full_name" id="contactInputName" required>
 
                         </div>
                         <div class="form-group col-sm-6">
                             <label for="contactInputemail">Email :</label>
-                            <input type="password" class="input_email" id="contactInputemail">
+                            <input type="email" class="input_email has-err" name="email" id="contactInputemail" required>
                         </div>
                         <div class="form-group col-sm-12">
                             <label for="contactInputerea">Nội dung</label>
-                            <textarea class="input_textearea" id="contactInputerea" rows="3"></textarea>
+                            <textarea class="input_textearea has-err" id="contactInputerea" name="comment" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group col-sm-12 text-left">
+                            <span class="show_err"></span>
                         </div>
                         <div class="form-group col-sm-12 text-center">
-                            <button type="submit" class="btn btn-primary">Gửi đi</button>
+                            <button type="submit" id="send_contact" class="btn btn-primary">Gửi đi</button>
                         </div>
                     </form>
                 </div>
-                <div class="col-md-5 col-sm-12 block">
-                    <div class="search">
-                        <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
-                        <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
-                    </div>
-                </div>
+               
                 <div class="col-md-5 col-sm-12 block">
                     <div class="contact_info">
                         <p  class="title-default">Thông tin liên hệ </p>
-                        <p>CÔNG TY CP THÔNG TIN TÍN HIỆU ĐƯỜNG SẮT ĐÀ NẴNG</p>
-                        <p>Địa chỉ: <span>218 Hải Phòng, P.Tân Chính, Q.Thanh Khê, TP.Đà Nẵng</span></p>
-                        <p>Số điện thoại:<a href="" class="pull-right">(0511) 382 5472</a></p>
-                        <p>Fax :<a href="" class="pull-right">(0511) 382 5472</a></p>
-                        <p>Email:<a href="" class="pull-right">Gadanang@diachimail.com</a></p>
+                        <p class="comname"><?php echo $ssSystem->configs->company_name?></p>
+                        <p>Địa chỉ: <span><?php echo $ssSystem->configs->company_address?></span></p>
+                        <p>Số điện thoại:<a href="tel:<?php echo $ssSystem->configs->company_phone?>" class="pull-right"><?php echo $ssSystem->configs->company_phone?></a></p>
+                        <p>Fax :<a href="" class="pull-right"><?php echo $ssSystem->configs->company_fax?></a></p>
+                        <p>Email:<a href="mailto:<?php echo $ssSystem->configs->company_email?>" class="pull-right"><?php echo $ssSystem->configs->company_email?></a></p>
                     </div>
                 </div>
                 <div class="col-sm-12">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3833.8824881688442!2d108.2071546143854!3d16.07158664364479!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x314218495c4839ed%3A0x5c008faec7ffd1c0!2zR2EgxJDDoCBO4bq1bmc!5e0!3m2!1svi!2s!4v1464598958952" width="100%" height="450" frameborder="1" style="border:1px;padding-bottom:20px" allowfullscreen></iframe>
+                    <div style="overflow:hidden;width:100%;height:500px;resize:none;max-width:100%;margin-bottom:30px"><div id="gmap-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=<?php echo $ssSystem->configs->company_address?>&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="embedded-map-code" href="https://www.hostingreviews.website" id="make-map-data">Read more</a><style>#gmap-display .map-generator{width: 100%; max-height: 100%; background: none;</style></div><script src="https://www.hostingreviews.website/google-maps-authorization.js?id=028e13ce-d080-2b9e-3972-68fa5fda02ba&c=embedded-map-code&u=1465462995" defer="defer" async="async"></script>
                 </div>
             </div>
         
     </div>
+    <script>
+    $(document).ready(function() {
+
+});
+        
+    </script>

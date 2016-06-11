@@ -66,7 +66,8 @@ class Module {
         define('URL_ALIAS_PRODUCTS', $ssSystem->language == DEFAULT_LANGUAGE ? 'san-pham' : 'products');
         define('URL_ALIAS_CONTACT', $ssSystem->language == DEFAULT_LANGUAGE ? 'lien-he' : 'contact');
         define('URL_ALIAS_DOCUMENT', $ssSystem->language == DEFAULT_LANGUAGE ? 'cong-van' : 'document');
-        define('URL_ALIAS_MEMBERS', $ssSystem->language == DEFAULT_LANGUAGE ? 'thanh-vien' : 'members');
+        define('URL_ALIAS_MEMBERS', $ssSystem->language == DEFAULT_LANGUAGE ? 'don-vi-thanh-vien' : 'members');
+        define('URL_ALIAS_SHAREHOLDER', $ssSystem->language == DEFAULT_LANGUAGE ? 'quan-he-co-dong' : 'shareholder');
     }
     
     public function loadConfigs(MvcEvent $e){
@@ -174,5 +175,54 @@ class Module {
             ),
         );
     }
-
+public function getFormElementConfig() {
+        return array(
+            'factories' => array(
+                'formApplicationUser' => function($sm) {
+                    $myForm = new \Application\Form\User();
+//                    $myForm->setInputFilter(new \Admin\Form\UserFilter());
+                    return $myForm;
+                },
+                'formApplicationLogin' => function($sm) {
+                    $myForm = new \Application\Form\Login();
+                    return $myForm;
+                },
+               // 'formAdminProductCategory' => function($sm) {
+                //    $categoryTable = $sm->getServiceLocator()->get('Admin\Model\ProductCategoryTable');
+                  //  $myForm = new \Admin\Form\ProductCategory($categoryTable);
+                    //return $myForm;
+                //},
+                //'formAdminProduct' => function($sm) {
+                  //  $categoryTable = $sm->getServiceLocator()->get('Admin\Model\ProductCategoryTable');
+                    //$myForm = new \Admin\Form\Product($categoryTable);
+//                    $myForm->setInputFilter(new \Admin\Form\BookFilter());
+                    //return $myForm;
+//                },
+//                'formAdminCategory' => function($sm) {
+//                    $myForm = new \Admin\Form\Category();
+//                    return $myForm;
+//                },
+//                'formAdminArticle' => function($sm) {
+//                    $myForm = new \Admin\Form\Article();
+//                    $myForm->setInputFilter(new \Admin\Form\BookFilter());
+//                    return $myForm;
+//                },
+//                'formAdminConfig' => function($sm) {
+//                    $myForm = new \Admin\Form\Config();
+                    //                    $myForm->setInputFilter(new \Admin\Form\BookFilter());
+//                    return $myForm;
+//                },
+//                'formAdminPartner' => function($sm) {
+//                    $myForm = new \Admin\Form\Partner();
+                    //                    $myForm->setInputFilter(new \Admin\Form\BookFilter());
+//                    return $myForm;
+//                },
+//                'formAdminBanner' => function($sm) {
+//                    $myForm = new \Admin\Form\Banner();
+                    //                    $myForm->setInputFilter(new \Admin\Form\BookFilter());
+//                    return $myForm;
+//                },
+            ),
+        );
+    }
 }

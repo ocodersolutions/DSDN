@@ -71,7 +71,7 @@ class IndexController extends OcoderBaseController
             // $transport = new Mail\Transport\Sendmail();
             // $result = $transport->send($mail);
 
-            $to      = 'hoangphuocthanhtrung@gmail.com';
+            $to      = 'pvhuyhoang166@gmail.com';
             $subject = 'the subject';
             $message = 'hello';
             $headers = 'From: webmaster@example.com' . "\r\n" .

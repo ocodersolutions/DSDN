@@ -1,5 +1,5 @@
 <?php
-define("PAGE_TITLE", "phuanphat.com.vn");
+define("PAGE_TITLE", "ttthdsdn.com.vn");
 define("TITLE_HOMEPAGE", "Homepage");
 define("TITLE_INTRO", "Introduction");
 define("TITLE_PRODUCT", "Products");

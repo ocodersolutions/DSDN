@@ -14,7 +14,7 @@ class BlkLatestNews extends AbstractHelper {
 
     public function setData($articleTable) {
         $paginator = array(
-            'itemCountPerPage' => 3,
+            'itemCountPerPage' => 5,
             'pageRange' => PAGE_RANGE,
             'currentPageNumber' => 1,
         );

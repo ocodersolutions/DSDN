@@ -146,19 +146,27 @@ $featuredProducts = $this->featuredProducts;
                         </div>
                         <hr class="block">
                     </div>-->
-                    <div class="pagination_line">
-                        <ul class="pagination_news">
-                            <li><a href="#">«</a></li>
-                            <li><a href="#">1</a></li>
-                            <li><a class="active" href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                            <li><a href="#">6</a></li>
-                            <li><a href="#">7</a></li>
-                            <li><a href="#">»</a></li>
-                        </ul>
-                    </div>
+                    <!-- PAGINATION -->
+                    <?php
+                    $aliasCategory = array(
+                        COMPANY_INFO_CATEGORY_ID => '/' . URL_ALIAS_INTRO,
+                        SERVICE_CATEGORY_ID => '/' . URL_ALIAS_SERVICE,
+                        RECRUITMENT_CATEGORY_ID => '/' . URL_ALIAS_RECRUITMENT,
+                        NEWS_CATEGORY_ID => '/' . URL_ALIAS_NEWS,
+                    );
+                    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                        $alias = $this->categoryInfo->alias;
+                    } else {
+                        $langObj = json_decode($this->categoryInfo->alias_lang);
+                        $aliasField = 'alias_' . $ssSystem->language;
+                        $alias = $langObj->$aliasField;
+                    }
+                    
+                    $currentURL = URL_APPLICATION . $aliasCategory[$this->categoryInfo->parent_id] . '/' . $alias;
+                    
+                    echo $this->paginationControl($this->paginator, 'sliding', 'paginator.phtml', array('currentURL' => $currentURL));
+                    ?>
+                    
                 </div>
             </div>
             <div class="col-md-4 pull-right">

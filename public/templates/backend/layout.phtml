@@ -2,6 +2,7 @@
 $urlCSS = URL_TEMPLATE . '/backend/css';
 $urlJS = URL_TEMPLATE . '/backend/js';
 $urlImage = URL_TEMPLATE . '/backend/img';
+
 ?>
 
 <!DOCTYPE html>
@@ -93,7 +94,7 @@ $urlImage = URL_TEMPLATE . '/backend/img';
                                 <i class="glyphicon glyphicon-user"></i> <span><?php echo ADMINISTRATOR ?></span>
                             </a>
                         </li>
-                        <li>
+                        <!--<li>
                             <a href="<?php echo URL_APPLICATION . '/admin/productcategory' ?>">
                                 <i class="fa fa-th"></i> <span><?php echo PRODUCT_CATEGORY ?></span>
                             </a>
@@ -102,7 +103,7 @@ $urlImage = URL_TEMPLATE . '/backend/img';
                             <a href="<?php echo URL_APPLICATION . '/admin/product' ?>">
                                 <i class="fa fa-th fa-camera"></i> <span><?php echo PRODUCT ?></span>
                             </a>
-                        </li>
+                        </li>-->
                         <li>
                             <a href="<?php echo URL_APPLICATION . '/admin/category/detail/' . SERVICE_CATEGORY_ID ?>">
                                 <i class="fa fa-th fa-cloud"></i> <span><?php echo SERVICES ?></span>
@@ -124,8 +125,8 @@ $urlImage = URL_TEMPLATE . '/backend/img';
                             </a>
                         </li>
                         <li>
-                            <a href="<?php echo URL_APPLICATION . '/admin/category/detail/' . RECRUITMENT_CATEGORY_ID ?>">
-                                <i class="fa fa-th fa-globe"></i> <span><?php echo RECRUITMENT ?></span>
+                            <a href="<?php echo URL_APPLICATION . '/admin/category/child/' . SHAREHOLDER_CATEGORY_ID ?>">
+                                <i class="fa fa-th fa-globe"></i> <span><?php echo SHAREHOLDER ?></span>
                             </a>
                         </li>
                         <li>

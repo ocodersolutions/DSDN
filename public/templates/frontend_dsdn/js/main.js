@@ -43,8 +43,8 @@ $("#uc_customer_logo_carousel").owlCarousel({
 	navigation : false,
 	pagination: true,
 	autoPlay: true,
-	autoPlaySpeed: 2000,
-	autoPlayTimeout: 2000,
+	autoPlaySpeed: 500,
+	autoPlayTimeout: 500,
 	autoPlayHoverPause: true
 });
 //

@@ -1,4 +1,7 @@
 <?php
+$urlCSS_DSDN = URL_TEMPLATE . '/frontend_dsdn/css';
+$urlJS_DSDN = URL_TEMPLATE . '/frontend_dsdn/js';
+$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
 
 use Zend\Session\Container;
 use Admin\Model\ProductTable;
@@ -8,67 +11,25 @@ $helperString = new \Ocoder\Helper\String;
 
 $featuredProducts = $this->featuredProducts;
 ?>
-
-
+<div class="row">
+    <div class="container contact-content" style="padding: 0">
+        <img src="<?php echo $urlImage_DSDN?>/news.jpg" alt="">   
+        <p class="contact_p">Tìm kiếm</p>
+    </div>
+</div>
 <!-- Main Content of Website -->
-<div class="main-wrapper search-page">
-    <!-- Main Content -->
-    <div class="row main-content-wrapper">
-        <!-- Main Content -->
-        <div class="main-content col-sm-8">
-            <img src="<?php echo URL_TEMPLATE . '/frontend/images/banner-sub.jpg' ?>" class="img-thumbnail banner-sub">
-            
-            <div class="row search-results">
-                <h3 class="col-sm-12 header-title"> <?php echo SEARCH_RESULTS_FOR . ' <span style="color: #ea3e03; text-transform: none;">"' . $this->keyword . '"</span>' ?></h3>
-                
-                <?php if(count($this->products) > 0) { ?>
-                <!-- Search Products Block -->
-                <div class="products">
-                    <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo PRODUCT ?></h3>
-                    <?php foreach ($this->products as $product) { ?>
-                        <div class="col-sm-6 product-item">
-                            <div class="product-thumbnail effect-box-shadow">
-                                <?php
-                                if ($ssSystem->language == DEFAULT_LANGUAGE) {
-                                    $name = $product->name;
-                                    $alias = $product->alias;
-                                    $intro = $product->intro;
-                                } else {
-                                    $nameLang = json_decode($product->name_lang);
-                                    $nameField = 'name_' . $ssSystem->language;
-                                    $name = $nameLang->$nameField;
-                                    $aliasLang = json_decode($product->alias_lang);
-                                    $aliasField = 'alias_' . $ssSystem->language;
-                                    $alias = $aliasLang->$aliasField;
-                                    $introLang = json_decode($product->intro_lang);
-                                    $introField = 'intro_' . $ssSystem->language;
-                                    $intro = $introLang->$introField;
-                                }
-                                
-                                if (trim($product->picture) && $helperString->isUrlExist(URL_APPLICATION . $product->picture)) {
-                                    $imageUrl = URL_APPLICATION . $product->picture;
-                                } else {
-                                    $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
-                                }
-                                ?>
-                                <a href="<?php echo URL_APPLICATION . '/sp/' . $alias ?>">
-                                    <img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail">
-                                </a>
-                            </div>
-                            <div>
-                                <h3 class="product-name"><a href="<?php echo URL_APPLICATION . '/sp/' . $alias ?>"><?php echo $helperString->summary($name, 50, true); ?></a></h3>
-                                <p class="price"><strong><?php echo PRICE ?>: <span><?php echo number_format($product->price, 0, ',', '.') . " VND" ?></span></strong></p>
-                                <p class="short-desc"><?php echo $helperString->summary($intro, 150, true, true); ?></p>
-                            </div>
-                        </div>
-                    <?php } ?>
-                </div><!-- END Search Product Block -->
-                <?php } ?>
-                
+<div class="row page-default ">
+        <div class="container content">
+            <div class="breakum-line">
+                <a href="<?php echo URL_APPLICATION ?>"><?php echo HOME ?></a>/<span> Tin tức </span>
+            </div>
+            <div class="main-content col-sm-8">
+            <div class="row search-results block">
+                <h3 class="col-sm-12 header-title block"> <?php echo SEARCH_RESULTS_FOR . ' <span style="color: #ea3e03; text-transform: none;">"' . $this->keyword . '"</span>' ?></h3>
                 <?php if(count($this->articles) > 0) { ?>
                 <!-- Search Articles List -->
-                <div class="articles">
-                    <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php echo ARTICLE ?></h3>
+                <div class="news">
+                    
                     <?php
                     foreach ($this->articles as $article) {
                         if ($ssSystem->language == DEFAULT_LANGUAGE) {
@@ -90,35 +51,83 @@ $featuredProducts = $this->featuredProducts;
                         if (trim($article->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $article->thumbnail)) {
                             $imageUrl = URL_APPLICATION . $article->thumbnail;
                         } else {
-                            $imageUrl = URL_TEMPLATE . '/frontend/images/no-image.png';
+                            $imageUrl = URL_TEMPLATE . '/frontend_dsdn/img/tinanh/no-image.png';
                         }
                         ?>
-                        <div class="col-sm-12 article">
-                            <div class="col-sm-3 news-images">
-                                <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="img-thumbnail"></a>
-                            </div>
-                            <div class="col-sm-9 news-content">
-                                <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><strong><?php echo $name; ?></strong></a>
-                                <p class="short-desc"><?php echo $helperString->summary($intro, 250, true, true); ?></p>
+                        
+                    <div class="news">
+                        <div class="new_box">
+                            <div class="first_news">
+                                <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><img src="<?php echo $imageUrl ?>" alt="<?php echo $name ?>" class="first_thumb"/></a>
+                                <div class="first_new_content">
+                                    <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>" class="links_tittle"><?php echo $name; ?></a>
+                                    <hr class="block">
+                                    <p><?php echo $helperString->summary($intro, 250, true, true); ?></p>
+                                    
+                                </div> 
                             </div>
                         </div>
+                    </div>
                     <?php } ?>
                 </div><!-- END Search Articles List -->
-                <?php } ?>
+                <?php } else { ?>
+                <div class="news">  
+                    <div class="new_box">
+                        <div class="first_news">  
+                            <p>Không có kết quả tìm kiếm</p>
+                        </div> 
+                    </div> 
+                </div>                
+                 
+                    <?php } ?>
             </div>
         </div> <!-- End Homepage content -->
 
         <!-- Sidebar right -->
-        <div class="sidebar-right col-sm-4">
-            <?php
-            // Sidebar Right Product Category Block
-            echo $this->blkProductCategory();
-            // Sidebar Right Services Block
-            echo $this->blkServices();
-            // Sidebar Right Video Block
-            echo $this->blkVideo();
-            // Sidebar Right Featured News
-            echo $this->blkLatestNews();
-            ?>
-        </div><!-- Sidebar Right -->
+        <div class="col-md-4 pull-right">
+            <div class="search padding_right5 block">
+                <form action="<?php echo URL_APPLICATION . '/tim-kiem/' ?>" method="GET">
+                    <input type="text" class="form-control input-search" id="keyword-search" maxlength="64" name='tk' placeholder="<?php echo SEARCH ?>" value="<?php echo array_key_exists('tk', $_GET) ? $_GET['tk'] : '' ?>" />
+                    <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p><?php echo SEARCH ?></p></button>
+                </form>
+            </div>
+            <div class="block">
+                <?php $this->blkLatestNews(); ?>
+            </div>   
+            <div class="block">
+             
+                <div class="tinanh">
+                    <span class="tittle">Tin ảnh</span>
+                    <div class="items">
+                    <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh1_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Đà Nẵng: Sẽ sớm di dời ga đường sắt ra khỏi nội thành</a><br>
+                    <span class="info">32 photos | 26639 view</span>
+                    </div>
+                    <div class="items">
+                    <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                    <span class="info">32 photos | 26639 view</span>
+                    </div>
+                    <div class="items">
+                    <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh3_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a>
+                    <a href="#" title="Hoạt động công ty" class="newslink">Ga đường sắt mới sẽ được đặt tại quận Liên Chiểu</a>
+                    <span class="info">32 photos | 26639 view</span>
+                    </div>
+                    <div class="items">
+                    <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/post1.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Phương án di dời và xây dựng ga đường sắt Đà Nẵng</a><br>
+                    <span class="info">32 photos | 26639 view</span>
+                    </div>
+                    <div class="items">
+                    <a href=""><img src="<?php echo $urlImage_DSDN?>/tinanh/tin_anh2_.jpg" alt="thumbnail" title="Hoạt động công ty" class="img"></a><a href="#" title="Hoạt động công ty" class="newslink">Triển lãm công nghệ khai khoáng</a><br>
+                    <span class="info">32 photos | 26639 view</span>
+                    </div>
+
+                    <div class="link"><a href="" class="linkmore">Xem thêm </a></div>
+                </div>
+            </div>
+
+            <div class="block">
+                <?php echo $this->blkVideo(); ?>
+            </div>
+            
+        </div>
     </div><!-- End Main Content -->
+   

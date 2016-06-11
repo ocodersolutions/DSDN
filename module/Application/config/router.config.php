@@ -24,6 +24,28 @@ $documentRoute = array(
         ),
     ),
 );
+$membersRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => '/don-vi-thanh-vien[/]',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'members',
+            'action' => 'index',
+        ),
+    ),
+);
+$shareholderRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => '/quan-he-co-dong[/]',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'shareholder',
+            'action' => 'index',
+        ),
+    ),
+);
 
 $introCompanyRoute = array(
     'type' => 'Zend\Mvc\Router\Http\Segment',
@@ -314,7 +336,44 @@ $searchRoute = array(
         ),
     ),
 );
-
+$applicationRoute = array(
+    'type' => 'Literal',
+    'options' => array(
+        'route' => '/dang-nhap',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'account',
+            'action' => 'login'
+        )
+    ),
+    'may_terminate' => true,
+    'child_routes' => array(
+        'default' => array(
+            'type' => 'Segment',
+            'options' => array(
+                'route' => '/[:controller[/:action[/:id]]][/]',
+                'constraints' => array(
+                    'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    'id' => '[0-9]*',
+                ),
+                'defaults' => array(
+                )
+            )
+        ),
+        'paginator' => array(
+            'type' => 'Segment',
+            'options' => array(
+                'route' => '/:controller/index[/:page][/]',
+                'constraints' => array(
+                    'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
+                    'page' => '[0-9]*'
+                ),
+                'defaults' => array()
+            )
+        )
+    )
+);
 return array(
     'router' => array(
         'routes' => array(
@@ -340,6 +399,9 @@ return array(
             'search' => $searchRoute,
 			'googleVerificationRoute' => $googleVerificationRoute,
             'document' => $documentRoute,
+            'members' => $membersRoute,
+            'shareholder' => $shareholderRoute,
+            'application' => $applicationRoute,
         ),
     )
 );

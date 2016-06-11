@@ -134,11 +134,21 @@
     color: #004ebc;
     font-size: 14px;
     line-height: 25px;
+    list-style: none;
+    
  }
- 
+ .menu-left-3 .wrap{
+    padding-left: 15px;
+ }
+ .sub-title-default a{
+    text-decoration: none;
+    color: #004ebc;
+    
+ }
  .p-default {
      font-family: Century Gothic;
      font-size: 15px;
+
  }
  
  .container {
@@ -336,7 +346,7 @@ header .textwidget {
  
  .page-default .content .sidebar-left {
      float: left;
-     padding: 20px 0 40px 45px;
+     padding: 0px 0 20px 30px;
  }
  
  .page-default .content .sidebar-left .menu-list {
@@ -783,7 +793,16 @@ header .textwidget {
      font: bold 16px "Century Gothic";
      color: #fff;
  }
- 
+ .otherlink .items a {
+    background-image: none;
+ }
+ .otherlink .items a .images{
+    
+    margin-right: 10px;
+    width: 70px;
+    padding: 2px;
+    border: #CCC 1px solid;
+ }
  .otherlink a {
     display: block;
     padding: 6px 5px 6px 25px;
@@ -920,5 +939,5 @@ header .textwidget {
 
  /*========== member=========*/
 .padding_right5{
-    padding-right: 30px;
+    padding-right: 40px;
 }
