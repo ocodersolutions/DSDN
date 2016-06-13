@@ -58,7 +58,7 @@ class Module {
         if ($ssSystem->offsetExists('language')) {
             include_once PATH_PUBLIC . '/languages/' . $ssSystem->offsetGet('language') . '.php';
         }
-
+        
         define('URL_ALIAS_INTRO', $ssSystem->language == DEFAULT_LANGUAGE ? 'gioi-thieu' : 'introduction');
         define('URL_ALIAS_SERVICE', $ssSystem->language == DEFAULT_LANGUAGE ? 'dich-vu' : 'services');
         define('URL_ALIAS_NEWS', $ssSystem->language == DEFAULT_LANGUAGE ? 'tin-tuc' : 'news');

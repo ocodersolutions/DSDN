@@ -8,8 +8,6 @@ use Zend\Session\Container;
 $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
 
-$featuredProducts = $this->featuredProducts;
-
 ?>
 
 <div class="row">
@@ -19,20 +17,21 @@ $featuredProducts = $this->featuredProducts;
     </div>
 
 </div>
+<?php
+    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+        $name = $this->categoryInfo->name;
+    } else {
+        $nameLang = json_decode($this->categoryInfo->name_lang);
+        $nameField = 'name_' . $ssSystem->language;
+        $name = $nameLang->$nameField;
+    }
+    ?>
 <div class="row page-default ">
     <div class="container content">
         <div class="breakum-line">
-            <a href="">Trang chủ</a>/<span> Dịch vụ </span>
+            <a href="">Trang chủ</a>/<span> <?php echo $name ?></span>
         </div>
-        <?php
-            if ($ssSystem->language == DEFAULT_LANGUAGE) {
-                $name = $this->categoryInfo->name;
-            } else {
-                $nameLang = json_decode($this->categoryInfo->name_lang);
-                $nameField = 'name_' . $ssSystem->language;
-                $name = $nameLang->$nameField;
-            }
-            ?>
+        
         <div class="col-md-8 block">
         <?php
         foreach ($this->articles as $article) {
@@ -71,9 +70,9 @@ $featuredProducts = $this->featuredProducts;
                     </div>
                 </div>
             </div>
-            
+             <hr class="block">
             <?php } ?>
-            <hr class="block"><hr class="block">
+                
         </div>
 
          <div class="col-md-4 block padding_right5">

@@ -43,32 +43,31 @@ $ssSystem = new Container('system');
                 
                 <ul class="parent nav navbar-nav">
                     <li class="parent-item ">
-                        <a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_CONTACT ?>"><?php echo CONTACT ?></a>
-                    </li>
-                    <li class="parent-item ">
-                        <a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_DOCUMENT ?>">Công văn</a>
+                        <a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_INTRO ?>"><?php echo INTRO ?></a>
                     </li>
                     <li class="parent-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SERVICE ?>">Dịch vụ <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/cung-cap-thiet-bi-1">Cung cấp thiết bị</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/bao-tri-van-hanh-2">Bảo trì vận hành</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/tu-van-thiet-ke-6">Tư vấn thiết kế</a></li>
+                         <ul class="dropdown-menu">
+                            <li><a href="<?php echo URL_APPLICATION ?>/bv/quan-ly-bao-tri-1">Cung cấp thiết bị</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/bv/tu-van-xay-dung-cong-trinh-2">Bảo trì vận hành</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/bv/san-xuatsua-chua-6">Tư vấn thiết kế</a></li>
                             <li><a href="<?php echo URL_APPLICATION ?>/bv/cac-dich-vu-khac-7">Dịch vụ khác</a></li>
                         </ul>
                     </li>
                     <li class="parent-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_NEWS ?>"><?php echo NEWS?> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_NEWS ?>/tin-noi-bo">Tin nội bộ</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_NEWS ?>/tin-lien-quan">Tin tức liên quan</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_NEWS ?>/tin-tuyen-dung">Tin tuyển dụng</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo INTERNALNEWS_CATEGORY_ID ?>/tin-noi-bo">Tin nội bộ</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo RELATENEWS_CATEGORY_ID ?>/tin-lien-quan">Tin tức liên quan</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo RECRUITMENT_CATEGORY_ID ?>/tin-tuyen-dung">Tin tuyển dụng</a></li>
                         </ul>
                     </li>
                     <li class="parent-item ">
-                        <a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_MEMBERS ?>"><?php echo MEMBERS ?></a>
-                        
+                        <a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_DOCUMENT ?>">Công văn</a>
                     </li>
+                    <!--<li class="parent-item ">
+                        <a href="<?php //echo URL_APPLICATION ?>/<?php //echo URL_ALIAS_MEMBERS ?>"><?php //echo MEMBERS ?></a>
+                    </li>-->
                     <li class="parent-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER ?>"><?php echo SHAREHOLDER ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
@@ -84,7 +83,7 @@ $ssSystem = new Container('system');
                         </ul>
                     </li>
                     <li class="parent-item ">
-                        <a href="<?php echo URL_APPLICATION;?>/#">Tin ảnh</a>
+                        <a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_CONTACT ?>"><?php echo CONTACT ?></a>
                     </li>
                 </ul>
             </nav>
