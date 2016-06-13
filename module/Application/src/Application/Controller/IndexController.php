@@ -17,7 +17,7 @@ use Ocoder\Base\BaseActionController as OcoderBaseController;
 class IndexController extends OcoderBaseController
 {
     public function init() {
-        
+       
     }
     
     public function indexAction()

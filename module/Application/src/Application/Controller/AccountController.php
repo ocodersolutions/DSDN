@@ -25,8 +25,9 @@ class AccountController extends BaseActionController {
 
     public function loginAction() {
         $msgError = '';
-        if ($this->_authService->hasIdentity()) {
-            $this->goAction('application', array('controller' => 'index'));
+        
+         if ($this->getAuthService()->hasIdentity()){
+            return $this->redirect()->toRoute('document');
         }
         
         $myForm = $this->getServiceLocator()->get('FormElementManager')->get('formApplicationLogin');
@@ -43,7 +44,7 @@ class AccountController extends BaseActionController {
             if ($result->isValid()) {
                 $userInfo = $this->_authService->getAdapter()->getResultRowObject(array('id', 'username', 'email', 'fullname'));
                 $this->_authService->getStorage()->write($userInfo);
-                $this->goAction('application', array('controller' => 'index'));
+                return $this->redirect()->toRoute('document');
             } else {
                 $msgError = USERNAME_OR_PASSWORD_INVALID;
             }

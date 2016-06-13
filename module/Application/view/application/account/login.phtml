@@ -1,50 +1,104 @@
 <?php
-$this->layout()->setTemplate('layout/backend-blank');
+//$this->layout()->setTemplate('layout/backend-blank');
 $myForm = $this->myForm;
 $myForm->prepare();
+//die('form here');
+$urlCSS_DSDN = URL_TEMPLATE . '/frontend_dsdn/css';
+$urlJS_DSDN = URL_TEMPLATE . '/frontend_dsdn/js';
+$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
+
+use Zend\Session\Container;
+use Admin\Model\ProductTable;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+
+$featuredProducts = $this->featuredProducts;
 ?>
+<div class="row page-default ">
+        <div class="container content">
+            <div class="breakum-line">
+                <a href="<?php echo URL_APPLICATION ?>"><?php echo HOME ?></a>/<span> <?php echo SIGN_IN ?> </span>
+            </div>
+            <div class="main-content col-sm-8">
+                <!--<div class="block login">
+                    <span>ĐĂNG NHẬP</span>
+                    <div>
+                        <form action="" method="post">
+                            <label for="acount">Tài khoản</label>
+                            <input id="acount" type="text" />
+                            <label for="pass">Mật khẩu</label>
+                            <input id="pass" type="text" />
+                            <button type="submit">Đăng nhập</button>
+                            <a href="#">Quên mật khẩu?</a>
+                        </form>
+                    </div>
+                </div>-->
+                <div class="form-box" id="login-box">
+                    <div class="header"><?php echo SIGN_IN ?></div>
+                    <?php echo $this->form()->openTag($myForm); ?>
+                    <div class="body bg-gray">
+                        <!-- NOTICE -->
+                        <?php if(trim($this->msgError)){
+                            echo '<span style="color: red">' . $this->msgError . '</span>';
+                        }?>
+                        <div class="form-group">
+                            <!--<input type="text" name="username" class="form-control" placeholder="<?php echo USERNAME ?>"/>-->
+                            <?php echo $this->formElement($myForm->get('username')) ?>
+                        </div>
+                        <div class="form-group">
+                            <!--<input type="password" name="password" class="form-control" placeholder="<?php echo PASSWORD ?>"/>-->
+                            <?php echo $this->formElement($myForm->get('password')) ?>
+                        </div>          
+                        <!--            <div class="form-group">
+                                        <input type="checkbox" name="remember_me"/> Remember me
+                                    </div>-->
+                    </div>
+                    <div class="footer">                                                               
+                        <button type="submit" class="btn bg-olive btn-block"><?php echo SIGN_IN ?></button>  
 
-<div class="form-box" id="login-box">
-    <div class="header"><?php echo SIGN_IN ?></div>
-    <?php echo $this->form()->openTag($myForm); ?>
-    <div class="body bg-gray">
-        <!-- NOTICE -->
-        <?php if(trim($this->msgError)){
-            echo '<span style="color: red">' . $this->msgError . '</span>';
-        }?>
-        <div class="form-group">
-            <!--<input type="text" name="username" class="form-control" placeholder="<?php echo USERNAME ?>"/>-->
-            <?php echo $this->formElement($myForm->get('username')) ?>
+                            <!--<p><a href="#">I forgot my password</a></p>-->
+
+                        <!--<a href="register.html" class="text-center">Register a new membership</a>-->
+                    </div>
+                    <?php echo $this->form()->closeTag(); ?>
+
+                    <!--    <div class="margin text-center">
+                            <span>Sign in using social networks</span>
+                            <br/>
+                            <button class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></button>
+                            <button class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></button>
+                            <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
+                    
+                        </div>-->
+                </div>
+            
+            
+        </div> <!-- End Homepage content -->
+
+        <!-- Sidebar right -->
+        <div class="col-md-4 pull-right">
+            <div class="search padding_right5 block">
+                <form action="<?php echo URL_APPLICATION . '/tim-kiem/' ?>" method="GET">
+                    <input type="text" class="form-control input-search" id="keyword-search" maxlength="64" name='tk' placeholder="<?php echo SEARCH ?>" value="<?php echo array_key_exists('tk', $_GET) ? $_GET['tk'] : '' ?>" />
+                    <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p><?php echo SEARCH ?></p></button>
+                </form>
+            </div>
+            <div class="block">
+                <?php $this->blkLatestNews(); ?>
+            </div>   
+            
+
+            <div class="block">
+                <?php echo $this->blkVideo(); ?>
+            </div>
+            
         </div>
-        <div class="form-group">
-            <!--<input type="password" name="password" class="form-control" placeholder="<?php echo PASSWORD ?>"/>-->
-            <?php echo $this->formElement($myForm->get('password')) ?>
-        </div>          
-        <!--            <div class="form-group">
-                        <input type="checkbox" name="remember_me"/> Remember me
-                    </div>-->
-    </div>
-    <div class="footer">                                                               
-        <button type="submit" class="btn bg-olive btn-block"><?php echo SIGN_IN ?></button>  
+    </div><!-- End Main Content -->
 
-            <!--<p><a href="#">I forgot my password</a></p>-->
-
-        <!--<a href="register.html" class="text-center">Register a new membership</a>-->
-    </div>
-    <?php echo $this->form()->closeTag(); ?>
-
-    <!--    <div class="margin text-center">
-            <span>Sign in using social networks</span>
-            <br/>
-            <button class="btn bg-light-blue btn-circle"><i class="fa fa-facebook"></i></button>
-            <button class="btn bg-aqua btn-circle"><i class="fa fa-twitter"></i></button>
-            <button class="btn bg-red btn-circle"><i class="fa fa-google-plus"></i></button>
-    
-        </div>-->
-</div>
 
 <script>
-    $('#adminForm')
+    $('#ApplicationForm')
             .formValidation({
                 excluded: [':disabled'],
                 icon: {

@@ -27,7 +27,7 @@ class AccountController extends BaseActionController {
         $msgError = '';
         if ($this->_authService->hasIdentity()) {
             $this->goAction('admin', array('controller' => 'index'));
-        }
+    }
         
         $myForm = $this->getServiceLocator()->get('FormElementManager')->get('formAdminLogin');
         
