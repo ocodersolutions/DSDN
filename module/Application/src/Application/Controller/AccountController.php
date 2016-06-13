@@ -57,7 +57,7 @@ class AccountController extends BaseActionController {
     
     public function logoutAction() {
         $this->_authService->clearIdentity();
-        return $this->redirect()->toUrl(URL_APPLICATION . '/dang-nhap/account/login');
+        return $this->redirect()->toUrl(URL_APPLICATION . '/application/account/login');
     }
 
 }

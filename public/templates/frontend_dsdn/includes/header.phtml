@@ -72,19 +72,19 @@ $ssSystem = new Container('system');
                     <li class="parent-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER ?>"><?php echo SHAREHOLDER ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/thong-bao">Thông báo</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/bao-cao-tai-chinh"">Báo cáo tài chính</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/hoi-dong-co-dong"">Đại hội cổ đông</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/thong-tin-co-phieu"">Thông tin về cổ phiếu</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/bao-cao-thuong-nien"">Báo cáo thường niên</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/bao-cao-hdqt"">Báo cáo HĐQT</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/qui-che-quan-tri"">Qui chế quản trị</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/ban-cao-bach"">Bản cáo bạch</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/bv/dieu-le-to-chuc-hoat-dong"">Điều lệ tổ chức và hoạt động</a></li>
+                            <li><a href="<?php echo URL_APPLICATION . '/application/category/detail/' . NOTIFICATION_CATEGORY_ID ?>">Thông báo</a></li>
+                            <li><a href="<?php echo URL_APPLICATION .'/application/category/detail/' .FINANCIAL_CATEGORY_ID ?>">Báo cáo tài chính</a></li>
+                            <li><a href="<?php echo URL_APPLICATION .'/application/category/detail/' .SHAREHOLDER_MEET_CATEGORY_ID ?>">Đại hội cổ đông</a></li>
+                            <li><a href="<?php echo URL_APPLICATION .'/application/category/detail/' .SHAREINFO_CATEGORY_ID ?>">Thông tin về cổ phiếu</a></li>
+                            <li><a href="<?php echo URL_APPLICATION .'/application/category/detail/' .ANNUALREPORT_CATEGORY_ID ?>">Báo cáo thường niên</a></li>
+                            <li><a href="<?php echo URL_APPLICATION .'/application/category/detail/' .BOARDREPORT_CATEGORY_ID ?>">Báo cáo HĐQT</a></li>
+                            <li><a href="<?php echo URL_APPLICATION .'/application/category/detail/' .GOVERNANCERULE_CATEGORY_ID ?>">Qui chế quản trị</a></li>
+                            <li><a href="<?php echo URL_APPLICATION .'/application/category/detail/' .PROSPECTUSREPORT_CATEGORY_ID ?>">Bản cáo bạch</a></li>
+                            <li><a href="<?php echo URL_APPLICATION .'/application/category/detail/' .CHARTERED_CATEGORY_ID ?>">Điều lệ tổ chức và hoạt động</a></li>
                         </ul>
                     </li>
                     <li class="parent-item ">
-                        <a href="<?php echo URL_APPLICATION;?>/tinanh.php">Tin ảnh</a>
+                        <a href="<?php echo URL_APPLICATION;?>/#">Tin ảnh</a>
                     </li>
                 </ul>
             </nav>

@@ -43,6 +43,7 @@ $shareholderRoute = array(
             '__NAMESPACE__' => 'Application\Controller',
             'controller' => 'shareholder',
             'action' => 'index',
+            'id' => SHAREHOLDER_CATEGORY_ID,
         ),
     ),
 );
@@ -339,10 +340,10 @@ $searchRoute = array(
 $applicationRoute = array(
     'type' => 'Literal',
     'options' => array(
-        'route' => '/dang-nhap',
+        'route' => '/application',
         'defaults' => array(
             '__NAMESPACE__' => 'Application\Controller',
-            'controller' => 'account',
+            'controller' => 'Account',
             'action' => 'login'
         )
     ),

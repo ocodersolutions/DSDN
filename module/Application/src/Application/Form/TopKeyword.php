@@ -16,8 +16,8 @@ class TopKeyword extends Form {
             'method' => 'POST',
             'class' => 'form-horizontal',
             'role' => 'form',
-            'name' => 'adminForm',
-            'id' => 'adminForm',
+            'name' => 'applicationForm',
+            'id' => 'applicationForm',
             'style' => 'padding-top: 20px;',
         ));
 

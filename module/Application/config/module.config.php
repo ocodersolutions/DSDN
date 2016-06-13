@@ -75,8 +75,8 @@ return array(
                     'route'    => '/Application',
                     'defaults' => array(
                         '__NAMESPACE__' => 'Application\Controller',
-                        'controller' => 'Index',
-                        'action'     => 'index',
+                        'controller' => 'account',
+                        'action'     => 'login',
                     ),
                 ),
             ),
