@@ -36,7 +36,7 @@ $ssSystem = new Container('system');
                     <form id="contactform" class="contactform" method="POST">
                         <div class="form-group col-sm-6">
                             <label for="contactInputName">Họ và tên:</label>
-                            <input type="text" class="input_fname has-err" name="full_name" id="contactInputName" required>
+                            <input type="text" class="input_fname" name="full_name" id="contactInputName" required>
 
                         </div>
                         <div class="form-group col-sm-6">
@@ -45,7 +45,7 @@ $ssSystem = new Container('system');
                         </div>
                         <div class="form-group col-sm-12">
                             <label for="contactInputerea">Nội dung</label>
-                            <textarea class="input_textearea has-err" id="contactInputerea" name="comment" rows="3" required></textarea>
+                            <textarea class="input_textearea" id="contactInputerea" name="comment" rows="3" required></textarea>
                         </div>
                         <div class="form-group col-sm-12 text-left">
                             <span class="show_err"></span>
@@ -67,7 +67,7 @@ $ssSystem = new Container('system');
                     </div>
                 </div>
                 <div class="col-sm-12">
-                    <div style="overflow:hidden;width:100%;height:500px;resize:none;max-width:100%;margin-bottom:30px"><div id="gmap-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=<?php echo $ssSystem->configs->company_address?>&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU"></iframe></div><a class="embedded-map-code" href="https://www.hostingreviews.website" id="make-map-data">Read more</a><style>#gmap-display .map-generator{width: 100%; max-height: 100%; background: none;</style></div><script src="https://www.hostingreviews.website/google-maps-authorization.js?id=028e13ce-d080-2b9e-3972-68fa5fda02ba&c=embedded-map-code&u=1465462995" defer="defer" async="async"></script>
+                    <div style="overflow:hidden;width:100%;height:500px;resize:none;max-width:100%;margin-bottom:30px"><div id="gmap-display" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=<?php echo $ssSystem->configs->company_name?>&key=AIzaSyAN0om9mFmy1QN6Wf54tXAowK4eT0ZUPrU&zoom=19"></iframe></div><a class="embedded-map-code" href="https://www.hostingreviews.website" id="make-map-data">Read more</a><style>#gmap-display .map-generator{width: 100%; max-height: 100%; background: none;</style></div><script src="https://www.hostingreviews.website/google-maps-authorization.js?id=028e13ce-d080-2b9e-3972-68fa5fda02ba&c=embedded-map-code&u=1465462995" defer="defer" async="async"></script>
                 </div>
             </div>
         
