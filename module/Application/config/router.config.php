@@ -303,29 +303,6 @@ $contactLangRoute = array(
     ),
 );
 
-$dispatchRoute = array(
-    'type' => 'Zend\Mvc\Router\Http\Segment',
-    'options' => array(
-        'route' => '/cong-van[/]',
-        'defaults' => array(
-            '__NAMESPACE__' => 'Application\Controller',
-            'controller' => 'Index',
-            'action' => 'dispatch',
-        ),
-    ),
-);
-$dispatchLangRoute = array(
-    'type' => 'Zend\Mvc\Router\Http\Segment',
-    'options' => array(
-        'route' => '/dispatch[/]',
-        'defaults' => array(
-            '__NAMESPACE__' => 'Application\Controller',
-            'controller' => 'Index',
-            'action' => 'dispatch',
-        ),
-    ),
-);
-
 $searchRoute = array(
     'type' => 'Zend\Mvc\Router\Http\Segment',
     'options' => array(

@@ -24,8 +24,6 @@ class Upload extends \Zend\File\Transfer\Adapter\Http{
 			$this->receive($fileInput);
 		}
 		
-		
-		
 		return $fileName;
 	}
 	

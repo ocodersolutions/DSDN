@@ -175,7 +175,7 @@ class Module {
             ),
         );
     }
-public function getFormElementConfig() {
+    public function getFormElementConfig() {
         return array(
             'factories' => array(
                 'formApplicationUser' => function($sm) {

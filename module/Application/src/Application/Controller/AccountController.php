@@ -26,7 +26,7 @@ class AccountController extends BaseActionController {
     public function loginAction() {
         $msgError = '';
         
-         if ($this->getAuthService()->hasIdentity()){
+        if ($this->getAuthService()->hasIdentity()){
             return $this->redirect()->toRoute('document');
         }
         
