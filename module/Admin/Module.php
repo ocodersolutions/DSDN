@@ -161,6 +161,17 @@ class Module {
                     $tableGateway = $sm->get('TrafficTableGateway');
                     return new \Admin\Model\TrafficTable($tableGateway);
                 },
+                'DocumentTableGateway'  => function ($sm) {
+                        $adapter = $sm->get('dbConfig');
+                        $resultSetPrototype = new HydratingResultSet();
+                        $resultSetPrototype->setHydrator(new ObjectProperty());
+                        $resultSetPrototype->setObjectPrototype(new \Admin\Model\Entity\Document());
+                        return new TableGateway(TABLE_DOCUMENTS, $adapter, null, $resultSetPrototype);
+                },
+                'Admin\Model\DocumentTable' => function ($sm) {
+                        $tableGateway   = $sm->get('DocumentTableGateway');
+                        return new \Admin\Model\DocumentTable($tableGateway);
+                }
             ),
         );
     }

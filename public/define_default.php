@@ -20,6 +20,7 @@ define('TABLE_CAREERS', 'careers');
 define('TABLE_PARTNERS', 'partners');
 define('TABLE_BANNERS', 'banners');
 define('TABLE_TRAFIC', 'traffic');
+define('TABLE_DOCUMENTS', 'documents');
 
 
 
