@@ -145,16 +145,7 @@ form input:focus,form textarea:focus{
     padding: 10px;
     
 }
-.news a.new_tittle:after{
-	content: "";
-	width: 0;
-	height: 0;
-	position: relative;
-	top: -28px;
-    left: 49px;
-    border-bottom: 38px solid #004ebc;
-    border-right: 39px solid transparent;
-}
+
 .news hr{
 	width: 100%;
 	border-bottom: 1px solid #eee;;
@@ -187,6 +178,9 @@ form input:focus,form textarea:focus{
 	width: 25%;
 	height: auto;
 }
+.news .new_box .first_news #member_box{
+    min-height: 150px;
+}
 .news .new_box .first_news .first_new_content{
     color: #333;
     min-height: 200px;
@@ -205,7 +199,11 @@ form input:focus,form textarea:focus{
     color: rgb(153, 153, 153);
     font-weight: normal;
 }
+.news .new_box .first_news #member_box p{
+    line-height: 26px;
+    }
 .news .new_box .first_news .first_new_content p{
+    
 	font-size: 14px;
     font-style: italic;
     font-weight: normal;
@@ -287,10 +285,13 @@ ul.pagination_news  li a:focus{
     color: rgb(153, 153, 153);
     font-weight: normal;
 }
+.news_content p.new_tittle {
+    color: #ff4600;;
+}
 .news_content .new_tittle{
     font-size: 20px;
     font-weight: bold;
-    color:#004ebc;
+    
 }
 .news_content .new_tittle_block {
     display: inline-block;

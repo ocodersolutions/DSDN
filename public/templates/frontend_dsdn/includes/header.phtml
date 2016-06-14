@@ -42,8 +42,16 @@ $ssSystem = new Container('system');
             <nav class="collapse navbar-collapse bs-navbar-collapse">
                 
                 <ul class="parent nav navbar-nav">
-                    <li class="parent-item ">
-                        <a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_INTRO ?>"><?php echo INTRO ?></a>
+                    
+                    <li class="parent-item dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_INTRO ?>"><?php echo INTRO ?> <span class="caret"></span></a>
+                         <ul class="dropdown-menu">
+                            <li><a href="<?php echo URL_APPLICATION ?>/bv/ve-cong-ty-39">Về Công ty</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/bv/lich-su-phat-trien-40">Lịch sử phát triển</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/bv/so-do-to-chuc-41">Sơ đồ tổ chức</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/bv/nhan-su-chu-chot-42">Nhân sự chủ chốt</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/bv/don-vi-thanh-vien-43">Đơn vị thành viên</a></li>
+                        </ul>
                     </li>
                     <li class="parent-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SERVICE ?>">Dịch vụ <span class="caret"></span></a>
