@@ -1,0 +1,66 @@
+<?php
+$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
+
+use Zend\Session\Container;
+$ssSystem = new Container('system');
+
+$documents = $this->documents;
+?>
+<div class="contact-content">
+    <div class="container">
+        <img src="<?php echo $urlImage_DSDN ?>/van-ban-phap-luat1.jpg" alt="hình nền">   
+        <p class="contact_p">Công văn nội bộ</p>
+        <div class="col-md-12">
+            <div class="row col-md-7">
+               
+            </div>
+        </div>
+    </div>  
+</div>
+    
+<div class="container page-home page-default">
+    <div class="col-sm-12 page_content">
+        <div class="breakum-line">
+            <a href="">Trang chủ</a>/<span> Công văn nội bộ</span>
+        </div>
+        <div class="col-md-7 col-sm-12">
+            <form method="POST" enctype="multipart/form-data">
+                <div class="row">
+                    <div class="col-sm-4">
+                        Tên Công văn
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" name="name"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        Mô tả
+                    </div>
+                    <div class="col-sm-8">
+                        <textarea name="description"></textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        File tải lên
+                    </div>
+                    <div class="group-button col-sm-8">
+                        <input type="file" name="link"/>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="group-button col-sm-8">
+                        <button type="submit" class="btn btn-warning">Tải lên</button>
+                    </div>
+                </div>
+                <div class="panel-note col-sm-12">
+                    
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

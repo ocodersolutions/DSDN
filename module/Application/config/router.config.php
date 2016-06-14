@@ -24,6 +24,19 @@ $documentRoute = array(
         ),
     ),
 );
+
+$documentUploadRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => '/cong-van/tai-len[/]',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'Document',
+            'action' => 'upload',
+        ),
+    ),
+);
+
 $membersRoute = array(
     'type' => 'Zend\Mvc\Router\Http\Segment',
     'options' => array(
@@ -377,6 +390,7 @@ return array(
             'search' => $searchRoute,
 			'googleVerificationRoute' => $googleVerificationRoute,
             'document' => $documentRoute,
+            'documentUpload' => $documentUploadRoute,
             'members' => $membersRoute,
             'shareholder' => $shareholderRoute,
             'application' => $applicationRoute,

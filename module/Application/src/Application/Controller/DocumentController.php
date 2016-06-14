@@ -68,5 +68,47 @@ class DocumentController extends OcoderBaseController
             // 'paginator' => OcoderPaginator::createPaginator($countArticles, $this->_params['paginator']),
         ));
     }
+
+    //Upload Document
+    public function uploadAction()
+    {
+    	$request = $this->getRequest();
+    	if ($request->isPost()) {
+    		$documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
+
+
+			$fileName = 'link';
+            if($_FILES[$fileName]["size"]) {
+                $target_dir = PATH_PUBLIC . "/uploads/documents/";
+                $uploadOk = 1;
+                $imageFileType = pathinfo(basename($_FILES[$fileName]["name"]), PATHINFO_EXTENSION);
+                $target_file = $target_dir . 'test123' . '_' . $fileName . '.' . $imageFileType;
+                // Check if image file is a actual image or fake image
+                $check = getimagesize($_FILES[$fileName]["tmp_name"]);
+                if($check === false) {
+                    // $this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => FILE_NOT_IMAGE));
+                    $uploadOk = 0;
+                }
+                // Check size
+                if ($_FILES[$fileName]["size"] > 2097152) {
+                    // $this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => MAX_SIZE_2M));
+                    $uploadOk = 0;
+                }
+                // Check if $uploadOk is set to 0 by an error
+                if ($uploadOk != 0) {
+                    if (move_uploaded_file($_FILES[$fileName]["tmp_name"], $target_file)) {
+                        $linkUpload = 'test123' . '_' . $fileName . '.' . $imageFileType;
+                    }
+                }
+            }  
+			die($linkUpload);
+   //          if($companyTable->saveItem(array('id' => $this->_companyInfo->id, 'banners' => json_encode($bannerArr)))){
+			// 	$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'success', 'content' => ''));
+			// } else {
+			// 	$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => ''));
+			// }
+        }
+    	return new ViewModel(array());
+    }
 }
     
