@@ -1,7 +1,7 @@
 <?php
 define("PAGE_TITLE", "ttthdsdn.com.vn");
 define("TITLE_HOMEPAGE", "Trang chủ, Trang chu");
-define("TITLE_INTRO", "Giới thiệu, Gioi thieu");
+define("TITLE_INTRO", "Giới thiệu công ty, Gioi thieu");
 define("TITLE_PRODUCT", "Sản phẩm, San pham");
 define("TITLE_SERVICE", "Dịch vụ, Dich vu");
 define("TITLE_NEWS", "Tin tức, Tin tuc");

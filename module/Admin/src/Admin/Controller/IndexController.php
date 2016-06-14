@@ -8,6 +8,7 @@ use Ocoder\Base\BaseActionController as OcoderActionController;
 class IndexController extends OcoderActionController
 {
     public function init() {
+        
         // OPTIONS
         $this->_options['tableName'] = TABLE_CONFIGS;
         $this->_options['modelTable'] = 'Admin\Model\ConfigTable';
