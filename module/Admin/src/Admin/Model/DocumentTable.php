@@ -53,7 +53,7 @@ class DocumentTable extends AbstractTableGateway {
         if ($options['task'] == 'list-item') {
             $result = $this->tableGateway->select(function (Select $select) use ($arrParam) {
                 $paginator = $arrParam['paginator'];
-                $ssFilter = $arrParam['ssFilter'];
+                //$ssFilter = $arrParam['ssFilter'];
 
                 $select->columns(array(
                             'id', 'name', 'description', 'link', 'created_by', 'created', 'published'
