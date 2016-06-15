@@ -5,6 +5,7 @@ define("TITLE_INTRO", "Introduction");
 define("TITLE_PRODUCT", "Products");
 define("TITLE_SERVICE", "Services");
 define("TITLE_NEWS", "News");
+define("TITLE_SHAREHOLDER", "Shareholder");
 define("TITLE_RECRUITMENT", "Recruiment");
 define("TITLE_CONTACT", "Contact");
 define("TITLE_SEARCH", "Search");

@@ -5,6 +5,7 @@ define("TITLE_INTRO", "Giới thiệu công ty, Gioi thieu");
 define("TITLE_PRODUCT", "Sản phẩm, San pham");
 define("TITLE_SERVICE", "Dịch vụ, Dich vu");
 define("TITLE_NEWS", "Tin tức, Tin tuc");
+define("TITLE_SHAREHOLDER", "Quan hệ cổ đông, Quan he co dong");
 define("TITLE_RECRUITMENT", "Tuyển dụng, Tuyen dung");
 define("TITLE_CONTACT", "Liên hệ, Lien he");
 define("TITLE_SEARCH", "Tìm kiếm, Tim kiem");

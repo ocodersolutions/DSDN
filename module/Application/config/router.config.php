@@ -54,9 +54,24 @@ $shareholderRoute = array(
         'route' => '/quan-he-co-dong[/]',
         'defaults' => array(
             '__NAMESPACE__' => 'Application\Controller',
-            'controller' => 'shareholder',
+            'controller' => 'Category',
             'action' => 'index',
             'id' => SHAREHOLDER_CATEGORY_ID,
+        ),
+    ),
+);
+$shareholderChildRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => '/quan-he-co-dong/:alias-cateogry[/:page]',
+        'constraints' => array(
+            'alias-cateogry' => '[a-zA-Z0-9-_.]+',
+            'page' => '[0-9]+',
+        ),
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'Category',
+            'action' => 'detailChild',
         ),
     ),
 );
@@ -393,6 +408,7 @@ return array(
             'documentUpload' => $documentUploadRoute,
             'members' => $membersRoute,
             'shareholder' => $shareholderRoute,
+            'shareholderChildRoute' => $shareholderChildRoute,
             'application' => $applicationRoute,
         ),
     )

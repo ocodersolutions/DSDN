@@ -22,6 +22,7 @@ class CategoryController extends OcoderBaseController {
     }
 
     public function indexAction() {
+        $category_id = $this->params('id');
         //set Head info
         $this->_viewHelper->get('HeadTitle')->prepend(TITLE_NEWS . ' - ' . $this->_configs->title);
         $this->_viewHelper->get('HeadMeta')->setName('keywords', $this->_configs->keywords);
@@ -33,7 +34,7 @@ class CategoryController extends OcoderBaseController {
         $this->_paginator['currentPageNumber'] = $this->params()->fromRoute('page', 1);
         $this->_params['paginator'] = $this->_paginator;
 
-        $this->_params['ssFilter']['filter_parent'] = NEWS_CATEGORY_ID;
+        $this->_params['ssFilter']['filter_parent'] = $category_id;
         $categoryNews = $categoryTableGateway->listItem($this->_params, array('task' => 'list-item'));
         $categoryNewsSidebar = $categoryTableGateway->listItem($this->_params, array('task' => 'list-item'));
         
