@@ -6,7 +6,7 @@ $('.flexslider').flexslider({
 	nextText: ""
 });
 // member corousel
-$('#uc_carousel_testimonials').owlCarousel({
+$('#uc_carousel_testimonials1').owlCarousel({
 	items: 5,
 	itemsDesktop : [1199,5],
 	itemsDesktopSmall : [991,4],
@@ -18,6 +18,34 @@ $('#uc_carousel_testimonials').owlCarousel({
 	autoPlay: true,
 	autoPlaySpeed: 2000,
 	autoPlayTimeout: 2000,
+	autoPlayHoverPause: true
+});
+$('#uc_carousel_testimonials2').owlCarousel({
+	items: 5,
+	itemsDesktop : [1199,5],
+	itemsDesktopSmall : [991,4],
+	itemsTablet: [768,3],
+	itemsTabletSmall: [640,2],
+	itemsMobile : [380,1],
+	navigation : false,
+	pagination: true,
+	autoPlay: true,
+	autoPlaySpeed: 1000,
+	autoPlayTimeout: 1000,
+	autoPlayHoverPause: true
+});
+$('#uc_carousel_testimonials3').owlCarousel({
+	items: 5,
+	itemsDesktop : [1199,5],
+	itemsDesktopSmall : [991,4],
+	itemsTablet: [768,3],
+	itemsTabletSmall: [640,2],
+	itemsMobile : [380,1],
+	navigation : false,
+	pagination: true,
+	autoPlay: true,
+	autoPlaySpeed: 1500,
+	autoPlayTimeout: 1500,
 	autoPlayHoverPause: true
 });
 // main content js
