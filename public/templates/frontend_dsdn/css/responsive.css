@@ -185,14 +185,14 @@
          margin: 0;
      }
      header .phone .content .title {
-         font-size: 16px;
+         font-size: 16px !important;
      }
      header .phone .content .phone-number {
-         font-size: 20px;
+         font-size: 24px !important;
          line-height: 15px;
      }
      header .phone .content .wrt {
-         font-size: 10px;
+         font-size: 13px !important;
          line-height: 10px;
      }
      .page-default .content {
@@ -267,6 +267,7 @@
      .loss-type .col-md-6 {
          padding: 0;
      }
+
  }
  
  @media (max-width: 479px) {

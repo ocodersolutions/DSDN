@@ -22,19 +22,37 @@ $documents = $this->documents;
     
 <div class="container page-home page-default">
     <div class="col-sm-12 page_content">
-        <div class="breakum-line">
-            <a href="">Trang chủ</a>/<span> Công văn nội bộ</span>
-            <div class="userinfo col-md-3 pull-right">
-                <p>Xin Chào,<span> Admin</span></p>
-                <img src="<?php echo $urlImage_DSDN ?>/icon-human/1.jpg" alt="" class="avatar"/>
+        <div class="breakum-line col-sm-12">
+            <div class="col-sm-6">
+               <a href="">Trang chủ</a>/<span> Công văn nội bộ</span> 
+            </div>
+           
+            <div class="userinfo col-sm-6 pull-right">
+                <p>Xin Chào,<span id="show_info"> phan van huy hoang</span></p>
+                
                 <div class="box_info">
-                <a href="">cập nhật thông tin</a>
-                <a href="">Đăng xuất</a>
+                    <div class="images">
+                       <img src="<?php echo $urlImage_DSDN ?>/icon-human/1.jpg" alt="" class="avatar"/> 
+                    </div>
+                    <div class="box_foot">
+                        <a href="" >Thông tin</a>
+                        <a href="" >Đăng xuất</a>
+                    </div>
+                    
+                </div>
             </div>
-            </div>
-            
         </div>
+            
         
+        <script>
+            $(document).ready(function($) {
+                
+                $('#show_info').on('click',function(){
+                    $('.box_info').toggle('blind', 200);
+
+                });
+            });
+        </script>
         <div class="col-md-7 col-sm-12">
             <span  class="title-default">Công văn mới nhất </span>
             <div class="wrap"  style="max-height: 535px; overflow: scroll;">

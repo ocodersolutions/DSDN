@@ -27,22 +27,81 @@
     border-bottom: 1px solid;
 }
 .breakum-line a {
+    margin-left: -15px;
     margin-right: 5px;
     font-weight: bold;
 }
 .breakum-line .userinfo {
-
+    display: block;
+    text-align: right;
 }
-.breakum-line .userinfo p{
-    
+.breakum-line .userinfo .images{
+    width: 100%;
+    text-align: center;
+}
+.breakum-line .userinfo .open{
+    display: block!important;
 }
 .breakum-line .userinfo span{
-    
+    font-style: italic;
+    font-weight: bold;
+    cursor: pointer;
 }
 .breakum-line .userinfo .avatar{
-    
+    width: 50%;
+    border: 3px solid white;
+    border-radius: 50%;
 }
-.breakum-line .userinfo .box_info
+.breakum-line .userinfo .box_info{
+    box-sizing: border-box;
+    z-index: 999;
+    position: absolute;
+    right: 5%;
+    display: none;
+    padding-top: 10px;
+    background-color: skyblue;
+    border: 1px solid #fefefe;
+    box-shadow: 0 5px 5px 0 #a5a0a0;
+    width: 50%;
+}
+.breakum-line .userinfo .box_info:after{
+    bottom: 100%;
+    right: 10px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(255, 255, 255, 0);
+    border-bottom-color: #87ceeb;
+    border-width: 10px;
+    margin-left: -10px;
+
+}
+.breakum-line .userinfo p {
+   
+    padding-right: 15px;
+   
+}
+.breakum-line .userinfo .box_info a {
+    margin-left: 35px;
+    padding: 5px 10px;
+    border: 1px solid #a9a6a6;
+}
+.breakum-line .userinfo .box_info a:hover,
+.breakum-line .userinfo .box_info a:active,
+.breakum-line .userinfo .box_info a:focus{
+    text-decoration: none;
+    background: #d8d5d5;
+
+}
+.breakum-line .userinfo .box_foot{
+    text-align: left;
+    padding: 5px 0;
+    margin-top: 10px;
+    background: #fafdfd;
+}
 .contact_info {
 	font-family: Century Gothic;
 	font-size: 15px;
@@ -398,14 +457,19 @@ ul.pagination_news  li a:focus{
 @media (max-width: 1190px){
     .search button i{
     display: block;
-}
+    }
 	.contact-content .contact_p{
 	font-size: 40px;
 	top:70%;
-}
-.images_new{
+    }
+    .images_new{
     margin-right: 17px;
-} 
+    }
+    .breakum-line .userinfo .box_info a {
+    margin-left: 5px;
+    padding: 5px 5px;
+    border: 1px solid #a9a6a6;
+}
 }
 @media (max-width: 991px){
     .search button i{
@@ -418,11 +482,19 @@ ul.pagination_news  li a:focus{
     .images_new{
 
     }
+    .breakum-line .userinfo .box_info a {
+        box-sizing: border-box;
+        display: block;
+        margin: 5px; 
+    }
 }
 @media (max-width: 767px){
+    .breakum-line{
+        padding:0;
+    }
 	.contact-content .contact_p{
 	display: block;
-}
+    }
     .news .new_tittle{
         font-size: 12px;
     }
