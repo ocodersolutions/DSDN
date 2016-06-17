@@ -240,7 +240,7 @@ form input:focus,form textarea:focus{
     display: block;
     
     font: bold 16px "Century Gothic";
-    color: #fff;	
+    	
 }
 .news a {
     color: #fff;
@@ -248,6 +248,7 @@ form input:focus,form textarea:focus{
     text-decoration: none;
 }
 .news .new_tittle{
+    color: #fff;
 	position: relative;
     top: 11px;
     text-transform: uppercase;
@@ -557,6 +558,9 @@ ul.pagination_news  li a:focus{
     }
 }
 @media (max-width: 480px){
+    .breakum-line a{
+        margin-left: 0px;
+    }
     .search button i{
     display: block;
     

@@ -204,14 +204,14 @@ Modules - reusable parts of our design
   clear: both;
 }
 .cd-timeline-content h2 {
-  font-size: 16px;
+  font-size: 14px;
   color: #FFF;
   background-color: #004ebc;
   padding: 15px;
 }
 .cd-timeline-content p, .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   font-size: 16px;
-  font-size: 0.8125rem;
+  font-size: 1.2125rem;
 }
 .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
   display: inline-block;
@@ -250,13 +250,15 @@ Modules - reusable parts of our design
 }
 @media only screen and (min-width: 768px) {
   .cd-timeline-content h2 {
+    font-weight: bold;
     border-radius: 4px 4px 0 0;
-    font-size: 20px;
-    font-size: 1.25rem;
+    font-size: 18px;
+    /*font-size: 1.35rem;*/
   }
   .cd-timeline-content p {
+
     font-size: 16px;
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
   .cd-timeline-content .cd-read-more, .cd-timeline-content .cd-date {
     margin-left: 15px;

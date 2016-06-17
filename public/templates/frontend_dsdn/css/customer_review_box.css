@@ -81,4 +81,8 @@
 	    width: 65%;
     	margin-top: -35px;
 	}
+	.uc_customer_review_box .uc_content{
+		font-size: 14px;
+		line-height: 22px;
+	}
 }

@@ -56,9 +56,9 @@
     color: red;
 }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line:hover >.ui-icon:before{
-	background-color:#c8385e; }
+	background-color:#004ebc; }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line:hover >.ui-icon:after{
-	background-color:#c8385e; }
+	background-color:#004ebc; }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .ui-accordion-header-active.ui-state-active {
 	color:#c8385e;
 }

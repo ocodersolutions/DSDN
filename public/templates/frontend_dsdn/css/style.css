@@ -118,7 +118,9 @@
  img {
      max-width: 100%;
  }
- 
+ a:hover{
+    text-decoration: none;
+ }
  .title-default {
      font-family: Century Gothic;
      color: #004ebc;
