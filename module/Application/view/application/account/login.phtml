@@ -15,6 +15,17 @@ $helperString = new \Ocoder\Helper\String;
 
 $featuredProducts = $this->featuredProducts;
 ?>
+<div class="contact-content">
+    <div class="container">
+        <img src="<?php echo $urlImage_DSDN ?>/van-ban-phap-luat1.jpg" alt="hình nền">   
+        <p class="contact_p">Đăng nhập</p>
+        <div class="col-md-12">
+            <div class="row col-md-7">
+               
+            </div>
+        </div>
+    </div>  
+</div>
 <div class="row page-default ">
         <div class="container content">
             <div class="breakum-line">
@@ -35,7 +46,7 @@ $featuredProducts = $this->featuredProducts;
                     </div>
                 </div>-->
                 <div class="form-box" id="login-box">
-                    <div class="header"><?php echo SIGN_IN ?></div>
+                    <div class="header"><p><?php echo SIGN_IN ?></p></div>
                     <?php echo $this->form()->openTag($myForm); ?>
                     <div class="body bg-gray">
                         <!-- NOTICE -->
@@ -43,10 +54,12 @@ $featuredProducts = $this->featuredProducts;
                             echo '<span style="color: red">' . $this->msgError . '</span>';
                         }?>
                         <div class="form-group">
+                            <p class="formlabel">Tên đăng nhập :</p>
                             <!--<input type="text" name="username" class="form-control" placeholder="<?php echo USERNAME ?>"/>-->
                             <?php echo $this->formElement($myForm->get('username')) ?>
                         </div>
                         <div class="form-group">
+                            <p class="formlabel">Mật khẩu :</p>
                             <!--<input type="password" name="password" class="form-control" placeholder="<?php echo PASSWORD ?>"/>-->
                             <?php echo $this->formElement($myForm->get('password')) ?>
                         </div>          
@@ -55,7 +68,7 @@ $featuredProducts = $this->featuredProducts;
                                     </div>-->
                     </div>
                     <div class="footer">                                                               
-                        <button type="submit" class="btn bg-olive btn-block"><?php echo SIGN_IN ?></button>  
+                        <button type="submit" class="btn bg-olive btn-block block"><?php echo SIGN_IN ?></button>  
 
                             <!--<p><a href="#">I forgot my password</a></p>-->
 

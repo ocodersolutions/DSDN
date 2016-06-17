@@ -6,8 +6,9 @@ $urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
 use Zend\Session\Container;
 $ssSystem = new Container('system');
 
-$documents = $this->documents;
+
 ?>
+
 <div class="contact-content">
     <div class="container">
         <img src="<?php echo $urlImage_DSDN ?>/van-ban-phap-luat1.jpg" alt="hình nền">   
@@ -22,21 +23,21 @@ $documents = $this->documents;
     
 <div class="container page-home page-default">
     <div class="col-sm-12 page_content">
-        <div class="breakum-line col-sm-12">
+        <div class="breakum-line col-sm-12" id="cvan">
             <div class="col-sm-6">
                <a href="">Trang chủ</a>/<span> Công văn nội bộ</span> 
             </div>
            
             <div class="userinfo col-sm-6 pull-right">
-                <p>Xin Chào,<span id="show_info"> phan van huy hoang</span></p>
+                <p>Xin Chào,<span id="show_info"><?php echo $this->userLogged->fullname ?></span></p>
                 
                 <div class="box_info">
                     <div class="images">
                        <img src="<?php echo $urlImage_DSDN ?>/icon-human/1.jpg" alt="" class="avatar"/> 
                     </div>
                     <div class="box_foot">
-                        <a href="" >Thông tin</a>
-                        <a href="" >Đăng xuất</a>
+                        <a href="<?php echo URL_APPLICATION . '/application/account/edit'?>" >Thông tin</a>
+                        <a href="<?php echo URL_APPLICATION . '/application/account/logout' ?>" >Đăng xuất</a>
                     </div>
                     
                 </div>
@@ -53,9 +54,9 @@ $documents = $this->documents;
                 });
             });
         </script>
-        <div class="col-md-7 col-sm-12">
-            <span  class="title-default">Công văn mới nhất </span>
-            <div class="wrap"  style="max-height: 535px; overflow: scroll;">
+        <div class="col-md-8 col-sm-12 document_new block">
+            <p  class="title-document">Công văn mới nhất </span>
+            <div class="wrap"  style="max-height: 700px; overflow: scroll;">
                 <?php foreach ($documents as $document) { ?>
                     <!-- start of customer review box -->
                     <div class="uc_customer_review_box">
@@ -84,16 +85,12 @@ $documents = $this->documents;
                     <!-- end of customer review box --> 
                 <?php }//end foreach ?>
             </div>
+            <div class="colum-date"></div>
         </div>
-        <div class="col-md-5 block first col-sm-12">
-            <div class="search">
-                <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
-                <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
-            </div>
-        </div>
-        <div class="col-md-5 block col-sm-12">
+       
+        <div class="col-md-4 block col-sm-12">
             <div class="contact_info">
-                <p  class="title-default">Công văn cũ hơn</p>
+                <p class="title-document">Công văn cũ hơn</p>
                 <!-- start of clean accordion -->
                 <div class="uc_clean_accordion">
                     <div class="uc_clean_accordion_wrap">

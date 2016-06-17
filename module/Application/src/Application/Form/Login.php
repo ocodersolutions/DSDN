@@ -23,7 +23,7 @@ class Login extends Form {
             'name' => 'username',
             'type' => 'Text',
             'attributes' => array(
-                'class' => 'form-control',
+                'class' => 'input_fname',
                 'id' => 'username',
                 'placeholder' => USERNAME,
             ),
@@ -40,7 +40,7 @@ class Login extends Form {
             'name' => 'password',
             'type' => 'Password',
             'attributes' => array(
-                'class' => 'form-control',
+                'class' => 'input_fname',
                 'id' => 'password',
                 'placeholder' => PASSWORD,
             ),

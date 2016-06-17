@@ -23,7 +23,7 @@
 	font-size: 15px;
     line-height: 23px;
 	margin: 30px 15px;
-    padding: 0 0px 10px 0px;
+    padding: 0 0px 10px 15px;
     border-bottom: 1px solid;
 }
 .breakum-line a {
@@ -167,12 +167,36 @@ form input:focus,form textarea:focus{
  margin-top: 20px;
 }
 .page_content{
-	
+    font-family: Century Gothic;
+    font-size: 16px;
 	background-color: #fff;
 }
 /*=== cong van block ===*/
+#cvan{
+    
+    padding-left: 0;
+}
+.document_new .title-document{
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: #ff4600;
+    padding: 10px;
+    color: #fff;
+}
+.document_new .wrap {
+    max-height: 535px;
+    overflow: scroll;
+    width: 95%;
+}
 .contact-content{
 	padding: 0;
+}
+.contact_info .title-document {
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: rgba(0, 78, 188, 0.52);
+    padding: 6px 10px;
+    color: #fff;
 }
 .contact-content img {
 	width: 100%;
@@ -195,6 +219,20 @@ form input:focus,form textarea:focus{
 	border: 1px solid;
     padding: 0 15px 0;
     background: rgba(0, 0, 0, 0.24);
+}/*=== form login ===*/
+.form-box{
+    font-family:  "Century Gothic";
+    font-size: 16px;
+}
+.form-box .header{
+    background-color: #004ebc;
+    padding: 8px 0;
+    margin-bottom: 18px;
+    color: #fff;
+}
+.form-box .header p{
+    margin:0;
+    padding-left: 10px
 }
 /*==== News ===*/
 .news {
