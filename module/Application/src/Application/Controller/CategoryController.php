@@ -23,6 +23,7 @@ class CategoryController extends OcoderBaseController {
 
     public function indexAction() {
         $category_id = $this->params('id');
+
         //set Head info
         $this->_viewHelper->get('HeadTitle')->prepend(TITLE_NEWS . ' - ' . $this->_configs->title);
         $this->_viewHelper->get('HeadMeta')->setName('keywords', $this->_configs->keywords);

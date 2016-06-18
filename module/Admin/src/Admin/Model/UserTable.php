@@ -14,6 +14,7 @@ class UserTable extends AbstractTableGateway {
 
     public function __construct(TableGateway $tableGateway) {
         $this->tableGateway = $tableGateway;
+        
     }
 
     public function countItem($arrParam = null, $options = null) {

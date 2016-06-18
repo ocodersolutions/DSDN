@@ -11,7 +11,6 @@ use Ocoder\Base\BaseActionController;
 class UserController extends BaseActionController {
 
     public function init() {
-
         // OPTIONS
         $this->_options['tableName'] = TABLE_USERS;
         $this->_options['modelTable'] = 'Admin\Model\UserTable';
@@ -27,7 +26,6 @@ class UserController extends BaseActionController {
     }
 
     public function indexAction() {
-        
         // SESSION FILTER
         $ssFilter = new Container(__CLASS__);
         $this->_params['ssFilter']['order_by'] = !empty($ssFilter->order_by) ? $ssFilter->order_by : 'id';
@@ -99,6 +97,7 @@ class UserController extends BaseActionController {
         }
 
         if ($this->getRequest()->isPost()) {
+
             $action = $this->_params['data']['action'];
             $myForm->setData($this->_params['data']);
 

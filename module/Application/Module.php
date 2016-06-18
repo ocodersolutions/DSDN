@@ -13,6 +13,10 @@ namespace Application;
 use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
 use Zend\Session\Container;
+use Application\Model\Application;
+ use Application\Model\UserTable;
+ use Zend\Db\ResultSet\ResultSet;
+ use Zend\Db\TableGateway\TableGateway;
 
 class Module {
 
@@ -31,7 +35,24 @@ class Module {
                 include __DIR__ . '/config/module.config.php', include __DIR__ . '/config/router.config.php'
         );
     }
-
+     public function getServiceConfig()
+     {
+         return array(
+             'factories' => array(
+                 'Application\Model\UserTable' =>  function($sm) {
+                     $tableGateway = $sm->get('userTableGateway');
+                     $table = new UserTable($tableGateway);
+                     return $table;
+                 },
+                 'UserTableGateway' => function ($sm) {
+                     $dbAdapter = $sm->get('Zend\Db\Adapter\Adapter');
+                     $resultSetPrototype = new ResultSet();
+                     $resultSetPrototype->setArrayObjectPrototype(new User());
+                     return new TableGateway('user', $dbAdapter, null, $resultSetPrototype);
+                 },
+             ),
+         );
+     }
     public function getAutoloaderConfig() {
         return array(
             'Zend\Loader\StandardAutoloader' => array(
@@ -172,6 +193,7 @@ class Module {
                     $helper->setData($sm->getServiceLocator()->get('Admin\Model\TrafficTable'));
                     return $helper;
                 },
+                
             ),
         );
     }

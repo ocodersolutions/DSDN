@@ -26,6 +26,7 @@ class ArticleController extends OcoderBaseController {
         $this->_params['data'] = array_merge(
                 $this->getRequest()->getPost()->toArray(), $this->getRequest()->getFiles()->toArray()
         );
+        
     }
 
     public function newAction() {

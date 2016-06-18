@@ -1,0 +1,98 @@
+<?php
+//$this->layout()->setTemplate('layout/backend-blank');
+
+//die('form here');
+
+
+$urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
+
+use Zend\Session\Container;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+
+
+
+var_dump($userInfo);
+?>
+<div class="contact-content">
+    <div class="container">
+        <img src="<?php echo $urlImage_DSDN ?>/van-ban-phap-luat1.jpg" alt="hình nền">   
+        <p class="contact_p">Cập nhật Tài khoản</p>
+        <div class="col-md-12">
+            <div class="row col-md-7">
+               
+            </div>
+        </div>
+    </div>  
+</div>
+    
+<div class="container page-home page-default">
+    <div class="col-sm-12 page_content">
+        <div class="breakum-line">
+            <a href="">Trang chủ</a>/<span> Cập nhật tài khoản</span>
+        </div>
+        <div class="col-md-7 col-sm-12">
+            <form method="POST" enctype="multipart/form-data" >
+                <div class="row block">
+                    <div class="col-sm-4">
+                        <p class="formlabel">Tài khoản :</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" name="username" class="input_fname" value="<?php echo $this->userInfo->username ?>"/>
+                    </div>
+                </div>
+                <div class="row block">
+                    <div class="col-sm-4">
+                        <p class="formlabel">Email :</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" name="email" class="input_fname" value="<?php echo $this->userInfo->email ?>"/>
+                    </div>
+                </div>
+                <div class="row block">
+                    <div class="col-sm-4">
+                        <p class="formlabel">Tên :</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="text" name="fullname" class="input_fname" value="<?php echo $this->userInfo->fullname ?>"/>
+                    </div>
+                </div>
+                <div class="row block">
+                    <div class="col-sm-4">
+                        <p class="formlabel">Mật khẩu:</p>
+                    </div>
+                    <div class="col-sm-8">
+                        <input type="password" name="password" class="input_fname" value="<?php echo $this->userInfo->password ?>"/>
+                    </div>
+                </div>
+                
+                <div class="row block">
+                    <div class="col-sm-4">
+                        <p class="formlabel">File Avatar :</p>
+                    </div>
+                    <div class="group-button col-sm-8">
+                        <input type="file" name="link"/>
+                    </div>
+                </div>
+                <div class="row block hidden">
+                    <div class="group-button col-sm-8">
+                        <input name="published" type="hidden" value="<?php echo $this->userInfo->published ?>">
+                        <input type="file" name="id" class="hidden" value="<?php echo $this->userInfo->id ?>"/>
+                        <input name="action" type="hidden" value="save">
+                    </div>
+                </div>
+                <div class="row block">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="group-button col-sm-8">
+                        <button type="submit" class="btn btn-warning" data-type="save">Cập nhật</button>
+                    </div>
+                </div>
+                <div class="panel-note col-sm-12">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>

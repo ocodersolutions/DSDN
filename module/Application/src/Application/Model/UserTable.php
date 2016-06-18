@@ -9,6 +9,7 @@ use Zend\Db\TableGateway\TableGateway;
 use Zend\Db\TableGateway\AbstractTableGateway;
 
 class UserTable extends AbstractTableGateway {
+    protected $tableName = 'users';
 
     protected $tableGateway;
 
@@ -214,6 +215,7 @@ class UserTable extends AbstractTableGateway {
 
             $this->tableGateway->update($data, array('id' => $arrParam['id']));
             return $arrParam['id'];
+            
         }
     }
 

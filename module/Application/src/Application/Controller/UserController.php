@@ -1,6 +1,6 @@
 <?php
 
-namespace Admin\Controller;
+namespace Application\Controller;
 
 use Zend\Form\FormInterface;
 use Zend\Session\Container;
@@ -13,8 +13,8 @@ class UserController extends BaseActionController {
     public function init() {
         // OPTIONS
         $this->_options['tableName'] = TABLE_USERS;
-        $this->_options['modelTable'] = 'Admin\Model\UserTable';
-        $this->_options['formName'] = 'formApplicationUser';
+        $this->_options['modelTable'] = 'Application\Model\UserTable';
+        $this->_options['formName'] = 'formAdminUser';
         // DATA
         $this->_params['data'] = $this->getRequest()->getPost()->toArray();
 
@@ -67,7 +67,7 @@ class UserController extends BaseActionController {
                 $ssFilter->offsetUnset('filter_keyword_value');
             }
         }
-        $this->goAction('Application', array('controller' => 'user', 'action' => 'index'));
+        $this->goAction('application', array('controller' => 'user', 'action' => 'index'));
     }
 
     public function publishedAction() {
@@ -79,7 +79,7 @@ class UserController extends BaseActionController {
                 $this->flashMessenger()->addErrorMessage(HAVE_ERROR);
             }
         }
-        $this->goAction('Application', array('controller' => 'user', 'action' => 'index'));
+        $this->goAction('application', array('controller' => 'user', 'action' => 'index'));
     }
 
     public function formAction() {
@@ -110,11 +110,11 @@ class UserController extends BaseActionController {
                     $this->flashMessenger()->addErrorMessage(HAVE_ERROR);
                 }
                 if ($action == 'save-close')
-                    $this->goAction('Application', array('action' => 'index'));
+                    $this->goAction('application', array('action' => 'index'));
                 if ($action == 'save-new')
-                    $this->goAction('Application', array('action' => 'form'));
+                    $this->goAction('application', array('action' => 'form'));
                 if ($action == 'save')
-                    $this->goAction('Application', array('action' => 'form', 'id' => $id));
+                    $this->goAction('application', array('action' => 'form', 'id' => $id));
             }
         }
 
@@ -133,7 +133,7 @@ class UserController extends BaseActionController {
             }
         }
 
-        $this->goAction('Application', array('action' => 'index'));
+        $this->goAction('application', array('action' => 'index'));
     }
 
 //

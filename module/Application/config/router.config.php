@@ -12,7 +12,17 @@ $homeRoute = array(
         )
     )
 );
-
+$userRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => 'Application/account[/]',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'Account',
+            'action' => 'edit',
+        ),
+    ),
+);
 $documentRoute = array(
     'type' => 'Zend\Mvc\Router\Http\Segment',
     'options' => array(
@@ -380,6 +390,17 @@ $applicationRoute = array(
         )
     )
 );
+//$userEditRoute = array(
+//    'type' => 'Zend\Mvc\Router\Http\Segment',
+//    'options' => array(
+//        'route' => 'Application/user/edit[/]',
+//        'defaults' => array(
+//            '__NAMESPACE__' => 'Application\Controller',
+//            'controller' => 'Account',
+//            'action' => 'upload',
+//        ),
+//    ),
+//);
 return array(
     'router' => array(
         'routes' => array(
@@ -410,6 +431,7 @@ return array(
             'shareholder' => $shareholderRoute,
             'shareholderChildRoute' => $shareholderChildRoute,
             'application' => $applicationRoute,
+            'user' => $userRoute,
         ),
     )
 );

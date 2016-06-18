@@ -125,6 +125,7 @@ return array(
             'Application\Controller\Members' => 'Application\Controller\MembersController',
             'Application\Controller\Shareholder' => 'Application\Controller\ShareholderController',
             'Application\Controller\Account' => 'Application\Controller\AccountController',
+            'Application\Controller\User' => 'Application\Controller\UserController',
         ),
     ),
     'view_manager' => array(

@@ -27,8 +27,9 @@ class DocumentController extends OcoderBaseController
     //Get all Documents
     public function indexAction()
     {
-    	$stringHelperOcoder = new \Ocoder\Helper\String();
+    	$userLogged = $this->getServiceLocator()->get('AuthService')->getStorage()->read();
 
+        $stringHelperOcoder = new \Ocoder\Helper\String();
         $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
 
         unset($this->_params['ssFilter']);
@@ -64,6 +65,8 @@ class DocumentController extends OcoderBaseController
         return new ViewModel(array(
             // 'categoryInfo' => $categoryInfo,
             'documents' => $documents,
+            'userLogged' => $userLogged,
+
             // 'categoryNews' => $categoryNews,
             // 'paginator' => OcoderPaginator::createPaginator($countArticles, $this->_params['paginator']),
         ));
@@ -101,14 +104,15 @@ class DocumentController extends OcoderBaseController
                     }
                 }
             }  
-			die($linkUpload);
-   //          if($companyTable->saveItem(array('id' => $this->_companyInfo->id, 'banners' => json_encode($bannerArr)))){
-			// 	$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'success', 'content' => ''));
-			// } else {
-			// 	$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => ''));
-			// }
+			echo ($linkUpload);
+           //if($DocumentTable->saveItem(array('id' => $this->->id, 'banners' => json_encode($bannerArr)))){
+			 	//$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'success', 'content' => 'Cập nhật thành công'));
+			 //} else {
+			 	//$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => ''));
+			 //}
         }
-    	return new ViewModel(array());
+    	return new ViewModel(array(
+        ));
     }
 }
     
