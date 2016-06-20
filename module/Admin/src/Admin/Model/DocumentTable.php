@@ -81,10 +81,35 @@ class DocumentTable extends AbstractTableGateway {
                                     ->or
                                     ->like($arrTest[3], '%' . $ssFilter['filter_keyword_value'] . '%')
                             ->UNNEST;
+
                 }
             });
         }
         return $result;
+    }
+
+    public function listItemCurrentMonth($arrParam = NULL) {
+        $result = $this->tableGateway->select(function (Select $select) use ($arrParam) {
+            $select->columns(array(
+                'id', 'name', 'description', 'link', 'created_by', 'created', 'published'
+            ));
+            $select->order(array('created DESC'));
+
+            $select->where->greaterThanOrEqualTo('created', date('Y-m-01'))
+                            ->lessThanOrEqualTo('created', date('Y-m-t'));
+        });
+
+        // $arrDocsDate = array();
+
+        // foreach ($result as $document) {
+        //     //$arrDocsDate[$document->created][] = $document;
+        // }
+
+        return $result;
+    }
+
+    public function listItemByMonth($arrParam = NULL) {
+        
     }
 
     public function getItem($arrParam = null, $options = null) {
@@ -120,8 +145,8 @@ class DocumentTable extends AbstractTableGateway {
                 'description' => $arrParam['description'],
                 'link' => $arrParam['link'],
                 'created_by' => $arrParam['created_by'],
-                'created' => $arrParam['created'],
-                'published' => $arrParam['published'],
+                'created' => date('Y-m-d H:i:s'),
+                'published' => 1,
             );
 
             // if (!empty($arrParam['file']['tmp_name'])) {
@@ -138,7 +163,7 @@ class DocumentTable extends AbstractTableGateway {
                 'description' => $arrParam['description'],
                 'link' => $arrParam['link'],
                 'created_by' => $arrParam['created_by'],
-                'created' => $arrParam['created'],
+                'created' => date('Y-m-d H:i:s'),
                 'published' => $arrParam['published'],
             );
 

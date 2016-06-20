@@ -184,12 +184,13 @@ class UserTable extends AbstractTableGateway {
                 'ordering' => $arrParam['ordering'],
                 'published' => ($arrParam['published'] == 'active') ? 1 : 0,
                 'created' => date('Y-m-d H:i:s'),
+                'avatar' => $arrParam['avatar'],
             );
 
-            if (!empty($arrParam['file']['tmp_name'])) {
-                $imageObj = new Image();
-                $data['avatar'] = $imageObj->upload('file', array('task' => 'user-avatar'));
-            }
+            // if (!empty($arrParam['file']['tmp_name'])) {
+            //     $imageObj = new Image();
+            //     $data['avatar'] = $imageObj->upload('file', array('task' => 'user-avatar'));
+            // }
 
             $this->tableGateway->insert($data);
             return $this->tableGateway->getLastInsertValue();
@@ -201,18 +202,19 @@ class UserTable extends AbstractTableGateway {
                 'fullname' => $arrParam['fullname'],
                 'group_id' => '',
                 'ordering' => '',
-                'published' => ($arrParam['published'] == 'active') ? 1 : 0,
+                // 'published' => ($arrParam['published'] == 'active') ? 1 : 0,
                 'modified' => date('Y-m-d H:i:s'),
+                'avatar' => $arrParam['avatar'],
             );
 
             if (!empty($arrParam['password']))
                 $data['password'] = md5($arrParam['password']);
 
-            if (!empty($arrParam['file']['tmp_name'])) {
-                $imageObj = new Image();
-                $data['avatar'] = $imageObj->upload('file', array('task' => 'user-avatar'));
-                $imageObj->removeImage($arrParam['avatar'], array('task' => 'user-avatar'));
-            }
+            // if (!empty($arrParam['file']['tmp_name'])) {
+            //     $imageObj = new Image();
+            //     $data['avatar'] = $imageObj->upload('file', array('task' => 'user-avatar'));
+            //     $imageObj->removeImage($arrParam['avatar'], array('task' => 'user-avatar'));
+            // }
 
            // print_r($data);
             //print_r($arrParam['userid']);die;
