@@ -85,7 +85,8 @@ class DocumentController extends OcoderBaseController
                 $target_dir = PATH_PUBLIC . "/uploads/documents/";
                 $uploadOk = 1;
                 $imageFileType = pathinfo(basename($_FILES[$fileName]["name"]), PATHINFO_EXTENSION);
-                $target_file = $target_dir . 'test123' . '_' . $fileName . '.' . $imageFileType;
+                $date = date('m-d-Y_H_i_s'); 
+                $target_file = $target_dir . $date . '_' . $fileName . '.' . $imageFileType;
                 // Check if image file is a actual image or fake image
                 $check = getimagesize($_FILES[$fileName]["tmp_name"]);
                 if($check === false) {
@@ -103,7 +104,7 @@ class DocumentController extends OcoderBaseController
                         $linkUpload = 'test123' . '_' . $fileName . '.' . $imageFileType;
                     }
                 }
-                var_dump($_FILES[$fileName]);die;
+                var_dump($linkUpload);die;
             }  
 			$DocumentTableGateway->saveItem($this->_params['data'], array('task' => $task));
            //if($DocumentTable->saveItem(array('id' => $this->->id, 'banners' => json_encode($bannerArr)))){
