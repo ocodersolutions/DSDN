@@ -16,18 +16,26 @@ use Zend\Session\Container;
 
 class DocumentController extends OcoderBaseController
 {
+    private $userLogged;
+
     public function init() {
         // Check login
         $this->getAuthService();
         if (!$this->_authService->hasIdentity() && $this->_params['action'] != 'login') {
             $this->goAction('application', array('controller' => 'account', 'action' => 'login'));
         }
+
+        // DATA
+        $this->_params['data'] = array_merge(
+            $this->getRequest()->getPost()->toArray(), $this->getRequest()->getFiles()->toArray()
+        );
+
+        $this->userLogged = $this->getServiceLocator()->get('AuthService')->getStorage()->read();
     }
     
     //Get all Documents
     public function indexAction()
     {
-    	$userLogged = $this->getServiceLocator()->get('AuthService')->getStorage()->read();
 
         $stringHelperOcoder = new \Ocoder\Helper\String();
         $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
@@ -39,7 +47,7 @@ class DocumentController extends OcoderBaseController
 
         // $this->_params['ssFilter']['filter_keyword_type'] = array('alias', 'alias_lang');
         // $this->_params['ssFilter']['filter_keyword_value'] = $aliasCategory;
-        $documents = $documentTableGateway->listItem($this->_params, array('task' => 'list-item'));
+        $documents = $documentTableGateway->listItemCurrentMonth();
 
         
 
@@ -65,7 +73,7 @@ class DocumentController extends OcoderBaseController
         return new ViewModel(array(
             // 'categoryInfo' => $categoryInfo,
             'documents' => $documents,
-            'userLogged' => $userLogged,
+            'userLogged' => $this->userLogged,
 
             // 'categoryNews' => $categoryNews,
             // 'paginator' => OcoderPaginator::createPaginator($countArticles, $this->_params['paginator']),
@@ -80,32 +88,32 @@ class DocumentController extends OcoderBaseController
     		$documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
 
             $task='add-item' ;
-			$fileName = 'link';
-            if($_FILES[$fileName]["size"]) {
-                $target_dir = PATH_PUBLIC . "/uploads/documents/";
+			$fileUploadName = 'document';
+            if($_FILES[$fileUploadName]["size"]) {
+                $target_dir = PATH_PUBLIC_DOCUMENTS . "/";
                 $uploadOk = 1;
-                $imageFileType = pathinfo(basename($_FILES[$fileName]["name"]), PATHINFO_EXTENSION);
-                $target_file = $target_dir . 'test123' . '_' . $fileName . '.' . $imageFileType;
+                $imageFileType = pathinfo(basename($_FILES[$fileUploadName]["name"]), PATHINFO_EXTENSION);
+                $fileName = time() . '.' . $imageFileType;
+                $target_file = $target_dir . $fileName;
                 // Check if image file is a actual image or fake image
-                $check = getimagesize($_FILES[$fileName]["tmp_name"]);
-                if($check === false) {
-                    // $this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => FILE_NOT_IMAGE));
-                    $uploadOk = 0;
-                }
-                // Check size
-                if ($_FILES[$fileName]["size"] > 2097152) {
-                    // $this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => MAX_SIZE_2M));
-                    $uploadOk = 0;
-                }
+                // $check = getimagesize($_FILES[$fileUploadName]["tmp_name"]);
+                // if($check === false) {
+                //     // $this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => FILE_NOT_IMAGE));
+                //     $uploadOk = 0;
+                // }
+                // // Check size
+                // if ($_FILES[$fileUploadName]["size"] > 2097152) {
+                //     // $this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => MAX_SIZE_2M));
+                //     $uploadOk = 0;
+                // }
                 // Check if $uploadOk is set to 0 by an error
                 if ($uploadOk != 0) {
-                    if (move_uploaded_file($_FILES[$fileName]["tmp_name"], $target_file)) {
-                        $linkUpload = 'test123' . '_' . $fileName . '.' . $imageFileType;
+                    if (move_uploaded_file($_FILES[$fileUploadName]["tmp_name"], $target_file)) {
+                        $this->_params['data']['link'] = $fileName;
                     }
                 }
-                var_dump($_FILES[$fileName]);die;
             }  
-			$DocumentTableGateway->saveItem($this->_params['data'], array('task' => $task));
+			$documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
            //if($DocumentTable->saveItem(array('id' => $this->->id, 'banners' => json_encode($bannerArr)))){
 			 	//$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'success', 'content' => 'Cập nhật thành công'));
 			 //} else {
@@ -113,6 +121,7 @@ class DocumentController extends OcoderBaseController
 			 //}
         }
     	return new ViewModel(array(
+            'userLogged' => $this->userLogged
         ));
     }
 }

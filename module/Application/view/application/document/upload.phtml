@@ -46,7 +46,7 @@ $documents = $this->documents;
                         <p class="formlabel">File tải lên :</p>
                     </div>
                     <div class="group-button col-sm-8">
-                        <input type="file" name="link"/>
+                        <input type="file" name="document"/>
                     </div>
                 </div>
                 <div class="row">
@@ -56,10 +56,8 @@ $documents = $this->documents;
                         <button type="submit" class="btn btn-warning">Tải lên</button>
                     </div>
                 </div>
-                <div class="panel-note col-sm-12">
-                    
-                </div>
-
+                <!-- Hidden fields -->
+                <input type="hidden" name="created_by" value="<?php echo $this->userLogged->id ?>"/>
             </form>
         </div>
     </div>

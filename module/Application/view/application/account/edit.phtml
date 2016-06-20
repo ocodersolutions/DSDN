@@ -60,7 +60,7 @@ $helperString = new \Ocoder\Helper\String;
                         <p class="formlabel">Mật khẩu:</p>
                     </div>
                     <div class="col-sm-8">
-                        <input type="password" name="password" class="input_fname" value="<?php echo $this->userInfo->password ?>"/>
+                        <input type="password" name="password" class="input_fname" value=""/>
                     </div>
                 </div>
                 
@@ -69,7 +69,7 @@ $helperString = new \Ocoder\Helper\String;
                         <p class="formlabel">File Avatar :</p>
                     </div>
                     <div class="group-button col-sm-8">
-                        <input type="file" name="link"/>
+                        <input type="file" name="avatar"/>
                     </div>
                 </div>
                 <div class="row block hidden">
@@ -79,13 +79,15 @@ $helperString = new \Ocoder\Helper\String;
                         <input name="action" type="hidden" value="save">
                     </div>
                 </div>
+                <?php if($this->userInfo->avatar != NULL) { ?>
                 <div class="row block ">
                     <div class="col-sm-4">
                     </div>
                     <div class="show_avatar col-sm-8">
-                        <img src="<?php echo PATH_PUBLIC . "/uploads/avatar/".$this->userInfo->avatar ?>" alt="user avatar">
+                        <img src="<?php echo URL_UPLOADS_AVATAR . '/'. $this->userInfo->avatar ?>" alt="user avatar">
                     </div>
                 </div>
+                <?php }//end if ?>
                 <div class="row block">
                     <div class="col-sm-4">
                     </div>
