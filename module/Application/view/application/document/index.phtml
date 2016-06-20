@@ -6,7 +6,10 @@ $urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
 use Zend\Session\Container;
 $ssSystem = new Container('system');
 
-
+ echo "<pre>";
+ var_dump($docArrCurrentMonth);
+ echo "</pre>";
+ die;
 ?>
 
 <div class="contact-content">
@@ -67,8 +70,15 @@ $ssSystem = new Container('system');
              
             <p  class="title-document">Công văn mới nhất </span>
             <div class="wrap" >
-                <?php foreach ($documents as $document) { 
+                <?php foreach ($docArrCurrentMonth as $docArrInDay) { 
+                    echo "<pre>";
+                    var_dump($docArrInDay);
+                    echo "</pre>";
+                    die;
                     ?>
+                    <div class="bydate">
+                        <span><?php echo $docArrInDay ?></span>
+                    </div>     
                     <!-- start of customer review box -->
                     <div class="uc_customer_review_box">
                         <span class="uc_content" style="font-weight: bold;"><?php echo $document->name ?></span>

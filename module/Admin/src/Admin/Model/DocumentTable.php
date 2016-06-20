@@ -101,25 +101,32 @@ class DocumentTable extends AbstractTableGateway {
                             ->lessThanOrEqualTo('created', date('Y-m-t'));
         });
        
-        $ds=(int)(date('j',date('Y-m-01')));
-        $de=(int)(date('t',date('Y-m-t')));
-        $arrDocsDate = array();
-        $result->buffer();
-        
-        for ($i=$ds;$i<=$de;$i++){
-
-            foreach ($result as $document) {
-
-                $daycreate = strtotime($document->created);
-                $check = date('d',$daycreate);
-                if ($check==$i){
-
-                  $arrDocsDate[$i]= $document;  
-                }
-               
-            }
-            
+        foreach ($result as $document) {
+            $dateOfMonth = date('d-m-Y', strtotime($document->created));
+            $arrDocsDate[$dateOfMonth][] = $document; 
         }
+
+
+
+        // $ds=(int)(date('j',date('Y-m-01')));
+        // $de=(int)(date('t',date('Y-m-t')));
+        // $arrDocsDate = array();
+        // $result->buffer();
+
+        // for ($i=$ds;$i<=$de;$i++){
+
+        //     foreach ($result as $document) {
+
+        //         $daycreate = strtotime($document->created);
+        //         $check = date('d',$daycreate);
+        //         if ($check==$i){
+
+        //           $arrDocsDate[$i]= $document;  
+        //         }
+               
+        //     }
+            
+        // }
         
         return $arrDocsDate;
         //return $result;

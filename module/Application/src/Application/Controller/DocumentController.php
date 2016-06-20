@@ -43,7 +43,7 @@ class DocumentController extends OcoderBaseController
         $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
         $userTableGateway = $this->getServiceLocator()->get('Admin\Model\UserTable');
         $userInfo = $userTableGateway->getItem(array('id' => $this->userLogged->id));
-        
+
         unset($this->_params['ssFilter']);
         $this->_paginator['currentPageNumber'] = 1;
         $this->_paginator['itemCountPerPage'] = 3000;
@@ -51,7 +51,7 @@ class DocumentController extends OcoderBaseController
 
         // $this->_params['ssFilter']['filter_keyword_type'] = array('alias', 'alias_lang');
         // $this->_params['ssFilter']['filter_keyword_value'] = $aliasCategory;
-        $documents = $documentTableGateway->listItemCurrentMonth();
+        $docArrCurrentMonth = $documentTableGateway->listItemCurrentMonth();
 
         
 
@@ -76,7 +76,7 @@ class DocumentController extends OcoderBaseController
 
         return new ViewModel(array(
             // 'categoryInfo' => $categoryInfo,
-            'documents' => $documents,
+            'docArrCurrentMonth' => $docArrCurrentMonth,
             'userLogged' => $this->userLogged,
             'userInfo' => $userInfo,
 
