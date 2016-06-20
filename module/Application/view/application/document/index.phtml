@@ -33,7 +33,7 @@ $ssSystem = new Container('system');
                 
                 <div class="box_info">
                     <div class="images">
-                       <img src="<?php echo $urlImage_DSDN ?>/icon-human/1.jpg" alt="" class="avatar"/> 
+                       <img src="<?php echo URL_APPLICATION.'/public/uploads/avatar/'.$this->userLogged->avatar ?>" alt="" class="avatar"/> 
                     </div>
                     <div class="box_foot">
                         <a href="<?php echo URL_APPLICATION . '/application/account/edit'?>" >Thông tin</a>
@@ -54,7 +54,13 @@ $ssSystem = new Container('system');
                 });
             });
         </script>
+        <div class="row block">
+                    <div class="col-sm-12">
+                        <a href="<?php echo URL_APPLICATION?>/cong-van/tai-len" class="btn btn_upload"> Tải công văn lên</a>
+                    </div>
+                </div>
         <div class="col-md-8 col-sm-12 document_new block">
+             
             <p  class="title-document">Công văn mới nhất </span>
             <div class="wrap" >
                 <?php foreach ($documents as $document) { ?>

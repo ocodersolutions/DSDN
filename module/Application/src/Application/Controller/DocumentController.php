@@ -79,7 +79,7 @@ class DocumentController extends OcoderBaseController
     	if ($request->isPost()) {
     		$documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
 
-
+            $task='add-item' ;
 			$fileName = 'link';
             if($_FILES[$fileName]["size"]) {
                 $target_dir = PATH_PUBLIC . "/uploads/documents/";
@@ -103,8 +103,9 @@ class DocumentController extends OcoderBaseController
                         $linkUpload = 'test123' . '_' . $fileName . '.' . $imageFileType;
                     }
                 }
+                var_dump($_FILES[$fileName]);die;
             }  
-			echo ($linkUpload);
+			$DocumentTableGateway->saveItem($this->_params['data'], array('task' => $task));
            //if($DocumentTable->saveItem(array('id' => $this->->id, 'banners' => json_encode($bannerArr)))){
 			 	//$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'success', 'content' => 'Cập nhật thành công'));
 			 //} else {

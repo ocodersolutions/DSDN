@@ -85,6 +85,7 @@ class UserController extends BaseActionController {
     }
 
     public function formAction() {
+
         $myForm = $this->getForm();
         $task = 'add-item';
         $this->_params['data']['id'] = $this->params('id');
@@ -99,9 +100,10 @@ class UserController extends BaseActionController {
         }
 
         if ($this->getRequest()->isPost()) {
+           
             $action = $this->_params['data']['action'];
             $myForm->setData($this->_params['data']);
-
+ 
             if ($myForm->isValid()) {
                 $this->_params['data'] = $myForm->getData(FormInterface::VALUES_AS_ARRAY);
                 $id = $this->getTable()->saveItem($this->_params['data'], array('task' => $task));

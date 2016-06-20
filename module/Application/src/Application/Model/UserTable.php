@@ -173,6 +173,7 @@ class UserTable extends AbstractTableGateway {
     }
 
     public function saveItem($arrParam = null, $options = null) {
+       
         if ($options['task'] == 'add-item') {
             $data = array(
                 'username' => $arrParam['username'],
@@ -183,6 +184,7 @@ class UserTable extends AbstractTableGateway {
                 'ordering' => $arrParam['ordering'],
                 'published' => ($arrParam['published'] == 'active') ? 1 : 0,
                 'created' => date('Y-m-d H:i:s'),
+
             );
 
             if (!empty($arrParam['file']['tmp_name'])) {
@@ -202,6 +204,7 @@ class UserTable extends AbstractTableGateway {
                 'ordering' => $arrParam['ordering'],
                 'published' => ($arrParam['published'] == 'active') ? 1 : 0,
                 'modified' => date('Y-m-d H:i:s'),
+                'avatar' => $arrParam['avatar'],
             );
 
             if (!empty($arrParam['password']))
@@ -212,9 +215,8 @@ class UserTable extends AbstractTableGateway {
                 $data['avatar'] = $imageObj->upload('file', array('task' => 'user-avatar'));
                 $imageObj->removeImage($arrParam['avatar'], array('task' => 'user-avatar'));
             }
-
             $this->tableGateway->update($data, array('id' => $arrParam['id']));
-            return $arrParam['id'];
+            return $arrParam['userid'];
             
         }
     }

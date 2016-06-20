@@ -70,18 +70,19 @@ class AccountController extends BaseActionController {
 
         $userLogged = $this->getServiceLocator()->get('AuthService')->getStorage()->read();
         $id = $userLogged->id;
-        $userTableGateway = $this->getServiceLocator()->get('Admin\Model\UserTable');
+        $userTableGateway = $this->getServiceLocator()->get('Application\Model\UserTable');
         $userInfo = $userTableGateway->getItem(array('id' => $id));
+        //var_dump($userInfo);
         $task = 'edit-item';
         $request = $this->getRequest();
         if ($request->isPost()) {
-            var_dump($this->_params['data']);
-            $fileName = 'link';
+           //var_dump($this->_params['data']['link']['name']);die;
+            $fileName='link';
             if($_FILES[$fileName]["size"]) {
                 $target_dir = PATH_PUBLIC . "/uploads/avatar/";
                 $uploadOk = 1;
                 $imageFileType = pathinfo(basename($_FILES[$fileName]["name"]), PATHINFO_EXTENSION);
-                $target_file = $target_dir . $id . '_' . $fileName . '.' . $imageFileType;
+                $target_file = $target_dir . $id . '_' . '.' . $imageFileType;
                 // Check if image file is a actual image or fake image
                 $check = getimagesize($_FILES[$fileName]["tmp_name"]);
                 if($check === false) {
@@ -97,20 +98,22 @@ class AccountController extends BaseActionController {
                 if ($uploadOk != 0) {
                     if (move_uploaded_file($_FILES[$fileName]["tmp_name"], $target_file)) {
                         $linkUpload = $id . '.' . $imageFileType;
+                        $this->_params['data']['avatar']=$linkUpload;
                     }
-                    echo ($linkUpload);
-                    var_dump($this->_params['data']);
+                
                 }
                 //$data = $userTableGateway->saveItem(array('id' => $userId));
                 $userTableGateway->saveItem($this->_params['data'], array('task' => $task));
-
+              //  print_r('data');    
+              $this->goAction('application', array('action' => 'edit'));
             }  
             
         }
         // if sumbmit update
         //if ($action == 'update')
-            //$this->goAction('admin', array('action' => 'form', 'id' => $id));
+            
         // use in view
+
         return new ViewModel(array(
             'userInfo'=>$userInfo,
         ));

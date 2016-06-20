@@ -172,6 +172,18 @@ form input:focus,form textarea:focus{
 	background-color: #fff;
 }
 /*=== cong van block ===*/
+.btn_upload{
+    margin:0 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    color: #fff;
+    font-weight: bold;
+    background-color:#004EBC; 
+}
+a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
+    background-color:#98afe1;
+    color: #000;
+}
 #cvan{
     
     padding-left: 0;

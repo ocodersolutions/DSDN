@@ -11,9 +11,6 @@ use Zend\Session\Container;
 $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
 
-
-
-var_dump($userInfo);
 ?>
 <div class="contact-content">
     <div class="container">
@@ -78,8 +75,15 @@ var_dump($userInfo);
                 <div class="row block hidden">
                     <div class="group-button col-sm-8">
                         <input name="published" type="hidden" value="<?php echo $this->userInfo->published ?>">
-                        <input type="file" name="id" class="hidden" value="<?php echo $this->userInfo->id ?>"/>
+                        <input name="id" type="hidden" value="<?php echo $this->userInfo->id ?>"/>
                         <input name="action" type="hidden" value="save">
+                    </div>
+                </div>
+                <div class="row block ">
+                    <div class="col-sm-4">
+                    </div>
+                    <div class="show_avatar col-sm-8">
+                        <img src="<?php echo PATH_PUBLIC . "/uploads/avatar/".$this->userInfo->avatar ?>" alt="user avatar">
                     </div>
                 </div>
                 <div class="row block">
