@@ -33,7 +33,11 @@ $ssSystem = new Container('system');
                 
                 <div class="box_info">
                     <div class="images">
-                       <img src="<?php echo URL_APPLICATION.'/public/uploads/avatar/'.$this->userLogged->avatar ?>" alt="" class="avatar"/> 
+                    <?php if ($userInfo->avatar!=null){?>
+                       <img src="<?php echo URL_UPLOADS_AVATAR .'/'.$userInfo->avatar ?>" alt="" class="avatar"/> 
+                       <?php }else {?>
+                        <img src="<?php echo URL_UPLOADS_AVATAR .'/no_avatar.jpg' ?>" alt="" class="avatar"/> 
+                        <?php }; ?>
                     </div>
                     <div class="box_foot">
                         <a href="<?php echo URL_APPLICATION . '/application/account/edit'?>" >Thông tin</a>
@@ -63,14 +67,15 @@ $ssSystem = new Container('system');
              
             <p  class="title-document">Công văn mới nhất </span>
             <div class="wrap" >
-                <?php foreach ($documents as $document) { ?>
+                <?php foreach ($documents as $document) { 
+                    ?>
                     <!-- start of customer review box -->
                     <div class="uc_customer_review_box">
                         <span class="uc_content" style="font-weight: bold;"><?php echo $document->name ?></span>
                         <span class="uc_content"><?php echo $document->description ?></span>
                         <div class="left-box ">
-                            <p class="uc_name">Rafael Oliveira</p>
-                            <p class="uc_job">CEO - Rafael Oliveira Design</p>
+                            <p class="uc_name"><?php echo $this->userLogged->fullname ?></p>
+                            <p class="uc_job"><?php echo $document->created ?></p>
                         </div>
                         <div class="right-box pull-right">
                             <!-- start of simple app download buttons -->
@@ -86,7 +91,12 @@ $ssSystem = new Container('system');
                             </div>
                         <!-- end of simple app download buttons -->
                         </div>
-                        <img class="uc_avatar" src="<?php echo $urlImage_DSDN ?>/icon-human/1.jpg" alt="avatar"/>
+                        <?php if ($userInfo->avatar!=null){?>
+                       <img  class="uc_avatar"src="<?php echo URL_UPLOADS_AVATAR .'/'.$userInfo->avatar ?>" alt="" class="avatar"/> 
+                       <?php }else {?>
+                        <img  class="uc_avatar"src="<?php echo URL_UPLOADS_AVATAR .'/no_avatar.jpg' ?>" alt="" class="avatar"/> 
+                        <?php }; ?>
+                        
                     </div>
                     <!-- end of customer review box --> 
                 <?php }//end foreach ?>

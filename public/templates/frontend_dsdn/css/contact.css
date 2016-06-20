@@ -246,6 +246,9 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     margin:0;
     padding-left: 10px
 }
+.show_avatar img{
+    width:150px;
+}
 /*==== News ===*/
 .news {
 	

@@ -17,6 +17,7 @@ use Zend\Session\Container;
 class DocumentController extends OcoderBaseController
 {
     private $userLogged;
+    
 
     public function init() {
         // Check login
@@ -31,6 +32,7 @@ class DocumentController extends OcoderBaseController
         );
 
         $this->userLogged = $this->getServiceLocator()->get('AuthService')->getStorage()->read();
+        
     }
     
     //Get all Documents
@@ -39,7 +41,9 @@ class DocumentController extends OcoderBaseController
 
         $stringHelperOcoder = new \Ocoder\Helper\String();
         $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
-
+        $userTableGateway = $this->getServiceLocator()->get('Admin\Model\UserTable');
+        $userInfo = $userTableGateway->getItem(array('id' => $this->userLogged->id));
+        
         unset($this->_params['ssFilter']);
         $this->_paginator['currentPageNumber'] = 1;
         $this->_paginator['itemCountPerPage'] = 3000;
@@ -74,6 +78,7 @@ class DocumentController extends OcoderBaseController
             // 'categoryInfo' => $categoryInfo,
             'documents' => $documents,
             'userLogged' => $this->userLogged,
+            'userInfo' => $userInfo,
 
             // 'categoryNews' => $categoryNews,
             // 'paginator' => OcoderPaginator::createPaginator($countArticles, $this->_params['paginator']),
@@ -83,12 +88,12 @@ class DocumentController extends OcoderBaseController
     //Upload Document
     public function uploadAction()
     {
-    	$request = $this->getRequest();
-    	if ($request->isPost()) {
-    		$documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
+        $request = $this->getRequest();
+        if ($request->isPost()) {
+            $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
 
             $task='add-item' ;
-			$fileUploadName = 'document';
+            $fileUploadName = 'document';
             if($_FILES[$fileUploadName]["size"]) {
                 $target_dir = PATH_PUBLIC_DOCUMENTS . "/";
                 $uploadOk = 1;
@@ -113,14 +118,14 @@ class DocumentController extends OcoderBaseController
                     }
                 }
             }  
-			$documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
+            $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
            //if($DocumentTable->saveItem(array('id' => $this->->id, 'banners' => json_encode($bannerArr)))){
-			 	//$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'success', 'content' => 'Cập nhật thành công'));
-			 //} else {
-			 	//$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => ''));
-			 //}
+                //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'success', 'content' => 'Cập nhật thành công'));
+             //} else {
+                //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => ''));
+             //}
         }
-    	return new ViewModel(array(
+        return new ViewModel(array(
             'userLogged' => $this->userLogged
         ));
     }

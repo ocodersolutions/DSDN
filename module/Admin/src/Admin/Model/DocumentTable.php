@@ -89,6 +89,8 @@ class DocumentTable extends AbstractTableGateway {
     }
 
     public function listItemCurrentMonth($arrParam = NULL) {
+
+       
         $result = $this->tableGateway->select(function (Select $select) use ($arrParam) {
             $select->columns(array(
                 'id', 'name', 'description', 'link', 'created_by', 'created', 'published'
@@ -98,18 +100,41 @@ class DocumentTable extends AbstractTableGateway {
             $select->where->greaterThanOrEqualTo('created', date('Y-m-01'))
                             ->lessThanOrEqualTo('created', date('Y-m-t'));
         });
+       
+        $ds=(int)(date('j',date('Y-m-01')));
+        $de=(int)(date('t',date('Y-m-t')));
+        $arrDocsDate = array();
+        $result->buffer();
+        
+        for ($i=$ds;$i<=$de;$i++){
 
-        // $arrDocsDate = array();
+            foreach ($result as $document) {
 
-        // foreach ($result as $document) {
-        //     //$arrDocsDate[$document->created][] = $document;
-        // }
+                $daycreate = strtotime($document->created);
+                $check = date('d',$daycreate);
+                if ($check==$i){
 
-        return $result;
+                  $arrDocsDate[$i]= $document;  
+                }
+               
+            }
+            
+        }
+        
+        return $arrDocsDate;
+        //return $result;
     }
 
     public function listItemByMonth($arrParam = NULL) {
-        
+        $result = $this->tableGateway->select(function (Select $select) use ($arrParam) {
+            $select->columns(array(
+                'id', 'name', 'description', 'link', 'created_by', 'created', 'published'
+            ));
+            $select->order(array('created DESC'));
+
+            $select->where->greaterEqualTo('created', date('Y-'.$month.'-01'))
+                            ->lessThanOrEqualTo('created', date('Y-'.$month.'-t'));
+        });
     }
 
     public function getItem($arrParam = null, $options = null) {
