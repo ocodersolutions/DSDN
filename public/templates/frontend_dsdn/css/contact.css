@@ -191,7 +191,7 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
 .document_new .title-document{
     font-weight: bold;
     text-transform: uppercase;
-    background-color: #ff4600;
+    background-color: #0103f8;;
     padding: 10px;
     color: #fff;
 }
@@ -202,7 +202,7 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     float: left;
 }
 .document_new .wrap .bydate{
-        background: rgb(255, 70, 0);;
+    background: rgb(199, 211, 239);
     color: #fff;
 }
 .document_new .wrap .bydate i{
@@ -222,12 +222,13 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     padding: 2px;
     display: block;
     width: 100%;
-    background-color: #ff4600;
+    background: rgb(199, 211, 239);
 }
 .contact-content{
 	padding: 0;
 }
 .contact_info .title-document {
+    clear: both;
     font-weight: bold;
     text-transform: uppercase;
     background-color: rgba(0, 78, 188, 0.52);

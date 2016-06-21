@@ -7,6 +7,7 @@ use Zend\Session\Container;
 
 $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
+
 ?>
 <?php
             if ($ssSystem->language == DEFAULT_LANGUAGE) {
@@ -28,7 +29,7 @@ $helperString = new \Ocoder\Helper\String;
     <div class="row">
         <div class="container contact-content" style="padding: 0">
             <img src="<?php echo $urlImage_DSDN?>/news.jpg" alt="">   
-            <p class="contact_p">Tin Tức</p>
+            <p class="contact_p">Tin tức</p>
         </div>
 
     </div>
@@ -48,12 +49,12 @@ $helperString = new \Ocoder\Helper\String;
                 </div>
             </div>
             <div class="col-md-4 pull-right">
-                <div class=" block padding_right5">
-                    <div class="search">
-                        <input type="text" class="form-control input-search" maxlength="64" placeholder="Tìm kiếm" />
-                        <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p>Tìm kiếm</p></button>
-                    </div>
-                </div>    
+                <div class="search padding_right5 block">
+                    <form action="<?php echo URL_APPLICATION . '/tim-kiem/' ?>" method="GET">
+                        <input type="text" class="form-control input-search" id="keyword-search" maxlength="64" name='tk' placeholder="<?php echo SEARCH ?>" value="<?php echo array_key_exists('tk', $_GET) ? $_GET['tk'] : '' ?>" />
+                        <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p><?php echo SEARCH ?></p></button>
+                    </form>
+                </div> 
                 <div class="block">
                 
                 <?php $this->blkLatestNews(); ?>
