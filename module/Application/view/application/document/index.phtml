@@ -5,11 +5,6 @@ $urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
 
 use Zend\Session\Container;
 $ssSystem = new Container('system');
-
- echo "<pre>";
- var_dump($docArrCurrentMonth);
- echo "</pre>";
- die;
 ?>
 
 <div class="contact-content">
@@ -70,16 +65,12 @@ $ssSystem = new Container('system');
              
             <p  class="title-document">Công văn mới nhất </span>
             <div class="wrap" >
-                <?php foreach ($docArrCurrentMonth as $docArrInDay) { 
-                    echo "<pre>";
-                    var_dump($docArrInDay);
-                    echo "</pre>";
-                    die;
-                    ?>
-                    <div class="bydate">
-                        <span><?php echo $docArrInDay ?></span>
+                <?php foreach ($docArrCurrentMonth as $dateString => $docArrInDay) { ?>
+                    <div class="bydate" id="<?php echo $dateString ?>">
+                        <span><?php echo $dateString ?></span>
                     </div>     
                     <!-- start of customer review box -->
+                    <?php foreach ($docArrInDay as $document) { ?>
                     <div class="uc_customer_review_box">
                         <span class="uc_content" style="font-weight: bold;"><?php echo $document->name ?></span>
                         <span class="uc_content"><?php echo $document->description ?></span>
@@ -106,12 +97,16 @@ $ssSystem = new Container('system');
                        <?php }else {?>
                         <img  class="uc_avatar"src="<?php echo URL_UPLOADS_AVATAR .'/no_avatar.jpg' ?>" alt="" class="avatar"/> 
                         <?php }; ?>
-                        
                     </div>
+                    <?php } //end foreach ?>
                     <!-- end of customer review box --> 
                 <?php }//end foreach ?>
             </div>
-            <div class="colum-date"></div>
+            <div class="colum-date">
+                <?php foreach ($docArrCurrentMonth as $dateString => $docArrInDay) { ?>
+                <a href="#<?php echo $dateString ?>"><?php echo $dateString ?></a>
+                <?php }//end foreach ?>
+            </div>
         </div>
        
         <div class="col-md-4 block col-sm-12">

@@ -89,8 +89,6 @@ class DocumentTable extends AbstractTableGateway {
     }
 
     public function listItemCurrentMonth($arrParam = NULL) {
-
-       
         $result = $this->tableGateway->select(function (Select $select) use ($arrParam) {
             $select->columns(array(
                 'id', 'name', 'description', 'link', 'created_by', 'created', 'published'
@@ -106,30 +104,43 @@ class DocumentTable extends AbstractTableGateway {
             $arrDocsDate[$dateOfMonth][] = $document; 
         }
 
-
-
-        // $ds=(int)(date('j',date('Y-m-01')));
-        // $de=(int)(date('t',date('Y-m-t')));
-        // $arrDocsDate = array();
-        // $result->buffer();
-
-        // for ($i=$ds;$i<=$de;$i++){
-
-        //     foreach ($result as $document) {
-
-        //         $daycreate = strtotime($document->created);
-        //         $check = date('d',$daycreate);
-        //         if ($check==$i){
-
-        //           $arrDocsDate[$i]= $document;  
-        //         }
-               
-        //     }
-            
-        // }
-        
         return $arrDocsDate;
-        //return $result;
+    }
+
+    public function listItemOld($arrParam = NULL) {
+        $result = $this->tableGateway->select(function (Select $select) use ($arrParam) {
+            $select->columns(array(
+                'id', 'name', 'description', 'link', 'created_by', 'created', 'published'
+            ));
+            $select->order(array('created DESC'));
+
+            $monthLength = 3;
+            $currentMonth = (int)date('m');
+            $currentYear = (int)date('Y');
+
+            if($currentMonth > $monthLength){
+                $oldMonth = $currentMonth - $monthLength;
+                $oldYear = $currentYear;
+            } else {
+                $oldMonth = $currentMonth - $monthLength + 12;
+                $oldYear = $currentYear - 1;
+            }
+            $oldDateString = "$oldYear-$oldMonth-01";
+            $dateString = "$currentYear-".($currentMonth-1)."-t";
+
+            $select->where->greaterThanOrEqualTo('created', date($oldDateString))
+                            ->lessThanOrEqualTo('created', date($dateString));
+        });
+
+        foreach ($result as $document) {
+            $month = date('Y-m', strtotime($document->created));
+            $arrDocsMonth[$month][] = $document; 
+        }
+        echo "<pre>";
+        var_dump($arrDocsMonth);
+        echo "</pre>";
+
+        return $arrDocsMonth;
     }
 
     public function listItemByMonth($arrParam = NULL) {
