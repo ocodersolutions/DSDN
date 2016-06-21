@@ -136,25 +136,11 @@ class DocumentTable extends AbstractTableGateway {
             $month = date('Y-m', strtotime($document->created));
             $arrDocsMonth[$month][] = $document; 
         }
-        echo "<pre>";
-        var_dump($arrDocsMonth);
-        echo "</pre>";
-
+        
         return $arrDocsMonth;
     }
 
-    public function listItemByMonth($arrParam = NULL) {
-        $result = $this->tableGateway->select(function (Select $select) use ($arrParam) {
-            $select->columns(array(
-                'id', 'name', 'description', 'link', 'created_by', 'created', 'published'
-            ));
-            $select->order(array('created DESC'));
-
-            $select->where->greaterEqualTo('created', date('Y-'.$month.'-01'))
-                            ->lessThanOrEqualTo('created', date('Y-'.$month.'-t'));
-        });
-    }
-
+    
     public function getItem($arrParam = null, $options = null) {
         if ($options == null) {
             $result = $this->tableGateway->select(function (Select $select) use ($arrParam) {

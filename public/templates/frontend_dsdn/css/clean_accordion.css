@@ -86,6 +86,8 @@
     font-weight: bold;
 }
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content{
+    max-height: 550px;
+    overflow: scroll;
 	padding: 10px 20px 25px;
     background-color: rgba(255, 255, 255, 0);
     border: 1px solid #eee;
@@ -118,4 +120,29 @@
 .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content .uc_get_now:hover{
 	background-color: #666666;
     border-color: #666666;
+}
+/*=== custom style ===*/
+.uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content .cv_date{
+    color: #9a9595;
+    font-style: italic;
+    padding-bottom: 7px;
+    margin-bottom: 10px;
+    border-bottom: 1px dotted;
+}
+.uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content .cv_p{
+   
+   font-weight: bold;
+   text-transform: uppercase;
+}
+.contact_info .cv_p::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content .cv_date a{
+    float: right;
+    border: 1px solid;
+    padding: 0 15px 0;
+    background: rgba(0, 0, 0, 0.24);
+    margin-right: 5px;
 }

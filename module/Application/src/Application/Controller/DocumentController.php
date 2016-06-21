@@ -38,7 +38,7 @@ class DocumentController extends OcoderBaseController
     //Get all Documents
     public function indexAction()
     {
-        var_dump($this->userLogged);
+        
         $stringHelperOcoder = new \Ocoder\Helper\String();
         $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
         $userTableGateway = $this->getServiceLocator()->get('Admin\Model\UserTable');
@@ -81,6 +81,7 @@ class DocumentController extends OcoderBaseController
             'docArrCurrentMonth' => $docArrCurrentMonth,
             'userLogged' => $this->userLogged,
             'userInfo' => $userInfo,
+            'docArrOld'=>$docArrOld,
 
             // 'categoryNews' => $categoryNews,
             // 'paginator' => OcoderPaginator::createPaginator($countArticles, $this->_params['paginator']),

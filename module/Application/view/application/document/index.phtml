@@ -67,7 +67,7 @@ $ssSystem = new Container('system');
             <div class="wrap" >
                 <?php foreach ($docArrCurrentMonth as $dateString => $docArrInDay) { ?>
                     <div class="bydate" id="<?php echo $dateString ?>">
-                        <span><?php echo $dateString ?></span>
+                        <span><i class="fa fa-calendar"></i><?php echo $dateString ?></span>
                     </div>     
                     <!-- start of customer review box -->
                     <?php foreach ($docArrInDay as $document) { ?>
@@ -81,13 +81,13 @@ $ssSystem = new Container('system');
                         <div class="right-box pull-right">
                             <!-- start of simple app download buttons -->
                             <div class="uc_simple_app_download_buttons">
-                                <a href="" class="uc_app_button">
+                                <!--<a href="" class="uc_app_button">
                                     <i class="fa fa-download" aria-hidden="true"></i>
                                     <span class="uc_button_app">Tải xuống </span>
-                                </a>
+                                </a>-->
                                 <a href="<?php echo URL_UPLOADS_DOCUMENTS . '/' . $document->link ?>" class="uc_app_button" target="_blank">
                                     <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="uc_button_app">Xem nhanh</span>
+                                    <span class="uc_button_app">Xem chi tiết</span>
                                 </a>
                             </div>
                         <!-- end of simple app download buttons -->
@@ -104,7 +104,8 @@ $ssSystem = new Container('system');
             </div>
             <div class="colum-date">
                 <?php foreach ($docArrCurrentMonth as $dateString => $docArrInDay) { ?>
-                <a href="#<?php echo $dateString ?>"><?php echo $dateString ?></a>
+                <a href="#<?php echo $dateString ?>"><?php echo date('d', strtotime($dateString));
+                 ?></a>
                 <?php }//end foreach ?>
             </div>
         </div>
@@ -112,48 +113,29 @@ $ssSystem = new Container('system');
         <div class="col-md-4 block col-sm-12">
             <div class="contact_info">
                 <p class="title-document">Công văn cũ hơn</p>
+                
                 <!-- start of clean accordion -->
                 <div class="uc_clean_accordion">
                     <div class="uc_clean_accordion_wrap">
                         <div id="accor-congvan" class="uc_clean_accorder_content">
+                        <?php foreach ($docArrOld as $olderMonth=>$docOlder ){
+                            /*echo "<pre>";
+                            var_dump($olderMonth);
+                            echo "</pre>";*/?>
                             <!-- start of line 1 -->
                             <h3 class="uc_head_line">
-                               <a href="" class="uc_link_tittle">Công văn tháng 4</a>
+                               <a href="" class="uc_link_tittle">Công văn <?php echo $olderMonth ?></a>
                             </h3>
                             <div class="uc_line_content">
-                               <p class="cv_p">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo<span><a href=""class="download_link"><i class="fa fa-download"></i></a>|<a><i class="fa fa-eye"></i></a></span></p>
-                                <p class="cv_p">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium 2<span><a href=""class="download_link"><i class="fa fa-download"></i></a>|<a><i class="fa fa-eye"></i></a></span></p>
-                                <p class="cv_p">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium 3<span><a href=""class="download_link"><i class="fa fa-download"></i></a>|<a><i class="fa fa-eye"></i></a></span></p>
+                            <?php foreach ($docOlder as $oderdocument ) { ?>
+                               <p class="cv_p"><?php echo $oderdocument->name; ?><span></p>
+                               <p class="cv_date"><?php echo $oderdocument->created; ?><a href=""class="download_link"><i class="fa fa-download"></i></a><a><i class="fa fa-eye"></i></a></span></p>
                                 
+                             <?php } ?>   
                             </div>
                             <!-- end of line 1 -->
-
-                            <!-- start of line 2 -->
-                            <h3 class="uc_head_line">
-                                <a href="" class="uc_link_tittle">Công văn tháng 3</a>
-                            </h3>
-                            <div class="uc_line_content">
-                                <p class="uc_des">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                            </div>
-                            <!-- end of line 2 -->
-
-                            <!-- start of line 3 -->
-                            <h3 class="uc_head_line">
-                                <a href="" class="uc_link_tittle">Công văn tháng 2</a>
-                            </h3>
-                            <div class="uc_line_content">
-                                <p class="uc_des">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                            </div>
-                            <!-- end of line 3 -->
-
-                            <!-- start of line 4 -->
-                            <h3 class="uc_head_line">
-                                <a href="" class="uc_link_tittle">Công văn tháng 1</a>
-                            </h3>
-                            <div class="uc_line_content">
-                                <p class="uc_des">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
-                            </div>
-                            <!-- end of line 4 -->
+                            <?php } ?>
+                            
                         </div>
                     </div>
                 </div>

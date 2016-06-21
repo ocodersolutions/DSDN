@@ -196,9 +196,33 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     color: #fff;
 }
 .document_new .wrap {
-    max-height: 535px;
+    max-height: 745px;
     overflow: scroll;
     width: 95%;
+    float: left;
+}
+.document_new .wrap .bydate{
+        background: rgb(255, 70, 0);;
+    color: #fff;
+}
+.document_new .wrap .bydate i{
+    margin:0 5px;
+    line-height: 25px;
+}
+
+.document_new .colum-date {
+    float: right;
+    width: 5%;
+    text-align: center;
+}
+.document_new .colum-date a{
+    color: #fff;
+    margin: 2px 0;
+    box-sizing: border-box;
+    padding: 2px;
+    display: block;
+    width: 100%;
+    background-color: #ff4600;
 }
 .contact-content{
 	padding: 0;
@@ -214,24 +238,11 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
 	width: 100%;
 	height:200px;
 }
-.contact_info .cv_p{
-	padding-bottom: 7px;
-    margin-bottom: 10px;
-    border-bottom: 1px dotted;
-}
-.contact_info .cv_p::after {
-    content: "";
-    display: block;
-    clear: both;
-}
+
 .contact_info span{
 	float: right;
 }
-.contact_info span a{
-	border: 1px solid;
-    padding: 0 15px 0;
-    background: rgba(0, 0, 0, 0.24);
-}/*=== form login ===*/
+/*=== form login ===*/
 .form-box{
     font-family:  "Century Gothic";
     font-size: 16px;

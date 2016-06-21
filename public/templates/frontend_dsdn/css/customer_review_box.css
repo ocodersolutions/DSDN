@@ -9,15 +9,15 @@
     border-bottom: 1px solid silver;
 }
 .uc_customer_review_box .left-box{
-	width: 40%;
+	width: 65%;
 	display: inline-block;
 }
 .uc_customer_review_box .right-box{
-	width: 60%;
+	width: 35%;
 }
 .uc_customer_review_box .uc_content {
 	display: block;
-	padding: 20px 5px 0;
+	padding: 5px 5px 0;
 	font: 16px Century Gothic;
 	color: #000;
 	text-align: justify;
