@@ -53,6 +53,8 @@ class DocumentController extends OcoderBaseController
         // $this->_params['ssFilter']['filter_keyword_value'] = $aliasCategory;
         $docArrCurrentMonth = $documentTableGateway->listItemCurrentMonth();
 
+        $docArrOld = $documentTableGateway->listItemOld();
+
         
 
         // unset($this->_params['ssFilter']);
