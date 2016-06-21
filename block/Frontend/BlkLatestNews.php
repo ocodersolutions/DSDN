@@ -19,11 +19,13 @@ class BlkLatestNews extends AbstractHelper {
             'currentPageNumber' => 1,
         );
         $params['paginator'] = $paginator;
-        $params['ssFilter']['filter_category_greater'] = NEWS_CATEGORY_ID;
+        //$params['ssFilter']['filter_category_greater'] = NEWS_CATEGORY_ID;
+        $params['ssFilter']['filter_category_head'] = NEWS_CATEGORY_ID;
+        $params['ssFilter']['filter_category_end'] = RECRUITMENT_CATEGORY_ID ;
         $params['ssFilter']['order_by'] = 'id';
         $params['ssFilter']['order'] = 'desc';
         $this->_data = $articleTable->listItem($params, array('task' => 'list-item'));
-        
+       
         return $this->_data;
     }
 

@@ -304,6 +304,9 @@ header .textwidget {
      line-height: 23px;
      border-right: 1px solid rgba(255, 255, 255, 0.18);
  }
+ .menu-main .navbar-nav li a:last-child{
+    border-right: none;
+ }
  .menu-main .navbar-nav li ul {
      background: #004EBC;
  }

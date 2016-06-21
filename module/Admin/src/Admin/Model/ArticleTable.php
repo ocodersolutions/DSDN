@@ -80,6 +80,11 @@ class ArticleTable extends AbstractTableGateway {
 
                 if (!empty($ssFilter['filter_category_greater'])) {
                     $select->where->greaterThanOrEqualTo('category_id', $ssFilter['filter_category_greater']);
+                                
+                }
+                if ((!empty($ssFilter['filter_category_head']))&(!empty($ssFilter['filter_category_end']))) {
+                    $select->where->greaterThanOrEqualTo('category_id', $ssFilter['filter_category_head'])
+                                    ->lessThanOrEqualTo('category_id', $ssFilter['filter_category_end']);
                 }
 
                 if (!empty($ssFilter['filter_keyword_type']) && !empty($ssFilter['filter_keyword_value'])) {
