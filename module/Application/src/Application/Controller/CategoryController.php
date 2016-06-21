@@ -139,6 +139,27 @@ class CategoryController extends OcoderBaseController {
         ));
     }
 
+    public function acmailerAction() {
+        $mailService = $this->getServiceLocator()->get('AcMailer\Service\MailService');
+        $mailService->setSubject('This is the subject')
+                    ->setBody('This is the body'); // This can be a string, HTML or even a zend\Mime\Message or a Zend\Mime\Part
+
+        $result = $mailService->send();
+        if ($result->isValid()) {
+            echo 'Message sent. Congratulations!';
+        } else {
+            if ($result->hasException()) {
+                echo sprintf('An error occurred. Exception: \n %s', $result->getException()->getTraceAsString());
+            } else {
+                echo sprintf('An error occurred. Message: %s', $result->getMessage());
+            }
+        }
+
+        return false;
+
+    }
+
+
     public function articleAction() {
         $stringHelperOcoder = new \Ocoder\Helper\String();
         $aliasArticle = $this->params('alias');

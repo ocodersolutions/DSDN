@@ -51,7 +51,9 @@
 @media (max-width: 1190px) {
     .uc_simple_app_download_buttons .uc_app_button {
         padding:6px;
+       
     }
+   
 }
 @media (max-width: 991px) {
     .uc_simple_app_download_buttons .uc_app_button {

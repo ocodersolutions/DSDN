@@ -159,6 +159,7 @@
      .tinanh {
         margin-right: 0px;
      }
+
  }
 
 @media (max-width: 991px) {
@@ -267,6 +268,18 @@
      .loss-type .col-md-6 {
          padding: 0;
      }
+     .document_new .wrap {
+        width: 93%;
+    }
+     .document_new .colum-date{
+        width: 7%;
+     }
+      .document_new .wrap {
+        width: 90% !important;
+    }
+    .document_new .colum-date {
+        width: 10% !important;
+    }
 
  }
  
@@ -367,7 +380,23 @@
     .contact-content img{
         height: auto!important;
     }
-    
+    .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content .cv_date{
+        font-size: 12px;
+    }
+    .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content .cv_date a {
+        padding:0 5px;
+    }
+    .uc_customer_review_box .left-box .uc_name{
+        margin-top: 10px;
+        font: bold 12px Century Gothic;
+    }
+    .document_new .wrap {
+        width: 90% !important;
+    }
+    .document_new .colum-date {
+        width: 10% !important;
+    }
+
  }
  
  @media (max-width: 399px) {

@@ -1,121 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<title>Công Ty Cổ Phần Thông Tin Tín Hiệu Đường Sắt Đà Nẵng | Công Ty CP Thông Tin Tín Hiệu Đường Sắt Đà Nẵng. ĐC: 218 Hải Phòng, P.Tân Chính, Q.Thanh Kkê, TP. Đà Nẵng. ĐT: (0511)3825472.</title>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/owl.carousel.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="css/style.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="css/responsive.css" media="all" rel="stylesheet" type="text/css"/>
-    <link href="css/background_image_content_box.css" media="all" rel="stylesheet" type="text/css"/>
-    <link rel="stylesheet" type="text/css" href="css/team_member_hover_effect.css"/>
-    <link rel="stylesheet" type="text/css" href="css/clean_accordion.css"/>
-    <link rel="stylesheet" type="text/css" href="css/customer_logo_carousel.css"/>
-    <link rel="stylesheet" type="text/css" href="css/minimal_logo_carousel.css" media="all"/>
-    <link rel="stylesheet" type="text/css" href="css/flexslider.css" />
-    <link rel="stylesheet" type="text/css" href="css/customer_review_box.css" />
-    <link rel="stylesheet" type="text/css" href="css/simple_app_download_buttons.css" />
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css" />
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/flexslider.css" />
-    <link rel="stylesheet" type="text/css" href="css/contact.css" />
-    <script src="https://code.jquery.com/jquery-1.11.2.js"   integrity="sha256-WMJwNbei5YnfOX5dfgVCS5C4waqvc+/0fV7W2uy3DyU="   crossorigin="anonymous"></script>
-    <script src="js/bootstrap.js"></script>
-    <script src="js/jquery.js"></script>
-    <script src="js/jquery.flexslider-min.js"></script>
-</head>
-<body>
-	<!-- Docs master nav -->
-    <header class="navbar navbar-static-top bs-docs-nav" id="top" role="banner">
-        <div class="header-wrapper container">
-            <div class="row">
-            	<div class="container">
-                    <div id="text-2" class="widget_text">
-                        <div class="textwidget">
-                            <div class="logo col-sm-4 col-xs-6">
-                                <a class="home-link" href="#" title="First Choice Restoration" rel="home">
-                                <img class="img-rize" src="img/logo/logo-2.png" alt="logo">
-                                </a>
-                            </div>
-                            <div class="phone col-sm-8 col-xs-6">
-                                <div class="content">
-                                    <span class="title">Gọi ngay hôm nay</span><br>
-                                    <span class="phone-number">(0511)3825472</span><br>
-                                    <span class="wrt">Công Ty CP Thông Tin Tín Hiệu Đường Sắt Đà Nẵng</span><br>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="menu-main">
-        <div class="container">
-            <div class="navbar-header">
-                <div id="text-4" class="widget_text">
-                    <div class="textwidget"><a href="#" class="request-quote">Trang chủ</a></div>
-                </div>
-                <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-            </div>
-            <nav class="collapse navbar-collapse bs-navbar-collapse">
-                
-                <ul class="parent nav navbar-nav">
-                    <li class="parent-item ">
-                        <a href="#">Liên hệ</a>
-                    </li>
-                    <li class="parent-item ">
-                        <a href="#">Công văn</a>
-                    </li>
-                    <li class="parent-item dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Dịch vụ <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Cung cấp thiết bị</a></li>
-                            <li><a href="#">Bảo trì vận hành</a></li>
-                            <li><a href="#">Tư vấn thiết kế</a></li>
-                            <li><a href="#">Dịch vụ khác</a></li>
-                        </ul>
-                    </li>
-                    <li class="parent-item dropdown">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Tin tức <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Tin nội bộ</a></li>
-                            <li><a href="#">Tin tức liên quan</a></li>
-                            <li><a href="#">Tin công nghệ</a></li>
-                        </ul>
-                    </li>
-                    <li class="parent-item ">
-                        <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="#">Đơn vị thành viên <span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="#">Xí nghiệp TTTH ĐS Bình Trị Thiên</a></li>
-                            <li><a href="#">Xí nghiệp TTTH ĐS Quảng Nam - Đà Nẵng</a></li>
-                            <li><a href="#">Xí nghiệp TTTH ĐS Nghĩa Bình</a></li>
-                            <li><a href="#">Xí nghiệp SX & XLCT</a></li>
-                        </ul>
-                    </li>
-                    <li class="parent-item ">
-                        <a href="#">Tin ảnh</a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </div>
+<?php include "header.php";?>
     <div class="container topslider">
         <div class="flexslider">
-            <ul class="slides">
-                <li><img src="img/top-slider/slide15.jpg" /></li>
-                <li><img src="img/top-slider/slide16.jpg" /></li>
-                <li><img src="img/top-slider/slide17.jpg" /></li>
-                <li><img src="img/top-slider/slide18.jpg" /></li>
-                <li><img src="img/top-slider/slide19.jpg" /></li>
-                <li><img src="img/top-slider/slide20.jpg" /></li>
-            </ul>
+        	<ul class="slides">
+        		<li><img src="img/top-slider/slide15.jpg" /></li>
+        		<li><img src="img/top-slider/slide16.jpg" /></li>
+        		<li><img src="img/top-slider/slide17.jpg" /></li>
+        		<li><img src="img/top-slider/slide18.jpg" /></li>
+        		<li><img src="img/top-slider/slide19.jpg" /></li>
+        		<li><img src="img/top-slider/slide20.jpg" /></li>
+        	</ul>
         </div>
     </div>
     <div class="container page-home page-default">
@@ -425,7 +318,7 @@
             </div>
             
             <div class="row">
-                <div class="container">
+            	<div class="container">
                     <div class="image_background"></div>
                     <div id="text-7" class="widget_text">
                         <div class="textwidget">
@@ -622,13 +515,4 @@
             </div>
         </div>
     </div>
-    </footer>
-    
-    <!-- js occodion in maincontent-->
-    <script src="js/jquery-ui.js"></script>
-    <script src="js/owl.carousel.min.js" type="text/javascript"></script>
-    <!-- main js file -->
-    <script src="js/main.js"></script>
-    
-</body>
-</html>
+    <?php include "footer.php";?>
