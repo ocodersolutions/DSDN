@@ -219,7 +219,7 @@ class UserTable extends AbstractTableGateway {
            // print_r($data);
             //print_r($arrParam['userid']);die;
             $this->tableGateway->update($data, array('id' => $arrParam['id']));
-            return $arrParam['userid'];
+            return $arrParam['id'];
         }
     }
 

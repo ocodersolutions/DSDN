@@ -42,7 +42,7 @@ class IndexController extends OcoderBaseController
         unset($this->_params['ssFilter']);
         $this->_params['paginator']['itemCountPerPage'] = 4;
         $this->_params['ssFilter']['order_by'] = 'id';
-        $this->_params['ssFilter']['order'] = 'DESC';
+        $this->_params['ssFilter']['order'] = 'ASC';
         $this->_params['ssFilter']['filter_category'] = SERVICE_CATEGORY_ID;
         $services = $articleTableGateway->listItem($this->_params, array('task' => 'list-item'));
         
@@ -108,7 +108,7 @@ class IndexController extends OcoderBaseController
             'keyword'  => $_GET['tk'],
         ));
     }
-	
+
 	public function googleAction(){
 		echo 'google-site-verification: google46462e6475c9b871.html';
 		return $this->getResponse();

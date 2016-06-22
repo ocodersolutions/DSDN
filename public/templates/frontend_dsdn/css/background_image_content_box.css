@@ -56,16 +56,16 @@
     -webkit-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-#orange .uc_item_link .uc_banner_box:before{
+#service1 .uc_item_link .uc_banner_box:before{
     background: #ff5b23;
 }
-#blue .uc_item_link .uc_banner_box:before{
+#service6 .uc_item_link .uc_banner_box:before{
     background: #0651BA;
 }
-#sky .uc_item_link .uc_banner_box:before{
+#service7 .uc_item_link .uc_banner_box:before{
     background: #07DDF8;
 }
-#green .uc_item_link .uc_banner_box:before{
+#service2 .uc_item_link .uc_banner_box:before{
     background: #09E20C;
 }
 .uc_background_image_content_box .uc_item_html .uc_add_cart {
@@ -85,13 +85,13 @@
     background: none;
     color: #fff;
 }
- .uc_background_image_content_box#sky .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add{
+ .uc_background_image_content_box#service7 .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add{
     background-color:  #07DDF8;
 }
-.uc_background_image_content_box#green .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add{
+.uc_background_image_content_box#service2 .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add{
     background-color:   #09E20C;
 }
-.uc_background_image_content_box#blue .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add{
+.uc_background_image_content_box#service6 .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add{
     background-color:   #0651BA;
 }
 .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add {
@@ -124,15 +124,15 @@
 
 @media only screen and (min-width: 1200px) {
 
-    #blue .uc_item_link:hover .uc_banner_box:before,
-    #sky .uc_item_link:hover .uc_banner_box:before,
-    #green .uc_item_link:hover .uc_banner_box:before,
-    #orange .uc_item_link:hover .uc_banner_box:before {
+    #service6 .uc_item_link:hover .uc_banner_box:before,
+    #service7 .uc_item_link:hover .uc_banner_box:before,
+    #service2 .uc_item_link:hover .uc_banner_box:before,
+    #service1 .uc_item_link:hover .uc_banner_box:before {
         top: -15px; 
     }
 
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_item_tittle{
-        font: bold 22px/27px 'Century Gothic';
+        font: bold 19px/27px 'Century Gothic';
         margin: 48px 0px 5px;
         text-transform: uppercase;
     }
@@ -168,25 +168,25 @@
     .uc_background_image_content_box .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
         background: rgba(41, 41, 41, 0.9); 
     }
-    .uc_background_image_content_box#sky .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
+    .uc_background_image_content_box#service7 .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
         background: rgba(41, 41, 41, 0.9); 
     }
-    .uc_background_image_content_box#blue .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
+    .uc_background_image_content_box#service6 .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
         background: rgba(41, 41, 41, 0.9); 
     }
-    .uc_background_image_content_box#green .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
+    .uc_background_image_content_box#service2 .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add {
         background: rgba(41, 41, 41, 0.9); 
     }
     .uc_background_image_content_box .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
         background: rgba(255, 91, 35, 0.8); 
     }
-    .uc_background_image_content_box#sky .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
+    .uc_background_image_content_box#service7 .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
         background: #07DDF8; 
     }
-    .uc_background_image_content_box#blue .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
+    .uc_background_image_content_box#service6 .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
         background:#0651BA; 
     }
-    .uc_background_image_content_box#green .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
+    .uc_background_image_content_box#service2 .uc_item_link:hover .uc_banner_box .uc_add_cart:hover .uc_link_add:after {
         background: #09E20C; 
     }
     
@@ -243,13 +243,14 @@
 @media (min-width: 480px) and (max-width: 767px) {
    
     .uc_background_image_content_box .uc_item_html .uc_item_tittle {
+        margin-top: 25px !important;
         font: bold 20px/22px 'Century Gothic', serif;
     }
     .uc_background_image_content_box .uc_item_html .uc_content_des {
         display: none; 
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add  {
-        font: bold 16px/20px 'Century Gothic', sans-serif;
+        font: bold 12px/20px 'Century Gothic', sans-serif;
         padding: 8px 10px 10px 11px; 
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after{
@@ -267,20 +268,23 @@
         padding: 0 5px 10px; 
     }
     .uc_background_image_content_box .uc_item_html .uc_item_tittle {
-        margin-top: 10px;
-        font: bold 14px/18px 'Century Gothic', serif; 
+        margin-top: 25px;
+        font: bold 19px/18px 'Century Gothic', serif;
     }
     .uc_background_image_content_box .uc_item_html .uc_content_des {
         display: none; 
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add {
-        font: bold 8px/8px 'Century Gothic', sans-serif;
-        padding: 4px 6px 4px 6px; 
+        margin-bottom: 12px;
+        margin-left: 5px;
+        font: bold 10px/14px 'Century Gothic', sans-serif;
+        padding: 8px 6px 4px 6px;
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after{
-        font-size: 8px;
-        line-height: 16px;
-        width: 13px; 
+        font-size: 13px;
+        line-height: 26px;
+        width: 19px;
+
     }
     
 }
@@ -311,8 +315,8 @@
     }
     .uc_background_image_content_box .uc_banner_box .uc_item_html .uc_add_cart .uc_link_add:after{
         font-size: 15px;
-        line-height: 29px;
-        width: 29px; 
+        line-height: 27px;
+        width: 18px;
     } 
 }
 @-webkit-keyframes moveFromLeft {

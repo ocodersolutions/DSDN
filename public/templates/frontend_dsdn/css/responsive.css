@@ -56,6 +56,12 @@
  }
  
  @media (max-width: 1299px) {
+    .page-home .sub-slider .service_wrap{
+        width: 90% ;
+    }
+    .page-home .sub-slider .service_wrap .slide-item{
+        margin-right: 7px;
+    }
      .title-default {
          font-size: 16px;
      }
@@ -89,6 +95,12 @@
  }
  
  @media (max-width: 1023px) {
+    .page-home .sub-slider .service_wrap{
+        
+    }
+    .page-home .sub-slider .service_wrap .slide-item{
+        margin-right: 5px;
+    }
      .container {
          padding: 0;
      }
@@ -161,6 +173,9 @@
  }
 
 @media (max-width: 991px) {
+    .page-home .sub-slider .service_wrap{
+
+    }
     .menu-main .request-quote {
         font-size: 12px;
     }
@@ -177,6 +192,15 @@
 }
  
  @media (max-width: 767px) {
+    .page-home .sub-slider .service_wrap{
+
+    }
+    .page-home .sub-slider .service_wrap .slide-item{
+       margin-bottom: -20px;
+        margin-left: 4px;
+        margin-right: 2px;
+        width: 48% !important;
+    }
      .container-fluid > .navbar-collapse,
      .container-fluid > .navbar-header,
      .container > .navbar-collapse,
@@ -282,6 +306,15 @@
  }
  
  @media (max-width: 479px) {
+    .page-home .sub-slider .service_wrap{
+        width: 100%;
+    }
+     .page-home .sub-slider .service_wrap .slide-item{
+       margin-bottom: -20px;
+        margin-left: 2px;
+        margin-right: 2px;
+        width: 48% !important;
+    }
      header .logo,
      header .phone {
          width: 100%;
@@ -398,6 +431,9 @@
  }
  
  @media (max-width: 399px) {
+    .page-home .sub-slider .service_wrap{
+
+    }
      .click-to-call-phone {
          font-size: 22px;
      }

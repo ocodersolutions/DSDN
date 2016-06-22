@@ -9,6 +9,7 @@ $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
 
 $featuredProducts = $this->featuredProducts;
+
 ?>
 
 <div class="container topslider">
@@ -40,20 +41,44 @@ $featuredProducts = $this->featuredProducts;
         <div class="content">
             <div id="text-6" class="widget_text">
                 <div class="textwidget">
-                    <div class="sub-slider row">
-                        <div class="col-xs-10 col-sm-10 col-sm-offset-1 col-xs-offset-1">
-                            <div class="row">
+                    <div class="sub-slider">
+                        <div class="service_wrap">
+                           <?php 
+                           foreach ($this->services as $service) {
                             
-                                <div class="slide-item col-sm-3 col-xs-5 ">
-                                    <div class="uc_background_image_content_box" id="orange">
-                                        <a href="<?php echo URL_APPLICATION ?>/bv/quan-ly-bao-tri-1"class="uc_item_link"/>
+                            if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                                $name = $service->name;
+                                $alias =$service->alias;
+                                $intro = $service->intro;
+                            } else {
+                                $nameLang = json_decode($service->name_lang);
+                                $nameField = 'name_' . $ssSystem->language;
+                                $name = $nameLang->$nameField;
+                                $aliasLang = json_decode($service->alias_lang);
+                                $aliasField = 'alias_' . $ssSystem->language;
+                                $alias = $aliasLang->$aliasField;
+                                $introLang = json_decode($service->intro_lang);
+                                $introField = 'intro_' . $ssSystem->language;
+                                $intro = $introLang->$introField;
+                            }
+
+                            if (trim($service->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $service->thumbnail)) {
+                                $imageUrl = URL_APPLICATION . $service->thumbnail;
+                            } else {
+                                $imageUrl = $urlImage_DSDN . '/tinanh/no-image.png';
+                            }
+                            ?>
+                            
+                               <div class="slide-item ">
+                                    <div class="uc_background_image_content_box" id="<?php echo 'service'.$service->id?>">
+                                        <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>" class="uc_item_link"/>
                                             <!-- start of box content block -->
                                             <div class="uc_banner_box">
-                                                <img src="<?php echo $urlImage_DSDN; ?>/services/orange_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
+                                                <img src="<?php echo $imageUrl ?>" alt="tàu hỏa " class="uc_item_img"/>
                                                 <!-- overplay block -->
                                                 <div class="overplay"></div>
                                                 <div class="uc_item_html">
-                                                    <h2 class="uc_item_tittle">Quản lý - Bảo trì</h2>
+                                                    <h2 class="uc_item_tittle"><?php echo $service->name?></h2>
                                                    <button class="uc_add_cart">
                                                         <span class="uc_link_add">Xem chi tiết!</span>
                                                     </button>
@@ -64,11 +89,11 @@ $featuredProducts = $this->featuredProducts;
                                     </div>
                                     <!-- end of background image content box-->
                                 </div>
-                               
-                                <div class="slide-item col-sm-3 col-xs-5">
+                                <?php } //end foreach ?>
+                                <!-- <div class="slide-item ">
                                     <div class="uc_background_image_content_box" id="green">
                                         <a href="<?php echo URL_APPLICATION.'/bv/tu-van-xay-dung-cong-trinh-2'?>" class="uc_item_link">
-                                            <!-- start of box content block -->
+                                           
                                             <div class="uc_banner_box">
                                                 <img src="<?php echo $urlImage_DSDN ?>/services/green-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <div class="overplay"></div>
@@ -79,15 +104,15 @@ $featuredProducts = $this->featuredProducts;
                                                     </button>
                                                 </div>
                                             </div>
-                                            <!-- end of box content block -->
+                                         
                                         </a>
                                     </div>
-                                    <!-- end of background image content box-->
+                                   
                                 </div>
-                                <div class="slide-item col-sm-3 col-xs-5 ">
+                                <div class="slide-item  ">
                                     <div class="uc_background_image_content_box" id="blue">
                                         <a href="<?php echo URL_APPLICATION.'/bv/san-xuatsua-chua-6'?>" class="uc_item_link">
-                                            <!-- start of box content block -->
+                                          
                                             <div class="uc_banner_box">
                                                 <img src="<?php echo $urlImage_DSDN ?>/services/blue_train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <div class="overplay"></div>
@@ -98,15 +123,15 @@ $featuredProducts = $this->featuredProducts;
                                                     </button>
                                                 </div>
                                             </div>
-                                            <!-- end of box content block -->
+                                           
                                         </a>
                                     </div>
-                                    <!-- end of background image content box-->
+                                   
                                 </div>
-                                <div class="slide-item col-sm-3 col-xs-5">
+                                <div class="slide-item">
                                     <div class="uc_background_image_content_box" id="sky">
                                         <a href="<?php echo URL_APPLICATION.'/bv/cac-dich-vu-khac-7'?>" class="uc_item_link">
-                                            <!-- start of box content block -->
+                                          
                                             <div class="uc_banner_box">
                                                 <img src="<?php echo $urlImage_DSDN ?>/services/yellow-train.jpg" alt="tàu hỏa " class="uc_item_img"/>
                                                 <div class="overplay"></div>
@@ -117,13 +142,13 @@ $featuredProducts = $this->featuredProducts;
                                                     </button>
                                                 </div>
                                             </div>
-                                            <!-- end of box content block -->
+                                           
                                         </a>
                                     </div>
-                                    <!-- end of background image content box-->
-                                </div>
+                                  
+                                </div>-->
                                
-                            </div>
+                            
                         </div>
                     </div>
                 </div>
@@ -236,7 +261,7 @@ $featuredProducts = $this->featuredProducts;
                                         </a><div id="awcc1465456113431" class="aw-widget-current"  data-locationkey="2-352954_1_AL" data-unit="c" data-language="vi" data-useip="false" data-uid="awcc1465456113431"></div>
                                         <script type="text/javascript" src="http://oap.accuweather.com/launch.js"></script>
                                     </div> 
-                                    <div class="menu-left-1 block">
+                                    <!--<div class="menu-left-1 block">
                                         <h2 class="title-default">THỐNG KÊ LƯỢNG TRUY CẬP</h2>
                                         <ul class="menu-list">
                                             <li class="sub-title-default"><i class="fa fa-users"></i> Đang truy cập : 17</li>

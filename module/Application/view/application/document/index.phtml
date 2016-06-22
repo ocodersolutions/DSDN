@@ -118,10 +118,7 @@ $ssSystem = new Container('system');
                 <div class="uc_clean_accordion">
                     <div class="uc_clean_accordion_wrap">
                         <div id="accor-congvan" class="uc_clean_accorder_content">
-                        <?php foreach ($docArrOld as $olderMonth=>$docOlder ){
-                            /*echo "<pre>";
-                            var_dump($olderMonth);
-                            echo "</pre>";*/?>
+                        <?php foreach ($docArrOld as $olderMonth=>$docOlder ){ ?>
                             <!-- start of line 1 -->
                             <h3 class="uc_head_line">
                                <a href="" class="uc_link_tittle">Công văn <?php echo $olderMonth ?></a>
@@ -129,7 +126,7 @@ $ssSystem = new Container('system');
                             <div class="uc_line_content">
                             <?php foreach ($docOlder as $oderdocument ) { ?>
                                <p class="cv_p"><?php echo $oderdocument->name; ?><span></p>
-                               <p class="cv_date"><?php echo $oderdocument->created; ?><a><i class="fa fa-eye"></i></a></span></p>
+                               <p class="cv_date"><?php echo $oderdocument->created; ?><a href="<?php echo URL_UPLOADS_DOCUMENTS . '/' . $document->link ?>" target="_blank"><i class="fa fa-download"></i></a></span></p>
                                 
                              <?php } ?>   
                             </div>

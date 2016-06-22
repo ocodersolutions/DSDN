@@ -224,6 +224,9 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     width: 100%;
     background: rgb(199, 211, 239);
 }
+.document_new .colum-date a:hover,.document_new .colum-date a:active{
+     background: rgb(1, 3, 248);
+}
 .contact-content{
 	padding: 0;
 }
