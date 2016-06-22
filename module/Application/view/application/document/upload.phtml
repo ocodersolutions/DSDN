@@ -23,14 +23,15 @@ $documents = $this->documents;
         <div class="breakum-line">
             <a href="">Trang chủ</a>/<span> Công văn nội bộ</span>
         </div>
-        <div class="col-md-7 col-sm-12">
-            <form method="POST" enctype="multipart/form-data">
+        <div class="col-md-7 col-sm-12 block">
+            <form id="formUploadDoc" method="POST" enctype="multipart/form-data">
                 <div class="row block">
                     <div class="col-sm-4">
                         <p class="formlabel">Tên Công văn :</p>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" name="name" class="input_fname"/>
+                        <input type="text" name="name" class="input_fname" id="docname"  />
+                         <span id="nameErr" style="color:red"></span>
                     </div>
                 </div>
                 <div class="row block">
@@ -38,15 +39,17 @@ $documents = $this->documents;
                         <p class="formlabel">Mô tả :</p>
                     </div>
                     <div class="col-sm-8">
-                        <textarea name="description"></textarea>
+                        <textarea name="description" id="docdes" ></textarea>
+                        <span id="desErr" style="color:red"></span>
                     </div>
                 </div>
-                <div class="row">
+                <div class="row block">
                     <div class="col-sm-4">
                         <p class="formlabel">File tải lên :</p>
                     </div>
                     <div class="group-button col-sm-8">
-                        <input type="file" name="document"/>
+                        <input type="file" name="link" id="file"/>
+                         <span id="fileErr" style="color:red"></span>
                     </div>
                 </div>
                 <div class="row">
@@ -62,3 +65,32 @@ $documents = $this->documents;
         </div>
     </div>
 </div>
+<script>
+    $(document).ready(function() {
+        
+        $('#formUploadDoc').on ('submit',function(e) {
+            var docname = $('#docname').val();
+            var docdes = $('#docdes').val();
+            var file = $('#file').val();
+            if( docname == ''){
+            e.preventDefault();
+            $('#docname').addClass('has-err');
+            $('#nameErr').text('* Vui lòng nhập tên công văn');
+            
+           } else {
+            if( docdes == ''){
+            e.preventDefault();
+            $('#docdes').addClass('has-err');
+            $('#desErr').text('* Không để trống mô tả');  
+               
+           }else {
+                if (file == ''){
+                    e.preventDefault();
+                 $('#fileErr').text('* vui lòng chọn file');  
+                }
+            }
+        }
+        form.submit();
+        });
+    });
+</script>
