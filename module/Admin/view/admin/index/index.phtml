@@ -42,6 +42,7 @@ echo $this->form()->openTag($myForm);
                     <div class="form-group"><?php echo $this->formLabel($myForm->get('company_phone')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('company_phone')) ?></div></div>
                     <div class="form-group"><?php echo $this->formLabel($myForm->get('company_fax')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('company_fax')) ?></div></div>
                     <div class="form-group"><?php echo $this->formLabel($myForm->get('company_email')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('company_email')) ?></div></div>
+
                 </div><!-- /.tab-pane -->
                 <!--<div class="tab-pane" id="tab_english">
                     <div class="form-group"><?php //echo $this->formLabel($myForm->get('title_en')) ?><div class="col-xs-6"><?php //echo $this->formElement($myForm->get('title_en')) ?></div></div>
@@ -61,11 +62,11 @@ echo $this->form()->openTag($myForm);
                 </div><!-- /.tab-pane -->
             </div><!-- /.tab-content -->
         </div><!-- nav-tabs-custom -->
-
+        <div class="form-group"><?php echo $this->formLabel($myForm->get('filetype_doc')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('filetype_doc')) ?><br/> <i style="display:block;clear:both">(*.doc,*.docx,*.img,...)</i></div></div>
         <div class="form-group"><?php echo $this->formLabel($myForm->get('logo')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('logo')) ?><input type="button" id="BrowseImageIcon" value="<?php echo BROWSER_IMAGE; ?>" style="height: 34px;" /><br/> <i>(250px * 85px)</i></div></div>
         <div class="form-group"><?php echo $this->formLabel($myForm->get('intro_image')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('intro_image')) ?><input type="button" id="BrowseImageIcon1" value="<?php echo BROWSER_IMAGE; ?>" style="height: 34px;" /><br/> <i>(215px * 130px)</i></div></div>
         <div class="form-group"><?php echo $this->formLabel($myForm->get('iframe_youtube')) ?><div class="col-xs-9"><?php echo $this->formElement($myForm->get('iframe_youtube')) ?><!--<input type="button" id="BrowseImageIcon2" value="<?php echo BROWSER_IMAGE; ?>" style="height: 34px;" /></div>-->
-
+        
         <?php echo $this->formHidden($myForm->get('id')) ?>
         <?php echo $this->formHidden($myForm->get('action')) ?>
 

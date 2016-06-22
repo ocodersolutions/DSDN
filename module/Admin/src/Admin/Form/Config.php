@@ -387,6 +387,25 @@ class Config extends Form {
                 )
             ),
         ));
+        // Intro file type document
+        $this->add(array(
+            'name' => 'filetype_doc',
+            'type' => 'Text',
+            'attributes' => array(
+                'class' => 'form-control',
+                'id' => 'DocType1',
+                'style' => 'width: 500px; float: left',
+                'placeholder' => 'Nhập định dạng file cho Công văn',
+            ),
+            'options' => array(
+                'label' => FILETYPE_DOCUMENT,
+                'label_attributes' => array(
+                    'for' => 'intro_image',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
+       
         
         // Contact Info
         $this->add(array(

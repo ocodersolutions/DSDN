@@ -124,3 +124,4 @@ define("COMPANY_HISTORY", "Lịch sử phát triển công ty");
 define("COMPANY_BUSINESS", "Nghành nghề kinh doanh");
 define("MEMBERS", "Đơn vị thành viên");
 define("SHAREHOLDER", "Quan hệ cổ đông");
+define("FILETYPE_DOCUMENT", "Kiểu file Công văn");
