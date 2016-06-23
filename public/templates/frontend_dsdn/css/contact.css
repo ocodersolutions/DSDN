@@ -518,6 +518,40 @@ ul.pagination_news  li a:focus{
     top: 0px;
     /*right: 0px;*/
 }
+/*============= category in detail page ===================*/
+.page-default .content .col_left{
+    position: relative;
+}
+.page-default .content .col_left .Category {
+    z-index: 100;
+    list-style-type: none;
+    border-radius: 5px;
+    background: #a7a7a7;
+    border: 1px solid #004ebc;
+    
+}
+
+
+.page-default .content .col_left .Category .CategoryChild {
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+.page-default .content .col_left .Category .CategoryChild:hover {
+    background-color: #004ebc;
+}
+.page-default .content .col_left .Category .CategoryChild:hover a {
+    text-decoration: none;
+    color: #FFF;
+}
+.page-default .content .col_left .Category .CategoryChild a {
+    color: #004ebc;
+     font: bold 14px "Century Gothic";
+}
+.fixed {
+    position: fixed;
+    top:20px;
+    width: 255px;
+}
 @media (min-width: 1191px){
    .search button p{
     display: block;
@@ -541,6 +575,9 @@ ul.pagination_news  li a:focus{
 }
 }
 @media (max-width: 991px){
+    .page-default .content .col_left{
+    display: none;
+}
     .search button i{
     display: block;
     float: left;

@@ -7,25 +7,31 @@ use Zend\Session\Container;
 
 $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
-
+$arrayNews= array (NEWS_CATEGORY_ID,RELATENEWS_CATEGORY_ID,INTERNALNEWS_CATEGORY_ID,RECRUITMENT_CATEGORY_ID);
+$arrayService= array (SERVICE_CATEGORY_ID);
+$arrayShareholder= array(SHAREHOLDER_CATEGORY_ID ,NOTIFICATION_CATEGORY_ID,FINANCIAL_CATEGORY_ID,SHAREHOLDER_MEET_CATEGORY_ID,SHAREINFO_CATEGORY_ID,ANNUALREPORT_CATEGORY_ID,BOARDREPORT_CATEGORY_ID,GOVERNANCERULE_CATEGORY_ID,PROSPECTUSREPORT_CATEGORY_ID,CHARTERED_CATEGORY_ID );
+$arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
 ?>
 <?php
-            if ($ssSystem->language == DEFAULT_LANGUAGE) {
-                $name = $this->item->name;
-                $intro = $this->item->intro;
-                $content = $this->item->content;
-            } else {
-                $nameLang = json_decode($this->item->name_lang);
-                $nameField = 'name_' . $ssSystem->language;
-                $name = $nameLang->$nameField;
-                $introLang = json_decode($this->item->intro_lang);
-                $introField = 'intro_' . $ssSystem->language;
-                $intro = $introLang->$introField;
-                $contentLang = json_decode($this->item->content_lang);
-                $contentField = 'content_' . $ssSystem->language;
-                $content = $contentLang->$contentField;
-            }
-            ?>
+       
+        $Parent_category=$this->item->category_id;
+        var_dump($Parent_category);
+    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+        $name = $this->item->name;
+        $intro = $this->item->intro;
+        $content = $this->item->content;
+    } else {
+        $nameLang = json_decode($this->item->name_lang);
+        $nameField = 'name_' . $ssSystem->language;
+        $name = $nameLang->$nameField;
+        $introLang = json_decode($this->item->intro_lang);
+        $introField = 'intro_' . $ssSystem->language;
+        $intro = $introLang->$introField;
+        $contentLang = json_decode($this->item->content_lang);
+        $contentField = 'content_' . $ssSystem->language;
+        $content = $contentLang->$contentField;
+    }
+    ?>
     <div class="row">
         <div class="container contact-content" style="padding: 0">
             <img src="<?php echo $urlImage_DSDN?>/news.jpg" alt="">   
@@ -38,8 +44,24 @@ $helperString = new \Ocoder\Helper\String;
             <div class="breakum-line">
                 <a href="<?php echo URL_APPLICATION ?>"><?php echo HOME ?></a>/<span> <?php echo $name ?></span>
             </div>
-        
-            <div class="col-md-8 block">
+            <div class="col-md-3  pull-left">
+
+               <?php if(in_array($Parent_category,$arrayNews)){
+                 
+                    $this->blkNewsList();
+                }
+                if(in_array($Parent_category,$arrayService)){
+                    $this->blkServicCateList();
+                }
+                if(in_array($Parent_category,$arrayShareholder)){
+                    $this->blkShareHolList();
+                }
+                if(in_array($Parent_category,$arrayAboutus)){
+                    $this->blkAboutUs();
+                }
+            ?>
+            </div>
+            <div class="col-md-9 block">
                 <div class="news_content">
 
                     <p class="new_tittle block"><?php echo $name?></p>
@@ -48,24 +70,27 @@ $helperString = new \Ocoder\Helper\String;
                     <?php echo $content; ?>
                 </div>
             </div>
-            <div class="col-md-4 pull-right">
-                <div class="search padding_right5 block">
-                    <form action="<?php echo URL_APPLICATION . '/tim-kiem/' ?>" method="GET">
-                        <input type="text" class="form-control input-search" id="keyword-search" maxlength="64" name='tk' placeholder="<?php echo SEARCH ?>" value="<?php echo array_key_exists('tk', $_GET) ? $_GET['tk'] : '' ?>" />
-                        <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p><?php echo SEARCH ?></p></button>
-                    </form>
-                </div> 
-                <div class="block">
-                
-                <?php $this->blkLatestNews(); ?>
             
-                </div>
-
-                <div class="block">
-                    <?php $this->blkVideo();?>
-                </div>
-                
-            </div>
             
         </div>
     </div> 
+   <script>
+        $(document).ready(function() {
+        var PosTop = $('#posoffset').offset().top;
+        var stickyNav = function(){
+        var scrollTop = $(window).scrollTop();
+              
+        if (scrollTop > PosTop) { 
+            $('.Category').addClass('fixed');
+        } else {
+            $('.Category').removeClass('fixed'); 
+        }
+        };
+         
+        stickyNav();
+         
+        $(window).scroll(function() {
+            stickyNav();
+        });
+        });
+    </script>

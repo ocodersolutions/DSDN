@@ -1,0 +1,44 @@
+<?php
+
+use Zend\Session\Container;
+
+$ssSystem = new Container('system');
+$helperString = new \Ocoder\Helper\String;
+?>
+
+<!-- <div class="row product-categories menu-right">
+    <h3 class="col-sm-12 header-title"><span class="glyphicon glyphicon-th-large" aria-hidden="true"></span> <?php// echo NEWS ?></h3>	
+    <div class="col-sm-12 job-item">
+        <ul class="menu-sidebar list-unstyled">
+           
+                <li><a href="<?php// echo URL_APPLICATION . '/' . URL_ALIAS_NEWS . '/' . $alias ?>"><?php// echo $name ?></a></li>
+            <?php //} ?>
+        </ul>
+    </div>
+</div> -->
+<div class="col_left">
+    <div id="posoffset"></div>
+    <ul class="Category">
+            <?php
+            foreach ($this->_data as $item) {
+                if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                    $name = $item->name;
+                    $alias = $item->alias;
+                } else {
+                    $nameLang = json_decode($item->name_lang);
+                    $nameField = 'name_' . $ssSystem->language;
+                    $name = $nameLang->$nameField;
+                    $aliasLang = json_decode($item->alias_lang);
+                    $aliasField = 'alias_' . $ssSystem->language;
+                    $alias = $aliasLang->$aliasField;
+                }
+            ?>
+        <li class="CategoryChild"><a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><?php echo  $name ?></a></li>
+            <!--<li class="CategoryChild"> <a href="http://ttthdsdn.local/bv/lich-su-phat-trien-40">Lịch sử phát triển</a> </li>
+            <li class="CategoryChild"><a href="http://ttthdsdn.local/bv/so-do-to-chuc-41"> Sơ đồ tổ chức</a></li>
+        <li class="CategoryChild"><a href="http://ttthdsdn.local/bv/nhan-su-chu-chot-42"> Nhân sự chủ chốt</a></li>
+        <li class="CategoryChild"><a href="http://ttthdsdn.local/bv/don-vi-thanh-vien-43"> Đơn vị thành viên</a></li>-->
+        <?php } ?>
+    </ul>
+    
+</div>

@@ -59,7 +59,7 @@ class IndexController extends OcoderBaseController
         ));
     }
     
-    public function contactAction()
+   /* public function contactAction()
     {
         if ($this->getRequest()->isPost()) {
             // $mail = new Mail\Message();
@@ -84,8 +84,29 @@ class IndexController extends OcoderBaseController
         $this->_viewHelper->get('HeadTitle')->prepend(TITLE_CONTACT . ' - ' . $this->_configs->title);
         $this->_viewHelper->get('HeadMeta')->setName('keywords', $this->_configs->keywords);
         $this->_viewHelper->get('HeadMeta')->setName('description', $this->_configs->description);
-    }
+    }*/
+    public function acmailerAction ()
+    {   
+        if ($this->getRequest()->isPost()) {
+        $mailService = $this->getServiceLocator()->get('AcMailer\Service\MailService');
+        $mailService->setSubject('This is the subject')
+                    ->setBody('This is the body'); // This can be a string, HTML or even a zend\Mime\Message or a Zend\Mime\Part
 
+        $result = $mailService->send();
+        if ($result->isValid()) {
+            echo 'Message sent. Congratulations!';
+        } else {
+            if ($result->hasException()) {
+                echo sprintf('An error occurred. Exception: \n %s', $result->getException()->getTraceAsString());
+            } else {
+                echo sprintf('An error occurred. Message: %s', $result->getMessage());
+            }
+        }
+
+        return false;
+       }
+
+    }
     public function searchAction() {
         //set Head info
         $this->_viewHelper->get('HeadTitle')->prepend(TITLE_SEARCH . ' - ' . $this->_configs->title);

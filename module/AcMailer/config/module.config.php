@@ -31,7 +31,7 @@ return [
 
     'controllers' => [
         'factories' => [
-            'AcMailer\Controller\ConfigMigration' => 'AcMailer\Controller\Factory\ConfigMigrationControllerFactory'
+            'Apllication\Controller\IndexController' =>  'Apllication\Controller\IndexController'
         ]
     ],
 
