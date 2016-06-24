@@ -13,6 +13,7 @@ $arrayNews= array (NEWS_CATEGORY_ID,RELATENEWS_CATEGORY_ID,INTERNALNEWS_CATEGORY
 $arrayService= array (SERVICE_CATEGORY_ID);
 $arrayShareholder= array(SHAREHOLDER_CATEGORY_ID ,NOTIFICATION_CATEGORY_ID,FINANCIAL_CATEGORY_ID,SHAREHOLDER_MEET_CATEGORY_ID,SHAREINFO_CATEGORY_ID,ANNUALREPORT_CATEGORY_ID,BOARDREPORT_CATEGORY_ID,GOVERNANCERULE_CATEGORY_ID,PROSPECTUSREPORT_CATEGORY_ID,CHARTERED_CATEGORY_ID );
 $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
+
 ?>
 
 <div class="row">
@@ -29,7 +30,7 @@ $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
             </div>
             <?php
                  $Parent_category=$this->categoryInfo->id;
-                 var_dump($Parent_category);
+                
                 if ($ssSystem->language == DEFAULT_LANGUAGE) {
                     $name = $this->categoryInfo->name;
                 } else {
@@ -40,19 +41,19 @@ $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
                 ?>
             <div class="col-md-4 pull-left">
                <?php if(in_array($Parent_category,$arrayNews)){
-                echo "1";
+               
                     $this->blkNewsList();
                 }
                 if(in_array($Parent_category,$arrayService)){
-                     echo "2";
+                   
                     $this->blkServicCateList();
                 }
                 if(in_array($Parent_category,$arrayShareholder)){
-                     echo "3";
+                
                     $this->blkShareHolList();
                 }
                 if(in_array($Parent_category,$arrayAboutus)){
-                     echo "4";
+                
                     $this->blkAboutUs();
                 }
             ?>

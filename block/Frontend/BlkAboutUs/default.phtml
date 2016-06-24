@@ -21,6 +21,7 @@ $helperString = new \Ocoder\Helper\String;
     <ul class="Category">
             <?php
             foreach ($this->_data as $item) {
+                //var_dump( $articleId);
                 if ($ssSystem->language == DEFAULT_LANGUAGE) {
                     $name = $item->name;
                     $alias = $item->alias;
@@ -33,6 +34,7 @@ $helperString = new \Ocoder\Helper\String;
                     $alias = $aliasLang->$aliasField;
                 }
             ?>
+            <?php //var_dump( $articleId); //(if ($articleId=$item->id?>
         <li class="CategoryChild"><a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><?php echo  $name ?></a></li>
             <!--<li class="CategoryChild"> <a href="http://ttthdsdn.local/bv/lich-su-phat-trien-40">Lịch sử phát triển</a> </li>
             <li class="CategoryChild"><a href="http://ttthdsdn.local/bv/so-do-to-chuc-41"> Sơ đồ tổ chức</a></li>

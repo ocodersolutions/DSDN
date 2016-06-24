@@ -11,11 +11,12 @@ $arrayNews= array (NEWS_CATEGORY_ID,RELATENEWS_CATEGORY_ID,INTERNALNEWS_CATEGORY
 $arrayService= array (SERVICE_CATEGORY_ID);
 $arrayShareholder= array(SHAREHOLDER_CATEGORY_ID ,NOTIFICATION_CATEGORY_ID,FINANCIAL_CATEGORY_ID,SHAREHOLDER_MEET_CATEGORY_ID,SHAREINFO_CATEGORY_ID,ANNUALREPORT_CATEGORY_ID,BOARDREPORT_CATEGORY_ID,GOVERNANCERULE_CATEGORY_ID,PROSPECTUSREPORT_CATEGORY_ID,CHARTERED_CATEGORY_ID );
 $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
+
 ?>
 <?php
-       
+        
         $Parent_category=$this->item->category_id;
-        var_dump($Parent_category);
+        var_dump($this->item->id);
     if ($ssSystem->language == DEFAULT_LANGUAGE) {
         $name = $this->item->name;
         $intro = $this->item->intro;
