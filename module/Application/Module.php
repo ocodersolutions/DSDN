@@ -160,12 +160,12 @@ class Module {
                 },
                 'BlkNewsList' => function($sm) {
                     $helper = new \Block\Frontend\BlkNewsList();
-                    $helper->setData($sm->getServiceLocator()->get('Admin\Model\ArticleTable'));
+                    $helper->setData($sm->getServiceLocator()->get('Admin\Model\CategoryTable'));
                     return $helper;
                 },
                 'BlkShareHolList' => function($sm) {
                     $helper = new \Block\Frontend\BlkShareHolList();
-                    $helper->setData($sm->getServiceLocator()->get('Admin\Model\ArticleTable'));
+                    $helper->setData($sm->getServiceLocator()->get('Admin\Model\CategoryTable'));
                     return $helper;
                 },
                 'BlkServicCateList' => function($sm) {
