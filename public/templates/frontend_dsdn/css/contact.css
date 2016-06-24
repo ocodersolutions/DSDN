@@ -536,6 +536,10 @@ ul.pagination_news  li a:focus{
     box-sizing: border-box;
     padding: 10px 15px;
 }
+.page-default .content .col_left .Category .CategoryChild.active{
+    background-color: #004ebc;
+}
+
 .page-default .content .col_left .Category .CategoryChild:hover {
     background-color: #004ebc;
 }
@@ -544,7 +548,7 @@ ul.pagination_news  li a:focus{
     color: #FFF;
 }
 .page-default .content .col_left .Category .CategoryChild a {
-    color: #004ebc;
+    color: #fff;
      font: bold 14px "Century Gothic";
 }
 .fixed {
