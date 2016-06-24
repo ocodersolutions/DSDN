@@ -95,6 +95,13 @@
  }
  
  @media (max-width: 1023px) {
+    .header-wrapper {background-size: cover;
+        background-image: url(../img/bg-header-2.png);
+        background-position: 20% 0% !important;
+    }
+    header .logo img{
+        width: 90%;
+    }
     .page-home .sub-slider .service_wrap{
         
     }
@@ -117,7 +124,7 @@
          font-size: 25px;
      }
      header .phone .content .wrt {
-         font-size: 13px;
+         font-size: 14px !important;
      }
      .menu-main .request-quote {
          font-size: 13px;
@@ -207,6 +214,9 @@
      .container > .navbar-header {
          margin: 0;
      }
+    header .logo img{
+        width: 80%;
+    } 
      header .phone .content .title {
          font-size: 16px !important;
      }

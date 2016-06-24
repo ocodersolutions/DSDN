@@ -663,6 +663,7 @@ header .textwidget {
  }
  
  .header-wrapper {
+     background-position: 0% 0%;
      background-image: url(../img/bg-header-2.png);
      background-repeat: no-repeat;
  }
