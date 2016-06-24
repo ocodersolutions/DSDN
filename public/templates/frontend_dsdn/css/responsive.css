@@ -199,6 +199,16 @@
 }
  
  @media (max-width: 767px) {
+    header .logo{
+        padding: 25px 0px !important; 
+    }
+     header .phone{
+        padding-top: 5px !important;
+    }
+    header .phone .content{
+        margin-right: 0px !important;
+    }
+
     .page-home .sub-slider .service_wrap{
 
     }
@@ -316,6 +326,13 @@
  }
  
  @media (max-width: 479px) {
+
+    header .logo {
+    padding: 25px 0px !important;
+    }  
+    header .logo img{
+        width: 90%;
+    }
     .page-home .sub-slider .service_wrap{
         width: 100%;
     }
@@ -335,6 +352,9 @@
      }
      header .phone {
          display: none;
+     }
+     .header-wrapper{
+        background-image: none !important;
      }
      .click-to-phone-image {
          display: block !important;
