@@ -533,6 +533,7 @@ ul.pagination_news  li a:focus{
 
 
 .page-default .content .col_left .Category .CategoryChild {
+    border-bottom: 1px solid #9f9f9f;
     box-sizing: border-box;
     padding: 10px 15px;
 }

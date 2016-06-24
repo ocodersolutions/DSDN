@@ -39,6 +39,7 @@ class CategoryController extends OcoderBaseController {
         $categoryNews = $categoryTableGateway->listItem($this->_params, array('task' => 'list-item'));
         $categoryNewsSidebar = $categoryTableGateway->listItem($this->_params, array('task' => 'list-item'));
         
+
         $categoryList = array();
         foreach ($categoryNews as $category) {
             $this->_paginator['currentPageNumber'] = $this->params()->fromRoute('page', 1);
@@ -56,6 +57,8 @@ class CategoryController extends OcoderBaseController {
         return new ViewModel(array(
             'categoryNews' => $categoryList,
             'categoryNewsSidebar' => $categoryNewsSidebar,
+            
+            
         ));
     }
 

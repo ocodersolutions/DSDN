@@ -59,7 +59,7 @@ class IndexController extends OcoderBaseController
         ));
     }
     
-   /* public function contactAction()
+   public function contactAction()
     {
         if ($this->getRequest()->isPost()) {
             // $mail = new Mail\Message();
@@ -84,7 +84,7 @@ class IndexController extends OcoderBaseController
         $this->_viewHelper->get('HeadTitle')->prepend(TITLE_CONTACT . ' - ' . $this->_configs->title);
         $this->_viewHelper->get('HeadMeta')->setName('keywords', $this->_configs->keywords);
         $this->_viewHelper->get('HeadMeta')->setName('description', $this->_configs->description);
-    }*/
+    }
     public function acmailerAction ()
     {   
         if ($this->getRequest()->isPost()) {

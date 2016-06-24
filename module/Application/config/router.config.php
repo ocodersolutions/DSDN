@@ -325,7 +325,7 @@ $contactRoute = array(
         'defaults' => array(
             '__NAMESPACE__' => 'Application\Controller',
             'controller' => 'Index',
-            'action' => 'acmailer',
+            'action' => 'contact',
         ),
     ),
 );

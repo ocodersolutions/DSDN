@@ -4,6 +4,9 @@ use Zend\Session\Container;
 
 $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
+$StrUrl=$helperString->getCurrentUrl();
+$chuoi=explode('-', $StrUrl);
+$check=end($chuoi);
 
 ?>
 
@@ -22,6 +25,8 @@ $helperString = new \Ocoder\Helper\String;
     <ul class="Category">
             <?php
             foreach ($this->_data as $item) {
+                $Id=$item->id;
+                               
                 if ($ssSystem->language == DEFAULT_LANGUAGE) {
                     $name = $item->name;
                     $alias = $item->alias;
@@ -34,12 +39,12 @@ $helperString = new \Ocoder\Helper\String;
                     $alias = $aliasLang->$aliasField;
                 }
             ?>
-        <li class="CategoryChild"><a href="<?php echo URL_APPLICATION .'/tin-tuc/'. $alias ?>"><?php echo  $name ?></a></li>
-            <!--<li class="CategoryChild"> <a href="http://ttthdsdn.local/bv/lich-su-phat-trien-40">Lịch sử phát triển</a> </li>
-            <li class="CategoryChild"><a href="http://ttthdsdn.local/bv/so-do-to-chuc-41"> Sơ đồ tổ chức</a></li>
-        <li class="CategoryChild"><a href="http://ttthdsdn.local/bv/nhan-su-chu-chot-42"> Nhân sự chủ chốt</a></li>
-        <li class="CategoryChild"><a href="http://ttthdsdn.local/bv/don-vi-thanh-vien-43"> Đơn vị thành viên</a></li>-->
-        <?php } ?>
+       <?php if ($Id==$check){?>
+                <li class="CategoryChild active"><a href="<?php echo URL_APPLICATION . '/tin-tuc/' . $alias ?>"><?php echo  $name ?></a></li>
+        <?php } else { ?>
+            <li class="CategoryChild "><a href="<?php echo URL_APPLICATION . '/tin-tuc/' . $alias ?>"><?php echo  $name ?></a></li>
+           
+        <?php };} ?>
     </ul>
     
 </div>

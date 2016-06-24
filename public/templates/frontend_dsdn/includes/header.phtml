@@ -30,9 +30,9 @@ $ssSystem = new Container('system');
 <div class="menu-main">
         <div class="container">
             <div class="navbar-header">
-                <div id="text-4" class="widget_text">
-                    <div class="textwidget"><a href="<?php echo URL_APPLICATION ?>" class="request-quote">Trang chủ</a></div>
-                </div>
+               <!-- <div id="text-4" class="widget_text">
+                    <div class="textwidget"><a href="<?php //echo URL_APPLICATION ?>" class="request-quote">Trang chủ</a></div>
+                </div>-->
                 <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -43,7 +43,9 @@ $ssSystem = new Container('system');
             <nav class="collapse navbar-collapse bs-navbar-collapse">
                 
                 <ul class="parent nav navbar-nav">
-                    
+                     <li class="parent-item ">
+                       <a href="<?php echo URL_APPLICATION ?>" ><?php echo HOME ?></a>
+                    </li>
                     <li class="parent-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_INTRO ?>"><?php echo INTRO ?> <span class="caret"></span></a>
                          <ul class="dropdown-menu">
