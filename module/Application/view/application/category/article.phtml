@@ -75,23 +75,4 @@ $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
             
         </div>
     </div> 
-   <script>
-        $(document).ready(function() {
-        var PosTop = $('#posoffset').offset().top;
-        var stickyNav = function(){
-        var scrollTop = $(window).scrollTop();
-              
-        if (scrollTop > PosTop) { 
-            $('.Category').addClass('fixed');
-        } else {
-            $('.Category').removeClass('fixed'); 
-        }
-        };
-         
-        stickyNav();
-         
-        $(window).scroll(function() {
-            stickyNav();
-        });
-        });
-    </script>
+  

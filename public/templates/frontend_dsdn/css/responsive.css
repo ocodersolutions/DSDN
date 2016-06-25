@@ -1,4 +1,5 @@
 @media (min-width: 1300px) {
+
      .container {
          width: 1300px !important;
      }
@@ -53,6 +54,12 @@
      .page-contact #comments {
          width: 672px;
      }
+     .page-home .sub-slider .service_wrap {
+         width: 90%;
+    }
+    .page-home .sub-slider .service_wrap .slide-item {
+        margin-right: 11px;
+    }
  }
  
  @media (max-width: 1299px) {
@@ -63,7 +70,7 @@
         margin-right: 7px;
     }
      .title-default {
-         font-size: 16px;
+         font-size: 14px! important;
      }
      .sub-title-default {
          font-size: 15px;
@@ -419,6 +426,9 @@
      .page-home .sub-slider .slide-item{
         margin-bottom: 0;
     }
+    .tinanh span.tittle,.otherlink span{
+        font-size: 14px !important;
+    }
      #uc_carousel_testimonials .owl-page span {
         margin: 5px 3px;
         width: 25px;
@@ -427,16 +437,18 @@
         margin: 5px 0;
      }
      .search button i {
-        margin-left: 15px;
+        margin-left: 10px;
     }
     .search button p{
         display: none!important;
     }
     .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line .uc_link_tittle{
         padding: 6px 9px 6px !important;
+        font-size: 14px !important;
     }
     .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_head_line .ui-accordion-header-icon.ui-icon{
-        top: 11px !important;
+        top: 10px !important;
+        right:0!important;
     }
     .uc_clean_accordion .uc_clean_accordion_wrap .uc_clean_accorder_content .uc_line_content{
         padding:5px 10px 5px!important;
