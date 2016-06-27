@@ -32,51 +32,28 @@ $featuredProducts = $this->featuredProducts;
                 $classActive = $isFirst ? 'active' : '';
                 $isFirst = false;
                 ?>
-                <li><img src="<?php echo URL_APPLICATION . $banner->banner ?>" alt="<?php echo $name; ?>"/></li>
+                <li><img src="<?php echo URL_APPLICATION . $banner->banner ?>" alt="<?php echo $name; ?>"/>
+                <p class="animate_des"><?php echo $description; ?></p>
+                </li>
             <?php } ?>    
             </ul>
         </div>
     </div>
     <div class="container page-home page-default">
         <div class="content">
-            <div id="text-6" class="widget_text">
+            <!--<div id="text-6" class="widget_text">
                 <div class="textwidget">
-                    <div class="sub-slider">
+                    <!--<div class="sub-slider">
                         <div class="service_wrap">
-                           <?php 
-                           foreach ($this->services as $service) {
-                            
-                            if ($ssSystem->language == DEFAULT_LANGUAGE) {
-                                $name = $service->name;
-                                $alias =$service->alias;
-                                $intro = $service->intro;
-                            } else {
-                                $nameLang = json_decode($service->name_lang);
-                                $nameField = 'name_' . $ssSystem->language;
-                                $name = $nameLang->$nameField;
-                                $aliasLang = json_decode($service->alias_lang);
-                                $aliasField = 'alias_' . $ssSystem->language;
-                                $alias = $aliasLang->$aliasField;
-                                $introLang = json_decode($service->intro_lang);
-                                $introField = 'intro_' . $ssSystem->language;
-                                $intro = $introLang->$introField;
-                            }
-
-                            if (trim($service->thumbnail) && $helperString->isUrlExist(URL_APPLICATION . $service->thumbnail)) {
-                                $imageUrl = URL_APPLICATION . $service->thumbnail;
-                            } else {
-                                $imageUrl = $urlImage_DSDN . '/tinanh/no-image.png';
-                            }
-                            ?>
-                            
-                               <div class="slide-item ">
-                                    <div class="uc_background_image_content_box" id="<?php echo 'service'.$service->id?>">
-                                        <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>" class="uc_item_link"/>
+                           
+                              <!-- <div class="slide-item ">
+                                    <div class="uc_background_image_content_box" id="<?php //echo 'service'.$service->id?>">
+                                        <a href="<?php //echo URL_APPLICATION . '/bv/' . $alias ?>" class="uc_item_link"/>
                                             <!-- start of box content block -->
-                                            <div class="uc_banner_box">
+                                           <!--<div class="uc_banner_box">
                                                 <img src="<?php echo $imageUrl ?>" alt="tàu hỏa " class="uc_item_img"/>
                                                 <!-- overplay block -->
-                                                <div class="overplay"></div>
+                                                <!--<div class="overplay"></div>
                                                 <div class="uc_item_html">
                                                     <h2 class="uc_item_tittle"><?php echo $service->name?></h2>
                                                    <button class="uc_add_cart">
@@ -85,11 +62,11 @@ $featuredProducts = $this->featuredProducts;
                                                 </div>
                                             </div>
                                             <!-- end of box content block -->
-                                        </a>
+                                        <!--</a>
                                     </div>
                                     <!-- end of background image content box-->
-                                </div>
-                                <?php } //end foreach ?>
+                                <!--</div>-->
+                                
                                 <!-- <div class="slide-item ">
                                     <div class="uc_background_image_content_box" id="green">
                                         <a href="<?php echo URL_APPLICATION.'/bv/tu-van-xay-dung-cong-trinh-2'?>" class="uc_item_link">
@@ -149,11 +126,11 @@ $featuredProducts = $this->featuredProducts;
                                 </div>-->
                                
                             
-                        </div>
+                        <!--</div>
                     </div>
                 </div>
             </div>
-            <hr>
+            <hr>-->
             <div class="row">
                 <div class="container">
                     <div class="image_background"></div>

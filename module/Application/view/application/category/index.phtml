@@ -8,8 +8,23 @@ use Zend\Session\Container;
 $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
 
-?>
 
+
+echo "index";
+?>
+<?php
+echo "<pre>";
+var_dump($categoryNews);
+echo "</pre>";
+     //$Parent_category=$this->categoryInfo->id;
+    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+        $name = $this->categoryInfo->name;
+    } else {
+        $nameLang = json_decode($this->categoryInfo->name_lang);
+        $nameField = 'name_' . $ssSystem->language;
+        $name = $nameLang->$nameField;
+    }
+    ?>
 <div class="row">
     <div class="container contact-content" style="padding: 0">
         <img src="<?php echo $urlImage_DSDN?>/news.jpg" alt="">   
@@ -20,7 +35,7 @@ $helperString = new \Ocoder\Helper\String;
 <div class="row page-default ">
     <div class="container content">
         <div class="breakum-line">
-            <a href="<?php echo URL_APPLICATION?>"><?php echo HOME?></a>/<span> Tin tức </span>
+            <a href="<?php echo URL_APPLICATION?>"><?php echo HOME?></a>/<span><?php echo $name?></span>
         </div>
         
         <div class="col-md-8 block">

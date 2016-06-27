@@ -15,31 +15,47 @@ $arrayShareholder= array(SHAREHOLDER_CATEGORY_ID ,NOTIFICATION_CATEGORY_ID,FINAN
 $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
 
 ?>
-
+ <?php
+     $Parent_category=$this->categoryInfo->id;
+    
+    if ($ssSystem->language == DEFAULT_LANGUAGE) {
+        $name = $this->categoryInfo->name;
+    } else {
+        $nameLang = json_decode($this->categoryInfo->name_lang);
+        $nameField = 'name_' . $ssSystem->language;
+        $name = $nameLang->$nameField;
+    }
+    ?>
 <div class="row">
         <div class="container contact-content" style="padding: 0">
-            <img src="<?php echo $urlImage_DSDN ?>/news.jpg" alt="">   
-            <p class="contact_p">Tin Tức</p>
+         <?php if(in_array($Parent_category,$arrayNews)){ ?>
+            <img src="<?php echo $urlImage_DSDN ?>/news.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p">Tin tức</p>
+        <?php }
+        if(in_array($Parent_category,$arrayService)){?>
+            <img src="<?php echo $urlImage_DSDN ?>/service.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p">Dịch vụ</p>
+        <?php }
+        if(in_array($Parent_category,$arrayShareholder)){ ?>
+            <img src="<?php echo $urlImage_DSDN ?>/shareholder.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p">Quan hệ cổ đông</p>
+        <?php }
+        if(in_array($Parent_category,$arrayAboutus)){?>
+            <img src="<?php echo $urlImage_DSDN ?>/contact-img.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p">Giới thiệu Công ty</p>
+        <?php }
+    ?>
+            
         </div>
 
     </div>
     <div class="row page-default ">
         <div class="container content">
             <div class="breakum-line">
-                <a href="">Trang chủ</a>/<span> Tin tức </span>
+                <a href="">Trang chủ</a>/<span> <?php echo $name?> </span>
             </div>
-            <?php
-                 $Parent_category=$this->categoryInfo->id;
-                
-                if ($ssSystem->language == DEFAULT_LANGUAGE) {
-                    $name = $this->categoryInfo->name;
-                } else {
-                    $nameLang = json_decode($this->categoryInfo->name_lang);
-                    $nameField = 'name_' . $ssSystem->language;
-                    $name = $nameLang->$nameField;
-                }
-                ?>
-            <div class="col-md-4 pull-left">
+           
+            <div class="col-md-3 pull-left">
                <?php if(in_array($Parent_category,$arrayNews)){
                
                     $this->blkNewsList();
@@ -58,7 +74,7 @@ $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
                 }
             ?>
             </div>
-            <div class="col-md-8 block">
+            <div class="col-md-9 block">
                 <div class="news">
                     <span class="new_tittle"><?php echo $name ;?></span>
                     <hr>

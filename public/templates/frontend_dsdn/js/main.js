@@ -93,12 +93,12 @@ $('.image_group').each(function() {
 		var PosTop = $('#posoffset').offset().top;
         var stickyNav = function(){
         var scrollTop = $(window).scrollTop();
-        var wid=$('.Category').width();    
+         
         if (scrollTop > PosTop) { 
 
             $('.Category').addClass('fixed');
-             $('.Category.fixed').css("position","fixed")
-             $('.Category.fixed').css("width",wid)
+          
+             
         } else {
             $('.Category').removeClass('fixed'); 
         }

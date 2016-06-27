@@ -62,7 +62,7 @@ define("SPECIAL", "Tiêu biểu");
 define("NORMAL", "Thường");
 define("SERVICES", "Dịch vụ");
 define("CAREERS", "Lĩnh vực hoạt động");
-define("COMPANY_INFO", "Thông tin Doanh nghiệp");
+define("COMPANY_INFO", "Giới thiệu Công Ty");
 define("NEWS", "Tin tức");
 define("RECRUITMENT", "Tuyển dụng");
 define("ID", "ID");

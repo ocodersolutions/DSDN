@@ -555,7 +555,7 @@ ul.pagination_news  li a:focus{
 .fixed {
     position: fixed;
     top:20px;
-    /*width: 255px;*/
+    width: 287px;
 }
 @media (min-width: 1191px){
    .search button p{
@@ -577,6 +577,11 @@ ul.pagination_news  li a:focus{
     margin-left: 5px;
     padding: 5px 5px;
     border: 1px solid #a9a6a6;
+    }
+    .fixed {
+    position: fixed;
+    top:20px;
+    width: 205px;
 }
 }
 @media (max-width: 991px){

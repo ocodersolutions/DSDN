@@ -35,8 +35,24 @@ $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
     ?>
     <div class="row">
         <div class="container contact-content" style="padding: 0">
-            <img src="<?php echo $urlImage_DSDN?>/news.jpg" alt="">   
+        
+         <?php if(in_array($Parent_category,$arrayNews)){ ?>
+            <img src="<?php echo $urlImage_DSDN ?>/news.jpg" alt="<?php echo $name ?>">   
             <p class="contact_p">Tin tức</p>
+        <?php }
+        if(in_array($Parent_category,$arrayService)){?>
+            <img src="<?php echo $urlImage_DSDN ?>/service.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p">Dịch vụ</p>
+        <?php }
+        if(in_array($Parent_category,$arrayShareholder)){ ?>
+            <img src="<?php echo $urlImage_DSDN ?>/shareholder.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p">Quan hệ cổ đông</p>
+        <?php }
+        if(in_array($Parent_category,$arrayAboutus)){?>
+            <img src="<?php echo $urlImage_DSDN ?>/contact-img.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p">Giới thiệu Công ty</p>
+        <?php }
+    ?>
         </div>
 
     </div>

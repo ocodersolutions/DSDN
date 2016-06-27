@@ -11,17 +11,9 @@ $arrayNews= array (NEWS_CATEGORY_ID,RELATENEWS_CATEGORY_ID,INTERNALNEWS_CATEGORY
 $arrayService= array (SERVICE_CATEGORY_ID);
 $arrayShareholder= array(SHAREHOLDER_CATEGORY_ID ,NOTIFICATION_CATEGORY_ID,FINANCIAL_CATEGORY_ID,SHAREHOLDER_MEET_CATEGORY_ID,SHAREINFO_CATEGORY_ID,ANNUALREPORT_CATEGORY_ID,BOARDREPORT_CATEGORY_ID,GOVERNANCERULE_CATEGORY_ID,PROSPECTUSREPORT_CATEGORY_ID,CHARTERED_CATEGORY_ID );
 $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
-echo "detail";
+
 
 ?>
-
-<div class="row">
-    <div class="container contact-content" style="padding: 0">
-        <img src="<?php echo $urlImage_DSDN ?>/service.jpg" alt="">   
-        <p class="contact_p">Dịch vụ</p>
-    </div>
-
-</div>
 <?php
      $Parent_category=$this->categoryInfo->id;
     if ($ssSystem->language == DEFAULT_LANGUAGE) {
@@ -32,6 +24,30 @@ echo "detail";
         $name = $nameLang->$nameField;
     }
     ?>
+<div class="row">
+    
+    <div class="container contact-content" style="padding: 0">
+    <?php if(in_array($Parent_category,$arrayNews)){ ?>
+            <img src="<?php echo $urlImage_DSDN ?>/news.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p"><?php echo $name ?></p>
+        <?php }
+        if(in_array($Parent_category,$arrayService)){?>
+            <img src="<?php echo $urlImage_DSDN ?>/service.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p"><?php echo $name ?></p>
+        <?php }
+        if(in_array($Parent_category,$arrayShareholder)){ ?>
+            <img src="<?php echo $urlImage_DSDN ?>/shareholder.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p"><?php echo $name ?></p>
+        <?php }
+        if(in_array($Parent_category,$arrayAboutus)){?>
+            <img src="<?php echo $urlImage_DSDN ?>/contact-img.jpg" alt="<?php echo $name ?>">   
+            <p class="contact_p"><?php echo $name ?></p>
+        <?php }
+    ?>
+        
+
+</div>
+
 <div class="row page-default ">
     <div class="container content">
         <div class="breakum-line">
