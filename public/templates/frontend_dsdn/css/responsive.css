@@ -63,6 +63,9 @@
  }
  
  @media (max-width: 1299px) {
+    header .logo img{
+        width: 75% !important;
+    }
     .page-home .sub-slider .service_wrap{
         width: 90% ;
     }
@@ -107,7 +110,8 @@
         background-position: 20% 0% !important;
     }
     header .logo img{
-        width: 90%;
+        padding-top: 10px;
+       
     }
     .page-home .sub-slider .service_wrap{
         
@@ -187,15 +191,20 @@
  }
 
 @media (max-width: 991px) {
-    .page-home .sub-slider .service_wrap{
-
-    }
+   header .logo img {
+       padding-top: 7px;
+    margin-left: 15px;
+    width: 100% !important;
+}
     .menu-main .request-quote {
         font-size: 12px;
     }
     .menu-main .navbar-nav li a {
         font-size: 12px;
         padding: 15px 3px;
+    }
+    .header-wrapper{
+        background-position: 17% 0%!important;
     }
     .navbar-collapse {
         padding-right: 0 !important;
@@ -207,9 +216,10 @@
  
  @media (max-width: 767px) {
     header .logo{
-        padding: 25px 0px !important; 
+        padding-top: 5px !important; 
     }
      header .phone{
+        line-height: 17px;
         padding-top: 5px !important;
     }
     header .phone .content{
@@ -231,8 +241,13 @@
      .container > .navbar-header {
          margin: 0;
      }
+     .header-wrapper{
+        background-position: 17% 0%!important;
+    }
     header .logo img{
-        width: 80%;
+        padding-top: 0px;
+    /* margin-left: 0px; */
+        width: 95% !important;
     } 
      header .phone .content .title {
          font-size: 16px !important;
@@ -330,14 +345,18 @@
         width: 10% !important;
     }
 
+
  }
  
  @media (max-width: 479px) {
     header .logo{
-        padding: 10px 0px !important; 
+        text-align: center;
+        padding: 0px 0px !important; 
+
     }
  
     header .logo img{
+         padding-top: 12px !important;
         width: 90%;
     }
     .page-home .sub-slider .service_wrap{
@@ -351,12 +370,10 @@
     }
      header .logo,
      header .phone {
+        line-height: 0px;
          /*width: 100%;*/
      }
-     header .logo {
-         text-align: center;
-         
-     }
+     
      header .phone {
          /*display: none;*/
      }
@@ -369,9 +386,7 @@
      header .phone .content .wrt {
         display: none;
      }
-     .header-wrapper{
-        background-position: 10% 0% !important;
-     }
+     
      .click-to-phone-image {
          display: block !important;
          text-align: right !important;

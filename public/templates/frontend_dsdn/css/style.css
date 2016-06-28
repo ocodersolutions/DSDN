@@ -172,17 +172,19 @@ header .textwidget {
 }
 
  header .logo {
-     padding: 10px 0px;
+    text-align: center;
+     padding: 2px 0px;
  }
  
  header .logo img {
-     max-width: 100%;
+     width: 65%;
  }
  
  header .phone {
      font-family: Century Gothic;
      text-align: right;
-     padding-top: 25px;
+     padding-top: 13px;
+    padding-bottom: 8px;
      background-size: 100% 100%;
  }
  
@@ -280,9 +282,12 @@ header .textwidget {
  }
  
  .menu-main {
-     background-color: #004ebc;
+    padding:0;
+    background-color: #004ebc;
  }
- 
+.topslider {
+    padding: 0;
+}
  .menu-main .request-quote {
      float: left;
      font-family: Century Gothic;
@@ -396,6 +401,9 @@ header .textwidget {
  
  .page-default .content .page-content .image {
      text-align: center;
+ }
+ .page-home{
+    padding:0;
  }
  
  .page-home .sub-slider {
@@ -527,7 +535,7 @@ header .textwidget {
  .bs-docs-footer {
      background: #1b478b;
      overflow: hidden;
-     
+     margin-top: -10px;
      padding-top: 10px;
      color: #FFFFFF;
      font-family: "Century Gothic";
