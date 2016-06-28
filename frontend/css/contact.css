@@ -250,7 +250,7 @@ ul.pagination_news  li a:focus{
 .news_content span {
     margin: 10px 0;
     display: block;
-    font-size: 14px;
+    /*font-size: 14px;*/
     color: rgb(153, 153, 153);
     font-weight: normal;
 }
