@@ -188,6 +188,11 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     
     padding-left: 0;
 }
+.document_new{
+    display: block;
+    clear:both;
+}
+
 .document_new .title-document{
     font-weight: bold;
     text-transform: uppercase;
@@ -606,6 +611,10 @@ ul.pagination_news  li a:focus{
     }
 }
 @media (max-width: 767px){
+    #older_document{
+        display: block;
+        clear:both;
+    }
     .breakum-line{
         padding:0;
     }
