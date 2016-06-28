@@ -292,6 +292,7 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
 	border-bottom: 1px solid #eee;;
 }
 .news .new_box {
+    min-height: 218px;
 	padding: 0 15px;
 }
 .news .new_box p{
