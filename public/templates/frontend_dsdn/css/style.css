@@ -352,7 +352,7 @@ header .textwidget {
  
  .page-default .content .sidebar-left {
      float: left;
-     padding: 0px 0 20px 30px;
+     padding: 0px 0 20px 0px;
  }
  
  .page-default .content .sidebar-left .menu-list {
@@ -527,7 +527,7 @@ header .textwidget {
  .bs-docs-footer {
      background: #1b478b;
      overflow: hidden;
-     width: 100%;
+     
      padding-top: 10px;
      color: #FFFFFF;
      font-family: "Century Gothic";

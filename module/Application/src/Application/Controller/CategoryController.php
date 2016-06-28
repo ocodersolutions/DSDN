@@ -1,5 +1,6 @@
 <?php
 
+
 /**
  * Zend Framework (http://framework.zend.com/)
  *
@@ -14,6 +15,8 @@ use Zend\View\Model\ViewModel;
 use Ocoder\Base\BaseActionController as OcoderBaseController;
 use Ocoder\Paginator\Paginator as OcoderPaginator;
 use Zend\Session\Container;
+//use Zend_Session_Namespace;
+
 
 class CategoryController extends OcoderBaseController {
 
@@ -52,6 +55,7 @@ class CategoryController extends OcoderBaseController {
             
             $category->articles = $articles;
             $categoryList[] = $category;
+
         }
 
         return new ViewModel(array(
@@ -178,13 +182,17 @@ class CategoryController extends OcoderBaseController {
         $articles = $articleTableGateway->listItem($this->_params, array('task' => 'list-item'));
         foreach ($articles as $article) {
             $item = $article;
+            $categoryId=$article->category_id;
             break;
         }
         
         unset($this->_params['ssFilter']);
         $this->_params['ssFilter']['filter_parent'] = NEWS_CATEGORY_ID;
         $categoryNews = $categoryTableGateway->listItem($this->_params, array('task' => 'list-item'));
-        
+        $categoryInfo = $categoryTableGateway->getItem(array('id' => $categoryId));
+        //$cateParentofArt = new Zend_Session_Namespace('Application\Controller');
+        //$cateParentofArt->id = $categoryId;
+
         unset($this->_params['ssFilter']);
         $this->_params['paginator']['itemCountPerPage'] = 3;
         $this->_params['ssFilter']['filter_category_greater'] = NEWS_CATEGORY_ID;
@@ -213,10 +221,12 @@ class CategoryController extends OcoderBaseController {
         $this->_viewHelper->get('HeadMeta')->setName('keywords', $keyword);
         $this->_viewHelper->get('HeadMeta')->setName('description', $intro);
         
+        
         return new ViewModel(array(
             'item' => $item,
             'categoryNews' => $categoryNews,
             'news' => $news,
+            'categoryInfo' => $categoryInfo,
         ));
     }
 }

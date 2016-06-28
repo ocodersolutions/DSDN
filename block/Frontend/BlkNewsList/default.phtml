@@ -25,8 +25,9 @@ $check=end($chuoi);
     <ul class="Category">
             <?php
             foreach ($this->_data as $item) {
+              
                 $Id=$item->id;
-                               
+                           
                 if ($ssSystem->language == DEFAULT_LANGUAGE) {
                     $name = $item->name;
                     $alias = $item->alias;

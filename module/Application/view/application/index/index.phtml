@@ -177,7 +177,7 @@ $featuredProducts = $this->featuredProducts;
                                         <!-- end of clean accordion -->
                                     </div>
                                     <div class="col-md-5 block ">
-                                        <div class="search padding_right5">
+                                        <div class="search">
                                             <form action="<?php echo URL_APPLICATION . '/tim-kiem/' ?>" method="GET">
                                                 <input type="text" class="form-control input-search" id="keyword-search" maxlength="64" name='tk' placeholder="<?php echo SEARCH ?>" value="<?php echo array_key_exists('tk', $_GET) ? $_GET['tk'] : '' ?>" />
                                                 <button type="submit" class="btn btn-primary btn-search"><i class="fa fa-search"></i><p><?php echo SEARCH ?></p></button>
