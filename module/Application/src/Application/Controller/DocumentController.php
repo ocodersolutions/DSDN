@@ -106,6 +106,7 @@ class DocumentController extends OcoderBaseController
                 $target_dir = PATH_PUBLIC_DOCUMENTS . "/";
                 $uploadOk = 1;
                 $imageFileType = pathinfo(basename($_FILES[$fileUploadName]["name"]), PATHINFO_EXTENSION);
+                
                 $fileName = time() . '.' . $imageFileType;
                 $target_file = $target_dir . $fileName;
                 // Check if image file is a actual image or fake image
@@ -117,13 +118,15 @@ class DocumentController extends OcoderBaseController
                  // Check size
                  if ($_FILES[$fileUploadName]["size"] > 2097152) {
                  //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => MAX_SIZE_2M));
-                     $uploadOk = 0;
+                    $uploadOk = 0;
+                    
                  }
                  
                 // Check file type
-                if (!in_array($imageFileType,$arrDocType)) {
+                if (in_array($imageFileType,$arrDocType)) {
                     //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => MAX_SIZE_2M));
-                    $uploadOk = 0;
+                    $uploadOk = 1;
+                    
                 }
                   
                 // Check if $uploadOk is set to 0 by an error
@@ -132,7 +135,8 @@ class DocumentController extends OcoderBaseController
                         $this->_params['data']['link'] = $fileName;
                     }
                 }
-            }  
+            }
+            
             $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
            //if($DocumentTable->saveItem(array('id' => $this->->id, 'banners' => json_encode($bannerArr)))){
                 //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'success', 'content' => 'Cập nhật thành công'));
