@@ -228,7 +228,7 @@ $featuredProducts = $this->featuredProducts;
                                             
                                             if ($ssSystem->language == DEFAULT_LANGUAGE) {
                                                 $name = $partner->name;
-                                                $website= $partner->website;
+                                                $website= trim($partner->website) ? $partner->website : '#';
                                                 $description = $partner->description;
                                             } else {
                                                 $nameLang = json_decode($partner->name_lang);
@@ -238,6 +238,7 @@ $featuredProducts = $this->featuredProducts;
                                                 $descritionField = 'descrition_' . $ssSystem->language;
                                                 $descrition = $descritionLang->$descritionField;
                                             }
+
                                             ?>
                                             <li class="sub-title-default"><a href="<?php echo $website ?>" target="_blank"><?php echo $name ?></a></li>
                                             
