@@ -11,6 +11,7 @@ use Zend\Db\TableGateway\AbstractTableGateway;
 class PartnerTable extends AbstractTableGateway {
 
     protected $tableGateway;
+    protected $tableName = 'partners';
 
     public function __construct(TableGateway $tableGateway) {
         $this->tableGateway = $tableGateway;

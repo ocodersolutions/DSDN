@@ -30,6 +30,7 @@ class IndexController extends OcoderBaseController
         $productTableGateway = $this->getServiceLocator()->get('Admin\Model\ProductTable');
         $articleTableGateway = $this->getServiceLocator()->get('Admin\Model\ArticleTable');
         $bannerTableGateway = $this->getServiceLocator()->get('Admin\Model\BannerTable');
+        $partnerTableGateway = $this->getServiceLocator()->get('Admin\Model\PartnerTable');
         
         $this->_paginator['currentPageNumber'] = $this->params()->fromRoute('page', 1);
         $this->_params['paginator'] = $this->_paginator;
@@ -51,11 +52,15 @@ class IndexController extends OcoderBaseController
         $this->_params['ssFilter']['order_by'] = 'id';
         $this->_params['ssFilter']['order'] = 'DESC';
         $banners = $bannerTableGateway->listItem($this->_params, array('task' => 'list-item'));
-        
+
+       
+        $partners= $partnerTableGateway->listItem($this->_params, array('task' => 'list-item'));
+
         return new ViewModel(array(
             'featuredProducts' => $featuredProducts,
             'services' => $services,
             'banners' => $banners,
+            'partners' => $partners,
         ));
     }
     

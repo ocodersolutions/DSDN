@@ -223,12 +223,25 @@ $featuredProducts = $this->featuredProducts;
                                     <div class="menu-left-3 block">
                                         <h2 class="title-default">LIÊN KẾT KHÁC</h2>
                                         <div class="wrap">
-                                            <li class="sub-title-default"><a href="#" target="_blank">Tổng công ty đường sắt Việt Nam</a></li>
-                                            <li class="sub-title-default"><a href="#" target="_blank">Công ty tín hiệu đường sắt Hà Nội</a></li>
-                                            <li class="sub-title-default"><a href="#" target="_blank">Công ty thông tin tín hiệu đường sắt Đà Nẵng</a></li>
-                                            <li class="sub-title-default"><a href="#" target="_blank">Công ty thông tin tín hiệu đường sắt Sài Gòn</a></li>
-                                            <li class="sub-title-default"><a href="#" target="_blank">Báo điện tử VnExpress</a></li>
-                                            <li class="sub-title-default"><a href="#" target="_blank">Báo điện tử Dân trí</a></li> 
+                                        <?php
+                                        foreach ($this->partners as $partner) { 
+                                            
+                                            if ($ssSystem->language == DEFAULT_LANGUAGE) {
+                                                $name = $partner->name;
+                                                $website= $partner->website;
+                                                $description = $partner->description;
+                                            } else {
+                                                $nameLang = json_decode($partner->name_lang);
+                                                $nameField = 'name_' . $ssSystem->language;
+                                                $name = $nameLang->$nameField;
+                                                $descritionLang = json_decode($partner->descrition_lang);
+                                                $descritionField = 'descrition_' . $ssSystem->language;
+                                                $descrition = $descritionLang->$descritionField;
+                                            }
+                                            ?>
+                                            <li class="sub-title-default"><a href="<?php echo $website ?>" target="_blank"><?php echo $name ?></a></li>
+                                            
+                                            <?php }?>
                                         </div>
                                         
                                     </div>
