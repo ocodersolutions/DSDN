@@ -7,15 +7,13 @@ use Zend\Session\Container;
 
 $ssSystem = new Container('system');
 $helperString = new \Ocoder\Helper\String;
-
-
-
-echo "index";
+$arrayNews= array (NEWS_CATEGORY_ID,RELATENEWS_CATEGORY_ID,INTERNALNEWS_CATEGORY_ID,RECRUITMENT_CATEGORY_ID);
+$arrayService= array (SERVICE_CATEGORY_ID);
+$arrayShareholder= array(SHAREHOLDER_CATEGORY_ID ,NOTIFICATION_CATEGORY_ID,FINANCIAL_CATEGORY_ID,SHAREHOLDER_MEET_CATEGORY_ID,SHAREINFO_CATEGORY_ID,ANNUALREPORT_CATEGORY_ID,BOARDREPORT_CATEGORY_ID,GOVERNANCERULE_CATEGORY_ID,PROSPECTUSREPORT_CATEGORY_ID,CHARTERED_CATEGORY_ID );
+$arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
 ?>
 <?php
-echo "<pre>";
-var_dump($categoryNews);
-echo "</pre>";
+    
      //$Parent_category=$this->categoryInfo->id;
     if ($ssSystem->language == DEFAULT_LANGUAGE) {
         $name = $this->categoryInfo->name;
