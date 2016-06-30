@@ -416,7 +416,10 @@ ul.pagination_news  li a:focus{
 /*======= newsdetail page ====*/
 .news_content{
     font: normal 14px "Century Gothic";
-    color: rgba(0, 0, 0, 0.64);
+    color: rgb(0, 0, 0);
+    font-family: arial;
+    line-height: 24px;
+}
 }
 .news_content .header-title{
     padding-left: 0;
@@ -433,6 +436,7 @@ ul.pagination_news  li a:focus{
     font-weight: normal;
 }
 .news_content p.new_tittle {
+    font: bold 20px "Century Gothic";
     color: #ff4600;;
 }
 .news_content .new_tittle{

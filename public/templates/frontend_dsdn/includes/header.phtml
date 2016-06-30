@@ -16,9 +16,9 @@ $ssSystem = new Container('system');
                         </div>
                         <div class="phone col-sm-9 col-xs-9">
                             <div class="content">
-                                <span class="title">Gọi ngay hôm nay</span><br>
-                                <span class="phone-number">(0511)3825472</span><br>
-                                <span class="wrt">Công Ty CP Thông Tin Tín Hiệu Đường Sắt Đà Nẵng</span><br>
+                                <span class="title"><?php echo $ssSystem->configs->action_title ?></span><br>
+                                <span class="phone-number"><?php echo $ssSystem->configs->company_phone ?></span><br>
+                                <span class="wrt"><?php echo $ssSystem->configs->company_name ?></span><br>
                             </div>
                         </div>
                     </div>
@@ -82,15 +82,11 @@ $ssSystem = new Container('system');
                     <li class="parent-item dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER ?>"><?php echo SHAREHOLDER ?> <span class="caret"></span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/thong-bao-12">Thông báo</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/bao-cao-tai-chinh-13">Báo cáo tài chính</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/dai-hoi-co-dong-14">Đại hội cổ đông</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/thong-tin-ve-co-phieu-15">Thông tin về cổ phiếu</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/bao-cao-thuong-nien-16">Báo cáo thường niên</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/bao-cao-hdqt-17">Báo cáo HĐQT</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/qui-che-quan-tri-18">Qui chế quản trị</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/ban-cao-bach-19">Bản cáo bạch</a></li>
-                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/dieu-le-to-chuc-hoat-dong-20">Điều lệ tổ chức và hoạt động</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/dai-hoi-co-dong-12">Đại Hội Cổ Đông</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/thong-bao-co-dong-13">Thông Báo Cổ Đông</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/bao-cao-thuong-nien-14">Báo Cáo thường Niên</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/thong-tin-tai-chinh-15">Thông tin tài chính</a></li>
+                            <li><a href="<?php echo URL_APPLICATION ?>/<?php echo URL_ALIAS_SHAREHOLDER?>/thong-tin-lien-lac-16">Thông tin Liên Lạc</a></li>
                         </ul>
                     </li>
                     <li class="parent-item ">

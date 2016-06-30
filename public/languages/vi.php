@@ -95,6 +95,10 @@ define("DESCRIPTION_DEFAULT", "...");
 define("TITLE", "Tiêu đề");
 define("KEYWORDS", "Từ khóa");
 define("COMPANY_NAME", "Tên công ty");
+define("OTHER_LINK", "Liên kết khác");
+define("ACTION_TITLE", "Hoạt động tiêu đề");
+
+
 
 define("COMPANY_INTRO", "Giới thiệu công ty");
 define("LOGO", "Logo");

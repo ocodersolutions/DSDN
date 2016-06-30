@@ -575,6 +575,39 @@ class Config extends Form {
                 )
             ),
         ));
+         $this->add(array(
+            'name' => 'action_title',
+            'type' => 'Text',
+            'attributes' => array(
+                'class' => 'form-control',
+                'id' => 'otherlink',
+                'placeholder' => 'Nhập nội dung',
+            ),
+            'options' => array(
+                'label' => ACTION_TITLE,
+                'label_attributes' => array(
+                    'for' => 'intro_image',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
+
+         $this->add(array(
+            'name' => 'other_link',
+            'type' => 'Textarea',
+            'attributes' => array(
+                'class' => 'form-control ckeditor',
+                'id' => 'otherlink',
+                'placeholder' => 'Nhập các link liên kết',
+            ),
+            'options' => array(
+                'label' => OTHER_LINK,
+                'label_attributes' => array(
+                    'for' => 'intro_image',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
 
     }
 

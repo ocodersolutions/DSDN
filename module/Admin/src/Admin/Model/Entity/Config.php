@@ -22,6 +22,7 @@ class Config {
     public $contact_info;
     public $contact_info_lang;
     public $iframe_youtube;
+    public $other_link;
 
     public function exchangeArray($data) {
         $this->id = (!empty($data['id'])) ? $data['id'] : 0;
@@ -48,6 +49,7 @@ class Config {
         $this->company_email = (!empty($data['company_email'])) ? $data['company_email'] : null;
         $this->company_fax = (!empty($data['company_history'])) ? $data['company_history'] : null;
         $this->company_email = (!empty($data['company_business'])) ? $data['company_business'] : null;
+        $this->other_link = (!empty($data['other_link'])) ? $data['other_link'] : null;
     }
 
     public function getArrayCopy() {

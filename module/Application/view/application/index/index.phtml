@@ -20,6 +20,7 @@ $featuredProducts = $this->featuredProducts;
             foreach ($this->banners as $banner) { 
                 if ($ssSystem->language == DEFAULT_LANGUAGE) {
                     $name = $banner->name;
+                    $link= $banner->link;
                     $description = $banner->description;
                 } else {
                     $nameLang = json_decode($banner->name_lang);
@@ -32,7 +33,8 @@ $featuredProducts = $this->featuredProducts;
                 $classActive = $isFirst ? 'active' : '';
                 $isFirst = false;
                 ?>
-                <li><img src="<?php echo URL_APPLICATION . $banner->banner ?>" alt="<?php echo $name; ?>"/>
+                <li>
+                <a href="<?php echo URL_APPLICATION.$link?>" target=_blank><img src="<?php echo URL_APPLICATION . $banner->banner ?>" alt="<?php echo $name; ?>"/></a>
                 
                 </li>
             <?php } ?>    
@@ -148,17 +150,7 @@ $featuredProducts = $this->featuredProducts;
                                         <div class="uc_clean_accordion">
                                             <div class="uc_clean_accordion_wrap">
                                                 <div id="accordion" class="uc_clean_accorder_content">
-                                                    <!-- start of line 1 -->
-                                                    <h3 class="uc_head_line">
-                                                       <a href="" class="uc_link_tittle sub-title-default"><?php echo COMPANY_HISTORY?></a>
-                                                    </h3>
-                                                    <div class="uc_line_content">
-                                                        <div class="uc_des p-default">
-                                                        
-                                                        <?php echo $ssSystem->configs->company_history;?>
-                                                        </div>
-                                                    </div>
-                                                    <!-- end of line 1 -->
+                                                    
 
                                                     <!-- start of line 2 -->
                                                     <h3 class="uc_head_line">
@@ -211,38 +203,16 @@ $featuredProducts = $this->featuredProducts;
                                     </div>-->
                                     
 
-                                    <div class="menu-left-2 block">
-                                        <h2 class="title-default">Văn phòng điều hành</h2>
-                                        <ul class="menu-list">
-                                            <li class="sub-title-default"><?php echo $ssSystem->configs->company_name; ?></li>
-                                            <li class="sub-title-default"><?php echo $ssSystem->configs->company_address; ?></li>
-                                            
-                                        </ul>
+                                    <div class="menu-left-2 block tinanh">
+                                      
+                                        <span class="tittle">Văn phòng điều hành</span>
+                                        <img src="<?php echo $urlImage_DSDN.'/vanphong.jpg'?>" alt="">
                                     </div>
 
                                     <div class="menu-left-3 block">
                                         <h2 class="title-default">LIÊN KẾT KHÁC</h2>
                                         <div class="wrap">
-                                        <?php
-                                        foreach ($this->partners as $partner) { 
-                                            
-                                            if ($ssSystem->language == DEFAULT_LANGUAGE) {
-                                                $name = $partner->name;
-                                                $website= trim($partner->website) ? $partner->website : '#';
-                                                $description = $partner->description;
-                                            } else {
-                                                $nameLang = json_decode($partner->name_lang);
-                                                $nameField = 'name_' . $ssSystem->language;
-                                                $name = $nameLang->$nameField;
-                                                $descritionLang = json_decode($partner->descrition_lang);
-                                                $descritionField = 'descrition_' . $ssSystem->language;
-                                                $descrition = $descritionLang->$descritionField;
-                                            }
-
-                                            ?>
-                                            <li class="sub-title-default"><a href="<?php echo $website ?>" target="_blank"><?php echo $name ?></a></li>
-                                            
-                                            <?php }?>
+                                        <?php echo $ssSystem->configs->other_link; ?>
                                         </div>
                                         
                                     </div>
