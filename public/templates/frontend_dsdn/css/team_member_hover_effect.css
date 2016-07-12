@@ -124,9 +124,12 @@
 	text-align: center;
 }
 .uc_member_hover_effect .uc_paragraph small {
+	text-transform: uppercase;
+	line-height: 17px;
 	font-weight: lighter;
+	min-height: 34px;
 	color: #222222;
-	font-size: 16px;
+	font-size: 12px;
 	margin: 10px 0 20px;
 	display: inline-block;
 
@@ -140,6 +143,7 @@
 }
 .uc_member_hover_effect .uc_paragraph .uc_tittle{
 	text-transform: uppercase;
+	min-height: 46px;
 	font-size: 14px;
 	color: #FFFFFF;
 	padding: 8px;
@@ -163,5 +167,8 @@ h3.uc_tittle{
 @media only screen and (max-width: 767px) {
 	.uc_member_hover_effect {
 		width: 100%;
+	}
+	.uc_member_hover_effect .uc_paragraph small{
+		min-height: 48px;
 	}
 }
