@@ -14,6 +14,12 @@ use Zend\View\Model\ViewModel;
 use Zend\Mail;
 use Ocoder\Base\BaseActionController as OcoderBaseController;
 
+
+use Zend\Mail\Message;
+use Zend\Mail\Transport\Smtp as SmtpTransport;
+use Zend\Mail\Transport\SmtpOptions;
+
+
 class IndexController extends OcoderBaseController
 {
     public function init() {
@@ -67,23 +73,26 @@ class IndexController extends OcoderBaseController
    public function contactAction()
     {
         if ($this->getRequest()->isPost()) {
-            // $mail = new Mail\Message();
-            // $mail->setBody('This is the text of the email.');
-            // $mail->setFrom('Freeaqingme@example.org', 'Sender\'s name');
-            // $mail->addTo('hoangphuocthanhtrung@gmail.com', 'Name of recipient');
-            // $mail->setSubject('TestSubject');
+            $message = new Message();
+            $message->addTo('hoangphuocthanhtrung@gmail.com')
+                    ->addFrom('ocodermail@yahoo.com')
+                    ->setSubject('Lien he tu')
+                    ->setBody("<b>Noi dung</b><br/>Test 123");
 
-            // $transport = new Mail\Transport\Sendmail();
-            // $result = $transport->send($mail);
-
-            $to      = 'pvhuyhoang166@gmail.com';
-            $subject = 'the subject';
-            $message = 'hello';
-            $headers = 'From: webmaster@example.com' . "\r\n" .
-                'Reply-To: webmaster@example.com' . "\r\n" .
-                'X-Mailer: PHP/' . phpversion();
-
-            mail($to, $subject, $message, $headers);
+            // Setup SMTP transport using LOGIN authentication
+            $transport = new SmtpTransport();
+            $options   = new SmtpOptions(array(
+                'name'              => 'smtp.mail.yahoo.com',
+                'host'              => 'smtp.mail.yahoo.com',
+                'connection_class'  => 'login',
+                'connection_config' => array(
+                    'username' => 'ocodermail@yahoo.com',
+                    'password' => 'Vf5IadKD',
+                    'ssl'=> 'tls',
+                ),
+            ));
+            $transport->setOptions($options);
+            $transport->send($message);
         }
         //set Head info
         $this->_viewHelper->get('HeadTitle')->prepend(TITLE_CONTACT . ' - ' . $this->_configs->title);
