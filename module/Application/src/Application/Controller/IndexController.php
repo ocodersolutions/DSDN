@@ -76,8 +76,15 @@ class IndexController extends OcoderBaseController
             $message = new Message();
             $message->addTo('hoangphuocthanhtrung@gmail.com')
                     ->addFrom('ocodermail@yahoo.com')
-                    ->setSubject('Lien he tu')
-                    ->setBody("<b>Noi dung</b><br/>Test 123");
+                    ->setSubject('Lien he tu');
+
+            $bodyPart = new \Zend\Mime\Message();
+
+            $bodyMessage = new \Zend\Mime\Part("<b>Noi dung</b><br/>Test 123456");
+            $bodyMessage->type = 'text/html';
+
+            $bodyPart->setParts(array($bodyMessage));
+            $message->setBody($bodyPart);
 
             // Setup SMTP transport using LOGIN authentication
             $transport = new SmtpTransport();
