@@ -21,6 +21,7 @@ class DocumentController extends OcoderBaseController
     
 
     public function init() {
+
         // Check login
         $this->getAuthService();
         if (!$this->_authService->hasIdentity() && $this->_params['action'] != 'login') {
@@ -39,7 +40,7 @@ class DocumentController extends OcoderBaseController
     //Get all Documents
     public function indexAction()
     {
-        
+        $this->_viewHelper->get('HeadTitle')->prepend(DOCUMENT . ' - ' . $this->_configs->title);
         $stringHelperOcoder = new \Ocoder\Helper\String();
         $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
         $userTableGateway = $this->getServiceLocator()->get('Admin\Model\UserTable');
