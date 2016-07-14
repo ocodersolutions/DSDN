@@ -87,7 +87,7 @@ class IndexController extends OcoderBaseController
 
             $bodyPart = new \Zend\Mime\Message();
 
-            $bodyMessage = new \Zend\Mime\Part("<b> Liên hệ từ khách hàng : ".$name."</b><br/><i>email khách hàng ".$from."</i><br/>".$content);
+            $bodyMessage = new \Zend\Mime\Part("<b> Liên hệ từ khách hàng : </b>".$name."<br/><b>Email khách hàng : </b>".$from."<br/><b> Nội dung phản hồi : </b>".$content);
             $bodyMessage->type = 'text/html';
 
             $bodyPart->setParts(array($bodyMessage));
