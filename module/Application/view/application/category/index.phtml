@@ -64,6 +64,8 @@ $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
                     foreach ($category->articles as $article) { 
                         if ($ssSystem->language == DEFAULT_LANGUAGE) {
                             $name = $article->name;
+                            $created = $article->created;
+                            $date= new DateTime($created);
                             $alias = $article->alias;
                             $intro = $article->intro;
                         } else {
@@ -101,7 +103,7 @@ $arrayAboutus =  array(COMPANY_INFO_CATEGORY_ID);
                         <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>"><img src="<?php echo $imageUrl ?>" alt="thumbnail" class="first_thumb"/></a>
                         <div class="first_new_content">
                             <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>" class="links_tittle"><?php echo $name?></a>
-                            <span>Thứ 4, 01/06/2016 , 9:37:03</span>
+                            <span><?php  echo $date->format("H:i , d-m-Y"); ?></span>
                             <p><?php echo $intro ?></p>
                             <a href="<?php echo URL_APPLICATION . '/bv/' . $alias ?>" class="link_detail"> Xem chi tiết</a>
                         </div> 
