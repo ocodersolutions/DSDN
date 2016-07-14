@@ -526,6 +526,22 @@ class Config extends Form {
                 )
             ),
         ));
+        $this->add(array(
+            'name' => 'admin_email',
+            'type' => 'Text',
+            'attributes' => array(
+                'class' => 'form-control',
+                'id' => 'admin_email',
+                'placeholder' => '',
+            ),
+            'options' => array(
+                'label' => ADMIN_EMAIL,
+                'label_attributes' => array(
+                    'for' => 'admin_email',
+                    'class' => 'col-xs-3 control-label',
+                )
+            ),
+        ));
         // Company Fax
         $this->add(array(
             'name' => 'company_fax',

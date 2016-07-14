@@ -27,7 +27,8 @@ class IndexController extends OcoderBaseController
     }
     
     public function indexAction()
-    {
+    {   
+        
         //set Head info
         $this->_viewHelper->get('HeadTitle')->prepend($this->_configs->title);
         $this->_viewHelper->get('HeadMeta')->setName('keywords', $this->_configs->keywords);
@@ -72,15 +73,21 @@ class IndexController extends OcoderBaseController
     
    public function contactAction()
     {
+        //$adminmail=$this->$ssSystem->configs->admin_mail;
         if ($this->getRequest()->isPost()) {
+            $adminmail=$this->_configs->admin_email;
+            $name=$this->getRequest()->getPost('full_name');
+            $from=$this->getRequest()->getPost('email');
+            $title=$this->getRequest()->getPost('tittle');
+            $content=$this->getRequest()->getPost('comment');
             $message = new Message();
-            $message->addTo('hoangphuocthanhtrung@gmail.com')
+            $message->addTo($adminmail)
                     ->addFrom('ocodermail@yahoo.com')
-                    ->setSubject('Lien he tu');
+                    ->setSubject($title);
 
             $bodyPart = new \Zend\Mime\Message();
 
-            $bodyMessage = new \Zend\Mime\Part("<b>Noi dung</b><br/>Test 123456");
+            $bodyMessage = new \Zend\Mime\Part("<b> Liên hệ từ khách hàng : ".$name."</b><br/><i>email khách hàng ".$from."</i><br/>".$content);
             $bodyMessage->type = 'text/html';
 
             $bodyPart->setParts(array($bodyMessage));

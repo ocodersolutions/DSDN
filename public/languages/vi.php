@@ -97,6 +97,7 @@ define("KEYWORDS", "Từ khóa");
 define("COMPANY_NAME", "Tên công ty");
 define("OTHER_LINK", "Liên kết khác");
 define("ACTION_TITLE", "Hoạt động tiêu đề");
+define("ADMIN_EMAIL", "Email quản trị");
 
 
 
