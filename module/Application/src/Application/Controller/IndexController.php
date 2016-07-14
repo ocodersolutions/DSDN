@@ -114,11 +114,11 @@ class IndexController extends OcoderBaseController
                 'name'              => 'smtp.gmail.com',
                 'host'              => 'smtp.gmail.com',
                 'connection_class'  => 'login',
+                'port' => 465,
                 'connection_config' => array(
                     'username' => 'ocodersolutions@gmail.com',
                     'password' => 'thhnt12311)',
                     'ssl'=> 'tls',
-                    'port' => 587,
                 ),
             ));
 
