@@ -116,8 +116,8 @@ class IndexController extends OcoderBaseController
                 'connection_class'  => 'login',
                 'port' => 465,
                 'connection_config' => array(
-                    'username' => 'ocodersolutions@gmail.com',
-                    'password' => 'thhnt12311)',
+                    'username' => 'ocodermail@gmail.com',
+                    'password' => 'Vf5IadKD',
                     'ssl'=> 'ssl',
                 ),
             ));
