@@ -103,7 +103,7 @@ class IndexController extends OcoderBaseController
                     'username' => 'ocodermail@yahoo.com',
                     'password' => 'Vf5IadKD',
                     //'ssl'=> 'tls',
-                    'ssl'=> 'ssl',
+                    // 'ssl'=> 'ssl',
                 ),
             ));
             $transport->setOptions($options);
