@@ -71,7 +71,7 @@ class IndexController extends OcoderBaseController
         ));
     }
     
-   public function contactAction()
+    public function contactAction()
     {
         //$adminmail=$this->$ssSystem->configs->admin_mail;
         if ($this->getRequest()->isPost()) {
@@ -95,17 +95,33 @@ class IndexController extends OcoderBaseController
 
             // Setup SMTP transport using LOGIN authentication
             $transport = new SmtpTransport();
+
+            // //SMTP Yahoo
+            // $options   = new SmtpOptions(array(
+            //     'name'              => 'smtp.mail.yahoo.com',
+            //     'host'              => 'smtp.mail.yahoo.com',
+            //     'connection_class'  => 'login',
+            //     'connection_config' => array(
+            //         'username' => 'ocodermail@yahoo.com',
+            //         'password' => 'Vf5IadKD',
+            //         'ssl'=> 'tls',
+            //         'port' => 587,
+            //     ),
+            // ));
+
+            //SMTP Gmail
             $options   = new SmtpOptions(array(
-                'name'              => 'smtp.mail.yahoo.com',
-                'host'              => 'smtp.mail.yahoo.com',
+                'name'              => 'smtp.gmail.com',
+                'host'              => 'smtp.gmail.com',
                 'connection_class'  => 'login',
                 'connection_config' => array(
-                    'username' => 'ocodermail@yahoo.com',
-                    'password' => 'Vf5IadKD',
+                    'username' => 'ocodersolutions@gmail.com',
+                    'password' => 'thhnt12311)',
                     'ssl'=> 'tls',
                     'port' => 587,
                 ),
             ));
+
             $transport->setOptions($options);
             $transport->send($message);
         }
