@@ -135,10 +135,11 @@ class DocumentController extends OcoderBaseController
                     if (move_uploaded_file($_FILES[$fileUploadName]["tmp_name"], $target_file)) {
                         $this->_params['data']['link'] = $fileName;
                     }
+                    $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
                 }
             }
             
-            $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
+            //$documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
            //if($DocumentTable->saveItem(array('id' => $this->->id, 'banners' => json_encode($bannerArr)))){
                 //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'success', 'content' => 'Cập nhật thành công'));
              //} else {
