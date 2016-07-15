@@ -202,7 +202,7 @@ class UserTable extends AbstractTableGateway {
                 'fullname' => $arrParam['fullname'],
                 'group_id' => '',
                 'ordering' => '',
-                // 'published' => ($arrParam['published'] == 'active') ? 1 : 0,
+                'published' => ($arrParam['published'] == 'active') ? 1 : 0,
                 'modified' => date('Y-m-d H:i:s'),
                 'avatar' => $arrParam['avatar'],
             );
