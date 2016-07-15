@@ -15,19 +15,18 @@ class AccountController extends BaseActionController {
         $this->_options['tableName'] = TABLE_USERS;
         $this->_options['modelTable'] = 'Admin\Model\UserTable';
         $this->_options['formName'] = 'formApplicationUser';
-        
         // Check login
         $this->getAuthService();
-        if (!$this->_authService->hasIdentity() && $this->_params['action'] != 'login') {
+        if (!$this->_authService->hasIdentity() && $this->_params['action'] != 'login' && $this->_authService->getStorage()->read()->published != 1 ) {
             $this->goAction('admin', array('controller' => 'account', 'action' => 'login'));
         }
     }
 
     public function loginAction() {
         $msgError = '';
-        if ($this->_authService->hasIdentity()) {
+        if ($this->_authService->hasIdentity() && $this->_authService->getStorage()->read()->published == 1) {
             $this->goAction('admin', array('controller' => 'index'));
-    }
+        }
         
         $myForm = $this->getServiceLocator()->get('FormElementManager')->get('formAdminLogin');
         
@@ -41,9 +40,13 @@ class AccountController extends BaseActionController {
             $result = $this->_authService->authenticate();
             
             if ($result->isValid()) {
-                $userInfo = $this->_authService->getAdapter()->getResultRowObject(array('id', 'username', 'email', 'fullname'));
+                $userInfo = $this->_authService->getAdapter()->getResultRowObject(array('id', 'username', 'email', 'fullname', 'published'));
                 $this->_authService->getStorage()->write($userInfo);
-                $this->goAction('admin', array('controller' => 'index'));
+                if($userInfo->published == 1) {
+                    $this->goAction('admin', array('controller' => 'index'));
+                } else {
+                   $this->redirect()->toUrl(URL_APPLICATION);
+                }
             } else {
                 $msgError = USERNAME_OR_PASSWORD_INVALID;
             }

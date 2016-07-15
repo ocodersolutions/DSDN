@@ -16,10 +16,11 @@ class IndexController extends OcoderActionController
 
         // Check login
         $this->getAuthService();
-        if (!$this->_authService->hasIdentity()) {
+        if (!$this->_authService->hasIdentity() || ($this->_authService->hasIdentity() && $this->_authService->getStorage()->read()->published == 0)) {
             $this->goAction('admin', array('controller' => 'account', 'action' => 'login'));
+        
         }
-
+        
         // DATA
         $this->_params['data'] = array_merge(
             $this->getRequest()->getPost()->toArray(), $this->getRequest()->getFiles()->toArray()
