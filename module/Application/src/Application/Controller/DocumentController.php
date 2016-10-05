@@ -107,15 +107,14 @@ class DocumentController extends OcoderBaseController
                 $target_dir = PATH_PUBLIC_DOCUMENTS . "/";
                 $uploadOk = 1;
                 $imageFileType = pathinfo(basename($_FILES[$fileUploadName]["name"]), PATHINFO_EXTENSION);
-                
                 $fileName = time() . '.' . $imageFileType;
                 $target_file = $target_dir . $fileName;
                 // Check if image file is a actual image or fake image
                  $check = getimagesize($_FILES[$fileUploadName]["tmp_name"]);
-                 if($check === false) {
-                 //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => FILE_NOT_IMAGE));
-                     $uploadOk = 0;
-                 }
+                 // if($check === false) {
+                 // //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => FILE_NOT_IMAGE));
+                 //     $uploadOk = 0;
+                 // }
                  // Check size
                  if ($_FILES[$fileUploadName]["size"] > 2097152) {
                  //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => MAX_SIZE_2M));
