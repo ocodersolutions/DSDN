@@ -133,6 +133,7 @@ class DocumentController extends OcoderBaseController
                 if ($uploadOk != 0) {
                     if (move_uploaded_file($_FILES[$fileUploadName]["tmp_name"], $target_file)) {
                         $this->_params['data']['link'] = $fileName;
+                        var_dump($this->_params['data']);
                     }
                     $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
                 }
