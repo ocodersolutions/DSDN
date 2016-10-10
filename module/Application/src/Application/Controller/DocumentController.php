@@ -149,5 +149,16 @@ class DocumentController extends OcoderBaseController
             'userLogged' => $this->userLogged
         ));
     }
+    public function deldocsAction()
+    {
+        $request = $this->getRequest();
+        if ($request->isPost()) {
+            $docId = $this->params()->fromPost('docId');
+            
+            $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
+            $del = $documentTableGateway->deleteDoc($docId);
+        }
+         return $del;
+    }
 }
     

@@ -5,10 +5,12 @@ $urlImage_DSDN = URL_TEMPLATE . '/frontend_dsdn/img';
 
 use Zend\Session\Container;
 $ssSystem = new Container('system');
+$userinfo = $this->userInfo;
+$AddId = $userinfo->id;
 ?>
 
 <div class="contact-content">
-    <div class="container">
+    <div class="container contact-content">
         <img src="<?php echo $urlImage_DSDN ?>/van-ban-phap-luat1.jpg" alt="hình nền">   
         <p class="contact_p">Công văn nội bộ</p>
         <div class="col-md-12">
@@ -89,6 +91,13 @@ $ssSystem = new Container('system');
                                     <i class="fa fa-eye" aria-hidden="true"></i>
                                     <span class="uc_button_app">Xem chi tiết</span>
                                 </a>
+                                <?php if($document->created_by == $AddId){?>
+                                    <a href="" class="uc_app_button" id="del_docs" data-docId ="<?php echo $document->id ?>">
+                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                        <span class="uc_button_app">Xóa</span>
+                                    </a>
+                                <?php }?>
+                                
                             </div>
                         <!-- end of simple app download buttons -->
                         </div>
@@ -121,7 +130,7 @@ $ssSystem = new Container('system');
                         <?php foreach ($docArrOld as $olderMonth=>$docOlder ){ ?>
                             <!-- start of line 1 -->
                             <h3 class="uc_head_line">
-                               <a href="" class="uc_link_tittle">Công văn <?php echo $olderMonth ?></a>
+                               <a  class="uc_link_tittle">Công văn <?php echo $olderMonth ?></a>
                             </h3>
                             <div class="uc_line_content">
                             <?php foreach ($docOlder as $oderdocument ) { ?>
@@ -142,3 +151,20 @@ $ssSystem = new Container('system');
         
     </div>        
 </div>
+<script>
+    $(document).on("click", "#del_docs", function(){
+        docId = $(this).attr('data-docId');
+        //alert (docId);
+        $.ajax({
+            url : "/cong-van/xoa",
+            type : "post",
+            data : {
+                'docId' : docId
+            },
+            success:function(result){
+                console.log(result);
+            }
+        });
+         location.reload();
+    })
+</script>

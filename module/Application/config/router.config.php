@@ -46,6 +46,17 @@ $documentUploadRoute = array(
         ),
     ),
 );
+$documentDeleteRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => '/cong-van/xoa[/]',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'Document',
+            'action' => 'deldocs',
+        ),
+    ),
+);
 
 $membersRoute = array(
     'type' => 'Zend\Mvc\Router\Http\Segment',
@@ -427,6 +438,7 @@ return array(
 			'googleVerificationRoute' => $googleVerificationRoute,
             'document' => $documentRoute,
             'documentUpload' => $documentUploadRoute,
+            'documentDeleteRoute' => $documentDeleteRoute,
             'members' => $membersRoute,
             'shareholder' => $shareholderRoute,
             'shareholderChildRoute' => $shareholderChildRoute,

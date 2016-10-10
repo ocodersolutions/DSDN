@@ -131,7 +131,7 @@ class DocumentTable extends AbstractTableGateway {
             $select->where->greaterThanOrEqualTo('created', date($oldDateString))
                             ->lessThanOrEqualTo('created', date($dateString));
         });
-
+        $arrDocsMonth=[];
         foreach ($result as $document) {
             $month = date('Y-m', strtotime($document->created));
             $arrDocsMonth[$month][] = $document; 
@@ -177,7 +177,6 @@ class DocumentTable extends AbstractTableGateway {
                 'created' => date('Y-m-d H:i:s'),
                 'published' => 1,
             );
-
             // if (!empty($arrParam['file']['tmp_name'])) {
             //     $imageObj = new Image();
             //     $data['avatar'] = $imageObj->upload('file', array('task' => 'user-avatar'));
@@ -205,6 +204,12 @@ class DocumentTable extends AbstractTableGateway {
             $this->tableGateway->update($data, array('id' => $arrParam['id']));
             return $arrParam['id'];
         }
+    }
+
+    // delete item
+    public function deleteDoc($id) {
+       $delDoc = $this->tableGateway->delete( array('id' => $id));
+       return $delDoc;
     }
 
 }
