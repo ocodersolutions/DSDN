@@ -54,7 +54,25 @@ class DocumentController extends OcoderBaseController
         // $this->_params['ssFilter']['filter_keyword_type'] = array('alias', 'alias_lang');
         // $this->_params['ssFilter']['filter_keyword_value'] = $aliasCategory;
         $docArrCurrentMonth = $documentTableGateway->listItemCurrentMonth();
-
+        // echo "<pre>";
+        // var_dump($docArrCurrentMonth);
+        // echo "</pre>";
+        if (!empty($docArrCurrentMonth))
+        {
+            foreach ($docArrCurrentMonth as $date => $ArrayDocInday) {
+                
+                if(is_array($ArrayDocInday)){
+                    foreach ($ArrayDocInday as $Obj) {
+                       $id= $Obj->created_by;
+                       $userCreat = $userTableGateway->getItem(array('id' => $id));
+                       $UserCreated = $userCreat->fullname;
+                       $AvatarCreated = $userCreat->avatar;
+                       $Obj->creat_by_user = $UserCreated;
+                        $Obj->avatar_creater = $AvatarCreated;
+                    }
+                }
+            }
+        }
         $docArrOld = $documentTableGateway->listItemOld();
 
         

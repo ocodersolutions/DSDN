@@ -31,6 +31,16 @@
     margin-right: 5px;
     font-weight: bold;
 }
+.breakum-line .userinfo a {
+    margin-left: 0px;
+    font-weight: bold;
+}
+.breakum-line .userinfo a.logout {
+    display: inline-block;
+    margin-left: 0px;
+    font-size: 12px;
+    font-style: italic;
+}
 .breakum-line .userinfo {
     display: block;
     text-align: right;

@@ -29,23 +29,8 @@ $AddId = $userinfo->id;
             </div>
            
             <div class="userinfo col-sm-6 pull-right">
-                <p>Xin Chào,<span id="show_info"><?php echo $this->userLogged->fullname ?></span></p>
-                
-                <div class="box_info">
-                    <div class="images">
-                    <?php if ($userInfo->avatar!=null){?>
-                       <img src="<?php echo URL_UPLOADS_AVATAR .'/'.$userInfo->avatar ?>" alt="" class="avatar"/> 
-                       <?php }else {?>
-                        <img src="<?php echo URL_UPLOADS_AVATAR .'/no_avatar.jpg' ?>" alt="" class="avatar"/> 
-                        <?php }; ?>
-                    </div>
-                    <div class="box_foot">
-                        <a href="<?php echo URL_APPLICATION . '/application/account/edit'?>" >Thông tin</a>
-                        <a href="<?php echo URL_APPLICATION . '/application/account/logout' ?>" >Đăng xuất</a>
-                    </div>
-                    
-                </div>
-            </div>
+                <p>Xin Chào,<a href="<?php echo URL_APPLICATION . '/application/account/edit'?>"><?php echo $this->userLogged->fullname ?>!</a>,<a href="<?php echo URL_APPLICATION . '/application/account/logout' ?>" class="logout" >Đăng xuất</a></p>
+            </div>   
         </div>
             
         
@@ -77,7 +62,7 @@ $AddId = $userinfo->id;
                         <span class="uc_content" style="font-weight: bold;"><?php echo $document->name ?></span>
                         <span class="uc_content"><?php echo $document->description ?></span>
                         <div class="left-box ">
-                            <p class="uc_name"><?php echo $this->userLogged->fullname ?></p>
+                            <p class="uc_name"><?php echo $document->creat_by_user ?></p>
                             <p class="uc_job"><?php echo $document->created ?></p>
                         </div>
                         <div class="right-box pull-right">
@@ -94,15 +79,23 @@ $AddId = $userinfo->id;
                                 <?php if($document->created_by == $AddId){?>
                                     <a href="" class="uc_app_button" id="del_docs" data-docId ="<?php echo $document->id ?>">
                                         <i class="fa fa-trash-o" aria-hidden="true"></i>
-                                        <span class="uc_button_app">Xóa</span>
+                                        <?php
+                                        $expire = strtotime($document->created);
+                                        $today = strtotime(date("Y-m-d H:m:i"));
+                                        $ex =  $today - $expire ; 
+                                        if ($ex < 84600) { 
+                                             ?>
+                                         <span class="uc_button_app">Xóa</span>
+                                         <?php } ?>
+                                       
                                     </a>
                                 <?php }?>
                                 
                             </div>
                         <!-- end of simple app download buttons -->
                         </div>
-                        <?php if ($userInfo->avatar!=null){?>
-                       <img  class="uc_avatar"src="<?php echo URL_UPLOADS_AVATAR .'/'.$userInfo->avatar ?>" alt="" class="avatar"/> 
+                        <?php if ($document->avatar_creater){?>
+                       <img  class="uc_avatar"src="<?php echo URL_UPLOADS_AVATAR .'/'.$document->avatar_creater ?>" alt="" class="avatar"/> 
                        <?php }else {?>
                         <img  class="uc_avatar"src="<?php echo URL_UPLOADS_AVATAR .'/no_avatar.jpg' ?>" alt="" class="avatar"/> 
                         <?php }; ?>
