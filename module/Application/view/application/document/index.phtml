@@ -77,18 +77,20 @@ $AddId = $userinfo->id;
                                     <span class="uc_button_app">Xem chi tiết</span>
                                 </a>
                                 <?php if($document->created_by == $AddId){?>
-                                    <a href="" class="uc_app_button" id="del_docs" data-docId ="<?php echo $document->id ?>">
-                                        <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                   
+                                       
                                         <?php
                                         $expire = strtotime($document->created);
                                         $today = strtotime(date("Y-m-d H:m:i"));
                                         $ex =  $today - $expire ; 
-                                        if ($ex < 84600) { 
-                                             ?>
-                                         <span class="uc_button_app">Xóa</span>
+                                        if ($ex < 84600) {?>
+                                            <a href="" class="uc_app_button" id="del_docs" data-docId="<?php echo $document->id ?>">
+                                            <i class="fa fa-trash-o" aria-hidden="true"></i>
+                                            <span class="uc_button_app">Xóa</span>
+                                         </a>
                                          <?php } ?>
                                        
-                                    </a>
+                                    
                                 <?php }?>
                                 
                             </div>
