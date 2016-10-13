@@ -2,6 +2,7 @@
 
 error_reporting(E_ALL ^ E_STRICT);
 ini_set('display_errors', 0);
+ini_set('date.timezone', 'Asia/Bangkok');
 
 include_once 'define_local.php';
 include_once 'define.php';

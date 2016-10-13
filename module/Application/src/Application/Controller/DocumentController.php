@@ -151,6 +151,8 @@ class DocumentController extends OcoderBaseController
                 if ($uploadOk != 0) {
                     if (move_uploaded_file($_FILES[$fileUploadName]["tmp_name"], $target_file)) {
                         $this->_params['data']['link'] = $fileName;
+                        $getdate = date("Y-m-d H:i:s");
+                        $this->_params['data']['created']= $getdate;
                     }
                     $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
                 }
