@@ -63,7 +63,7 @@ $AddId = $userinfo->id;
                         <span class="uc_content"><?php echo $document->description ?></span>
                         <div class="left-box ">
                             <p class="uc_name"><?php echo $document->creat_by_user ?></p>
-                            <p class="uc_job"><?php echo $document->created ?></p>
+                            <p class="uc_job"><?php echo date('H:i:s', strtotime($document->created)); ?></p>
                         </div>
                         <div class="right-box pull-right">
                             <!-- start of simple app download buttons -->
@@ -73,8 +73,8 @@ $AddId = $userinfo->id;
                                     <span class="uc_button_app">Tải xuống </span>
                                 </a>-->
                                 <a href="<?php echo URL_UPLOADS_DOCUMENTS . '/' . $document->link ?>" class="uc_app_button" target="_blank">
-                                    <i class="fa fa-eye" aria-hidden="true"></i>
-                                    <span class="uc_button_app">Xem chi tiết</span>
+                                    <i class="fa fa-download" aria-hidden="true"></i>
+                                    <span class="uc_button_app">Tải xuống</span>
                                 </a>
                                 <?php if($document->created_by == $AddId){?>
                                    

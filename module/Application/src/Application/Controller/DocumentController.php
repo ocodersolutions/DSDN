@@ -121,11 +121,12 @@ class DocumentController extends OcoderBaseController
 
             $task='add-item' ;
             $fileUploadName = 'link';
+            $fileNameup = pathinfo($_FILES[$fileUploadName]['name'], PATHINFO_FILENAME);
             if($_FILES[$fileUploadName]["size"]) {
                 $target_dir = PATH_PUBLIC_DOCUMENTS . "/";
                 $uploadOk = 1;
                 $imageFileType = pathinfo(basename($_FILES[$fileUploadName]["name"]), PATHINFO_EXTENSION);
-                $fileName = time() . '.' . $imageFileType;
+                $fileName = $fileNameup . '-' .rand(1,999). '.' . $imageFileType;
                 $target_file = $target_dir . $fileName;
                 // Check if image file is a actual image or fake image
                  $check = getimagesize($_FILES[$fileUploadName]["tmp_name"]);

@@ -217,8 +217,8 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     float: left;
 }
 .document_new .wrap .bydate{
-    background: rgb(199, 211, 239);
-    color: #fff;
+    //background: rgb(199, 211, 239);
+    color: #ff4600;
 }
 .document_new .wrap .bydate i{
     margin:0 5px;
@@ -231,7 +231,7 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     text-align: center;
 }
 .document_new .colum-date a{
-    color: #fff;
+    color: #ff4600;
     margin: 2px 0;
     box-sizing: border-box;
     padding: 2px;
@@ -240,7 +240,8 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     background: rgb(199, 211, 239);
 }
 .document_new .colum-date a:hover,.document_new .colum-date a:active{
-     background: rgb(1, 3, 248);
+    background: rgb(1, 3, 248);
+    color: #ff4600;
 }
 .contact-content{
 	padding: 0;
