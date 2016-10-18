@@ -217,7 +217,7 @@ a.btn_upload:hover,a.btn_upload:focus,a.btn_upload:active{
     float: left;
 }
 .document_new .wrap .bydate{
-    //background: rgb(199, 211, 239);
+    background: rgb(199, 211, 239);
     color: #ff4600;
 }
 .document_new .wrap .bydate i{
