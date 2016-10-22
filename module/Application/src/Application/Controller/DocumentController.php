@@ -39,7 +39,7 @@ class DocumentController extends OcoderBaseController
     
     //Get all Documents
     public function indexAction()
-    {
+    {   
         $this->_viewHelper->get('HeadTitle')->prepend(DOCUMENT . ' - ' . $this->_configs->title);
         $stringHelperOcoder = new \Ocoder\Helper\String();
         $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
@@ -155,7 +155,7 @@ class DocumentController extends OcoderBaseController
                         $getdate = date("Y-m-d H:i:s");
                         $this->_params['data']['created']= $getdate;
                     }
-                    $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
+                    $LastDocument = $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
                 }
             }
             
@@ -167,7 +167,8 @@ class DocumentController extends OcoderBaseController
              //}
         }
         return new ViewModel(array(
-            'userLogged' => $this->userLogged
+            'userLogged' => $this->userLogged,
+            'lastDocument' => $LastDocument
         ));
     }
     public function deldocsAction()
