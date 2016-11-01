@@ -36,7 +36,8 @@ $helperString = new \Ocoder\Helper\String;
                         <p class="formlabel">Tài khoản :</p>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" name="username" class="input_fname" value="<?php echo $this->userInfo->username ?>"/>
+                        <p class="input_fname"><?php echo $this->userInfo->username ?></p>
+                        <input type="hidden" name="username" class="input_fname" value="<?php echo $this->userInfo->username ?>"/>
                     </div>
                 </div>
                 <div class="row block">
@@ -44,7 +45,7 @@ $helperString = new \Ocoder\Helper\String;
                         <p class="formlabel">Email :</p>
                     </div>
                     <div class="col-sm-8">
-                        <input type="text" name="email" class="input_fname" value="<?php echo $this->userInfo->email ?>"/>
+                        <input type="text" name="email" class="input_fname" value="<?php echo $this->userInfo->email ?>" />
                     </div>
                 </div>
                 <div class="row block">

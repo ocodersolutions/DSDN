@@ -152,9 +152,10 @@ form input,form textarea {
     transition: background-size 0.15s cubic-bezier(0.64, 0.09, 0.08, 1)
 }
 form input.input_email,
-form input.input_fname,form textarea{
+form input.input_fname,form textarea,p.input_fname{
     padding: 0 8px;
 	border-bottom: 1px solid #004EBC;
+    font-size: 14px;
 }
 form.contactform input.has-err {
     border-color: red;
