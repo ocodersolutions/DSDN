@@ -23,4 +23,20 @@ jQuery(document).ready(function($){
 			( $(this).offset().top <= $(window).scrollTop()+$(window).height()*offset && $(this).find('.cd-timeline-img').hasClass('is-hidden') ) && $(this).find('.cd-timeline-img, .cd-timeline-content').removeClass('is-hidden').addClass('bounce-in');
 		});
 	}
+	/*official page*/
+
+    $(".inbox-nav.inbox-divider> li > a").click(function(e) {
+        //e.preventDefault();
+        $(this).closest("li").siblings('.active').removeClass("active");
+        $(this).closest("li").addClass("active");
+        var index = $(this).index();
+        console.log(index);
+        $("div.lg-side>div.tab-content").removeClass("active");
+        $("div.lg-side>div.tab-content").eq(index).addClass("active");
+    });
+    $('#example').DataTable( {
+        responsive: true,
+        colReorder: true
+    } );
+
 });

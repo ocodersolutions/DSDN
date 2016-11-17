@@ -114,7 +114,6 @@ class DocumentController extends OcoderBaseController
         $getfileType= $this->getServiceLocator()->get('Admin\Model\ConfigTable');
         $fileType=$getfileType->getItem(array('id' => 1));
         $arrDocType=(explode(',',$fileType->filetype_doc) );
-        
         $request = $this->getRequest();
         if ($request->isPost()) {
             $documentTableGateway = $this->getServiceLocator()->get('Admin\Model\DocumentTable');
@@ -145,7 +144,8 @@ class DocumentController extends OcoderBaseController
                 if (in_array($imageFileType,$arrDocType)) {
                     //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => MAX_SIZE_2M));
                     $uploadOk = 1;
-                    
+                }else{
+                     $uploadOk = 0;
                 }
                   
                 // Check if $uploadOk is set to 0 by an error
@@ -154,9 +154,11 @@ class DocumentController extends OcoderBaseController
                         $this->_params['data']['link'] = $fileName;
                         $getdate = date("Y-m-d H:i:s");
                         $this->_params['data']['created']= $getdate;
+                        $LastDocument = $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
                     }
-                    $LastDocument = $documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
-                }
+                }else{
+                        $LastDocument = 0;
+                    }
             }
             
             //$documentTableGateway->saveItem($this->_params['data'], array('task' => $task));
@@ -168,7 +170,7 @@ class DocumentController extends OcoderBaseController
         }
         return new ViewModel(array(
             'userLogged' => $this->userLogged,
-            'lastDocument' => $LastDocument
+            'lastDocument' => $LastDocument,
         ));
     }
     public function deldocsAction()

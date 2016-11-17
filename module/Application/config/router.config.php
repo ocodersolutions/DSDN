@@ -23,6 +23,17 @@ $userRoute = array(
         ),
     ),
 );
+$officialRoute = array(
+    'type' => 'Zend\Mvc\Router\Http\Segment',
+    'options' => array(
+        'route' => '/official[/]',
+        'defaults' => array(
+            '__NAMESPACE__' => 'Application\Controller',
+            'controller' => 'Official',
+            'action' => 'index',
+        ),
+    ),
+);
 $documentRoute = array(
     'type' => 'Zend\Mvc\Router\Http\Segment',
     'options' => array(
@@ -444,6 +455,7 @@ return array(
             'shareholderChildRoute' => $shareholderChildRoute,
             'application' => $applicationRoute,
             'user' => $userRoute,
+            'offical' => $officialRoute,
         ),
     )
 );

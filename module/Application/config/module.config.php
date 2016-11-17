@@ -159,6 +159,7 @@ return array(
             'Application\Controller\Shareholder' => 'Application\Controller\ShareholderController',
             'Application\Controller\Account' => 'Application\Controller\AccountController',
             'Application\Controller\User' => 'Application\Controller\UserController',
+            'Application\Controller\Official' => 'Application\Controller\OfficialController',
         ),
     ),
     'view_manager' => array(

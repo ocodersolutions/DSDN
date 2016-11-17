@@ -23,11 +23,13 @@ $documents = $this->documents;
         <div class="breakum-line">
             <a href="">Trang chủ</a>/<span> Công văn nội bộ</span>
         </div>
-        <?php if($lastDocument){?>
+        <?php if($lastDocument){ ?>
             <div class="alert alert-success" role="alert">
                 <span class="success"> Tải công văn thành công!</span>
             </div>
            <?php }?>
+            
+            
         <div class="col-md-7 col-sm-12 block">
             <form id="formUploadDoc" method="POST" enctype="multipart/form-data">
                 <div class="row block">
