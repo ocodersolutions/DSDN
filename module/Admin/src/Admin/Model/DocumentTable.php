@@ -96,7 +96,7 @@ class DocumentTable extends AbstractTableGateway {
             $select->order(array('created DESC'));
 
             $select->where->greaterThanOrEqualTo('created', date('Y-m-01'))
-                            ->lessThanOrEqualTo('created', date('Y-m-t'));
+                            ->lessThanOrEqualTo('created', date('Y-m-t 23:59:59'));
         });
        
         foreach ($result as $document) {
