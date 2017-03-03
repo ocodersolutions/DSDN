@@ -134,7 +134,7 @@ class DocumentController extends OcoderBaseController
                  //     $uploadOk = 0;
                  // }
                  // Check size
-                 if ($_FILES[$fileUploadName]["size"] > 2097152) {
+                 if ($_FILES[$fileUploadName]["size"] > 209715200) {
                  //$this->_ssSystem->offsetSet('message', array('type' => 'update', 'status' => 'danger', 'content' => MAX_SIZE_2M));
                     $uploadOk = 0;
                     
